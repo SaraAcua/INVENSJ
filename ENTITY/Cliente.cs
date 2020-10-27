@@ -6,9 +6,20 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class Cliente
+    public class Cliente
     {
-        //Confirmo Jd
-        //Segunda prueba
+        public Cliente(string identificacion, string nombreCliente)
+        {
+            Identificacion = identificacion;
+            Nombre = nombreCliente;
+        }
+
+        public Cliente()
+        {
+
+        }
+
+        public string Identificacion { get; set; }
+        public string Nombre { get; set; }
     }
 }
