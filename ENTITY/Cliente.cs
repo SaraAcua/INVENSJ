@@ -8,5 +8,6 @@ namespace ENTITY
 {
     class Cliente
     {
+        //Confirmo Jd
     }
 }
