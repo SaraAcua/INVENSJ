@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class Venta
+    class Venta:Factura
     {
-        public Venta(string codigoProducto, string nombreProducto, int cantidadProducto,
-            string fechaVenta, int valorunitario, int valorTotal )
+        public Venta(string codigoVenta, string identificacionCliente)
         {
-            CodigoProducto = codigoProducto;
-            NombreProducto = nombreProducto;
-            CantidadProducto = cantidadProducto;
-            FechaVenta = fechaVenta;
-            Valorunitario = valorunitario;
-            ValorTotal = valorTotal;
+            CodigoVenta = codigoVenta;
+            IdentificacionCliente = identificacionCliente;
         }
 
         public Venta()
@@ -24,11 +19,8 @@ namespace ENTITY
 
         }
 
-        public string CodigoProducto { get; set; }
-        public string NombreProducto { get; set; }
-        public int CantidadProducto { get; set; }
-        public string FechaVenta { get; set; }
-        public int Valorunitario { get; set; }
-        public int ValorTotal { get; set; }
+        public string CodigoVenta { get; set; }
+        public string IdentificacionCliente { get; set; }
     }
 }
+

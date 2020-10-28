@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class Proveedor
+    class Proveedor :Persona
     {
-        public Proveedor(string nitProvedor, string codigoProveedor, string nombreProveedor,
-            string direccionProveedor , string telefonoProveedor)
+        public Proveedor(string nitProvedor)
         {
             NitProvedor = nitProvedor;
-            CodigoProveedor = codigoProveedor;
-            NombreProveedor = nombreProveedor;
-            DireccionProveedor = direccionProveedor;
-            TelefonoProveedor = telefonoProveedor;
             
         }
 
@@ -25,10 +20,7 @@ namespace ENTITY
         }
 
         public string NitProvedor { get; set; }
-        public string CodigoProveedor { get; set; }
-        public string NombreProveedor { get; set; }
-        public string DireccionProveedor { get; set; }
-        public string TelefonoProveedor { get; set; }
+        
         
     }
 }

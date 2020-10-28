@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class Pedido
+    class Compra:Factura
     {
-        public Pedido(string codigoPedido, string codigoProveedor)
+        public Compra(string codigoPedido, string codigoProveedor)
         {
             CodigoPedido = codigoPedido;
             CodigoProveedor = codigoProveedor;
         }
 
-        public Pedido()
+        public Compra()
         {
 
         }
@@ -23,4 +23,4 @@ namespace ENTITY
         public string CodigoProveedor { get; set; }
     }
 }
-}
+
