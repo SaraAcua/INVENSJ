@@ -8,6 +8,17 @@ namespace ENTITY
 {
     public class Cliente:Persona
     {
-        
+        public Cliente(string email)
+        {
+            Email = email;
+
+        }
+
+        public Cliente()
+        {
+
+        }
+
+        public string Email { get; set; }
     }
 }
