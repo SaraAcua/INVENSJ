@@ -107,6 +107,7 @@ namespace Presentacion
 
         private void btnConsultarProd_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new FormConsultarProductos());
             EsconderSubMenu();
         }
 

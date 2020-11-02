@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureInicio = new System.Windows.Forms.PictureBox();
+            this.pictureExpandir = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.PanelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelMenuProd = new System.Windows.Forms.Panel();
             this.btnConsultarProd = new System.Windows.Forms.Button();
@@ -47,23 +50,20 @@
             this.btnListadoCompras = new System.Windows.Forms.Button();
             this.btnListadoVentas = new System.Windows.Forms.Button();
             this.PanelMenuLateral = new System.Windows.Forms.Panel();
-            this.pictureInicio = new System.Windows.Forms.PictureBox();
-            this.pictureExpandir = new System.Windows.Forms.PictureBox();
             this.btnMenuReportes = new System.Windows.Forms.Button();
             this.btnMenuCompra = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.BtnAlmacen = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).BeginInit();
             this.PanelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenuProd.SuspendLayout();
             this.panelMenuFacturacion.SuspendLayout();
             this.panelMenuCompras.SuspendLayout();
             this.panelMenuReportes.SuspendLayout();
             this.PanelMenuLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 38);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureInicio
+            // 
+            this.pictureInicio.Image = global::Presentacion.Properties.Resources.iconfinder_Artboard_1_30306981;
+            this.pictureInicio.Location = new System.Drawing.Point(56, 1);
+            this.pictureInicio.Name = "pictureInicio";
+            this.pictureInicio.Size = new System.Drawing.Size(38, 35);
+            this.pictureInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureInicio.TabIndex = 1;
+            this.pictureInicio.TabStop = false;
+            this.pictureInicio.Click += new System.EventHandler(this.pictureInicio_Click);
+            // 
+            // pictureExpandir
+            // 
+            this.pictureExpandir.Image = global::Presentacion.Properties.Resources.iconfinder_Burger_Menu_4781852;
+            this.pictureExpandir.Location = new System.Drawing.Point(-1, 0);
+            this.pictureExpandir.Name = "pictureExpandir";
+            this.pictureExpandir.Size = new System.Drawing.Size(51, 38);
+            this.pictureExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureExpandir.TabIndex = 0;
+            this.pictureExpandir.TabStop = false;
+            this.pictureExpandir.Click += new System.EventHandler(this.pictureExpandir_Click_1);
             // 
             // panelContenedor
             // 
@@ -98,6 +120,16 @@
             this.PanelLogo.Name = "PanelLogo";
             this.PanelLogo.Size = new System.Drawing.Size(250, 95);
             this.PanelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.IMG_6180;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 93);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -339,28 +371,6 @@
             this.PanelMenuLateral.Size = new System.Drawing.Size(250, 684);
             this.PanelMenuLateral.TabIndex = 0;
             // 
-            // pictureInicio
-            // 
-            this.pictureInicio.Image = global::Presentacion.Properties.Resources.iconfinder_Artboard_1_30306982;
-            this.pictureInicio.Location = new System.Drawing.Point(56, 1);
-            this.pictureInicio.Name = "pictureInicio";
-            this.pictureInicio.Size = new System.Drawing.Size(38, 35);
-            this.pictureInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureInicio.TabIndex = 1;
-            this.pictureInicio.TabStop = false;
-            this.pictureInicio.Click += new System.EventHandler(this.pictureInicio_Click);
-            // 
-            // pictureExpandir
-            // 
-            this.pictureExpandir.Image = global::Presentacion.Properties.Resources.iconfinder_Burger_Menu_47818521;
-            this.pictureExpandir.Location = new System.Drawing.Point(-1, 0);
-            this.pictureExpandir.Name = "pictureExpandir";
-            this.pictureExpandir.Size = new System.Drawing.Size(51, 38);
-            this.pictureExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureExpandir.TabIndex = 0;
-            this.pictureExpandir.TabStop = false;
-            this.pictureExpandir.Click += new System.EventHandler(this.pictureExpandir_Click_1);
-            // 
             // btnMenuReportes
             // 
             this.btnMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
@@ -410,7 +420,7 @@
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVentas.Image = global::Presentacion.Properties.Resources.proyecto_de_ley;
+            this.btnVentas.Image = global::Presentacion.Properties.Resources.bolso;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(0, 219);
             this.btnVentas.Name = "btnVentas";
@@ -442,16 +452,6 @@
             this.BtnAlmacen.UseVisualStyleBackColor = true;
             this.BtnAlmacen.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.IMG_6180;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -471,15 +471,15 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).EndInit();
             this.PanelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenuProd.ResumeLayout(false);
             this.panelMenuFacturacion.ResumeLayout(false);
             this.panelMenuCompras.ResumeLayout(false);
             this.panelMenuReportes.ResumeLayout(false);
             this.PanelMenuLateral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
