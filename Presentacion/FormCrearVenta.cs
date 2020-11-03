@@ -24,6 +24,19 @@ namespace Presentacion
             table.Columns.Add("Iva");
             table.Columns.Add("Total");
             dataGVfactura.DataSource = table;
+            InhabiltarText();
+
+        }
+        void InhabiltarText()
+        {
+            txtNumFactura.Enabled= false;
+            txtDireccionCliente.Enabled = false;
+            txtNombreCliente.Enabled = false;
+            txtTelefonoCliente.Enabled = false;
+        }
+
+        private void btnGenerarVenta_Click(object sender, EventArgs e)
+        {
 
         }
     }
