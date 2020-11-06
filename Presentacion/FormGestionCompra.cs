@@ -17,5 +17,11 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        private void btnRegsitroProv_Click(object sender, EventArgs e)
+        {
+            FormRegistroProveedor form = new FormRegistroProveedor();
+            form.ShowDialog();
+                
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtNumFactura = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgraegarCliente = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnCancelarVenta = new System.Windows.Forms.Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
@@ -93,7 +93,7 @@
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtNumFactura);
             this.guna2GradientPanel1.Controls.Add(this.label9);
-            this.guna2GradientPanel1.Controls.Add(this.button2);
+            this.guna2GradientPanel1.Controls.Add(this.btnAgraegarCliente);
             this.guna2GradientPanel1.Controls.Add(this.label7);
             this.guna2GradientPanel1.Controls.Add(this.label6);
             this.guna2GradientPanel1.Controls.Add(this.label5);
@@ -176,22 +176,23 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Nº de Factura";
             // 
-            // button2
+            // btnAgraegarCliente
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnAgraegarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Presentacion.Properties.Resources.boton_agregar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(307, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 35);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "         Agregar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAgraegarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAgraegarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnAgraegarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgraegarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnAgraegarCliente.Image = global::Presentacion.Properties.Resources.boton_agregar;
+            this.btnAgraegarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgraegarCliente.Location = new System.Drawing.Point(307, 47);
+            this.btnAgraegarCliente.Name = "btnAgraegarCliente";
+            this.btnAgraegarCliente.Size = new System.Drawing.Size(81, 35);
+            this.btnAgraegarCliente.TabIndex = 16;
+            this.btnAgraegarCliente.Text = "         Agregar";
+            this.btnAgraegarCliente.UseVisualStyleBackColor = true;
+            this.btnAgraegarCliente.Click += new System.EventHandler(this.btnAgraegarCliente_Click);
             // 
             // label7
             // 
@@ -435,9 +436,9 @@
             // textBox2
             // 
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(8, 23);
+            this.textBox2.Location = new System.Drawing.Point(17, 23);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(91, 20);
             this.textBox2.TabIndex = 6;
             // 
             // label1
@@ -624,9 +625,9 @@
             // textBox3
             // 
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(10, 23);
+            this.textBox3.Location = new System.Drawing.Point(16, 23);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(67, 20);
+            this.textBox3.Size = new System.Drawing.Size(61, 20);
             this.textBox3.TabIndex = 38;
             // 
             // pictureBox1
@@ -641,9 +642,10 @@
             // 
             // btnGenerarVenta
             // 
-            this.btnGenerarVenta.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnGenerarVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarVenta.FlatAppearance.BorderSize = 0;
             this.btnGenerarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarVenta.ForeColor = System.Drawing.Color.Black;
             this.btnGenerarVenta.Location = new System.Drawing.Point(608, 221);
             this.btnGenerarVenta.Name = "btnGenerarVenta";
@@ -653,18 +655,20 @@
             this.btnGenerarVenta.UseVisualStyleBackColor = false;
             this.btnGenerarVenta.Click += new System.EventHandler(this.btnGenerarVenta_Click);
             // 
-            // button7
+            // btnCancelarVenta
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(608, 274);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(91, 38);
-            this.button7.TabIndex = 38;
-            this.button7.Text = "Cancelar";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnCancelarVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelarVenta.FlatAppearance.BorderSize = 0;
+            this.btnCancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnCancelarVenta.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelarVenta.Location = new System.Drawing.Point(608, 274);
+            this.btnCancelarVenta.Name = "btnCancelarVenta";
+            this.btnCancelarVenta.Size = new System.Drawing.Size(91, 38);
+            this.btnCancelarVenta.TabIndex = 38;
+            this.btnCancelarVenta.Text = "Cancelar";
+            this.btnCancelarVenta.UseVisualStyleBackColor = false;
+            this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
             // 
             // FormCrearVenta
             // 
@@ -672,7 +676,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(734, 553);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnCancelarVenta);
             this.Controls.Add(this.btnGenerarVenta);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.label27);
@@ -684,6 +688,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCrearVenta";
             this.Text = "FormCrearVenta";
@@ -717,7 +722,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgraegarCliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
@@ -742,7 +747,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtNumFactura;
         private System.Windows.Forms.Button btnGenerarVenta;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCancelarVenta;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox txtTelefonoCliente;
         private System.Windows.Forms.TextBox txtDireccionCliente;

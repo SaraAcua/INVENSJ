@@ -36,7 +36,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegsitroProv = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -87,7 +87,7 @@
             this.guna2GradientPanel1.Controls.Add(this.textBox4);
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
             this.guna2GradientPanel1.Controls.Add(this.label4);
-            this.guna2GradientPanel1.Controls.Add(this.button2);
+            this.guna2GradientPanel1.Controls.Add(this.btnRegsitroProv);
             this.guna2GradientPanel1.Controls.Add(this.button1);
             this.guna2GradientPanel1.Controls.Add(this.textBox3);
             this.guna2GradientPanel1.Controls.Add(this.textBox2);
@@ -106,6 +106,7 @@
             // 
             this.txtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccionCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDireccionCliente.Enabled = false;
             this.txtDireccionCliente.Location = new System.Drawing.Point(216, 72);
             this.txtDireccionCliente.Multiline = true;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
@@ -128,6 +129,7 @@
             // 
             this.txtTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtTelefonoCliente.Enabled = false;
             this.txtTelefonoCliente.Location = new System.Drawing.Point(449, 72);
             this.txtTelefonoCliente.Multiline = true;
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
@@ -162,6 +164,7 @@
             // 
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtNombreCliente.Enabled = false;
             this.txtNombreCliente.Location = new System.Drawing.Point(23, 72);
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
@@ -173,28 +176,30 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(20, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Nombre";
             // 
-            // button2
+            // btnRegsitroProv
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnRegsitroProv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Presentacion.Properties.Resources.boton_agregar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(429, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 26);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "         Agregar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRegsitroProv.FlatAppearance.BorderSize = 0;
+            this.btnRegsitroProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnRegsitroProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegsitroProv.ForeColor = System.Drawing.Color.Black;
+            this.btnRegsitroProv.Image = global::Presentacion.Properties.Resources.boton_agregar;
+            this.btnRegsitroProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegsitroProv.Location = new System.Drawing.Point(429, 28);
+            this.btnRegsitroProv.Name = "btnRegsitroProv";
+            this.btnRegsitroProv.Size = new System.Drawing.Size(81, 26);
+            this.btnRegsitroProv.TabIndex = 17;
+            this.btnRegsitroProv.Text = "         Agregar";
+            this.btnRegsitroProv.UseVisualStyleBackColor = true;
+            this.btnRegsitroProv.Click += new System.EventHandler(this.btnRegsitroProv_Click);
             // 
             // button1
             // 
@@ -267,7 +272,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(34, 291);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(593, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(593, 163);
             this.dataGridView1.TabIndex = 1;
             // 
             // guna2GradientPanel3
@@ -510,6 +515,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(209, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 17);
@@ -540,7 +546,7 @@
             // 
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Location = new System.Drawing.Point(333, 531);
+            this.panel1.Location = new System.Drawing.Point(333, 470);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 47);
             this.panel1.TabIndex = 42;
@@ -608,7 +614,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRegsitroProv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txtNombreCliente;

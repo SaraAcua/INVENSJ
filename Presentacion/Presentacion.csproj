@@ -79,6 +79,18 @@
     <Compile Include="FormRegistodeProducto.Designer.cs">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroCliente.Designer.cs">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroProveedor.Designer.cs">
+      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistodeProducto.resx">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroCliente.resx">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroProveedor.resx">
+      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
