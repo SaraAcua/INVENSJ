@@ -36,5 +36,17 @@ namespace Presentacion
         {
 
         }
+
+        private void picAddColor_Click(object sender, EventArgs e)
+        {
+            FormRegistroColor form = new FormRegistroColor();
+            form.ShowDialog();
+        }
+
+        private void picAddMarca_Click(object sender, EventArgs e)
+        {
+            FormRegistroMarca marca = new FormRegistroMarca();
+            marca.ShowDialog();
+        }
     }
 }

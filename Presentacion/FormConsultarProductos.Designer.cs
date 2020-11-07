@@ -60,7 +60,7 @@
             this.guna2GradientPanel1.Controls.Add(this.radioButton1);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(41, 70);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(41, 61);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
@@ -214,10 +214,10 @@
             // 
             this.dataGvConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGvConsulta.Location = new System.Drawing.Point(41, 213);
+            this.dataGvConsulta.Location = new System.Drawing.Point(41, 185);
             this.dataGvConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.dataGvConsulta.Name = "dataGvConsulta";
-            this.dataGvConsulta.Size = new System.Drawing.Size(636, 375);
+            this.dataGvConsulta.Size = new System.Drawing.Size(636, 280);
             this.dataGvConsulta.TabIndex = 2;
             // 
             // FormConsultarProductos

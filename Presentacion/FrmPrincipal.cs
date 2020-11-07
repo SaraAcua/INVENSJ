@@ -16,8 +16,8 @@ namespace Presentacion
         public FrmPrincipal()
         {
             InitializeComponent();
-
             PersonalizarSubMenu();
+         
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -35,22 +35,19 @@ namespace Presentacion
 
         private void EsconderSubMenu()
         {
-           if (panelMenuProd.Visible = true)
+           if (panelMenuProd.Visible == true)
             {
                 panelMenuProd.Visible = false;
             }
-           if (panelMenuFacturacion.Visible = true)
+           if (panelMenuFacturacion.Visible == true)
             {
                 panelMenuFacturacion.Visible = false;
             }
-        
-           
-           
-            if (panelMenuCompras.Visible=true)
+            if (panelMenuCompras.Visible == true)
             {
                 panelMenuCompras.Visible = false;
             }
-            if (panelMenuReportes.Visible=true)
+            if (panelMenuReportes.Visible==true)
             {
                 panelMenuReportes.Visible = false;
             }
@@ -63,32 +60,21 @@ namespace Presentacion
                 subMenu.Visible = true;
             }
             else
+            {
                 subMenu.Visible = false;
+            }
+               
         }
-
-
         private void BtnProducto_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMenuProd);
 
         }
-
-
         private void btnFacturacion_Click_1(object sender, EventArgs e)
         {
             showSubMenu(panelMenuFacturacion);
         }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            //showSubMenu(panelMenuClientes);
-        }
-
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-           // showSubMenu(panelMenuVentas);
-        }
-
+      
         private void btnMenuCompra_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMenuCompras);
@@ -134,6 +120,7 @@ namespace Presentacion
 
         private void btnConsultarCompra_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new FormProveedores());
             EsconderSubMenu();
         }
 
@@ -160,6 +147,7 @@ namespace Presentacion
 
         private void btnConsultaFactura_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new FormClientes());
             EsconderSubMenu();
         }
 

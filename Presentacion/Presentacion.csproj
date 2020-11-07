@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,24 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListadoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoCompra.Designer.cs">
+      <DependentUpon>FormListadoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoVentas.Designer.cs">
+      <DependentUpon>FormListadoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistodeProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +108,18 @@
     </Compile>
     <Compile Include="FormRegistroCliente.Designer.cs">
       <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroColor.Designer.cs">
+      <DependentUpon>FormRegistroColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroMarca.Designer.cs">
+      <DependentUpon>FormRegistroMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegistroProveedor.cs">
       <SubType>Form</SubType>
@@ -99,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultarProductos.resx">
       <DependentUpon>FormConsultarProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,11 +150,20 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegistodeProducto.resx">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroCliente.resx">
       <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroColor.resx">
+      <DependentUpon>FormRegistroColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroMarca.resx">
+      <DependentUpon>FormRegistroMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroProveedor.resx">
       <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
@@ -246,6 +294,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

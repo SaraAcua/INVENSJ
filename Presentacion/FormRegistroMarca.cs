@@ -10,26 +10,25 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FormRegistroProveedor : Form
+    public partial class FormRegistroMarca : Form
     {
-        public FormRegistroProveedor()
+        public FormRegistroMarca()
         {
             InitializeComponent();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(@"Esta seguro que desea salir del registro proveedor?", @"Atención",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(@"Esta seguro que desea salir del registro de marca?", @"Atención",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
                 this.Close();
+
             }
             else
             {
                 this.DialogResult = DialogResult.None;
-                //btnCancelar.Focus();
-
             }
         }
     }

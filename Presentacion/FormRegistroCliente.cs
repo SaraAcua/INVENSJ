@@ -29,9 +29,8 @@ namespace Presentacion
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                this.Dispose();
-                FormCrearVenta form = new FormCrearVenta();
-                form.Enabled = true;
+                this.Close();
+              
             }
             else
             {

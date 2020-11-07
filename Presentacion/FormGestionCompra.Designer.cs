@@ -45,35 +45,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtStockProd = new System.Windows.Forms.TextBox();
-            this.txtTallaproducto = new System.Windows.Forms.TextBox();
-            this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -211,9 +209,9 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::Presentacion.Properties.Resources.buscar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(346, 29);
+            this.button1.Location = new System.Drawing.Point(346, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 24);
+            this.button1.Size = new System.Drawing.Size(77, 25);
             this.button1.TabIndex = 8;
             this.button1.Text = "      Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -228,6 +226,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.Location = new System.Drawing.Point(104, 33);
             this.textBox2.Name = "textBox2";
@@ -278,10 +277,12 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
+            this.guna2GradientPanel3.Controls.Add(this.textBox7);
             this.guna2GradientPanel3.Controls.Add(this.button5);
             this.guna2GradientPanel3.Controls.Add(this.button4);
             this.guna2GradientPanel3.Controls.Add(this.label24);
             this.guna2GradientPanel3.Controls.Add(this.label23);
+            this.guna2GradientPanel3.Controls.Add(this.label19);
             this.guna2GradientPanel3.Controls.Add(this.label22);
             this.guna2GradientPanel3.Controls.Add(this.textBox1);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.Silver;
@@ -292,6 +293,14 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(592, 51);
             this.guna2GradientPanel3.TabIndex = 38;
             // 
+            // textBox7
+            // 
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Location = new System.Drawing.Point(119, 23);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(67, 20);
+            this.textBox7.TabIndex = 42;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Transparent;
@@ -301,7 +310,7 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = global::Presentacion.Properties.Resources.basura;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(332, 19);
+            this.button5.Location = new System.Drawing.Point(458, 18);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(85, 23);
             this.button5.TabIndex = 41;
@@ -317,7 +326,7 @@
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(241, 19);
+            this.button4.Location = new System.Drawing.Point(367, 18);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 23);
             this.button4.TabIndex = 40;
@@ -328,7 +337,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(151, 27);
+            this.label24.Location = new System.Drawing.Point(214, 25);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 13);
             this.label24.TabIndex = 36;
@@ -339,11 +348,22 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(149, 7);
+            this.label23.Location = new System.Drawing.Point(214, 7);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(31, 13);
             this.label23.TabIndex = 39;
             this.label23.Text = "Total";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(116, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Precio";
             // 
             // label22
             // 
@@ -364,153 +384,6 @@
             this.textBox1.Size = new System.Drawing.Size(67, 20);
             this.textBox1.TabIndex = 38;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.txtStockProd);
-            this.guna2GradientPanel2.Controls.Add(this.txtTallaproducto);
-            this.guna2GradientPanel2.Controls.Add(this.txtDescripcionProducto);
-            this.guna2GradientPanel2.Controls.Add(this.label28);
-            this.guna2GradientPanel2.Controls.Add(this.label20);
-            this.guna2GradientPanel2.Controls.Add(this.label19);
-            this.guna2GradientPanel2.Controls.Add(this.button3);
-            this.guna2GradientPanel2.Controls.Add(this.label18);
-            this.guna2GradientPanel2.Controls.Add(this.label15);
-            this.guna2GradientPanel2.Controls.Add(this.label14);
-            this.guna2GradientPanel2.Controls.Add(this.textBox5);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(34, 169);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(593, 51);
-            this.guna2GradientPanel2.TabIndex = 37;
-            // 
-            // txtStockProd
-            // 
-            this.txtStockProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStockProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtStockProd.Enabled = false;
-            this.txtStockProd.Location = new System.Drawing.Point(449, 23);
-            this.txtStockProd.Multiline = true;
-            this.txtStockProd.Name = "txtStockProd";
-            this.txtStockProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtStockProd.Size = new System.Drawing.Size(46, 20);
-            this.txtStockProd.TabIndex = 37;
-            // 
-            // txtTallaproducto
-            // 
-            this.txtTallaproducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTallaproducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtTallaproducto.Enabled = false;
-            this.txtTallaproducto.Location = new System.Drawing.Point(380, 23);
-            this.txtTallaproducto.Multiline = true;
-            this.txtTallaproducto.Name = "txtTallaproducto";
-            this.txtTallaproducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTallaproducto.Size = new System.Drawing.Size(45, 20);
-            this.txtTallaproducto.TabIndex = 36;
-            // 
-            // txtDescripcionProducto
-            // 
-            this.txtDescripcionProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcionProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtDescripcionProducto.Enabled = false;
-            this.txtDescripcionProducto.Location = new System.Drawing.Point(216, 23);
-            this.txtDescripcionProducto.Multiline = true;
-            this.txtDescripcionProducto.Name = "txtDescripcionProducto";
-            this.txtDescripcionProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescripcionProducto.Size = new System.Drawing.Size(143, 20);
-            this.txtDescripcionProducto.TabIndex = 35;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(377, 7);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(30, 13);
-            this.label28.TabIndex = 34;
-            this.label28.Text = "Talla";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(513, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 13);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "$...";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(505, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 13);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "Precio";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(120, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 23);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(446, 7);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Stock";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(213, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 13);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Descripciòn";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(20, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 13);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Codigo producto";
-            // 
-            // textBox5
-            // 
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(23, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(88, 20);
-            this.textBox5.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -525,7 +398,7 @@
             // button6
             // 
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(633, 302);
+            this.button6.Location = new System.Drawing.Point(633, 290);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(73, 33);
             this.button6.TabIndex = 40;
@@ -535,7 +408,7 @@
             // button7
             // 
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(633, 341);
+            this.button7.Location = new System.Drawing.Point(633, 336);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(73, 33);
             this.button7.TabIndex = 41;
@@ -559,9 +432,9 @@
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(34, 5);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 20);
+            this.label26.Size = new System.Drawing.Size(114, 20);
             this.label26.TabIndex = 34;
-            this.label26.Text = "Total a pagar";
+            this.label26.Text = "Total pagado";
             // 
             // label25
             // 
@@ -573,18 +446,111 @@
             this.label25.TabIndex = 33;
             this.label25.Text = "$$$$$$$";
             // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.BorderRadius = 15;
+            this.guna2GradientPanel2.Controls.Add(this.comboBox2);
+            this.guna2GradientPanel2.Controls.Add(this.comboBox1);
+            this.guna2GradientPanel2.Controls.Add(this.button2);
+            this.guna2GradientPanel2.Controls.Add(this.label10);
+            this.guna2GradientPanel2.Controls.Add(this.label8);
+            this.guna2GradientPanel2.Controls.Add(this.label14);
+            this.guna2GradientPanel2.Controls.Add(this.textBox5);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(34, 166);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(593, 51);
+            this.guna2GradientPanel2.TabIndex = 35;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(216, 23);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(65, 21);
+            this.comboBox2.TabIndex = 46;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(119, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(65, 21);
+            this.comboBox1.TabIndex = 45;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::Presentacion.Properties.Resources.buscar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(346, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 23);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "      Buscar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(213, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Color";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(116, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Talla";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(20, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Codigo producto";
+            // 
+            // textBox5
+            // 
+            this.textBox5.ForeColor = System.Drawing.Color.Black;
+            this.textBox5.Location = new System.Drawing.Point(23, 23);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(82, 20);
+            this.textBox5.TabIndex = 6;
+            // 
             // FormGestionCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(730, 646);
+            this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2GradientPanel3);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -596,10 +562,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,23 +596,21 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.TextBox txtStockProd;
-        private System.Windows.Forms.TextBox txtTallaproducto;
-        private System.Windows.Forms.TextBox txtDescripcionProducto;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox7;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
