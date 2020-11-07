@@ -22,20 +22,26 @@ namespace ENTITY
 
         public string CodigoFactura { get; set; }
         public string Fecha { get; set; }
-        public int ValorTotalFactura { get; set; }
+        public double ValorTotalFactura { get; set; }
+        private List<DetalleFactura> Detalles;
+        public string Tipo { get; set; }
+        public Persona Persona { get; set; }
 
         
-
-        public void CalcularTotalFactura(int valorTotalProductos)
+        public void AgregarDetalle(Producto producto, int cantidad)
         {
-            ValorTotalFactura = ValorTotalFactura + valorTotalProductos;
+            DetalleFactura detalle = new DetalleFactura(this, producto, cantidad);
+            Detalles.Add(detalle);
         }
 
 
-        //public void CalcularTotalFacturaEliminarproducto(int valorTotalProductos)
-        //{
-        //    ValorTotalFactura = ValorTotalFactura - valorTotalProductos;
-        //}
+        public void CalcularTotalFactura()
+        {
+            ValorTotalFactura = Detalles.Sum(d=>d.ValorTotal);
+        }
+
+
+        
 
 
     }

@@ -8,10 +8,11 @@ namespace ENTITY
 {
     class Compra:Factura
     {
-        public Compra(string codigoPedido, string codigoProveedor)
+        public Compra(string codigoPedido, Persona persona)
         {
             CodigoPedido = codigoPedido;
-            CodigoProveedor = codigoProveedor;
+            Persona = persona;
+            Tipo = "Compra";
         }
 
         public Compra()
@@ -21,6 +22,7 @@ namespace ENTITY
 
         public string CodigoPedido { get; set; }
         public string CodigoProveedor { get; set; }
+        
     }
 }
 

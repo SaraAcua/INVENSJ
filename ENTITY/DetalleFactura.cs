@@ -8,15 +8,16 @@ namespace ENTITY
 {
     class DetalleFactura 
     {
-        public DetalleFactura(string codigoVenta, string codigoProducto, string nombreProducto, int cantidadProducto,
-            string fechaVenta, int valorunitario)
+
+        public DetalleFactura(Factura factura, Producto producto,  int cantidadProducto)
         {
-            CodigoVenta = codigoVenta;
-            CodigoProducto = codigoProducto;
-            NombreProducto = nombreProducto;
+            Factura = factura;
+            Producto = producto;
+            CodigoProducto = producto.CodigoProducto;
+            NombreProducto = producto.NombreProducto;
             CantidadProducto = cantidadProducto;
-            FechaVenta = fechaVenta;
-            Valorunitario = valorunitario;
+            FechaVenta = factura.Fecha;
+            Valorunitario = producto.ValorUnitarioVenta;
             
             
         }
@@ -32,15 +33,13 @@ namespace ENTITY
         public int CantidadProducto { get; set; }
         public string FechaVenta { get; set; }
         public int Valorunitario { get; set; }
+        public Factura Factura { get; set; }
+        public Producto Producto { get; set; }
+        public double ValorTotal { get { return Valorunitario * CantidadProducto; } set { } }
+
+
+
         
-
-
-        public int CalcularTotalPorProducto(int valorUnitaio, int cantidad)
-        {
-            int totalPorPoroducto = 0;
-            totalPorPoroducto = valorUnitaio * cantidad;
-            return totalPorPoroducto;
-        }
 
     }
 }

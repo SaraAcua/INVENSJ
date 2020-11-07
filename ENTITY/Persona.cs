@@ -9,13 +9,14 @@ namespace ENTITY
     public class Persona
     {
         public Persona( string identificacion, string nombre,
-            string direccion, string telefono, string email)
+            string direccion, string telefono, string email, string tipo)
         {
             Identificacion = identificacion;
             Nombre = nombre;
             Direccion = direccion;
             Telefono = telefono;
             Email = email;
+            Tipo = tipo;
         }
 
         public Persona()
@@ -29,6 +30,7 @@ namespace ENTITY
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
+        public string Tipo { get; set; }
     }
 
 }

@@ -12,6 +12,7 @@ namespace ENTITY
         {
             CodigoVenta = codigoVenta;
             IdentificacionCliente = identificacionCliente;
+            Tipo = "Venta";
         }
 
         public Venta()
