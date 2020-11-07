@@ -17,7 +17,7 @@ namespace Presentacion
         {
             InitializeComponent();
 
-            table.Columns.Add("Id producto");
+            table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
             table.Columns.Add("Precio Compra");
             table.Columns.Add("Precio venta");
@@ -32,9 +32,9 @@ namespace Presentacion
             dataGvRegistroProd.Refresh();
         }
 
-       
+        private void btnEliminarProd_Click(object sender, EventArgs e)
+        {
 
-
-        
+        }
     }
 }

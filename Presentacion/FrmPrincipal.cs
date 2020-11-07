@@ -128,6 +128,7 @@ namespace Presentacion
 
         private void btnRegistarCompra_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new FormGestionCompra());
             EsconderSubMenu();
         }
 

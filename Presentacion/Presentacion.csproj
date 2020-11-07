@@ -61,6 +61,12 @@
     <Compile Include="FormCrearVenta.Designer.cs">
       <DependentUpon>FormCrearVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGestionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionCompra.Designer.cs">
+      <DependentUpon>FormGestionCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,18 @@
     </Compile>
     <Compile Include="FormRegistodeProducto.Designer.cs">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroCliente.Designer.cs">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroProveedor.Designer.cs">
+      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -87,11 +105,20 @@
     <EmbeddedResource Include="FormCrearVenta.resx">
       <DependentUpon>FormCrearVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionCompra.resx">
+      <DependentUpon>FormGestionCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistodeProducto.resx">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroCliente.resx">
+      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroProveedor.resx">
+      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

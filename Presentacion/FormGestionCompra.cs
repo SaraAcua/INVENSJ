@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FormConsultarProductos : Form
+    public partial class FormGestionCompra : Form
     {
-        public FormConsultarProductos()
+        public FormGestionCompra()
         {
             InitializeComponent();
         }
 
+        private void btnRegsitroProv_Click(object sender, EventArgs e)
+        {
+            FormRegistroProveedor form = new FormRegistroProveedor();
+            form.ShowDialog();
+                
+        }
     }
 }
