@@ -79,11 +79,23 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoCliente.Designer.cs">
+      <DependentUpon>FormListadoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListadoCompra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormListadoCompra.Designer.cs">
       <DependentUpon>FormListadoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoProveedores.Designer.cs">
+      <DependentUpon>FormListadoProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListadoVentas.cs">
       <SubType>Form</SubType>
@@ -103,11 +115,11 @@
     <Compile Include="FormRegistodeProducto.Designer.cs">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistroCliente.cs">
+    <Compile Include="FormGestionCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistroCliente.Designer.cs">
-      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    <Compile Include="FormGestionCliente.Designer.cs">
+      <DependentUpon>FormGestionCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegistroColor.cs">
       <SubType>Form</SubType>
@@ -121,11 +133,11 @@
     <Compile Include="FormRegistroMarca.Designer.cs">
       <DependentUpon>FormRegistroMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistroProveedor.cs">
+    <Compile Include="FormGestionProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistroProveedor.Designer.cs">
-      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
+    <Compile Include="FormGestionProveedor.Designer.cs">
+      <DependentUpon>FormGestionProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -150,14 +162,26 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoCliente.resx">
+      <DependentUpon>FormListadoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoCompra.resx">
+      <DependentUpon>FormListadoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoProveedores.resx">
+      <DependentUpon>FormListadoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoVentas.resx">
+      <DependentUpon>FormListadoVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistodeProducto.resx">
       <DependentUpon>FormRegistodeProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistroCliente.resx">
-      <DependentUpon>FormRegistroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestionCliente.resx">
+      <DependentUpon>FormGestionCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistroColor.resx">
       <DependentUpon>FormRegistroColor.cs</DependentUpon>
@@ -165,8 +189,8 @@
     <EmbeddedResource Include="FormRegistroMarca.resx">
       <DependentUpon>FormRegistroMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistroProveedor.resx">
-      <DependentUpon>FormRegistroProveedor.cs</DependentUpon>
+    <EmbeddedResource Include="FormGestionProveedor.resx">
+      <DependentUpon>FormGestionProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

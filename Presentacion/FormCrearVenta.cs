@@ -44,7 +44,7 @@ namespace Presentacion
         private void btnAgraegarCliente_Click(object sender, EventArgs e)
         {
           
-            FormRegistroCliente cliente = new FormRegistroCliente();
+            FormGestionCliente cliente = new FormGestionCliente();
 
             cliente.ShowDialog();
            

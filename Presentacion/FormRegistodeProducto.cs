@@ -28,7 +28,7 @@ namespace Presentacion
             table.Columns.Add("Imagen");
 
             dataGvRegistroProd.DataSource = table;
-           // dataGvRegistroProd.DataSource = service.ConsultarTodos().Personas;
+            // dataGvRegistroProd.DataSource = service.ConsultarTodos().Personas;
             dataGvRegistroProd.Refresh();
         }
 
@@ -48,5 +48,24 @@ namespace Presentacion
             FormRegistroMarca marca = new FormRegistroMarca();
             marca.ShowDialog();
         }
+
+        private void picAgregarImage_Click(object sender, EventArgs e)
+        {
+           OpenFileDialog imagen = new OpenFileDialog();
+            imagen.InitialDirectory = "C:\\";
+            //imagen.Filter = "Archivos de imagen(*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png|GIF(*.gif)*.gif";
+            
+            if (imagen.ShowDialog()==DialogResult.OK)
+            {
+                picImgen.ImageLocation = imagen.FileName;
+                txtRutaImge.Text = imagen.FileName;
+            }
+            else
+            {
+                MessageBox.Show("No selecciono la imagen","Informacion",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+ 
     }
 }

@@ -310,9 +310,9 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = global::Presentacion.Properties.Resources.basura;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(458, 18);
+            this.button5.Location = new System.Drawing.Point(428, 19);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 23);
+            this.button5.Size = new System.Drawing.Size(81, 23);
             this.button5.TabIndex = 41;
             this.button5.Text = "Quitar";
             this.button5.UseVisualStyleBackColor = false;
@@ -326,11 +326,11 @@
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(367, 18);
+            this.button4.Location = new System.Drawing.Point(345, 19);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 23);
+            this.button4.Size = new System.Drawing.Size(77, 23);
             this.button4.TabIndex = 40;
-            this.button4.Text = "Agregar";
+            this.button4.Text = "   Agregar";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // label24
@@ -557,6 +557,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGestionCompra";
             this.Text = "FormGestionCompra";
+            this.Load += new System.EventHandler(this.FormGestionCompra_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

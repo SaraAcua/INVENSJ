@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FormProveedores : Form
+    public partial class FormListadoProveedores : Form
     {
-        public FormProveedores()
+        public FormListadoProveedores()
         {
             InitializeComponent();
-        }
-
-        private void BtnRegsitrarProv_Click(object sender, EventArgs e)
-        {
-            FormGestionProveedor gestionProveedor = new FormGestionProveedor();
-            gestionProveedor.ShowDialog();
         }
     }
 }

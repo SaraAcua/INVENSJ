@@ -20,10 +20,14 @@ namespace Presentacion
 
         private void btnRegsitroProv_Click(object sender, EventArgs e)
         {
-            FormRegistroProveedor form = new FormRegistroProveedor();
+            FormGestionProveedor form = new FormGestionProveedor();
             form.ShowDialog();
                 
         }
 
+        private void FormGestionCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,17 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void BtnRegsitrarCliente_Click(object sender, EventArgs e)
+        {
+            FormGestionCliente gestionCliente = new FormGestionCliente();
+            gestionCliente.ShowDialog();
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            FormGestionCliente gestionCliente = new FormGestionCliente();
+            gestionCliente.ShowDialog();
+        }
     }
 }

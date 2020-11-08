@@ -13,10 +13,22 @@ namespace Presentacion
 {
     public partial class FrmPrincipal : Form
     {
+        FormRegistodeProducto formRegistodeProducto = new FormRegistodeProducto();
+        FormConsultarProductos consultarProductos  = new FormConsultarProductos();
+        FormCrearVenta crearVenta = new FormCrearVenta();
+        FormClientes formClientes = new FormClientes();
+        FormGestionCompra gestionCompra = new FormGestionCompra();
+        FormProveedores formProveedores = new FormProveedores();
+        FormListadoVentas listadoVentas = new FormListadoVentas();
+        FormListadoCompra listadoCompra = new FormListadoCompra();
+        FormListadoProveedores listadoProveedorescs = new FormListadoProveedores();
+        FormListadoCliente listadoCliente = new FormListadoCliente();
+        
         public FrmPrincipal()
         {
             InitializeComponent();
             PersonalizarSubMenu();
+            //this.ControlBox = false;
          
         }
 
@@ -65,35 +77,18 @@ namespace Presentacion
             }
                
         }
-        private void BtnProducto_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelMenuProd);
-
-        }
-        private void btnFacturacion_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(panelMenuFacturacion);
-        }
-      
-        private void btnMenuCompra_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelMenuCompras);
-        }
-
-        private void btnMenuReportes_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelMenuReportes);
-        }
-
+    
         private void btnRegistarProd_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormRegistodeProducto());
+       
+            AbrirFormEnPanel(formRegistodeProducto);
             EsconderSubMenu();
         }
 
         private void btnConsultarProd_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormConsultarProductos());
+          
+            AbrirFormEnPanel(consultarProductos);
             EsconderSubMenu();
         }
 
@@ -114,19 +109,20 @@ namespace Presentacion
 
         private void btnRegistarCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormGestionCompra());
+            AbrirFormEnPanel(gestionCompra);
             EsconderSubMenu();
         }
 
         private void btnConsultarCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormProveedores());
+           
+            AbrirFormEnPanel(formProveedores);
             EsconderSubMenu();
         }
 
         private void btnConsultarReportes_Click(object sender, EventArgs e)
         {
-            MostrarFormLogo();
+            AbrirFormEnPanel(listadoVentas);
             EsconderSubMenu();
         }
         private void AbrirFormEnPanel(object Formhijo)
@@ -140,14 +136,12 @@ namespace Presentacion
             this.panelContenedor.Controls.Add(fh);
             this.panelContenedor.Tag = fh;
             fh.Show();
-          
-
         }
-    
+     
 
         private void btnConsultaFactura_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormClientes());
+            AbrirFormEnPanel(formClientes);
             EsconderSubMenu();
         }
 
@@ -185,7 +179,49 @@ namespace Presentacion
 
         private void btnGestionVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormCrearVenta());
+             AbrirFormEnPanel(crearVenta);
+            EsconderSubMenu();
+          
+        }
+
+        private void btnListadoProv_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(listadoProveedorescs);
+            EsconderSubMenu();
+        }
+
+        private void btnListadoCliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(listadoCliente);
+            EsconderSubMenu();
+        }
+
+        private void btnListadoCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(listadoCompra);
+            EsconderSubMenu();
+        }
+
+     
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelMenuFacturacion);
+        }
+
+        private void btnMenuCompra_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelMenuCompras);
+        }
+
+        private void btnMenuReportes_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelMenuReportes);
+        }
+
+        private void BtnAlmacen_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelMenuProd);
         }
     }
 }
