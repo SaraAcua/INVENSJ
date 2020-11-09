@@ -28,10 +28,40 @@ namespace Presentacion
         {
             InitializeComponent();
             PersonalizarSubMenu();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+
             this.ControlBox = false;
             this.DoubleBuffered = true;
-         
+
+           // this.SetStyle(ControlStyles.ResizeRedraw, true);
+
         }
+
+        private const int cGrip = 16;
+        private const int cCaption = 32;
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x34)
+            {
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.PointToClient(pos);
+                if (pos.Y < cCaption)
+                {
+                    m.Result = (IntPtr)2;
+                    return;
+                }
+                if(pos.X>=this.ClientSize.Width-cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)17;
+                    return;
+                }
+            }
+            base.WndProc(ref m);
+        }
+
+
+
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -258,6 +288,11 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0X112, 0xf012, 0);
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

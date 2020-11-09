@@ -101,6 +101,7 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(730, 646);
             this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // PanelMenuLateral
             // 
@@ -181,7 +182,7 @@
             // 
             this.picMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMax.Image = global::Presentacion.Properties.Resources.moverse;
-            this.picMax.Location = new System.Drawing.Point(650, 2);
+            this.picMax.Location = new System.Drawing.Point(649, 1);
             this.picMax.Name = "picMax";
             this.picMax.Size = new System.Drawing.Size(38, 35);
             this.picMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -193,7 +194,7 @@
             // 
             this.picMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMin.Image = global::Presentacion.Properties.Resources.minimizar;
-            this.picMin.Location = new System.Drawing.Point(611, 2);
+            this.picMin.Location = new System.Drawing.Point(611, 1);
             this.picMin.Name = "picMin";
             this.picMin.Size = new System.Drawing.Size(38, 35);
             this.picMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -534,13 +535,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(980, 684);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelMenuLateral);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(949, 600);
             this.Name = "FrmPrincipal";
