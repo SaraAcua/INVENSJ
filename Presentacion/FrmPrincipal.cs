@@ -28,7 +28,8 @@ namespace Presentacion
         {
             InitializeComponent();
             PersonalizarSubMenu();
-            //this.ControlBox = false;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
          
         }
 
@@ -222,6 +223,41 @@ namespace Presentacion
         private void BtnAlmacen_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMenuProd);
+        }
+
+        private void picExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void picMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            picMax.Visible = false;
+            picRestaurar.Visible = true;
+        }
+
+        private void picMin_Click(object sender, EventArgs e)
+        {
+         
+            this.WindowState = FormWindowState.Minimized;
+            picMax.Visible = true;
+            picRestaurar.Visible = false;
+        }
+
+        private void picRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            picMax.Visible = true;
+            picRestaurar.Visible = false;
+            picMin.Visible = true;
+            
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0X112, 0xf012, 0);
         }
     }
 }
