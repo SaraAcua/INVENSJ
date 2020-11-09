@@ -68,6 +68,7 @@
             this.btnEditarProv.Text = "Editar";
             this.btnEditarProv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditarProv.UseVisualStyleBackColor = false;
+            this.btnEditarProv.Click += new System.EventHandler(this.btnEditarProv_Click);
             // 
             // BtnRegsitrarProv
             // 

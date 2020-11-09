@@ -22,5 +22,11 @@ namespace Presentacion
             FormGestionProveedor gestionProveedor = new FormGestionProveedor();
             gestionProveedor.ShowDialog();
         }
+
+        private void btnEditarProv_Click(object sender, EventArgs e)
+        {
+            FormGestionProveedor gestionProveedor = new FormGestionProveedor();
+            gestionProveedor.ShowDialog();
+        }
     }
 }

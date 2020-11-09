@@ -117,4 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnListadoCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AsJAxklmZtOqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD7SURBVDhP
+        jdIxSwJhHMfxWwSdyllwiKbWhnwBDY63+EZccq6pVyAttoWLY0O0RTSEEqSjgQ4NDYk2aKDw9P3JPSD/
+        nufwCx+O4+75c8/dJco5V0A5U0SsEvx9he1ixUkK3wG+Iw7hS7Pl/wac4ChC13zRAfuWO2CBt8y50YMK
+        DnhHEzVc4wd94wsqOGCFOi63Z869wL6HDlR0C5vsqNaYGb9QuQNGuMUT/Hf32lDBAa84QxUPWOLDmENF
+        n+AKWqw08NS4g4oO2E1/36MxhQoO0P51QxctDNEw7qGCAwao4BgTfOLG0L+iolvQY2qxGuPCeIba6x3k
+        xYAk+QN6SDLmu3pyAwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnListadoProv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AsJAxklmZtOqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD7SURBVDhP
+        jdIxSwJhHMfxWwSdyllwiKbWhnwBDY63+EZccq6pVyAttoWLY0O0RTSEEqSjgQ4NDYk2aKDw9P3JPSD/
+        nufwCx+O4+75c8/dJco5V0A5U0SsEvx9he1ixUkK3wG+Iw7hS7Pl/wac4ChC13zRAfuWO2CBt8y50YMK
+        DnhHEzVc4wd94wsqOGCFOi63Z869wL6HDlR0C5vsqNaYGb9QuQNGuMUT/Hf32lDBAa84QxUPWOLDmENF
+        n+AKWqw08NS4g4oO2E1/36MxhQoO0P51QxctDNEw7qGCAwao4BgTfOLG0L+iolvQY2qxGuPCeIba6x3k
+        xYAk+QN6SDLmu3pyAwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnListadoVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AsJAxklmZtOqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD7SURBVDhP
+        jdIxSwJhHMfxWwSdyllwiKbWhnwBDY63+EZccq6pVyAttoWLY0O0RTSEEqSjgQ4NDYk2aKDw9P3JPSD/
+        nufwCx+O4+75c8/dJco5V0A5U0SsEvx9he1ixUkK3wG+Iw7hS7Pl/wac4ChC13zRAfuWO2CBt8y50YMK
+        DnhHEzVc4wd94wsqOGCFOi63Z869wL6HDlR0C5vsqNaYGb9QuQNGuMUT/Hf32lDBAa84QxUPWOLDmENF
+        n+AKWqw08NS4g4oO2E1/36MxhQoO0P51QxctDNEw7qGCAwao4BgTfOLG0L+iolvQY2qxGuPCeIba6x3k
+        xYAk+QN6SDLmu3pyAwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

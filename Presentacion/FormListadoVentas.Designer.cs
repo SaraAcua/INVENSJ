@@ -30,10 +30,11 @@
         {
             this.btnImprimir = new System.Windows.Forms.Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(601, 223);
+            this.btnImprimir.Location = new System.Drawing.Point(595, 228);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(91, 41);
             this.btnImprimir.TabIndex = 41;
@@ -55,46 +56,17 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 15;
+            this.guna2GradientPanel1.Controls.Add(this.textBox1);
             this.guna2GradientPanel1.Controls.Add(this.button3);
             this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.Controls.Add(this.comboBox1);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(48, 66);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(42, 109);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(547, 87);
             this.guna2GradientPanel1.TabIndex = 40;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Fecha";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(34, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 236);
-            this.dataGridView1.TabIndex = 39;
             // 
             // button3
             // 
@@ -115,12 +87,53 @@
             this.button3.Text = "     Buscar";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Fecha";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 228);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(547, 236);
+            this.dataGridView1.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(43, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(220, 20);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "LISTADO DE DE VENTAS";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(34, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 20);
+            this.textBox1.TabIndex = 23;
+            // 
             // FormListadoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(730, 646);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.dataGridView1);
@@ -131,6 +144,7 @@
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,7 +154,8 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

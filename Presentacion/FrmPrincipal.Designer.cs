@@ -28,40 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureInicio = new System.Windows.Forms.PictureBox();
-            this.pictureExpandir = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnConsultarProd = new System.Windows.Forms.Button();
-            this.btnRegistarProd = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnGestionVenta = new System.Windows.Forms.Button();
-            this.btnProveedores = new System.Windows.Forms.Button();
-            this.btnRegistarCompra = new System.Windows.Forms.Button();
             this.btnListadoCliente = new System.Windows.Forms.Button();
             this.btnListadoProv = new System.Windows.Forms.Button();
-            this.btnListadoCompras = new System.Windows.Forms.Button();
             this.btnListadoVentas = new System.Windows.Forms.Button();
             this.PanelMenuLateral = new System.Windows.Forms.Panel();
             this.panelMenuReportes = new System.Windows.Forms.Panel();
-            this.btnMenuReportes = new System.Windows.Forms.Button();
             this.panelMenuCompras = new System.Windows.Forms.Panel();
-            this.btnMenuCompra = new System.Windows.Forms.Button();
             this.panelMenuFacturacion = new System.Windows.Forms.Panel();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.panelMenuProd = new System.Windows.Forms.Panel();
-            this.BtnAlmacen = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureInicio = new System.Windows.Forms.PictureBox();
+            this.pictureExpandir = new System.Windows.Forms.PictureBox();
+            this.btnListadoCompras = new System.Windows.Forms.Button();
+            this.btnMenuReportes = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnRegistarCompra = new System.Windows.Forms.Button();
+            this.btnMenuCompra = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnGestionVenta = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnConsultarProd = new System.Windows.Forms.Button();
+            this.btnRegistarProd = new System.Windows.Forms.Button();
+            this.BtnAlmacen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).BeginInit();
             this.PanelMenuLateral.SuspendLayout();
             this.panelMenuReportes.SuspendLayout();
             this.panelMenuCompras.SuspendLayout();
             this.panelMenuFacturacion.SuspendLayout();
             this.panelMenuProd.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,28 +78,6 @@
             this.panel1.Size = new System.Drawing.Size(730, 38);
             this.panel1.TabIndex = 1;
             // 
-            // pictureInicio
-            // 
-            this.pictureInicio.Image = global::Presentacion.Properties.Resources.iconfinder_Artboard_1_30306981;
-            this.pictureInicio.Location = new System.Drawing.Point(56, 1);
-            this.pictureInicio.Name = "pictureInicio";
-            this.pictureInicio.Size = new System.Drawing.Size(38, 35);
-            this.pictureInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureInicio.TabIndex = 1;
-            this.pictureInicio.TabStop = false;
-            this.pictureInicio.Click += new System.EventHandler(this.pictureInicio_Click);
-            // 
-            // pictureExpandir
-            // 
-            this.pictureExpandir.Image = global::Presentacion.Properties.Resources.iconfinder_Burger_Menu_4781852;
-            this.pictureExpandir.Location = new System.Drawing.Point(-1, 0);
-            this.pictureExpandir.Name = "pictureExpandir";
-            this.pictureExpandir.Size = new System.Drawing.Size(51, 38);
-            this.pictureExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureExpandir.TabIndex = 0;
-            this.pictureExpandir.TabStop = false;
-            this.pictureExpandir.Click += new System.EventHandler(this.pictureExpandir_Click_1);
-            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.LightGray;
@@ -110,108 +89,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(730, 646);
             this.panelContenedor.TabIndex = 2;
             // 
-            // btnConsultarProd
-            // 
-            this.btnConsultarProd.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnConsultarProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultarProd.FlatAppearance.BorderSize = 0;
-            this.btnConsultarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnConsultarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarProd.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarProd.Location = new System.Drawing.Point(0, 40);
-            this.btnConsultarProd.Name = "btnConsultarProd";
-            this.btnConsultarProd.Size = new System.Drawing.Size(233, 40);
-            this.btnConsultarProd.TabIndex = 1;
-            this.btnConsultarProd.Text = "Consultar productos";
-            this.btnConsultarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarProd.UseVisualStyleBackColor = false;
-            this.btnConsultarProd.Click += new System.EventHandler(this.btnConsultarProd_Click);
-            // 
-            // btnRegistarProd
-            // 
-            this.btnRegistarProd.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnRegistarProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistarProd.FlatAppearance.BorderSize = 0;
-            this.btnRegistarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnRegistarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistarProd.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarProd.Location = new System.Drawing.Point(0, 0);
-            this.btnRegistarProd.Name = "btnRegistarProd";
-            this.btnRegistarProd.Size = new System.Drawing.Size(233, 40);
-            this.btnRegistarProd.TabIndex = 0;
-            this.btnRegistarProd.Text = "Gestiòn de productos ";
-            this.btnRegistarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistarProd.UseVisualStyleBackColor = false;
-            this.btnRegistarProd.Click += new System.EventHandler(this.btnRegistarProd_Click);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(0, 40);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(233, 40);
-            this.btnClientes.TabIndex = 1;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnConsultaFactura_Click);
-            // 
-            // btnGestionVenta
-            // 
-            this.btnGestionVenta.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnGestionVenta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGestionVenta.FlatAppearance.BorderSize = 0;
-            this.btnGestionVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnGestionVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionVenta.ForeColor = System.Drawing.Color.White;
-            this.btnGestionVenta.Location = new System.Drawing.Point(0, 0);
-            this.btnGestionVenta.Name = "btnGestionVenta";
-            this.btnGestionVenta.Size = new System.Drawing.Size(233, 40);
-            this.btnGestionVenta.TabIndex = 0;
-            this.btnGestionVenta.Text = "Gestiòn de Venta";
-            this.btnGestionVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionVenta.UseVisualStyleBackColor = false;
-            this.btnGestionVenta.Click += new System.EventHandler(this.btnGestionVenta_Click);
-            // 
-            // btnProveedores
-            // 
-            this.btnProveedores.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedores.FlatAppearance.BorderSize = 0;
-            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.ForeColor = System.Drawing.Color.White;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 40);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(233, 40);
-            this.btnProveedores.TabIndex = 1;
-            this.btnProveedores.Text = "Proveedores";
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.UseVisualStyleBackColor = false;
-            this.btnProveedores.Click += new System.EventHandler(this.btnConsultarCompra_Click);
-            // 
-            // btnRegistarCompra
-            // 
-            this.btnRegistarCompra.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnRegistarCompra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistarCompra.FlatAppearance.BorderSize = 0;
-            this.btnRegistarCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnRegistarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistarCompra.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarCompra.Location = new System.Drawing.Point(0, 0);
-            this.btnRegistarCompra.Name = "btnRegistarCompra";
-            this.btnRegistarCompra.Size = new System.Drawing.Size(233, 40);
-            this.btnRegistarCompra.TabIndex = 0;
-            this.btnRegistarCompra.Text = "Gestiòn de compra";
-            this.btnRegistarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistarCompra.UseVisualStyleBackColor = false;
-            this.btnRegistarCompra.Click += new System.EventHandler(this.btnRegistarCompra_Click);
-            // 
             // btnListadoCliente
             // 
             this.btnListadoCliente.BackColor = System.Drawing.Color.CadetBlue;
@@ -220,11 +97,13 @@
             this.btnListadoCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnListadoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListadoCliente.ForeColor = System.Drawing.Color.White;
+            this.btnListadoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnListadoCliente.Image")));
+            this.btnListadoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoCliente.Location = new System.Drawing.Point(0, 121);
             this.btnListadoCliente.Name = "btnListadoCliente";
             this.btnListadoCliente.Size = new System.Drawing.Size(233, 40);
             this.btnListadoCliente.TabIndex = 3;
-            this.btnListadoCliente.Text = "Listado clientes";
+            this.btnListadoCliente.Text = "        Listado clientes";
             this.btnListadoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoCliente.UseVisualStyleBackColor = false;
             this.btnListadoCliente.Click += new System.EventHandler(this.btnListadoCliente_Click);
@@ -237,31 +116,16 @@
             this.btnListadoProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnListadoProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListadoProv.ForeColor = System.Drawing.Color.White;
+            this.btnListadoProv.Image = ((System.Drawing.Image)(resources.GetObject("btnListadoProv.Image")));
+            this.btnListadoProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoProv.Location = new System.Drawing.Point(0, 40);
             this.btnListadoProv.Name = "btnListadoProv";
             this.btnListadoProv.Size = new System.Drawing.Size(233, 40);
             this.btnListadoProv.TabIndex = 2;
-            this.btnListadoProv.Text = "Listado proveedores";
+            this.btnListadoProv.Text = "        Listado proveedores";
             this.btnListadoProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoProv.UseVisualStyleBackColor = false;
             this.btnListadoProv.Click += new System.EventHandler(this.btnListadoProv_Click);
-            // 
-            // btnListadoCompras
-            // 
-            this.btnListadoCompras.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnListadoCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListadoCompras.FlatAppearance.BorderSize = 0;
-            this.btnListadoCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnListadoCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListadoCompras.ForeColor = System.Drawing.Color.White;
-            this.btnListadoCompras.Location = new System.Drawing.Point(0, 0);
-            this.btnListadoCompras.Name = "btnListadoCompras";
-            this.btnListadoCompras.Size = new System.Drawing.Size(233, 40);
-            this.btnListadoCompras.TabIndex = 1;
-            this.btnListadoCompras.Text = "Listado compras";
-            this.btnListadoCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListadoCompras.UseVisualStyleBackColor = false;
-            this.btnListadoCompras.Click += new System.EventHandler(this.btnListadoCompras_Click);
             // 
             // btnListadoVentas
             // 
@@ -271,11 +135,13 @@
             this.btnListadoVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnListadoVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListadoVentas.ForeColor = System.Drawing.Color.White;
+            this.btnListadoVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnListadoVentas.Image")));
+            this.btnListadoVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoVentas.Location = new System.Drawing.Point(0, 80);
             this.btnListadoVentas.Name = "btnListadoVentas";
             this.btnListadoVentas.Size = new System.Drawing.Size(233, 41);
             this.btnListadoVentas.TabIndex = 0;
-            this.btnListadoVentas.Text = "Listado ventas";
+            this.btnListadoVentas.Text = "        Listado ventas";
             this.btnListadoVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoVentas.UseVisualStyleBackColor = false;
             this.btnListadoVentas.Click += new System.EventHandler(this.btnConsultarReportes_Click);
@@ -313,6 +179,89 @@
             this.panelMenuReportes.Size = new System.Drawing.Size(233, 160);
             this.panelMenuReportes.TabIndex = 12;
             // 
+            // panelMenuCompras
+            // 
+            this.panelMenuCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuCompras.Controls.Add(this.btnProveedores);
+            this.panelMenuCompras.Controls.Add(this.btnRegistarCompra);
+            this.panelMenuCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuCompras.Location = new System.Drawing.Point(0, 424);
+            this.panelMenuCompras.Name = "panelMenuCompras";
+            this.panelMenuCompras.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuCompras.TabIndex = 10;
+            // 
+            // panelMenuFacturacion
+            // 
+            this.panelMenuFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuFacturacion.Controls.Add(this.btnClientes);
+            this.panelMenuFacturacion.Controls.Add(this.btnGestionVenta);
+            this.panelMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuFacturacion.Location = new System.Drawing.Point(0, 299);
+            this.panelMenuFacturacion.Name = "panelMenuFacturacion";
+            this.panelMenuFacturacion.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuFacturacion.TabIndex = 4;
+            // 
+            // panelMenuProd
+            // 
+            this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuProd.Controls.Add(this.btnConsultarProd);
+            this.panelMenuProd.Controls.Add(this.btnRegistarProd);
+            this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuProd.Location = new System.Drawing.Point(0, 174);
+            this.panelMenuProd.Name = "panelMenuProd";
+            this.panelMenuProd.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuProd.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(233, 129);
+            this.panel2.TabIndex = 0;
+            // 
+            // pictureInicio
+            // 
+            this.pictureInicio.Image = global::Presentacion.Properties.Resources.iconfinder_Artboard_1_30306981;
+            this.pictureInicio.Location = new System.Drawing.Point(56, 1);
+            this.pictureInicio.Name = "pictureInicio";
+            this.pictureInicio.Size = new System.Drawing.Size(38, 35);
+            this.pictureInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureInicio.TabIndex = 1;
+            this.pictureInicio.TabStop = false;
+            this.pictureInicio.Click += new System.EventHandler(this.pictureInicio_Click);
+            // 
+            // pictureExpandir
+            // 
+            this.pictureExpandir.Image = global::Presentacion.Properties.Resources.iconfinder_Burger_Menu_4781852;
+            this.pictureExpandir.Location = new System.Drawing.Point(-1, 0);
+            this.pictureExpandir.Name = "pictureExpandir";
+            this.pictureExpandir.Size = new System.Drawing.Size(51, 38);
+            this.pictureExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureExpandir.TabIndex = 0;
+            this.pictureExpandir.TabStop = false;
+            this.pictureExpandir.Click += new System.EventHandler(this.pictureExpandir_Click_1);
+            // 
+            // btnListadoCompras
+            // 
+            this.btnListadoCompras.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnListadoCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListadoCompras.FlatAppearance.BorderSize = 0;
+            this.btnListadoCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnListadoCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListadoCompras.ForeColor = System.Drawing.Color.White;
+            this.btnListadoCompras.Image = global::Presentacion.Properties.Resources.report;
+            this.btnListadoCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListadoCompras.Location = new System.Drawing.Point(0, 0);
+            this.btnListadoCompras.Name = "btnListadoCompras";
+            this.btnListadoCompras.Size = new System.Drawing.Size(233, 40);
+            this.btnListadoCompras.TabIndex = 1;
+            this.btnListadoCompras.Text = "        Listado compras";
+            this.btnListadoCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListadoCompras.UseVisualStyleBackColor = false;
+            this.btnListadoCompras.Click += new System.EventHandler(this.btnListadoCompras_Click);
+            // 
             // btnMenuReportes
             // 
             this.btnMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
@@ -333,16 +282,43 @@
             this.btnMenuReportes.UseVisualStyleBackColor = true;
             this.btnMenuReportes.Click += new System.EventHandler(this.btnMenuReportes_Click_1);
             // 
-            // panelMenuCompras
+            // btnProveedores
             // 
-            this.panelMenuCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuCompras.Controls.Add(this.btnProveedores);
-            this.panelMenuCompras.Controls.Add(this.btnRegistarCompra);
-            this.panelMenuCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuCompras.Location = new System.Drawing.Point(0, 424);
-            this.panelMenuCompras.Name = "panelMenuCompras";
-            this.panelMenuCompras.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuCompras.TabIndex = 10;
+            this.btnProveedores.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.ForeColor = System.Drawing.Color.White;
+            this.btnProveedores.Image = global::Presentacion.Properties.Resources.vendor;
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(0, 40);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(233, 40);
+            this.btnProveedores.TabIndex = 1;
+            this.btnProveedores.Text = "         Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnConsultarCompra_Click);
+            // 
+            // btnRegistarCompra
+            // 
+            this.btnRegistarCompra.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnRegistarCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistarCompra.FlatAppearance.BorderSize = 0;
+            this.btnRegistarCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnRegistarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistarCompra.ForeColor = System.Drawing.Color.White;
+            this.btnRegistarCompra.Image = global::Presentacion.Properties.Resources.product;
+            this.btnRegistarCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistarCompra.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistarCompra.Name = "btnRegistarCompra";
+            this.btnRegistarCompra.Size = new System.Drawing.Size(233, 40);
+            this.btnRegistarCompra.TabIndex = 0;
+            this.btnRegistarCompra.Text = "         Gestiòn de compra";
+            this.btnRegistarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistarCompra.UseVisualStyleBackColor = false;
+            this.btnRegistarCompra.Click += new System.EventHandler(this.btnRegistarCompra_Click);
             // 
             // btnMenuCompra
             // 
@@ -364,16 +340,43 @@
             this.btnMenuCompra.UseVisualStyleBackColor = true;
             this.btnMenuCompra.Click += new System.EventHandler(this.btnMenuCompra_Click_1);
             // 
-            // panelMenuFacturacion
+            // btnClientes
             // 
-            this.panelMenuFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuFacturacion.Controls.Add(this.btnClientes);
-            this.panelMenuFacturacion.Controls.Add(this.btnGestionVenta);
-            this.panelMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuFacturacion.Location = new System.Drawing.Point(0, 299);
-            this.panelMenuFacturacion.Name = "panelMenuFacturacion";
-            this.panelMenuFacturacion.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuFacturacion.TabIndex = 4;
+            this.btnClientes.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::Presentacion.Properties.Resources.customer;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 40);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(233, 40);
+            this.btnClientes.TabIndex = 1;
+            this.btnClientes.Text = "        Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnConsultaFactura_Click);
+            // 
+            // btnGestionVenta
+            // 
+            this.btnGestionVenta.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnGestionVenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionVenta.FlatAppearance.BorderSize = 0;
+            this.btnGestionVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnGestionVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionVenta.ForeColor = System.Drawing.Color.White;
+            this.btnGestionVenta.Image = global::Presentacion.Properties.Resources.sales;
+            this.btnGestionVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionVenta.Location = new System.Drawing.Point(0, 0);
+            this.btnGestionVenta.Name = "btnGestionVenta";
+            this.btnGestionVenta.Size = new System.Drawing.Size(233, 40);
+            this.btnGestionVenta.TabIndex = 0;
+            this.btnGestionVenta.Text = "        Gestiòn de Venta";
+            this.btnGestionVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionVenta.UseVisualStyleBackColor = false;
+            this.btnGestionVenta.Click += new System.EventHandler(this.btnGestionVenta_Click);
             // 
             // btnVentas
             // 
@@ -395,16 +398,43 @@
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // panelMenuProd
+            // btnConsultarProd
             // 
-            this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuProd.Controls.Add(this.btnConsultarProd);
-            this.panelMenuProd.Controls.Add(this.btnRegistarProd);
-            this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuProd.Location = new System.Drawing.Point(0, 174);
-            this.panelMenuProd.Name = "panelMenuProd";
-            this.panelMenuProd.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuProd.TabIndex = 2;
+            this.btnConsultarProd.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnConsultarProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultarProd.FlatAppearance.BorderSize = 0;
+            this.btnConsultarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnConsultarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarProd.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarProd.Image = global::Presentacion.Properties.Resources.magnifying_glass;
+            this.btnConsultarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarProd.Location = new System.Drawing.Point(0, 40);
+            this.btnConsultarProd.Name = "btnConsultarProd";
+            this.btnConsultarProd.Size = new System.Drawing.Size(233, 40);
+            this.btnConsultarProd.TabIndex = 1;
+            this.btnConsultarProd.Text = "        Consultar productos";
+            this.btnConsultarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarProd.UseVisualStyleBackColor = false;
+            this.btnConsultarProd.Click += new System.EventHandler(this.btnConsultarProd_Click);
+            // 
+            // btnRegistarProd
+            // 
+            this.btnRegistarProd.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnRegistarProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistarProd.FlatAppearance.BorderSize = 0;
+            this.btnRegistarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnRegistarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistarProd.ForeColor = System.Drawing.Color.White;
+            this.btnRegistarProd.Image = global::Presentacion.Properties.Resources.tag__1_;
+            this.btnRegistarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistarProd.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistarProd.Name = "btnRegistarProd";
+            this.btnRegistarProd.Size = new System.Drawing.Size(233, 40);
+            this.btnRegistarProd.TabIndex = 0;
+            this.btnRegistarProd.Text = "        Gestiòn de productos ";
+            this.btnRegistarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistarProd.UseVisualStyleBackColor = false;
+            this.btnRegistarProd.Click += new System.EventHandler(this.btnRegistarProd_Click);
             // 
             // BtnAlmacen
             // 
@@ -428,21 +458,13 @@
             this.BtnAlmacen.UseVisualStyleBackColor = false;
             this.BtnAlmacen.Click += new System.EventHandler(this.BtnAlmacen_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 129);
-            this.panel2.TabIndex = 0;
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.IMG_6180;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(233, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -466,14 +488,14 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).EndInit();
             this.PanelMenuLateral.ResumeLayout(false);
             this.panelMenuReportes.ResumeLayout(false);
             this.panelMenuCompras.ResumeLayout(false);
             this.panelMenuFacturacion.ResumeLayout(false);
             this.panelMenuProd.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
