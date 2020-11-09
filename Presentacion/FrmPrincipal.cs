@@ -23,6 +23,7 @@ namespace Presentacion
         FormListadoCompra listadoCompra = new FormListadoCompra();
         FormListadoProveedores listadoProveedorescs = new FormListadoProveedores();
         FormListadoCliente listadoCliente = new FormListadoCliente();
+        FormInicio inicio = new FormInicio();
         
         public FrmPrincipal()
         {
@@ -164,13 +165,13 @@ namespace Presentacion
 
         private void pictureInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormInicio());
+            AbrirFormEnPanel(inicio);
          
 
         }
         private void MostrarFormLogo()
         {
-            AbrirFormEnPanel(new FormInicio());
+            AbrirFormEnPanel(inicio);
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
