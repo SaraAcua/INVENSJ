@@ -40,9 +40,8 @@
             this.labelHora.Font = new System.Drawing.Font("Russo One", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHora.Location = new System.Drawing.Point(49, 372);
             this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(166, 64);
+            this.labelHora.Size = new System.Drawing.Size(0, 64);
             this.labelHora.TabIndex = 1;
-            this.labelHora.Text = "label";
             // 
             // labelFecha
             // 
@@ -51,9 +50,8 @@
             this.labelFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.labelFecha.Location = new System.Drawing.Point(53, 420);
             this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(86, 31);
+            this.labelFecha.Size = new System.Drawing.Size(0, 31);
             this.labelFecha.TabIndex = 2;
-            this.labelFecha.Text = "label2";
             // 
             // timerFechaHora
             // 
