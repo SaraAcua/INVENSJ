@@ -23,6 +23,7 @@ namespace ENTITY
         public string CodigoFactura { get; set; }
         public string Fecha { get; set; }
         public double ValorTotalFactura { get; set; }
+
         private List<DetalleFactura> Detalles;
         public string Tipo { get; set; }
         public Persona Persona { get; set; }
