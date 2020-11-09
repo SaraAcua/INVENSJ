@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -41,22 +41,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtNumeroDoc = new System.Windows.Forms.TextBox();
+            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
+            this.cmbTalla = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtStockProd = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCodigoProd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGVfactura = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,7 +71,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderRadius = 15;
-            this.guna2GradientPanel1.Controls.Add(this.textBox7);
+            this.guna2GradientPanel1.Controls.Add(this.txtFecha);
             this.guna2GradientPanel1.Controls.Add(this.txtTelefonoCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtDireccionCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
@@ -99,8 +99,8 @@
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.button1);
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
-            this.guna2GradientPanel1.Controls.Add(this.comboBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtNumeroDoc);
+            this.guna2GradientPanel1.Controls.Add(this.cmbTipoDocumento);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.Silver;
@@ -111,16 +111,16 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(562, 132);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // textBox7
+            // txtFecha
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox7.Location = new System.Drawing.Point(411, 68);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox7.Size = new System.Drawing.Size(128, 20);
-            this.textBox7.TabIndex = 34;
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtFecha.Location = new System.Drawing.Point(411, 68);
+            this.txtFecha.Multiline = true;
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtFecha.Size = new System.Drawing.Size(128, 20);
+            this.txtFecha.TabIndex = 34;
             // 
             // txtTelefonoCliente
             // 
@@ -255,22 +255,22 @@
             this.button1.Text = "      Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNumeroDoc
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(196, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtNumeroDoc.ForeColor = System.Drawing.Color.Black;
+            this.txtNumeroDoc.Location = new System.Drawing.Point(196, 31);
+            this.txtNumeroDoc.Name = "txtNumeroDoc";
+            this.txtNumeroDoc.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeroDoc.TabIndex = 5;
             // 
-            // comboBox1
+            // cmbTipoDocumento
             // 
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(89, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cmbTipoDocumento.ForeColor = System.Drawing.Color.Black;
+            this.cmbTipoDocumento.FormattingEnabled = true;
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(92, 30);
+            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
+            this.cmbTipoDocumento.Size = new System.Drawing.Size(89, 21);
+            this.cmbTipoDocumento.TabIndex = 4;
             // 
             // label3
             // 
@@ -299,15 +299,15 @@
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.button2);
             this.guna2GradientPanel2.Controls.Add(this.label10);
-            this.guna2GradientPanel2.Controls.Add(this.comboBox3);
-            this.guna2GradientPanel2.Controls.Add(this.comboBox2);
+            this.guna2GradientPanel2.Controls.Add(this.cmbColor);
+            this.guna2GradientPanel2.Controls.Add(this.cmbTalla);
             this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.Controls.Add(this.txtStockProd);
             this.guna2GradientPanel2.Controls.Add(this.label20);
             this.guna2GradientPanel2.Controls.Add(this.label19);
             this.guna2GradientPanel2.Controls.Add(this.label18);
             this.guna2GradientPanel2.Controls.Add(this.label14);
-            this.guna2GradientPanel2.Controls.Add(this.textBox2);
+            this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(21, 194);
@@ -345,21 +345,21 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Color";
             // 
-            // comboBox3
+            // cmbColor
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(168, 22);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(94, 21);
-            this.comboBox3.TabIndex = 43;
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Location = new System.Drawing.Point(168, 22);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(94, 21);
+            this.cmbColor.TabIndex = 43;
             // 
-            // comboBox2
+            // cmbTalla
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 22);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(48, 21);
-            this.comboBox2.TabIndex = 42;
+            this.cmbTalla.FormattingEnabled = true;
+            this.cmbTalla.Location = new System.Drawing.Point(114, 22);
+            this.cmbTalla.Name = "cmbTalla";
+            this.cmbTalla.Size = new System.Drawing.Size(48, 21);
+            this.cmbTalla.TabIndex = 42;
             // 
             // label8
             // 
@@ -376,7 +376,6 @@
             // 
             this.txtStockProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStockProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtStockProd.Enabled = false;
             this.txtStockProd.Location = new System.Drawing.Point(411, 23);
             this.txtStockProd.Multiline = true;
             this.txtStockProd.Name = "txtStockProd";
@@ -427,13 +426,13 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Codigo producto";
             // 
-            // textBox2
+            // txtCodigoProd
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(17, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(79, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtCodigoProd.ForeColor = System.Drawing.Color.Black;
+            this.txtCodigoProd.Location = new System.Drawing.Point(17, 23);
+            this.txtCodigoProd.Name = "txtCodigoProd";
+            this.txtCodigoProd.Size = new System.Drawing.Size(79, 20);
+            this.txtCodigoProd.TabIndex = 6;
             // 
             // label1
             // 
@@ -543,7 +542,7 @@
             this.guna2GradientPanel3.Controls.Add(this.label24);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label22);
-            this.guna2GradientPanel3.Controls.Add(this.textBox3);
+            this.guna2GradientPanel3.Controls.Add(this.txtCantidad);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2GradientPanel3.Location = new System.Drawing.Point(22, 251);
@@ -616,13 +615,13 @@
             this.label22.TabIndex = 37;
             this.label22.Text = "Cantidad";
             // 
-            // textBox3
+            // txtCantidad
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(16, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(61, 20);
-            this.textBox3.TabIndex = 38;
+            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
+            this.txtCantidad.Location = new System.Drawing.Point(16, 23);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(61, 20);
+            this.txtCantidad.TabIndex = 38;
             // 
             // pictureBox1
             // 
@@ -709,7 +708,7 @@
         private System.Windows.Forms.DataGridView dataGVfactura;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
@@ -720,7 +719,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCodigoProd;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label26;
@@ -733,22 +732,22 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtNumFactura;
         private System.Windows.Forms.Button btnGenerarVenta;
         private System.Windows.Forms.Button btnCancelarVenta;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTelefonoCliente;
         private System.Windows.Forms.TextBox txtDireccionCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumeroDoc;
         private System.Windows.Forms.TextBox txtStockProd;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbColor;
+        private System.Windows.Forms.ComboBox cmbTalla;
         private System.Windows.Forms.Label label8;
     }
 }

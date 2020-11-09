@@ -28,8 +28,24 @@ namespace Presentacion
             table.Columns.Add("Imagen");
 
             dataGvRegistroProd.DataSource = table;
-            // dataGvRegistroProd.DataSource = service.ConsultarTodos().Personas;
             dataGvRegistroProd.Refresh();
+            cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void Limpiar()
+        {
+            txtCodigoProd.Text = "";
+            txtNombreProd.Text = "";
+            txtPrecioCompra.Text = "";
+            txtPrecioVenta.Text = "";
+            txtStock.Text = "";
+            txtRutaImge.Text = "";
+            cmbColor.Text = "Seleccione";
+            cmbMarca.Text = "Seleccione";
+            cmbTalla.Text = "Seleccione";
+
         }
 
         private void btnEliminarProd_Click(object sender, EventArgs e)
@@ -51,21 +67,35 @@ namespace Presentacion
 
         private void picAgregarImage_Click(object sender, EventArgs e)
         {
-           OpenFileDialog imagen = new OpenFileDialog();
+            OpenFileDialog imagen = new OpenFileDialog();
             imagen.InitialDirectory = "C:\\";
             //imagen.Filter = "Archivos de imagen(*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG(*.png)|*.png|GIF(*.gif)*.gif";
-            
-            if (imagen.ShowDialog()==DialogResult.OK)
+
+            if (imagen.ShowDialog() == DialogResult.OK)
             {
                 picImgen.ImageLocation = imagen.FileName;
                 txtRutaImge.Text = imagen.FileName;
             }
             else
             {
-                MessageBox.Show("No selecciono la imagen","Informacion",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No selecciono la imagen", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
- 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(@"Esta seguro que desea salir del registro de producto?", @"Atención",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Limpiar();
+
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+                txtCodigoProd.Focus();
+            }
+        }
     }
 }

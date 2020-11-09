@@ -26,6 +26,10 @@ namespace Presentacion
             dataGVfactura.DataSource = table;
             InhabiltarText();
 
+            cmbTipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
         void InhabiltarText()
         {
@@ -33,6 +37,7 @@ namespace Presentacion
             txtDireccionCliente.Enabled = false;
             txtNombreCliente.Enabled = false;
             txtTelefonoCliente.Enabled = false;
+            txtStockProd.Enabled = false;
         }
 
 
@@ -49,14 +54,21 @@ namespace Presentacion
             cliente.ShowDialog();
            
         }
+        private void Limpiar()
+        {
+            txtNumeroDoc.Text = "";
+            txtNombreCliente.Text = "";
+            txtFecha.Text = "";
+            txtCodigoProd.Text = "";
+            txtCantidad.Text = "";
+        }
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(@"Esta seguro que desea salir de la Venta?", @"Atención",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
-                this.Dispose();
+                Limpiar();
             
             }
             else

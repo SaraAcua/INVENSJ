@@ -15,19 +15,52 @@ namespace Presentacion
         public FormGestionCompra()
         {
             InitializeComponent();
-           
+            cmbTipoDoc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
+
+
         }
 
         private void btnRegsitroProv_Click(object sender, EventArgs e)
         {
             FormGestionProveedor form = new FormGestionProveedor();
             form.ShowDialog();
-                
+
         }
 
         private void FormGestionCompra_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Limpiar()
+        {
+            txtNumeroCompra.Text = "";
+            txtFecha.Text = "";
+            cmbTipoDoc.Text = "";
+            txtNitProveedor.Text = "";
+            txtCodigoProd.Text = "";
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(@"Esta seguro que desea salir del registro de compra?", @"Atención",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                 Limpiar();
+
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+                //btnCancelar.Focus();
+            }
         }
     }
 }
