@@ -26,9 +26,11 @@ namespace Presentacion
             dataGVfactura.DataSource = table;
             InhabiltarText();
 
-            cmbTipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
+            TxtTalla.Enabled = false;
+            TxtColor.Enabled = false;
+            txtcantidadProd.Enabled = false;
+
+            LbelFechaFacturaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
         void InhabiltarText()
@@ -37,7 +39,7 @@ namespace Presentacion
             txtDireccionCliente.Enabled = false;
             txtNombreCliente.Enabled = false;
             txtTelefonoCliente.Enabled = false;
-            txtStockProd.Enabled = false;
+            txtcantidadProd.Enabled = false;
         }
 
 
@@ -58,7 +60,6 @@ namespace Presentacion
         {
             txtNumeroDoc.Text = "";
             txtNombreCliente.Text = "";
-            txtFecha.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
         }
@@ -69,6 +70,7 @@ namespace Presentacion
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Limpiar();
+             
             
             }
             else

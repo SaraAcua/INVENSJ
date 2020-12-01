@@ -30,47 +30,47 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.PanelMenuLateral = new System.Windows.Forms.Panel();
-            this.panelMenuReportes = new System.Windows.Forms.Panel();
-            this.panelMenuCompras = new System.Windows.Forms.Panel();
-            this.panelMenuFacturacion = new System.Windows.Forms.Panel();
-            this.panelMenuProd = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.picMax = new System.Windows.Forms.PictureBox();
             this.picMin = new System.Windows.Forms.PictureBox();
             this.picRestaurar = new System.Windows.Forms.PictureBox();
             this.picExit = new System.Windows.Forms.PictureBox();
             this.pictureInicio = new System.Windows.Forms.PictureBox();
             this.pictureExpandir = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.PanelMenuLateral = new System.Windows.Forms.Panel();
+            this.panelMenuReportes = new System.Windows.Forms.Panel();
             this.btnListadoCliente = new System.Windows.Forms.Button();
             this.btnListadoVentas = new System.Windows.Forms.Button();
             this.btnListadoProv = new System.Windows.Forms.Button();
             this.btnListadoCompras = new System.Windows.Forms.Button();
             this.btnMenuReportes = new System.Windows.Forms.Button();
+            this.panelMenuCompras = new System.Windows.Forms.Panel();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnRegistarCompra = new System.Windows.Forms.Button();
             this.btnMenuCompra = new System.Windows.Forms.Button();
+            this.panelMenuFacturacion = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnGestionVenta = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
+            this.panelMenuProd = new System.Windows.Forms.Panel();
             this.btnConsultarProd = new System.Windows.Forms.Button();
             this.btnRegistarProd = new System.Windows.Forms.Button();
             this.BtnAlmacen = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.PanelMenuLateral.SuspendLayout();
-            this.panelMenuReportes.SuspendLayout();
-            this.panelMenuCompras.SuspendLayout();
-            this.panelMenuFacturacion.SuspendLayout();
-            this.panelMenuProd.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).BeginInit();
+            this.PanelMenuLateral.SuspendLayout();
+            this.panelMenuReportes.SuspendLayout();
+            this.panelMenuCompras.SuspendLayout();
+            this.panelMenuFacturacion.SuspendLayout();
+            this.panelMenuProd.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,93 +90,6 @@
             this.panel1.Size = new System.Drawing.Size(730, 38);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.LightGray;
-            this.panelContenedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.ForeColor = System.Drawing.Color.White;
-            this.panelContenedor.Location = new System.Drawing.Point(250, 38);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(730, 646);
-            this.panelContenedor.TabIndex = 2;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
-            // 
-            // PanelMenuLateral
-            // 
-            this.PanelMenuLateral.AutoScroll = true;
-            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
-            this.PanelMenuLateral.Controls.Add(this.panelMenuReportes);
-            this.PanelMenuLateral.Controls.Add(this.btnMenuReportes);
-            this.PanelMenuLateral.Controls.Add(this.panelMenuCompras);
-            this.PanelMenuLateral.Controls.Add(this.btnMenuCompra);
-            this.PanelMenuLateral.Controls.Add(this.panelMenuFacturacion);
-            this.PanelMenuLateral.Controls.Add(this.btnVentas);
-            this.PanelMenuLateral.Controls.Add(this.panelMenuProd);
-            this.PanelMenuLateral.Controls.Add(this.BtnAlmacen);
-            this.PanelMenuLateral.Controls.Add(this.panel2);
-            this.PanelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelMenuLateral.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuLateral.Margin = new System.Windows.Forms.Padding(4);
-            this.PanelMenuLateral.Name = "PanelMenuLateral";
-            this.PanelMenuLateral.Size = new System.Drawing.Size(250, 684);
-            this.PanelMenuLateral.TabIndex = 0;
-            // 
-            // panelMenuReportes
-            // 
-            this.panelMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuReportes.Controls.Add(this.btnListadoCliente);
-            this.panelMenuReportes.Controls.Add(this.btnListadoVentas);
-            this.panelMenuReportes.Controls.Add(this.btnListadoProv);
-            this.panelMenuReportes.Controls.Add(this.btnListadoCompras);
-            this.panelMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuReportes.Location = new System.Drawing.Point(0, 549);
-            this.panelMenuReportes.Name = "panelMenuReportes";
-            this.panelMenuReportes.Size = new System.Drawing.Size(233, 160);
-            this.panelMenuReportes.TabIndex = 12;
-            // 
-            // panelMenuCompras
-            // 
-            this.panelMenuCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuCompras.Controls.Add(this.btnProveedores);
-            this.panelMenuCompras.Controls.Add(this.btnRegistarCompra);
-            this.panelMenuCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuCompras.Location = new System.Drawing.Point(0, 424);
-            this.panelMenuCompras.Name = "panelMenuCompras";
-            this.panelMenuCompras.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuCompras.TabIndex = 10;
-            // 
-            // panelMenuFacturacion
-            // 
-            this.panelMenuFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuFacturacion.Controls.Add(this.btnClientes);
-            this.panelMenuFacturacion.Controls.Add(this.btnGestionVenta);
-            this.panelMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuFacturacion.Location = new System.Drawing.Point(0, 299);
-            this.panelMenuFacturacion.Name = "panelMenuFacturacion";
-            this.panelMenuFacturacion.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuFacturacion.TabIndex = 4;
-            // 
-            // panelMenuProd
-            // 
-            this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuProd.Controls.Add(this.btnConsultarProd);
-            this.panelMenuProd.Controls.Add(this.btnRegistarProd);
-            this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuProd.Location = new System.Drawing.Point(0, 174);
-            this.panelMenuProd.Name = "panelMenuProd";
-            this.panelMenuProd.Size = new System.Drawing.Size(233, 80);
-            this.panelMenuProd.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 129);
-            this.panel2.TabIndex = 0;
             // 
             // picMax
             // 
@@ -247,6 +160,51 @@
             this.pictureExpandir.TabIndex = 0;
             this.pictureExpandir.TabStop = false;
             this.pictureExpandir.Click += new System.EventHandler(this.pictureExpandir_Click_1);
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.LightGray;
+            this.panelContenedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.ForeColor = System.Drawing.Color.White;
+            this.panelContenedor.Location = new System.Drawing.Point(250, 38);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(730, 646);
+            this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // PanelMenuLateral
+            // 
+            this.PanelMenuLateral.AutoScroll = true;
+            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
+            this.PanelMenuLateral.Controls.Add(this.panelMenuReportes);
+            this.PanelMenuLateral.Controls.Add(this.btnMenuReportes);
+            this.PanelMenuLateral.Controls.Add(this.panelMenuCompras);
+            this.PanelMenuLateral.Controls.Add(this.btnMenuCompra);
+            this.PanelMenuLateral.Controls.Add(this.panelMenuFacturacion);
+            this.PanelMenuLateral.Controls.Add(this.btnVentas);
+            this.PanelMenuLateral.Controls.Add(this.panelMenuProd);
+            this.PanelMenuLateral.Controls.Add(this.BtnAlmacen);
+            this.PanelMenuLateral.Controls.Add(this.panel2);
+            this.PanelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelMenuLateral.Location = new System.Drawing.Point(0, 0);
+            this.PanelMenuLateral.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelMenuLateral.Name = "PanelMenuLateral";
+            this.PanelMenuLateral.Size = new System.Drawing.Size(250, 684);
+            this.PanelMenuLateral.TabIndex = 0;
+            // 
+            // panelMenuReportes
+            // 
+            this.panelMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuReportes.Controls.Add(this.btnListadoCliente);
+            this.panelMenuReportes.Controls.Add(this.btnListadoVentas);
+            this.panelMenuReportes.Controls.Add(this.btnListadoProv);
+            this.panelMenuReportes.Controls.Add(this.btnListadoCompras);
+            this.panelMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuReportes.Location = new System.Drawing.Point(0, 549);
+            this.panelMenuReportes.Name = "panelMenuReportes";
+            this.panelMenuReportes.Size = new System.Drawing.Size(233, 160);
+            this.panelMenuReportes.TabIndex = 12;
             // 
             // btnListadoCliente
             // 
@@ -344,6 +302,17 @@
             this.btnMenuReportes.UseVisualStyleBackColor = true;
             this.btnMenuReportes.Click += new System.EventHandler(this.btnMenuReportes_Click_1);
             // 
+            // panelMenuCompras
+            // 
+            this.panelMenuCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuCompras.Controls.Add(this.btnProveedores);
+            this.panelMenuCompras.Controls.Add(this.btnRegistarCompra);
+            this.panelMenuCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuCompras.Location = new System.Drawing.Point(0, 424);
+            this.panelMenuCompras.Name = "panelMenuCompras";
+            this.panelMenuCompras.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuCompras.TabIndex = 10;
+            // 
             // btnProveedores
             // 
             this.btnProveedores.BackColor = System.Drawing.Color.CadetBlue;
@@ -402,6 +371,17 @@
             this.btnMenuCompra.UseVisualStyleBackColor = true;
             this.btnMenuCompra.Click += new System.EventHandler(this.btnMenuCompra_Click_1);
             // 
+            // panelMenuFacturacion
+            // 
+            this.panelMenuFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuFacturacion.Controls.Add(this.btnClientes);
+            this.panelMenuFacturacion.Controls.Add(this.btnGestionVenta);
+            this.panelMenuFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuFacturacion.Location = new System.Drawing.Point(0, 299);
+            this.panelMenuFacturacion.Name = "panelMenuFacturacion";
+            this.panelMenuFacturacion.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuFacturacion.TabIndex = 4;
+            // 
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.CadetBlue;
@@ -459,6 +439,17 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // panelMenuProd
+            // 
+            this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuProd.Controls.Add(this.btnConsultarProd);
+            this.panelMenuProd.Controls.Add(this.btnRegistarProd);
+            this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuProd.Location = new System.Drawing.Point(0, 174);
+            this.panelMenuProd.Name = "panelMenuProd";
+            this.panelMenuProd.Size = new System.Drawing.Size(233, 80);
+            this.panelMenuProd.TabIndex = 2;
             // 
             // btnConsultarProd
             // 
@@ -520,6 +511,15 @@
             this.BtnAlmacen.UseVisualStyleBackColor = false;
             this.BtnAlmacen.Click += new System.EventHandler(this.BtnAlmacen_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(233, 129);
+            this.panel2.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -551,18 +551,18 @@
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            this.PanelMenuLateral.ResumeLayout(false);
-            this.panelMenuReportes.ResumeLayout(false);
-            this.panelMenuCompras.ResumeLayout(false);
-            this.panelMenuFacturacion.ResumeLayout(false);
-            this.panelMenuProd.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureExpandir)).EndInit();
+            this.PanelMenuLateral.ResumeLayout(false);
+            this.panelMenuReportes.ResumeLayout(false);
+            this.panelMenuCompras.ResumeLayout(false);
+            this.panelMenuFacturacion.ResumeLayout(false);
+            this.panelMenuProd.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

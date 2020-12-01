@@ -45,6 +45,7 @@ namespace Presentacion
             cmbColor.Text = "Seleccione";
             cmbMarca.Text = "Seleccione";
             cmbTalla.Text = "Seleccione";
+            picImgen.Visible= false;
 
         }
 
