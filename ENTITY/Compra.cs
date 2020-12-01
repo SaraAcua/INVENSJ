@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class Compra:Factura
+    class Compra:FacturaCompra
     {
         public Compra(string codigoPedido, Persona persona)
         {

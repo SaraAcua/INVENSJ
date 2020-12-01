@@ -6,34 +6,35 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    class DetalleFactura 
+    class DetalleFacturaCompra 
     {
 
-        public DetalleFactura(Factura factura, Producto producto,  int cantidadProducto)
+        public DetalleFacturaCompra(FacturaCompra factura, Producto producto,  int cantidadProducto)
         {
             Factura = factura;
             Producto = producto;
             CodigoProducto = producto.CodigoProducto;
-            NombreProducto = producto.NombreProducto;
+            Descripcion = producto.Descripcion;
             CantidadProducto = cantidadProducto;
             FechaVenta = factura.Fecha;
-            Valorunitario = producto.ValorUnitarioVenta;
+            Costo = producto.Costo;
             
             
         }
             
-        public DetalleFactura()
+        public DetalleFacturaCompra()
         {
            
         }
 
         public string CodigoVenta { get; set; }
         public string CodigoProducto { get; set; }
-        public string NombreProducto { get; set; }
+        public string Descripcion { get; set; }
         public int CantidadProducto { get; set; }
         public string FechaVenta { get; set; }
         public int Valorunitario { get; set; }
-        public Factura Factura { get; set; }
+        public int Costo { get; set; }
+        public FacturaCompra Factura { get; set; }
         public Producto Producto { get; set; }
         public double ValorTotal { get { return Valorunitario * CantidadProducto; } set { } }
 
