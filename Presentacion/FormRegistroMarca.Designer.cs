@@ -30,15 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroMarca));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +46,7 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2Separator1);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.panel3);
-            this.guna2GradientPanel1.Controls.Add(this.textBox2);
             this.guna2GradientPanel1.Controls.Add(this.textBox1);
-            this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
@@ -60,6 +56,27 @@
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(394, 239);
             this.guna2GradientPanel1.TabIndex = 2;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.guna2Separator1.FillColor = System.Drawing.Color.Lavender;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 27);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(391, 5);
+            this.guna2Separator1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "REGISTRO DE MARCA";
             // 
             // panel3
             // 
@@ -108,35 +125,14 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(18, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(91, 23);
-            this.textBox2.TabIndex = 5;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(125, 79);
+            this.textBox1.Location = new System.Drawing.Point(98, 82);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 23);
+            this.textBox1.Size = new System.Drawing.Size(182, 23);
             this.textBox1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Codigo";
             // 
             // label2
             // 
@@ -144,32 +140,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(124, 63);
+            this.label2.Location = new System.Drawing.Point(95, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "REGISTRO DE MARCA";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.guna2Separator1.FillColor = System.Drawing.Color.Lavender;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 27);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(391, 5);
-            this.guna2Separator1.TabIndex = 7;
             // 
             // FormRegistroMarca
             // 
@@ -194,9 +169,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label1;

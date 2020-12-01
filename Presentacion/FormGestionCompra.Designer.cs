@@ -39,7 +39,6 @@
             this.btnRegsitroProv = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNitProveedor = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,14 +59,15 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cmbColor = new System.Windows.Forms.ComboBox();
-            this.cmbTalla = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
-            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
+            this.TxtColor = new System.Windows.Forms.TextBox();
+            this.TxtTalla = new System.Windows.Forms.TextBox();
+            this.LbelFechaFacturaCompra = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,7 +81,8 @@
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel1.Controls.Add(this.label9);
-            this.guna2GradientPanel1.Controls.Add(this.cmbTipoDoc);
+            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.LbelFechaFacturaCompra);
             this.guna2GradientPanel1.Controls.Add(this.txtDireccionCliente);
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.Controls.Add(this.txtTelefonoCliente);
@@ -92,7 +93,6 @@
             this.guna2GradientPanel1.Controls.Add(this.btnRegsitroProv);
             this.guna2GradientPanel1.Controls.Add(this.button1);
             this.guna2GradientPanel1.Controls.Add(this.txtNitProveedor);
-            this.guna2GradientPanel1.Controls.Add(this.txtFecha);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.label1);
@@ -109,11 +109,11 @@
             this.txtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccionCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtDireccionCliente.Enabled = false;
-            this.txtDireccionCliente.Location = new System.Drawing.Point(216, 72);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(315, 72);
             this.txtDireccionCliente.Multiline = true;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDireccionCliente.Size = new System.Drawing.Size(209, 20);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(110, 20);
             this.txtDireccionCliente.TabIndex = 37;
             // 
             // label5
@@ -121,7 +121,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(213, 58);
+            this.label5.Location = new System.Drawing.Point(312, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 36;
@@ -181,9 +181,9 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(20, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Nombre";
+            this.label4.Text = "Razon social";
             // 
             // btnRegsitroProv
             // 
@@ -195,7 +195,7 @@
             this.btnRegsitroProv.ForeColor = System.Drawing.Color.Black;
             this.btnRegsitroProv.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.btnRegsitroProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegsitroProv.Location = new System.Drawing.Point(501, 28);
+            this.btnRegsitroProv.Location = new System.Drawing.Point(398, 29);
             this.btnRegsitroProv.Name = "btnRegsitroProv";
             this.btnRegsitroProv.Size = new System.Drawing.Size(81, 26);
             this.btnRegsitroProv.TabIndex = 17;
@@ -213,7 +213,7 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::Presentacion.Properties.Resources.buscar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(418, 28);
+            this.button1.Location = new System.Drawing.Point(315, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 25);
             this.button1.TabIndex = 8;
@@ -223,24 +223,16 @@
             // txtNitProveedor
             // 
             this.txtNitProveedor.ForeColor = System.Drawing.Color.Black;
-            this.txtNitProveedor.Location = new System.Drawing.Point(299, 32);
+            this.txtNitProveedor.Location = new System.Drawing.Point(216, 32);
             this.txtNitProveedor.Name = "txtNitProveedor";
             this.txtNitProveedor.Size = new System.Drawing.Size(90, 20);
             this.txtNitProveedor.TabIndex = 5;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(104, 33);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(83, 20);
-            this.txtFecha.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(300, 17);
+            this.label3.Location = new System.Drawing.Point(217, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
@@ -299,9 +291,9 @@
             // txtPrecio
             // 
             this.txtPrecio.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecio.Location = new System.Drawing.Point(119, 23);
+            this.txtPrecio.Location = new System.Drawing.Point(116, 22);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(67, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(73, 20);
             this.txtPrecio.TabIndex = 42;
             // 
             // button5
@@ -362,11 +354,11 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(116, 9);
+            this.label19.Location = new System.Drawing.Point(118, 8);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.Size = new System.Drawing.Size(71, 13);
             this.label19.TabIndex = 30;
-            this.label19.Text = "Precio";
+            this.label19.Text = "Costo unitario";
             // 
             // label22
             // 
@@ -453,8 +445,8 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.cmbColor);
-            this.guna2GradientPanel2.Controls.Add(this.cmbTalla);
+            this.guna2GradientPanel2.Controls.Add(this.TxtColor);
+            this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
             this.guna2GradientPanel2.Controls.Add(this.button2);
             this.guna2GradientPanel2.Controls.Add(this.label10);
             this.guna2GradientPanel2.Controls.Add(this.label8);
@@ -467,22 +459,6 @@
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(593, 51);
             this.guna2GradientPanel2.TabIndex = 35;
-            // 
-            // cmbColor
-            // 
-            this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(216, 23);
-            this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(65, 21);
-            this.cmbColor.TabIndex = 46;
-            // 
-            // cmbTalla
-            // 
-            this.cmbTalla.FormattingEnabled = true;
-            this.cmbTalla.Location = new System.Drawing.Point(119, 23);
-            this.cmbTalla.Name = "cmbTalla";
-            this.cmbTalla.Size = new System.Drawing.Size(65, 21);
-            this.cmbTalla.TabIndex = 45;
             // 
             // button2
             // 
@@ -507,7 +483,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(213, 7);
+            this.label10.Location = new System.Drawing.Point(165, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 44;
@@ -543,24 +519,55 @@
             this.txtCodigoProd.Size = new System.Drawing.Size(82, 20);
             this.txtCodigoProd.TabIndex = 6;
             // 
-            // cmbTipoDoc
+            // TxtColor
             // 
-            this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(216, 34);
-            this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.Size = new System.Drawing.Size(65, 21);
-            this.cmbTipoDoc.TabIndex = 47;
+            this.TxtColor.ForeColor = System.Drawing.Color.Black;
+            this.TxtColor.Location = new System.Drawing.Point(165, 23);
+            this.TxtColor.Name = "TxtColor";
+            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.TabIndex = 48;
+            // 
+            // TxtTalla
+            // 
+            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
+            this.TxtTalla.Location = new System.Drawing.Point(115, 23);
+            this.TxtTalla.Name = "TxtTalla";
+            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.TabIndex = 47;
+            // 
+            // LbelFechaFacturaCompra
+            // 
+            this.LbelFechaFacturaCompra.AutoSize = true;
+            this.LbelFechaFacturaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaCompra.Location = new System.Drawing.Point(100, 35);
+            this.LbelFechaFacturaCompra.Name = "LbelFechaFacturaCompra";
+            this.LbelFechaFacturaCompra.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaCompra.TabIndex = 38;
+            this.LbelFechaFacturaCompra.Text = "/    /     /";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(216, 72);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(93, 20);
+            this.textBox1.TabIndex = 39;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(215, 18);
+            this.label9.Location = new System.Drawing.Point(217, 57);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "Tipo. Doc";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Barrio";
             // 
             // FormGestionCompra
             // 
@@ -598,7 +605,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -634,9 +640,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtCodigoProd;
-        private System.Windows.Forms.ComboBox cmbColor;
-        private System.Windows.Forms.ComboBox cmbTalla;
+        private System.Windows.Forms.TextBox TxtColor;
+        private System.Windows.Forms.TextBox TxtTalla;
+        private System.Windows.Forms.Label LbelFechaFacturaCompra;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbTipoDoc;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

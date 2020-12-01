@@ -15,10 +15,10 @@ namespace Presentacion
         public FormGestionCompra()
         {
             InitializeComponent();
-            cmbTipoDoc.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            TxtTalla.Enabled = false;
+            TxtColor.Enabled = false;
+            LbelFechaFacturaCompra.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
 
@@ -37,8 +37,7 @@ namespace Presentacion
         private void Limpiar()
         {
             txtNumeroCompra.Text = "";
-            txtFecha.Text = "";
-            cmbTipoDoc.Text = "";
+            LbelFechaFacturaCompra.Text = "";
             txtNitProveedor.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -42,16 +41,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNumeroDoc = new System.Windows.Forms.TextBox();
-            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbColor = new System.Windows.Forms.ComboBox();
-            this.cmbTalla = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtStockProd = new System.Windows.Forms.TextBox();
+            this.txtcantidadProd = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -75,6 +70,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
+            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
+            this.TxtTalla = new System.Windows.Forms.TextBox();
+            this.TxtColor = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
@@ -87,7 +89,11 @@
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderRadius = 15;
-            this.guna2GradientPanel1.Controls.Add(this.txtFecha);
+            this.guna2GradientPanel1.Controls.Add(this.label11);
+            this.guna2GradientPanel1.Controls.Add(this.textBox2);
+            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.LbelFechaFacturaVenta);
             this.guna2GradientPanel1.Controls.Add(this.txtTelefonoCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtDireccionCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
@@ -100,9 +106,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.button1);
             this.guna2GradientPanel1.Controls.Add(this.txtNumeroDoc);
-            this.guna2GradientPanel1.Controls.Add(this.cmbTipoDocumento);
             this.guna2GradientPanel1.Controls.Add(this.label3);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(21, 44);
@@ -111,22 +115,11 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(562, 132);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // txtFecha
-            // 
-            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtFecha.Location = new System.Drawing.Point(411, 68);
-            this.txtFecha.Multiline = true;
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFecha.Size = new System.Drawing.Size(128, 20);
-            this.txtFecha.TabIndex = 34;
-            // 
             // txtTelefonoCliente
             // 
             this.txtTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(411, 29);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(307, 104);
             this.txtTelefonoCliente.Multiline = true;
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -141,7 +134,7 @@
             this.txtDireccionCliente.Multiline = true;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDireccionCliente.Size = new System.Drawing.Size(279, 20);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(129, 20);
             this.txtDireccionCliente.TabIndex = 32;
             // 
             // txtNombreCliente
@@ -152,7 +145,7 @@
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNombreCliente.Size = new System.Drawing.Size(279, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(129, 20);
             this.txtNombreCliente.TabIndex = 31;
             // 
             // txtNumFactura
@@ -186,7 +179,7 @@
             this.btnAgraegarCliente.ForeColor = System.Drawing.Color.Black;
             this.btnAgraegarCliente.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.btnAgraegarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgraegarCliente.Location = new System.Drawing.Point(307, 47);
+            this.btnAgraegarCliente.Location = new System.Drawing.Point(307, 15);
             this.btnAgraegarCliente.Name = "btnAgraegarCliente";
             this.btnAgraegarCliente.Size = new System.Drawing.Size(81, 35);
             this.btnAgraegarCliente.TabIndex = 16;
@@ -199,7 +192,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(411, 52);
+            this.label7.Location = new System.Drawing.Point(411, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 15;
@@ -210,7 +203,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(408, 12);
+            this.label6.Location = new System.Drawing.Point(326, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 12;
@@ -223,9 +216,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(14, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Direcciòn";
+            this.label5.Text = "Barrio";
             // 
             // label4
             // 
@@ -248,7 +241,7 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::Presentacion.Properties.Resources.buscar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(306, 12);
+            this.button1.Location = new System.Drawing.Point(223, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 32);
             this.button1.TabIndex = 6;
@@ -258,51 +251,31 @@
             // txtNumeroDoc
             // 
             this.txtNumeroDoc.ForeColor = System.Drawing.Color.Black;
-            this.txtNumeroDoc.Location = new System.Drawing.Point(196, 31);
+            this.txtNumeroDoc.Location = new System.Drawing.Point(102, 30);
             this.txtNumeroDoc.Name = "txtNumeroDoc";
             this.txtNumeroDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroDoc.TabIndex = 5;
-            // 
-            // cmbTipoDocumento
-            // 
-            this.cmbTipoDocumento.ForeColor = System.Drawing.Color.Black;
-            this.cmbTipoDocumento.FormattingEnabled = true;
-            this.cmbTipoDocumento.Location = new System.Drawing.Point(92, 30);
-            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
-            this.cmbTipoDocumento.Size = new System.Drawing.Size(89, 21);
-            this.cmbTipoDocumento.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(196, 12);
+            this.label3.Location = new System.Drawing.Point(102, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Numero documento";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(86, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tipo . Doc. Cliente";
-            // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BorderRadius = 15;
+            this.guna2GradientPanel2.Controls.Add(this.TxtColor);
+            this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
             this.guna2GradientPanel2.Controls.Add(this.button2);
             this.guna2GradientPanel2.Controls.Add(this.label10);
-            this.guna2GradientPanel2.Controls.Add(this.cmbColor);
-            this.guna2GradientPanel2.Controls.Add(this.cmbTalla);
             this.guna2GradientPanel2.Controls.Add(this.label8);
-            this.guna2GradientPanel2.Controls.Add(this.txtStockProd);
+            this.guna2GradientPanel2.Controls.Add(this.txtcantidadProd);
             this.guna2GradientPanel2.Controls.Add(this.label20);
             this.guna2GradientPanel2.Controls.Add(this.label19);
             this.guna2GradientPanel2.Controls.Add(this.label18);
@@ -327,7 +300,7 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::Presentacion.Properties.Resources.buscar;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(306, 13);
+            this.button2.Location = new System.Drawing.Point(225, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(82, 32);
             this.button2.TabIndex = 35;
@@ -339,49 +312,33 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(175, 7);
+            this.label10.Location = new System.Drawing.Point(152, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 44;
             this.label10.Text = "Color";
-            // 
-            // cmbColor
-            // 
-            this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(168, 22);
-            this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(94, 21);
-            this.cmbColor.TabIndex = 43;
-            // 
-            // cmbTalla
-            // 
-            this.cmbTalla.FormattingEnabled = true;
-            this.cmbTalla.Location = new System.Drawing.Point(114, 22);
-            this.cmbTalla.Name = "cmbTalla";
-            this.cmbTalla.Size = new System.Drawing.Size(48, 21);
-            this.cmbTalla.TabIndex = 42;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(116, 7);
+            this.label8.Location = new System.Drawing.Point(102, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 39;
             this.label8.Text = "Talla";
             // 
-            // txtStockProd
+            // txtcantidadProd
             // 
-            this.txtStockProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStockProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtStockProd.Location = new System.Drawing.Point(411, 23);
-            this.txtStockProd.Multiline = true;
-            this.txtStockProd.Name = "txtStockProd";
-            this.txtStockProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtStockProd.Size = new System.Drawing.Size(46, 20);
-            this.txtStockProd.TabIndex = 37;
+            this.txtcantidadProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcantidadProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtcantidadProd.Location = new System.Drawing.Point(411, 23);
+            this.txtcantidadProd.Multiline = true;
+            this.txtcantidadProd.Name = "txtcantidadProd";
+            this.txtcantidadProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtcantidadProd.Size = new System.Drawing.Size(49, 20);
+            this.txtcantidadProd.TabIndex = 37;
             // 
             // label20
             // 
@@ -411,9 +368,9 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(411, 7);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 13);
+            this.label18.Size = new System.Drawing.Size(49, 13);
             this.label18.TabIndex = 28;
-            this.label18.Text = "Stock";
+            this.label18.Text = "Cantidad";
             // 
             // label14
             // 
@@ -560,7 +517,7 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = global::Presentacion.Properties.Resources.basura;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(397, 17);
+            this.button5.Location = new System.Drawing.Point(410, 17);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(85, 23);
             this.button5.TabIndex = 41;
@@ -576,7 +533,7 @@
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(306, 17);
+            this.button4.Location = new System.Drawing.Point(226, 17);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 23);
             this.button4.TabIndex = 40;
@@ -663,6 +620,77 @@
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
             this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
             // 
+            // LbelFechaFacturaVenta
+            // 
+            this.LbelFechaFacturaVenta.AutoSize = true;
+            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
+            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
+            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaVenta.TabIndex = 34;
+            this.LbelFechaFacturaVenta.Text = "/    /     /";
+            // 
+            // TxtTalla
+            // 
+            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
+            this.TxtTalla.Location = new System.Drawing.Point(102, 23);
+            this.TxtTalla.Name = "TxtTalla";
+            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.TabIndex = 45;
+            // 
+            // TxtColor
+            // 
+            this.TxtColor.ForeColor = System.Drawing.Color.Black;
+            this.TxtColor.Location = new System.Drawing.Point(152, 23);
+            this.TxtColor.Name = "TxtColor";
+            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.TabIndex = 46;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Location = new System.Drawing.Point(167, 69);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(129, 20);
+            this.textBox1.TabIndex = 35;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(164, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Apellidos";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox2.Location = new System.Drawing.Point(167, 104);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.Size = new System.Drawing.Size(129, 20);
+            this.textBox2.TabIndex = 37;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(164, 91);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Direcciòn";
+            // 
             // FormCrearVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,9 +736,7 @@
         private System.Windows.Forms.DataGridView dataGVfactura;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -736,18 +762,22 @@
         private System.Windows.Forms.TextBox txtNumFactura;
         private System.Windows.Forms.Button btnGenerarVenta;
         private System.Windows.Forms.Button btnCancelarVenta;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTelefonoCliente;
         private System.Windows.Forms.TextBox txtDireccionCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtNumeroDoc;
-        private System.Windows.Forms.TextBox txtStockProd;
+        private System.Windows.Forms.TextBox txtcantidadProd;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbColor;
-        private System.Windows.Forms.ComboBox cmbTalla;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LbelFechaFacturaVenta;
+        private System.Windows.Forms.TextBox TxtColor;
+        private System.Windows.Forms.TextBox TxtTalla;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

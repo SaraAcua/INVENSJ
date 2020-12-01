@@ -30,11 +30,13 @@
         {
             this.btnImprimir = new System.Windows.Forms.Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimeListadoCompra1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeListadoCompra = new System.Windows.Forms.DateTimePicker();
+            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +58,11 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 15;
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
-            this.guna2GradientPanel1.Controls.Add(this.button3);
+            this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.Controls.Add(this.dateTimeListadoCompra1);
+            this.guna2GradientPanel1.Controls.Add(this.dateTimeListadoCompra);
+            this.guna2GradientPanel1.Controls.Add(this.button3);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(42, 109);
@@ -67,6 +71,48 @@
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(547, 87);
             this.guna2GradientPanel1.TabIndex = 40;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(225, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Hasta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(35, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Desde";
+            // 
+            // dateTimeListadoCompra1
+            // 
+            this.dateTimeListadoCompra1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeListadoCompra1.Location = new System.Drawing.Point(228, 42);
+            this.dateTimeListadoCompra1.Name = "dateTimeListadoCompra1";
+            this.dateTimeListadoCompra1.Size = new System.Drawing.Size(121, 20);
+            this.dateTimeListadoCompra1.TabIndex = 33;
+            this.dateTimeListadoCompra1.Value = new System.DateTime(2020, 11, 30, 0, 0, 0, 0);
+            // 
+            // dateTimeListadoCompra
+            // 
+            this.dateTimeListadoCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeListadoCompra.Location = new System.Drawing.Point(36, 42);
+            this.dateTimeListadoCompra.Name = "dateTimeListadoCompra";
+            this.dateTimeListadoCompra.Size = new System.Drawing.Size(127, 20);
+            this.dateTimeListadoCompra.TabIndex = 32;
+            this.dateTimeListadoCompra.Value = new System.DateTime(2020, 11, 30, 0, 0, 0, 0);
             // 
             // button3
             // 
@@ -80,24 +126,12 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Presentacion.Properties.Resources.buscar;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(172, 33);
+            this.button3.Location = new System.Drawing.Point(415, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
-            this.button3.TabIndex = 22;
+            this.button3.TabIndex = 31;
             this.button3.Text = "     Buscar";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Fecha";
             // 
             // dataGridView1
             // 
@@ -119,13 +153,6 @@
             this.label2.Size = new System.Drawing.Size(220, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "LISTADO DE DE VENTAS";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 23;
             // 
             // FormListadoVentas
             // 
@@ -152,10 +179,12 @@
 
         private System.Windows.Forms.Button btnImprimir;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimeListadoCompra1;
+        private System.Windows.Forms.DateTimePicker dateTimeListadoCompra;
+        private System.Windows.Forms.Button button3;
     }
 }
