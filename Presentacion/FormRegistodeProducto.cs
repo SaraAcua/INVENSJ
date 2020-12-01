@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Presentacion
 {
     public partial class FormRegistodeProducto : Form
     {
+        ProductoService productoService = new ProductoService();
+
+
         DataTable table = new DataTable();
         public FormRegistodeProducto()
         {
+
+
             InitializeComponent();
 
             table.Columns.Add("Codigo");
