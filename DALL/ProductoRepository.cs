@@ -1,13 +1,11 @@
 ﻿using ENTITY;
 using System;
 using System.Collections.Generic;
-using System.Data.OracleClient;
-//using Oracle.ManagedDataAccess.Client;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-
+using Oracle.ManagedDataAccess.Client;
 
 namespace DALL
 {
@@ -21,7 +19,7 @@ namespace DALL
         }
 
 
-        /*
+        
         public int GuardarProducto(Producto producto)
         {
             using (var command = _connection.CreateCommand())
@@ -60,7 +58,7 @@ namespace DALL
             }
         }
 
-        */
+        
 
         private Producto DataReaderMapToProducto(OracleDataReader dataReader)
         {
