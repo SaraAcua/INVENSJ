@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ENTITY
+{
+    class FacturaCompra
+    {
+        public FacturaCompra(Persona persona, string codigoFactura, string fecha, int valorTotalFactura)
+        {
+            CodigoFactura = codigoFactura;
+            Fecha = fecha;
+            ValorTotalFactura = valorTotalFactura;
+            Tipo = "Compra";
+        }
+
+        public FacturaCompra()
+        {
+
+        }
+
+        public string CodigoFactura { get; set; }
+        public string Fecha { get; set; }
+        public double ValorTotalFactura { get; set; }
+
+        private List<DetalleFacturaCompra> Detalles;
+        public string Tipo { get; set; }
+        public Persona Persona { get; set; }
+
+        
+        public void AgregarDetalle(Producto producto, int cantidad)
+        {
+            DetalleFacturaCompra detalle = new DetalleFacturaCompra(this, producto, cantidad);
+            Detalles.Add(detalle);
+        }
+
+
+        public void CalcularTotalFactura()
+        {
+            ValorTotalFactura = Detalles.Sum(d=>d.ValorTotal);
+        }
+
+
+        
+
+
+    }
+}
