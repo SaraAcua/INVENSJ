@@ -32,6 +32,7 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.btnConexion = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // labelHora
@@ -58,12 +59,28 @@
             this.timerFechaHora.Enabled = true;
             this.timerFechaHora.Tick += new System.EventHandler(this.timerFechaHora_Tick);
             // 
+            // btnConexion
+            // 
+            this.btnConexion.CheckedState.Parent = this.btnConexion;
+            this.btnConexion.CustomImages.Parent = this.btnConexion;
+            this.btnConexion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnConexion.ForeColor = System.Drawing.Color.White;
+            this.btnConexion.HoverState.Parent = this.btnConexion;
+            this.btnConexion.Location = new System.Drawing.Point(269, 157);
+            this.btnConexion.Name = "btnConexion";
+            this.btnConexion.ShadowDecoration.Parent = this.btnConexion;
+            this.btnConexion.Size = new System.Drawing.Size(180, 45);
+            this.btnConexion.TabIndex = 3;
+            this.btnConexion.Text = "PROBAR CONEXION";
+            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(730, 606);
+            this.Controls.Add(this.btnConexion);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelHora);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -79,5 +96,6 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.Timer timerFechaHora;
+        private Guna.UI2.WinForms.Guna2Button btnConexion;
     }
 }

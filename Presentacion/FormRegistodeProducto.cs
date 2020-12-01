@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using ENTITY;
 
 namespace Presentacion
 {
     public partial class FormRegistodeProducto : Form
     {
-        ProductoService productoService = new ProductoService();
+        ProductoService productoService ;
+        Producto producto;
 
 
         DataTable table = new DataTable();
@@ -22,6 +24,7 @@ namespace Presentacion
 
 
             InitializeComponent();
+           // productoService = new ProductoService(ConfigConnection.connectionString);
 
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
