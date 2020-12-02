@@ -64,7 +64,7 @@ namespace Presentacion
         {
             Cliente cliente = MapearCliente();
             string mensaje = clienteService.GuardarCliente(cliente);
-            MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Infomarcion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             Limpiar();
 
         }
