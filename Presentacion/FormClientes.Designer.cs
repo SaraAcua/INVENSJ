@@ -44,11 +44,13 @@
             // 
             // dtgcliente
             // 
+            this.dtgcliente.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtgcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgcliente.Location = new System.Drawing.Point(62, 183);
+            this.dtgcliente.Location = new System.Drawing.Point(93, 253);
+            this.dtgcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgcliente.Name = "dtgcliente";
-            this.dtgcliente.Size = new System.Drawing.Size(612, 217);
+            this.dtgcliente.Size = new System.Drawing.Size(918, 300);
             this.dtgcliente.TabIndex = 0;
             // 
             // label1
@@ -56,8 +58,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(65, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(98, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 3;
@@ -71,11 +73,11 @@
             this.guna2GradientPanel1.Controls.Add(this.txtId);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(62, 78);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(93, 108);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(268, 87);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(402, 120);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
             // label2
@@ -84,7 +86,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 20);
+            this.label2.Location = new System.Drawing.Point(60, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 19;
@@ -102,9 +105,10 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::Presentacion.Properties.Resources.buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(139, 39);
+            this.btnBuscar.Location = new System.Drawing.Point(208, 54);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(83, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(124, 42);
             this.btnBuscar.TabIndex = 18;
             this.btnBuscar.Text = "     Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -124,23 +128,24 @@
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.HoverState.Parent = this.txtId;
-            this.txtId.Location = new System.Drawing.Point(40, 39);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Location = new System.Drawing.Point(60, 54);
+            this.txtId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
             this.txtId.PlaceholderText = "";
             this.txtId.SelectedText = "";
             this.txtId.ShadowDecoration.Parent = this.txtId;
-            this.txtId.Size = new System.Drawing.Size(92, 20);
+            this.txtId.Size = new System.Drawing.Size(138, 28);
             this.txtId.TabIndex = 17;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnEditarCliente);
             this.panel3.Controls.Add(this.BtnRegsitrarCliente);
-            this.panel3.Location = new System.Drawing.Point(410, 105);
+            this.panel3.Location = new System.Drawing.Point(615, 145);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(168, 58);
+            this.panel3.Size = new System.Drawing.Size(252, 80);
             this.panel3.TabIndex = 22;
             // 
             // btnEditarCliente
@@ -153,9 +158,10 @@
             this.btnEditarCliente.ForeColor = System.Drawing.Color.Black;
             this.btnEditarCliente.Image = global::Presentacion.Properties.Resources.edit;
             this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarCliente.Location = new System.Drawing.Point(89, 1);
+            this.btnEditarCliente.Location = new System.Drawing.Point(134, 1);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(71, 54);
+            this.btnEditarCliente.Size = new System.Drawing.Size(106, 75);
             this.btnEditarCliente.TabIndex = 9;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -172,9 +178,10 @@
             this.BtnRegsitrarCliente.ForeColor = System.Drawing.Color.Black;
             this.BtnRegsitrarCliente.Image = global::Presentacion.Properties.Resources.diskette;
             this.BtnRegsitrarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(3, 2);
+            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(4, 3);
+            this.BtnRegsitrarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnRegsitrarCliente.Name = "BtnRegsitrarCliente";
-            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(80, 54);
+            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(120, 75);
             this.BtnRegsitrarCliente.TabIndex = 7;
             this.BtnRegsitrarCliente.Text = "Registrar";
             this.BtnRegsitrarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -183,15 +190,18 @@
             // 
             // FormClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(730, 646);
+            this.ClientSize = new System.Drawing.Size(1095, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.dtgcliente);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormClientes";
             this.Text = "FormClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dtgcliente)).EndInit();

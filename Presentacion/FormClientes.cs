@@ -36,14 +36,13 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-          // BusquedaClienteRespuesta respuesta = new BusquedaClienteRespuesta();
+          
       
             var respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
             List<Cliente> clientes = new List<Cliente>();
             if (!respuesta.Error)
             {
-                // dtgcliente.DataSource = null;
-
+  
                 clientes.Add(respuesta.Cliente);
                 dtgcliente.DataSource = clientes;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();

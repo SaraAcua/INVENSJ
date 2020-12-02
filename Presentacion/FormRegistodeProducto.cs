@@ -31,8 +31,9 @@ namespace Presentacion
 
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
-            llenarCombo();
+            llenarComboColor();
             // cmbMarca.Items.Add();
+            LlenarComboTalla();
 
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
@@ -50,16 +51,13 @@ namespace Presentacion
             cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-         void llenarCombo()
+         void llenarComboColor()
         {
             
            ColorService colorService= new ColorService(ConfigConnection.connectionString);
             cmbColor.DataSource = colorService.ConsultarColor();
-            /*cmbColor.DisplayMember = "  NOMBRE";
-                cmbColor.ValueMember = "CODIGO_COLOR";*/
-
-               
-           
+            cmbColor.Refresh();
+ 
         }
 
         private void Limpiar()
@@ -75,6 +73,19 @@ namespace Presentacion
             cmbTalla.Text = "Seleccione";
             picImgen.Visible= false;
 
+        }
+        private void LlenarComboTalla()
+        {
+            cmbTalla.Text = "SELECCIONE";
+        
+            cmbTalla.Items.Add("S");
+            cmbTalla.Items.Add("XS");
+            cmbTalla.Items.Add("XXS");
+            cmbTalla.Items.Add("M");
+            cmbTalla.Items.Add("L");
+            cmbTalla.Items.Add("XL");
+            cmbTalla.Items.Add("XXL");
+          
         }
 
         private void btnEliminarProd_Click(object sender, EventArgs e)
