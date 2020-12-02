@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +10,18 @@ using System.Windows.Forms;
 using BLL;
 using ENTITY;
 
+
 namespace Presentacion
 {
     public partial class FormRegistodeProducto : Form
     {
         ProductoService productoService ;
         Producto producto;
+       
+       
+        Color color;
+
+
 
 
         DataTable table = new DataTable();
@@ -25,6 +31,8 @@ namespace Presentacion
 
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
+            llenarCombo();
+            // cmbMarca.Items.Add();
 
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
@@ -41,6 +49,17 @@ namespace Presentacion
             cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+         void llenarCombo()
+        {
+            
+           ColorService colorService= new ColorService(ConfigConnection.connectionString);
+            cmbColor.DataSource = colorService.ConsultarColor();
+            /*cmbColor.DisplayMember = "  NOMBRE";
+                cmbColor.ValueMember = "CODIGO_COLOR";*/
+
+               
+           
         }
 
         private void Limpiar()
@@ -131,8 +150,7 @@ namespace Presentacion
             // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             // Limpiar();
 
-            cmbColor.Items.Add("");
-            cmbMarca.Items.Add("");
+   
         }
 
     }

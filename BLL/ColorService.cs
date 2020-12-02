@@ -18,6 +18,10 @@ namespace BLL
             repositorio = new ColorRepository(conexion);
         }
 
+        public ColorService()
+        {
+        }
+
         public string GuardarColor(Color color)
         {
             try
@@ -35,6 +39,29 @@ namespace BLL
                 return $"Error de la Aplicacion: {e.Message}";
             }
             finally { conexion.Close(); }
+        }
+
+
+        public List<String> ConsultarColor()
+        {
+            List<String> coloresString = new List<string>();
+            coloresString.Add("SELECCIONE");
+            try
+            {
+                conexion.Open();
+                List<Color> ColoresRegistrados = repositorio.ConsultarTodos();
+                conexion.Close();
+                foreach(Color color in ColoresRegistrados)
+                {
+                    coloresString.Add(color.Nombre);
+                }
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return coloresString;
         }
 
 

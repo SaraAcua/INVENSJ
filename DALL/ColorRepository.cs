@@ -49,7 +49,7 @@ namespace DALL
         {
             if (!dataReader.HasRows) return null;
             Color color = new Color();
-            color.Nombre = dataReader.GetString(1);
+            color.Nombre = dataReader.GetString(0);
             return color;
 
         }

@@ -18,6 +18,10 @@ namespace BLL
             repositorio = new ClienteRepository(conexion);
         }
 
+        public ClienteService()
+        {
+        }
+
         public string GuardarCliente(Cliente cliente)
         {
             try

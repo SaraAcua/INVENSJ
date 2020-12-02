@@ -39,12 +39,13 @@ namespace Presentacion
           // BusquedaClienteRespuesta respuesta = new BusquedaClienteRespuesta();
       
             var respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
-
-            if (respuesta.Error==false)
+            List<Cliente> clientes = new List<Cliente>();
+            if (!respuesta.Error)
             {
-               // dtgcliente.DataSource = null;
-                respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
-                dtgcliente.DataSource = respuesta.Cliente;
+                // dtgcliente.DataSource = null;
+
+                clientes.Add(respuesta.Cliente);
+                dtgcliente.DataSource = clientes;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
             }
@@ -53,9 +54,6 @@ namespace Presentacion
             {
                 MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-       
-            MessageBox.Show(respuesta.Mensaje, "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
         }
 
