@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DALL
 {
-    class ColorRepository
+    public class ColorRepository
     {
         private readonly OracleConnection _connection;
         public ColorRepository(ConnectionManager connection)
@@ -16,7 +16,7 @@ namespace DALL
         }
 
 
-        public int Guardar(string nombreColor)
+        public int GuardarColor(string nombreColor)
         {
             using (var command = _connection.CreateCommand())
             {
@@ -28,6 +28,8 @@ namespace DALL
                 return filas;
             }
         }
+
+
 
 
     }
