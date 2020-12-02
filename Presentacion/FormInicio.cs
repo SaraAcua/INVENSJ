@@ -32,7 +32,7 @@ namespace Presentacion
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Conexión válida");
+                    MessageBox.Show("Conexión válida ");
                 }
                 catch (Exception exception)
                 {
