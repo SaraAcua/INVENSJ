@@ -22,8 +22,8 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert Into color 
-                values(:Nombre)"; ;
+                command.CommandText = @"insert into color 
+                values (:cdcolor.NEXTVAL,: Nombre)"; ;
                 command.Parameters.Add("Nombre", OracleDbType.Varchar2).Value = color.Nombre;
                 var filas = command.ExecuteNonQuery();
                 return filas;
