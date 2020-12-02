@@ -28,9 +28,9 @@ namespace DALL
                 values(:Identificacion,:TipoIdentificacion,:RazonSocial,:Telefono,:Barrio,:Direccion,:Email)";
                 command.Parameters.Add("Identificacion", OracleDbType.Varchar2).Value = proveedor.Identificacion;
                 command.Parameters.Add("TipoIdentificacion", OracleDbType.Varchar2).Value = proveedor.TipoIdentificacion;
-                command.Parameters.Add("RazonSocial", OracleDbType.Int32).Value = proveedor.RazonSocial;
-                command.Parameters.Add("Telefono", OracleDbType.Int32).Value = proveedor.Telefono;
-                command.Parameters.Add("Barrio", OracleDbType.Int32).Value = proveedor.Barrio;
+                command.Parameters.Add("RazonSocial", OracleDbType.Varchar2).Value = proveedor.RazonSocial;
+                command.Parameters.Add("Telefono", OracleDbType.Varchar2).Value = proveedor.Telefono;
+                command.Parameters.Add("Barrio", OracleDbType.Varchar2).Value = proveedor.Barrio;
                 command.Parameters.Add("Direccion", OracleDbType.Varchar2).Value = proveedor.Direccion;
                 command.Parameters.Add("Email", OracleDbType.Varchar2).Value = proveedor.Email;
                 var filas = command.ExecuteNonQuery();
