@@ -11,6 +11,7 @@ namespace ENTITY
         public Color(string nombre)
         {
 
+
            Nombre = nombre;
            
         }
