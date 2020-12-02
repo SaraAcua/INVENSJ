@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using ENTITY;
 
 namespace Presentacion
 {
@@ -40,7 +41,6 @@ namespace Presentacion
         void llenarCombo()
         {
             cmboTipo.Items.Add("CC");
-            cmboTipo.Items.Add("CE");
             cmboTipo.Items.Add("NIT");
             cmboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -51,9 +51,9 @@ namespace Presentacion
             proveedor.TipoIdentificacion = cmboTipo.Text;
             proveedor.Identificacion = txtId.Text;
             proveedor.RazonSocial = txtRazonSocial.Text;
+            proveedor.Telefono = txtTelefono.Text;
             proveedor.Barrio = txtBarrio.Text;
             proveedor.Direccion = txtDireccion.Text;
-            proveedor.Telefono = txtTelefono.Text;
             proveedor.Email = txtEmail.Text;
             return proveedor;
 
