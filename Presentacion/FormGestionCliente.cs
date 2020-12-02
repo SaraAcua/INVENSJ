@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Presentacion
 {
     public partial class FormGestionCliente : Form
     {
-        ClienteRepository cliente = new ClienteRepository();
+        ClienteService cliente = new ClienteService();
         public FormGestionCliente()
         {
             InitializeComponent();
