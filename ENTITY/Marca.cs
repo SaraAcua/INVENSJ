@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    public class Color
+    public class Marca
     {
-        public Color(string nombre)
+        public Marca(string nombre)
         {
 
 
-           Nombre = nombre;
-           
+            Nombre = nombre;
+
         }
 
-        public Color()
+        public Marca()
         {
 
         }
 
 
         public string Nombre { get; set; }
-
     }
 }
