@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DALL
 {
-    class ClienteRepository
+    public class ClienteRepository
     {
 
 
@@ -20,7 +20,7 @@ namespace DALL
         }
 
 
-        public int GuardarProveedor(Cliente cliente)
+        public int GuardarCliente(Cliente cliente)
         {
             using (var command = _connection.CreateCommand())
             {
