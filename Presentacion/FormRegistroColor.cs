@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,10 +36,10 @@ namespace Presentacion
                 this.DialogResult = DialogResult.None;
             }
         }
-        private Color MapearColor()
+        private String MapearColor()
         {
             color = new Color();
-          //  color.Nombre = txtNombre.Text;
+           color. = txtNombre.Text;
         
             return color;
 
