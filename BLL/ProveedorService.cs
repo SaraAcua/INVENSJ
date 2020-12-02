@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class ClienteService
+    public class ProveedorService
     {
         private readonly ConnectionManager conexion;
-        private readonly ClienteRepository repositorio;
-        public ClienteService(string connectionString)
+        private readonly ProveedorRepository repositorio;
+        public ProveedorService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
-            repositorio = new ClienteRepository(conexion);
+            repositorio = new ProveedorRepository(conexion);
         }
 
-        public string GuardarCliente(Cliente cliente)
+        public string GuardarProveedor(Proveedor proveedor)
         {
             try
             {
                 conexion.Open();
-                if (repositorio.BuscarPorIdentificacionCliente(cliente.Identificacion) == null)
+                if (repositorio.BuscarPorIdentificacionProveedor(proveedor.Identificacion) == null)
                 {
-                    repositorio.GuardarCliente(cliente);
-                    return $"Se guardaron los del cliente: {cliente.Nombre} datos satisfactoriamente";
+                    repositorio.GuardarProveedor(proveedor);
+                    return $"Se guardaron los del cliente: {proveedor.RazonSocial} datos satisfactoriamente";
                 }
-                return $"El cliente ya existe";
+                return $"El proveedor ya existe";
             }
             catch (Exception e)
             {

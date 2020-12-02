@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DALL
 {
-    class ProveedorRepository
+    public class ProveedorRepository
     {
 
         private readonly OracleConnection _connection;

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteRepository.cs" />
+    <Compile Include="ColorRepository.cs" />
     <Compile Include="MovimientoRepository.cs" />
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="ConnectionManager.cs" />
