@@ -38,6 +38,57 @@ namespace BLL
         }
 
 
+        public BusquedaClienteRespuesta BuscarPorIdentificacion(string identificacion)
+        {
+            BusquedaClienteRespuesta respuesta = new BusquedaClienteRespuesta();
+            try
+            {
+
+                conexion.Open();
+                respuesta.Cliente = repositorio.BuscarPorIdentificacionCliente(identificacion);
+                conexion.Close();
+                respuesta.Mensaje = (respuesta.Cliente != null) ? "Se encontró el cliente buscado" : "El cliente buscado no existe";
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
+
+
 
     }
+
+
+
+    public class ConsultaClienteRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<Cliente> Clientes { get; set; }
+    }
+
+
+    public class BusquedaClienteRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Cliente Cliente { get; set; }
+    }
+
+
+
+    public class ConteoClienteRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public int Cuenta { get; set; }
+    }
+
 }
