@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class ClienteService
+    public class ClienteService
     {
         private readonly ConnectionManager conexion;
         private readonly ClienteRepository repositorio;
