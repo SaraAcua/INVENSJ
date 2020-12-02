@@ -46,6 +46,7 @@
     <Compile Include="FacturaCompra.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="FacturaVenta.cs" />
+    <Compile Include="Marca.cs" />
     <Compile Include="Movimientos.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Producto.cs" />

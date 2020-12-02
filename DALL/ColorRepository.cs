@@ -22,10 +22,9 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"insert into color 
-                values (:Cod,: Nombre)"; ;
+                command.CommandText = @"pr_insertar_color";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("Nombre", OracleDbType.Varchar2).Value = color.Nombre;
-                command.Parameters.Add("Cod", OracleDbType.Varchar2).Value = "PRB";
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
@@ -37,7 +36,7 @@ namespace DALL
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "select * from color where nombre=:Nombre";
+                command.CommandText = "select codigo_color from color where nombre=:Nombre";
                 command.Parameters.Add("nombre", OracleDbType.Varchar2).Value = nombre;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
@@ -56,6 +55,25 @@ namespace DALL
         }
 
 
+        public List<Color> ConsultarTodos()
+        {
+            OracleDataReader dataReader;
+            List<Color> proveedores = new List<Color>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select nombre from color ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Color color = DataReaderMapToColor(dataReader);
+                        proveedores.Add(color);
+                    }
+                }
+            }
+            return proveedores;
+        }
 
 
     }

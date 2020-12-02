@@ -8,25 +8,26 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class ColorService
+    class MarcaService
     {
+
         private readonly ConnectionManager conexion;
-        private readonly ColorRepository repositorio;
-        public ColorService(string connectionString)
+        private readonly MarcaRepository repositorio;
+        public MarcaService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
-            repositorio = new ColorRepository(conexion);
+            repositorio = new MarcaRepository(conexion);
         }
 
-        public string GuardarColor(Color color)
+        public string GuardarMarca(Marca marca)
         {
             try
             {
                 conexion.Open();
-                if (repositorio.BuscarPorNombreColor(color.Nombre) == null)
+                if (repositorio.BuscarPorNombreMarca(marca.Nombre) == null)
                 {
-                    repositorio.GuardarColor(color);
-                    return $"Se guardaron los datos del color: {color.Nombre} datos satisfactoriamente";
+                    repositorio.GuardarMarca(marca);
+                    return $"Se guardaron los datos de la marca : {marca.Nombre} datos satisfactoriamente";
                 }
                 return $"La marca ya existe";
             }
