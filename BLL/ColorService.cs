@@ -1,4 +1,5 @@
 ﻿using DALL;
+using ENTITY;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,16 +18,17 @@ namespace BLL
             repositorio = new ColorRepository(conexion);
         }
 
-        public string GuardarColor(string nombreColor)
+        public string GuardarColor(Color color)
         {
             try
             {
                 conexion.Open();
-                
-                    repositorio.GuardarColor(nombreColor);
-                    return $"Se guardaron los datos de color: {nombreColor}  satisfactoriamente";
-                
-                
+                if (repositorio.BuscarPorNombreColor(color.Nombre) == null)
+                {
+                    repositorio.GuardarColor(color);
+                    return $"Se guardaron los datos del color: {color.Nombre} datos satisfactoriamente";
+                }
+                return $"El proveedor ya existe";
             }
             catch (Exception e)
             {
@@ -34,6 +36,7 @@ namespace BLL
             }
             finally { conexion.Close(); }
         }
+
 
 
     }
