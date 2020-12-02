@@ -39,5 +39,62 @@ namespace BLL
 
 
 
+        public ConsultaColorRespuesta ConsultarTodos()
+        {
+            ConsultaColorRespuesta respuesta = new ConsultaColorRespuesta();
+            try
+            {
+
+                conexion.Open();
+                respuesta.Colores = repositorio.ConsultarTodos();
+                conexion.Close();
+                if (respuesta.Colores.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+
+        }
+
+
+
     }
+
+    public class ConsultaColorRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<Color> Colores { get; set; }
+    }
+
+
+    public class BusquedaColorRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Color Color { get; set; }
+    }
+
+
+
+    public class ConteoColorRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public int Cuenta { get; set; }
+    }
+
 }
