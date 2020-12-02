@@ -12,6 +12,7 @@ namespace Presentacion
 {
     public partial class FormGestionCliente : Form
     {
+        ClienteRepository cliente = new ClienteRepository();
         public FormGestionCliente()
         {
             InitializeComponent();
@@ -37,6 +38,11 @@ namespace Presentacion
                 this.DialogResult = DialogResult.None;
                 //btnCancelar.Focus();
             }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            txtId.Text=
         }
     }
 }
