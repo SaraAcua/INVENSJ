@@ -8,10 +8,10 @@ namespace ENTITY
 {
     class Venta:FacturaCompra
     {
-        public Venta(Persona persona)
+        public Venta(Cliente persona)
         {
             Persona = persona;
-            Tipo = "Venta";
+            
         }
 
         public Venta()

@@ -8,12 +8,12 @@ namespace ENTITY
 {
     class FacturaCompra
     {
-        public FacturaCompra(Persona persona, string codigoFactura, string fecha, int valorTotalFactura)
+        public FacturaCompra(Proveedor proveedor, string codigoFactura, string fecha, int valorTotalFactura)
         {
             CodigoFactura = codigoFactura;
             Fecha = fecha;
             ValorTotalFactura = valorTotalFactura;
-            Tipo = "Compra";
+            
         }
 
         public FacturaCompra()
@@ -26,8 +26,7 @@ namespace ENTITY
         public double ValorTotalFactura { get; set; }
 
         private List<DetalleFacturaCompra> Detalles;
-        public string Tipo { get; set; }
-        public Persona Persona { get; set; }
+        public Cliente Persona { get; set; }
 
         
         public void AgregarDetalle(Producto producto, int cantidad)

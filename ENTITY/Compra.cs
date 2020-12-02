@@ -8,11 +8,11 @@ namespace ENTITY
 {
     class Compra:FacturaCompra
     {
-        public Compra(string codigoPedido, Persona persona)
+        public Compra(string codigoPedido, Cliente persona)
         {
             CodigoPedido = codigoPedido;
             Persona = persona;
-            Tipo = "Compra";
+            
         }
 
         public Compra()
