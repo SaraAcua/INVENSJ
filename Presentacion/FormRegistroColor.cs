@@ -55,7 +55,7 @@ namespace Presentacion
 
         private void Limpiar()
         {
-            txtNombre.Text = " ";
+            txtNombre.Text = "";
      
         }
     }
