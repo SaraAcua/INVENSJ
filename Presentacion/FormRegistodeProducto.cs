@@ -126,11 +126,13 @@ namespace Presentacion
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-           //Producto producto = MapearMarca();
-           // string mensaje = productoService.GuardarProducto(producto);
-           // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-           // Limpiar();
+            //Producto producto = MapearMarca();
+            // string mensaje = productoService.GuardarProducto(producto);
+            // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            // Limpiar();
 
+            cmbColor.Items.Add("");
+            cmbMarca.Items.Add("");
         }
 
     }
