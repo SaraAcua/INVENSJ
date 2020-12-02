@@ -20,13 +20,22 @@ namespace Presentacion
         {
             InitializeComponent();
             clienteService = new ClienteService(ConfigConnection.connectionString);
+            llenarCombo();
+            
 
         }
         private void inhhabilitar()
         {
 
         }
-      
+      void llenarCombo()
+        {
+            cmboTipo.Items.Add("CC");
+            cmboTipo.Items.Add("CE");
+            cmboTipo.Items.Add("TI");
+            cmboTipo.Items.Add("NIT");
+            cmboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -64,7 +73,7 @@ namespace Presentacion
         {
             Cliente cliente = MapearCliente();
             string mensaje = clienteService.GuardarCliente(cliente);
-            MessageBox.Show(mensaje, "Infomarcion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             Limpiar();
 
         }
