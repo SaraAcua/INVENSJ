@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using ENTITY;
 
 namespace Presentacion
 {
     public partial class FormGestionCliente : Form
     {
-        ClienteService cliente = new ClienteService();
+        ClienteService clienteService;
+        Cliente cliente;
         public FormGestionCliente()
         {
             InitializeComponent();
-         
+            clienteService = new ClienteService(ConfigConnection.connectionString);
+
         }
         private void inhhabilitar()
         {
@@ -41,9 +44,41 @@ namespace Presentacion
             }
         }
 
+        private Cliente MapearCliente()
+        {
+            cliente = new Cliente();
+            cliente.TipoIdentificacion = cmboTipo.Text;
+            cliente.Identificacion = txtId.Text;
+            cliente.Nombre = txtname.Text;
+            cliente.Apellidos = txtApellido.Text;
+            cliente.Barrio = txtBarrio.Text;
+            cliente.Direccion = txtDirecciòn.Text;
+            cliente.Telefono = txtTelefono.Text;
+            cliente.Email = txtEmail.Text;
+            return cliente;
+
+        }
+
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            txtId.Text=
+            Cliente cliente = MapearCliente();
+            string mensaje = clienteService.GuardarCliente(cliente);
+            MessageBox.Show(mensaje, "Mensaje de Guardado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            Limpiar();
+
+        }
+
+        private void Limpiar()
+        {
+            txtId.Text = "";
+            txtname.Text = "";
+            txtApellido.Text = "";
+            txtBarrio.Text = "";
+            txtDirecciòn.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
+
         }
     }
 }
