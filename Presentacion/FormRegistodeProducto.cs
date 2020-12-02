@@ -24,7 +24,7 @@ namespace Presentacion
 
 
             InitializeComponent();
-           // productoService = new ProductoService(ConfigConnection.connectionString);
+            productoService = new ProductoService(ConfigConnection.connectionString);
 
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
@@ -46,10 +46,10 @@ namespace Presentacion
         private void Limpiar()
         {
             txtCodigoProd.Text = "";
-            txtNombreProd.Text = "";
-            txtPrecioCompra.Text = "";
+            txtDescripcionProd.Text = "";
+            txtCostoCompra.Text = "";
             txtPrecioVenta.Text = "";
-            txtStock.Text = "";
+            txtCantidad.Text = "";
             txtRutaImge.Text = "";
             cmbColor.Text = "Seleccione";
             cmbMarca.Text = "Seleccione";
@@ -107,5 +107,32 @@ namespace Presentacion
                 txtCodigoProd.Focus();
             }
         }
+        private Producto MapearMarca()
+        {
+          producto = new Producto();
+            producto.CodigoProducto = txtCodigoProd.Text;
+            producto.Descripcion = txtDescripcionProd.Text;
+            producto.Costo = int.Parse( txtCostoCompra.Text);
+            producto.Precio = int.Parse(txtCodigoProd.Text);
+            producto.Iva = int.Parse(txtIva.Text);
+            producto.Talla = cmbColor.Text;
+            producto.Color = cmbColor.Text;
+            producto.Marca = cmbMarca.Text;
+            producto.StockMinimo = int.Parse(txtStockMinimo.Text);
+            producto.StockMaximo= int.Parse(txtStockMaximo.Text);
+            producto.Cantidad= int.Parse(txtCantidad.Text);
+            return producto;
+
+        }
+        private void btnGuardarProducto_Click(object sender, EventArgs e)
+        {
+           //Producto producto = MapearMarca();
+           // string mensaje = productoService.GuardarProducto(producto);
+           // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+           // Limpiar();
+
+        }
+
     }
-}
+    }
+
