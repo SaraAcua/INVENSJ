@@ -12,13 +12,13 @@ namespace Presentacion
 {
     public partial class FormRegistroColor : Form
     {
-        ColorService colorService;
+       ColorService colorService;
         Color color;
         public FormRegistroColor()
         {
             InitializeComponent();
 
-            colorService = new ColorService(ConfigConnection.connectionString);
+           colorService = new ColorService(ConfigConnection.connectionString);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Presentacion
         private Color MapearColor()
         {
             color = new Color();
-            color.Nombre = txtNombre.Text;
+          //  color.Nombre = txtNombre.Text;
         
             return color;
 
