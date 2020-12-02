@@ -1,4 +1,5 @@
 ﻿using BLL;
+using ENTITY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,11 @@ namespace Presentacion
 {
     public partial class FormClientes : Form
     {
-        ClienteService clienteService = new ClienteService();
+        ClienteService clienteService;
         public FormClientes()
         {
-            clienteService = new ClienteService(ConfigConnection.connectionString, ConfigConnection.ProviderName);
+            clienteService = new ClienteService(ConfigConnection.connectionString);
+
             InitializeComponent();
         }
 
@@ -34,26 +36,31 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ConsultaPersonaRespuesta respuesta = new ConsultaPersonaRespuesta();
+          // BusquedaClienteRespuesta respuesta = new BusquedaClienteRespuesta();
+      
+            var respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
 
-         
-                dtgcliente.DataSource = null;
-                respuesta = clienteService.ConsultarTodos();
-                dtgcliente.DataSource = respuesta.Personas;
+            if (respuesta.Error==false)
+            {
+               // dtgcliente.DataSource = null;
+                respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
+                dtgcliente.DataSource = respuesta.Cliente;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
-
-
             }
+
             else
             {
-                MessageBox.Show("Debe Seleccionar una opción ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-
+       
             MessageBox.Show(respuesta.Mensaje, "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            
         }
+
+      
+
     }
     }
-}
+
