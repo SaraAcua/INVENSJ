@@ -194,10 +194,12 @@ namespace Presentacion
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-           // Producto producto = MapearProducto();
-            //string mensaje = productoService.GuardarProducto(producto);
-            // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            // Limpiar();
+           Producto producto = MapearProducto();
+            string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text));
+             MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+           
+
+            //Limpiar();
 
    
         }
