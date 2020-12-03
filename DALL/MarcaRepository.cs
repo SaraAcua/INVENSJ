@@ -55,5 +55,27 @@ namespace DALL
         }
 
 
+
+
+        public List<Marca> ConsultarTodos()
+        {
+            OracleDataReader dataReader;
+            List<Marca> marcas = new List<Marca>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select nombre from marca ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Marca marca = DataReaderMapToMarca(dataReader);
+                        marcas.Add(marca);
+                    }
+                }
+            }
+            return marcas;
+        }
+
     }
 }

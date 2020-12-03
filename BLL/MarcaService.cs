@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class MarcaService
+    public class MarcaService
     {
 
         private readonly ConnectionManager conexion;
@@ -40,5 +40,66 @@ namespace BLL
 
 
 
+        public ConsultaMarcaRespuesta ConsultarTodos()
+        {
+            ConsultaMarcaRespuesta respuesta = new ConsultaMarcaRespuesta();
+            try
+            {
+
+                conexion.Open();
+                respuesta.Marcas = repositorio.ConsultarTodos();
+                conexion.Close();
+                if (respuesta.Marcas.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+    public class ConsultaMarcaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<Marca> Marcas { get; set; }
+    }
+
+
+    public class BusquedaMarcaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Marca Marca { get; set; }
+    }
+
+
+
+    public class ConteoMarcaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public int Cuenta { get; set; }
     }
 }
