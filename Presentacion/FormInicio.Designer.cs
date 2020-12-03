@@ -32,7 +32,12 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.btnConexion = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.SuspendLayout();
             // 
             // labelHora
@@ -59,20 +64,53 @@
             this.timerFechaHora.Enabled = true;
             this.timerFechaHora.Tick += new System.EventHandler(this.timerFechaHora_Tick);
             // 
-            // btnConexion
+            // guna2GradientPanel1
             // 
-            this.btnConexion.CheckedState.Parent = this.btnConexion;
-            this.btnConexion.CustomImages.Parent = this.btnConexion;
-            this.btnConexion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnConexion.ForeColor = System.Drawing.Color.White;
-            this.btnConexion.HoverState.Parent = this.btnConexion;
-            this.btnConexion.Location = new System.Drawing.Point(269, 157);
-            this.btnConexion.Name = "btnConexion";
-            this.btnConexion.ShadowDecoration.Parent = this.btnConexion;
-            this.btnConexion.Size = new System.Drawing.Size(180, 45);
-            this.btnConexion.TabIndex = 3;
-            this.btnConexion.Text = "PROBAR CONEXION";
-            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(489, 43);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel1.TabIndex = 3;
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(263, 43);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel2.TabIndex = 4;
+            // 
+            // guna2GradientPanel3
+            // 
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(42, 43);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.ShadowDecoration.Parent = this.guna2GradientPanel3;
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel3.TabIndex = 4;
+            // 
+            // guna2GradientPanel4
+            // 
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(263, 149);
+            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
+            this.guna2GradientPanel4.ShadowDecoration.Parent = this.guna2GradientPanel4;
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel4.TabIndex = 5;
+            // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(489, 149);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.ShadowDecoration.Parent = this.guna2GradientPanel5;
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel5.TabIndex = 5;
+            // 
+            // guna2GradientPanel6
+            // 
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(42, 149);
+            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
+            this.guna2GradientPanel6.ShadowDecoration.Parent = this.guna2GradientPanel6;
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(200, 100);
+            this.guna2GradientPanel6.TabIndex = 5;
             // 
             // FormInicio
             // 
@@ -80,7 +118,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(730, 606);
-            this.Controls.Add(this.btnConexion);
+            this.Controls.Add(this.guna2GradientPanel6);
+            this.Controls.Add(this.guna2GradientPanel4);
+            this.Controls.Add(this.guna2GradientPanel5);
+            this.Controls.Add(this.guna2GradientPanel3);
+            this.Controls.Add(this.guna2GradientPanel2);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelHora);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -96,6 +139,11 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.Timer timerFechaHora;
-        private Guna.UI2.WinForms.Guna2Button btnConexion;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
     }
 }
