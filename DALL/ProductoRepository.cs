@@ -49,7 +49,7 @@ namespace DALL
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "SELECT  p.codigo_producto,p.descripcion,p.costo,p.precio,p.iva, p.talla,c.nombre, m.nombre,stock_minimo,stock_maximo,cantidad FROM producto P JOIN color C ON p.codigo_color = c.codigo_color JOIN marca m ON p.codigo_marca = m.codigo_marca AND codigo_producto =: codigo; ";
+                command.CommandText = "SELECT  p.codigo_producto,p.descripcion,p.costo,p.precio,p.iva, p.talla,c.nombre, m.nombre,stock_minimo,stock_maximo,cantidad FROM producto P JOIN color C ON p.codigo_color = c.codigo_color JOIN marca m ON p.codigo_marca = m.codigo_marca AND codigo_producto =: codigo ";
                 command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = codigo;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
