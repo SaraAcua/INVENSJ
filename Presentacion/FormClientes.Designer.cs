@@ -35,8 +35,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnEditarCliente = new System.Windows.Forms.Button();
             this.BtnRegsitrarCliente = new System.Windows.Forms.Button();
+            this.btnEditarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgcliente)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -44,13 +44,14 @@
             // 
             // dtgcliente
             // 
+            this.dtgcliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgcliente.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtgcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgcliente.Location = new System.Drawing.Point(93, 253);
-            this.dtgcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgcliente.Location = new System.Drawing.Point(38, 249);
+            this.dtgcliente.Margin = new System.Windows.Forms.Padding(4);
             this.dtgcliente.Name = "dtgcliente";
-            this.dtgcliente.Size = new System.Drawing.Size(918, 300);
+            this.dtgcliente.Size = new System.Drawing.Size(544, 273);
             this.dtgcliente.TabIndex = 0;
             // 
             // label1
@@ -67,14 +68,15 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.btnBuscar);
             this.guna2GradientPanel1.Controls.Add(this.txtId);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(93, 108);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(38, 91);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(402, 120);
@@ -106,7 +108,7 @@
             this.btnBuscar.Image = global::Presentacion.Properties.Resources.buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(208, 54);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 42);
             this.btnBuscar.TabIndex = 18;
@@ -129,7 +131,7 @@
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtId.HoverState.Parent = this.txtId;
             this.txtId.Location = new System.Drawing.Point(60, 54);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtId.Margin = new System.Windows.Forms.Padding(6);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
             this.txtId.PlaceholderText = "";
@@ -140,33 +142,14 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnEditarCliente);
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.BtnRegsitrarCliente);
-            this.panel3.Location = new System.Drawing.Point(615, 145);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Controls.Add(this.btnEditarCliente);
+            this.panel3.Location = new System.Drawing.Point(461, 111);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 80);
+            this.panel3.Size = new System.Drawing.Size(174, 76);
             this.panel3.TabIndex = 22;
-            // 
-            // btnEditarCliente
-            // 
-            this.btnEditarCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCliente.FlatAppearance.BorderSize = 0;
-            this.btnEditarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnEditarCliente.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarCliente.Location = new System.Drawing.Point(134, 1);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(106, 75);
-            this.btnEditarCliente.TabIndex = 9;
-            this.btnEditarCliente.Text = "Editar";
-            this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditarCliente.UseVisualStyleBackColor = false;
-            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // BtnRegsitrarCliente
             // 
@@ -178,22 +161,42 @@
             this.BtnRegsitrarCliente.ForeColor = System.Drawing.Color.Black;
             this.BtnRegsitrarCliente.Image = global::Presentacion.Properties.Resources.diskette;
             this.BtnRegsitrarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(4, 3);
-            this.BtnRegsitrarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(1, 3);
+            this.BtnRegsitrarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRegsitrarCliente.Name = "BtnRegsitrarCliente";
-            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(120, 75);
-            this.BtnRegsitrarCliente.TabIndex = 7;
+            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(85, 73);
+            this.BtnRegsitrarCliente.TabIndex = 10;
             this.BtnRegsitrarCliente.Text = "Registrar";
             this.BtnRegsitrarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRegsitrarCliente.UseVisualStyleBackColor = false;
-            this.BtnRegsitrarCliente.Click += new System.EventHandler(this.BtnRegsitrarCliente_Click);
+            this.BtnRegsitrarCliente.Click += new System.EventHandler(this.BtnRegsitrarCliente_Click_1);
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarCliente.FlatAppearance.BorderSize = 0;
+            this.btnEditarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarCliente.Image = global::Presentacion.Properties.Resources.edit;
+            this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditarCliente.Location = new System.Drawing.Point(87, 1);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Size = new System.Drawing.Size(85, 73);
+            this.btnEditarCliente.TabIndex = 9;
+            this.btnEditarCliente.Text = "Editar";
+            this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1095, 788);
+            this.ClientSize = new System.Drawing.Size(730, 646);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -201,7 +204,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormClientes";
             this.Text = "FormClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dtgcliente)).EndInit();

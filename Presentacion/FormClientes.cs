@@ -24,8 +24,7 @@ namespace Presentacion
 
         private void BtnRegsitrarCliente_Click(object sender, EventArgs e)
         {
-            FormGestionCliente gestionCliente = new FormGestionCliente();
-            gestionCliente.ShowDialog();
+          
         }
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
@@ -56,8 +55,11 @@ namespace Presentacion
             
         }
 
-      
-
+        private void BtnRegsitrarCliente_Click_1(object sender, EventArgs e)
+        {
+            FormGestionCliente gestionCliente = new FormGestionCliente();
+            gestionCliente.ShowDialog();
+        }
     }
     }
 
