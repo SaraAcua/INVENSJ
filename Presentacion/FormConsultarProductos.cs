@@ -15,11 +15,12 @@ namespace Presentacion
     public partial class FormConsultarProductos : Form
     {
         ProductoService productoService;
-        Producto producto;
+       
         public FormConsultarProductos()
         {
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
+         
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace Presentacion
                 MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtCodigoProducto.Text = "";
+            dtgProducto.DataSource = "";
         }
     }
 }
