@@ -49,7 +49,7 @@ namespace DALL
         {
             if (!dataReader.HasRows) return null;
             Marca marca = new Marca();
-            marca.Nombre = dataReader.GetString(1);
+            marca.Nombre = dataReader.GetString(0);
             return marca;
 
         }
