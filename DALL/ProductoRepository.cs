@@ -27,7 +27,7 @@ namespace DALL
 
                 command.CommandText = @"pr_insertar_producto";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.Add("(codigo_producto ", OracleDbType.Varchar2).Value = producto.CodigoProducto;
+                command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = producto.CodigoProducto;
                 command.Parameters.Add("Descripcion", OracleDbType.Varchar2).Value = producto.Descripcion;
                 command.Parameters.Add("Costo", OracleDbType.Int32).Value = producto.Costo;
                 command.Parameters.Add("Precio", OracleDbType.Int32).Value = producto.Precio;
@@ -49,7 +49,7 @@ namespace DALL
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "select * from persona where codigo_producto=:codigo";
+                command.CommandText = "select * from Producto where codigo_producto=:codigo";
                 command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = codigo;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();

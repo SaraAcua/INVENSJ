@@ -1,5 +1,6 @@
 ﻿using DALL;
 using ENTITY;
+using Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,15 @@ namespace BLL
 
         public string GuardarCliente(Cliente cliente)
         {
+            Email email = new Email();
+            string mensajeEmail ;
             try
             {
                 conexion.Open();
                 if (repositorio.BuscarPorIdentificacionCliente(cliente.Identificacion) == null)
                 {
                     repositorio.GuardarCliente(cliente);
+                    mensajeEmail = email.EnviarEmail(cliente);
                     return $"Se guardaron los del cliente: {cliente.Nombre} datos satisfactoriamente";
                 }
                 return $"El cliente ya existe";
