@@ -17,7 +17,8 @@ namespace Presentacion
     {
         ProductoService productoService ;
         Producto producto;
-     
+        ColorService colorService;
+        MarcaService marcaService;
 
         DataTable table = new DataTable();
         public FormRegistodeProducto()
@@ -26,11 +27,13 @@ namespace Presentacion
 
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
+            colorService = new ColorService(ConfigConnection.connectionString);
+            marcaService = new MarcaService(ConfigConnection.connectionString);
             llenarComboColor();
             LlenarComboMarca();
             LlenarComboTalla();
-            LlenarCodigoColor();
-
+            txtCodigoMarca.Enabled = false;
+            txtCodigoColor.Enabled = false;
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
             table.Columns.Add("Precio Compra");
@@ -58,9 +61,36 @@ namespace Presentacion
 
         void LlenarCodigoColor()
         {
-            ColorService colorService = new ColorService(ConfigConnection.connectionString);
-            txtCodigoColor.Text = ""+colorService.ConsultarIdColor(cmbColor.Text)  ;
+            
+            string codigo = colorService.ConsultarIdColor(cmbColor.Text).ToString();
+            if (codigo != "0")
+            {
+                txtCodigoColor.Text = codigo;
+            }
+            else
+            {
+                txtCodigoColor.Text = "";
+            }
         }
+
+
+        void LlenarCodigoMarca()
+        {
+
+            string codigo = marcaService.ConsultarIdMarca(cmbMarca.Text).ToString();
+            if (codigo != "0")
+            {
+                txtCodigoMarca.Text = codigo;
+            }
+            else
+            {
+                txtCodigoMarca.Text = "";
+            }
+        }
+
+
+
+
         void LlenarComboMarca()
         {
             MarcaService marcaService = new MarcaService(ConfigConnection.connectionString);
@@ -172,6 +202,15 @@ namespace Presentacion
    
         }
 
+        private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarCodigoColor();
+        }
+
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarCodigoMarca();
+        }
     }
     }
 

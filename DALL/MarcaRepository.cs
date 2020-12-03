@@ -56,6 +56,28 @@ namespace DALL
 
 
 
+        public int ConsultarIdMarca(string nombreR)
+        {
+            OracleDataReader dataReader;
+            int respuesta = 0;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select codigo_marca from marca where Nombre =  :nombreR ";
+                command.Parameters.Add("nombreR", OracleDbType.Varchar2).Value = nombreR;
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        respuesta = dataReader.GetInt32(0);
+
+                    }
+                }
+            }
+            return respuesta;
+        }
+
+
 
         public List<Marca> ConsultarTodos()
         {
