@@ -37,8 +37,55 @@ namespace BLL
             finally { conexion.Close(); }
         }
 
+        public BusquedaProductoRespuesta BuscarPorcodigo(string codigo)
+        {
+            BusquedaProductoRespuesta respuesta = new BusquedaProductoRespuesta();
+            try
+            {
 
+                conexion.Open();
+                respuesta.Producto = repositorio.BuscarPorCodigoProducto(codigo);
+                conexion.Close();
+                respuesta.Mensaje = (respuesta.Producto != null) ? "Se encontró el producto buscado" : "El cliente buscado no existe";
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
 
 
     }
+
+    public class ConsultaProductoRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<Producto> Productos { get; set; }
+    }
+
+
+    public class BusquedaProductoRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Producto Producto { get; set; }
+    }
+
+
+
+    public class ConteoProductoRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public int Cuenta { get; set; }
+    }
+
+
 }
