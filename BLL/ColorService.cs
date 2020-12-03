@@ -69,7 +69,7 @@ namespace BLL
         public string ConsultarIdColor(string nombre)
         {
 
-            string respuesta="";
+            string respuesta="10";
             try
             {
                 conexion.Open();
