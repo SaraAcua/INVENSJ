@@ -20,7 +20,7 @@ namespace DALL
 
 
         
-        public int GuardarProducto(Producto producto)
+        public int GuardarProducto(Producto producto, int cod_color)
         {
             using (var command = _connection.CreateCommand())
             {
@@ -33,7 +33,7 @@ namespace DALL
                 command.Parameters.Add("Precio", OracleDbType.Int32).Value = producto.Precio;
                 command.Parameters.Add("Iva", OracleDbType.Int32).Value = producto.Iva;
                 command.Parameters.Add("Talla", OracleDbType.Varchar2).Value = producto.Talla;
-                command.Parameters.Add("Color", OracleDbType.Varchar2).Value = producto.Color;
+                command.Parameters.Add("Color", OracleDbType.Int32).Value = cod_color;
                 command.Parameters.Add("Marca", OracleDbType.Varchar2).Value = producto.Marca;
                 command.Parameters.Add("StockMinimo", OracleDbType.Int32).Value = producto.StockMinimo;
                 command.Parameters.Add("StockMaximo", OracleDbType.Int32).Value = producto.StockMaximo;
