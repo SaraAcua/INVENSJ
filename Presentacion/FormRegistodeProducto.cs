@@ -27,7 +27,7 @@ namespace Presentacion
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
             llenarComboColor();
-           
+            LlenarComboMarca();
             LlenarComboTalla();
 
             table.Columns.Add("Codigo");
@@ -57,8 +57,8 @@ namespace Presentacion
         void LlenarComboMarca()
         {
             MarcaService marcaService = new MarcaService(ConfigConnection.connectionString);
-            cmbColor.DataSource = marcaService.ConsultarTodos();
-            cmbColor.Refresh();
+            cmbMarca.DataSource = marcaService.ConsultarMarca();
+            cmbMarca.Refresh();
         }
 
         private void Limpiar()
@@ -103,6 +103,7 @@ namespace Presentacion
         {
             FormRegistroMarca marca = new FormRegistroMarca();
             marca.ShowDialog();
+            LlenarComboMarca();
         }
 
         private void picAgregarImage_Click(object sender, EventArgs e)
@@ -156,8 +157,8 @@ namespace Presentacion
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            //Producto producto = MapearProducto();
-            // string mensaje = productoService.GuardarProducto(producto);
+           // Producto producto = MapearProducto();
+            //string mensaje = productoService.GuardarProducto(producto);
             // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             // Limpiar();
 
