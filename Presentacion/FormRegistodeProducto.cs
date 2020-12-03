@@ -29,6 +29,7 @@ namespace Presentacion
             llenarComboColor();
             LlenarComboMarca();
             LlenarComboTalla();
+            LlenarCodigoColor();
 
             table.Columns.Add("Codigo");
             table.Columns.Add("Nombre");
@@ -53,6 +54,12 @@ namespace Presentacion
             cmbColor.DataSource = colorService.ConsultarColor();
             cmbColor.Refresh();
  
+        }
+
+        void LlenarCodigoColor()
+        {
+            ColorService colorService = new ColorService(ConfigConnection.connectionString);
+            txtCodigoColor.Text = colorService.ConsultarIdColor(cmbColor.Text);
         }
         void LlenarComboMarca()
         {
