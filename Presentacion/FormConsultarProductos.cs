@@ -25,13 +25,13 @@ namespace Presentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            var respuesta = productoService.(txtId.Text);
-            List<Cliente> clientes = new List<Cliente>();
+            var respuesta = productoService.BuscarPorcodigo(txtCodigoProducto.Text);
+            List<Producto> productos = new List<Producto>();
             if (!respuesta.Error)
             {
 
-                clientes.Add(respuesta.Cliente);
-                dtgcliente.DataSource = clientes;
+                productos.Add(respuesta.Producto);
+                dtgProducto.DataSource = productos;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
             }

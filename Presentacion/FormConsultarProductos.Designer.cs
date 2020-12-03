@@ -36,9 +36,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtCodigoProducto = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGvConsulta = new System.Windows.Forms.DataGridView();
+            this.dtgProducto = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGvConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -161,22 +161,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CONSULTA PRODUCTO";
             // 
-            // dataGvConsulta
+            // dtgProducto
             // 
-            this.dataGvConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGvConsulta.Location = new System.Drawing.Point(41, 185);
-            this.dataGvConsulta.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGvConsulta.Name = "dataGvConsulta";
-            this.dataGvConsulta.Size = new System.Drawing.Size(636, 280);
-            this.dataGvConsulta.TabIndex = 2;
+            this.dtgProducto.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dtgProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProducto.Location = new System.Drawing.Point(41, 186);
+            this.dtgProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgProducto.Name = "dtgProducto";
+            this.dtgProducto.Size = new System.Drawing.Size(636, 273);
+            this.dtgProducto.TabIndex = 2;
             // 
             // FormConsultarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 646);
-            this.Controls.Add(this.dataGvConsulta);
+            this.Controls.Add(this.dtgProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +188,7 @@
             this.Text = "FormConsultarProductos";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGvConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,12 +198,12 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGvConsulta;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoProducto;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dtgProducto;
     }
 }
