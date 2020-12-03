@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -163,12 +166,24 @@
             // 
             // dtgProducto
             // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgProducto.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtgProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProducto.Location = new System.Drawing.Point(41, 186);
             this.dtgProducto.Margin = new System.Windows.Forms.Padding(4);
             this.dtgProducto.Name = "dtgProducto";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dtgProducto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProducto.Size = new System.Drawing.Size(636, 273);
             this.dtgProducto.TabIndex = 2;
             // 
@@ -204,6 +219,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dtgProducto;
+        public System.Windows.Forms.DataGridView dtgProducto;
     }
 }

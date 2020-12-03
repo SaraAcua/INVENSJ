@@ -20,6 +20,7 @@ namespace Presentacion
         {
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
+         
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
