@@ -81,9 +81,9 @@ namespace BLL
                 conexion.Open();
                 List<Marca> MarcasRegistradas = repositorio.ConsultarTodos();
                 conexion.Close();
-                foreach (Marca color in MarcasRegistradas)
+                foreach (Marca marca in MarcasRegistradas)
                 {
-                    coloresString.Add(color.Nombre);
+                    coloresString.Add(marca.Nombre);
                 }
             }
             catch
