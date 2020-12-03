@@ -99,6 +99,7 @@ namespace BLL
 
 
 
+
     public class ConsultaMarcaRespuesta
     {
         public bool Error { get; set; }
