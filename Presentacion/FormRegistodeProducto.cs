@@ -17,12 +17,7 @@ namespace Presentacion
     {
         ProductoService productoService ;
         Producto producto;
-       
-       
-        Color color;
-
-
-
+     
 
         DataTable table = new DataTable();
         public FormRegistodeProducto()
@@ -32,7 +27,7 @@ namespace Presentacion
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
             llenarComboColor();
-            // cmbMarca.Items.Add();
+           
             LlenarComboTalla();
 
             table.Columns.Add("Codigo");
@@ -58,6 +53,12 @@ namespace Presentacion
             cmbColor.DataSource = colorService.ConsultarColor();
             cmbColor.Refresh();
  
+        }
+        void LlenarComboMarca()
+        {
+            MarcaService marcaService = new MarcaService(ConfigConnection.connectionString);
+            cmbColor.DataSource = marcaService.ConsultarTodos();
+            cmbColor.Refresh();
         }
 
         private void Limpiar()
@@ -95,6 +96,7 @@ namespace Presentacion
         {
             FormRegistroColor form = new FormRegistroColor();
             form.ShowDialog();
+            llenarComboColor();
         }
 
         private void picAddMarca_Click(object sender, EventArgs e)
