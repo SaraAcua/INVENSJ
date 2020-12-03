@@ -68,16 +68,14 @@ namespace Presentacion
             txtPrecioVenta.Text = "";
             txtCantidad.Text = "";
             txtRutaImge.Text = "";
-            cmbColor.Text = "Seleccione";
-            cmbMarca.Text = "Seleccione";
-            cmbTalla.Text = "Seleccione";
+            cmbColor.Text = "SELECCIONE";
+            cmbMarca.Text = "SELECCIONE";
+            cmbTalla.Text = "SELECCIONE";
             picImgen.Visible= false;
 
         }
         private void LlenarComboTalla()
         {
-            cmbTalla.Text = "SELECCIONE";
-        
             cmbTalla.Items.Add("S");
             cmbTalla.Items.Add("XS");
             cmbTalla.Items.Add("XXS");
@@ -137,7 +135,7 @@ namespace Presentacion
                 txtCodigoProd.Focus();
             }
         }
-        private Producto MapearMarca()
+        private Producto MapearProducto()
         {
           producto = new Producto();
             producto.CodigoProducto = txtCodigoProd.Text;
@@ -156,7 +154,7 @@ namespace Presentacion
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            //Producto producto = MapearMarca();
+            //Producto producto = MapearProducto();
             // string mensaje = productoService.GuardarProducto(producto);
             // MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             // Limpiar();
