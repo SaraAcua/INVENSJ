@@ -48,7 +48,7 @@ namespace Presentacion
         }
          void llenarComboColor()
         {
-            
+        
            ColorService colorService= new ColorService(ConfigConnection.connectionString);
             cmbColor.DataSource = colorService.ConsultarColor();
             cmbColor.Refresh();
