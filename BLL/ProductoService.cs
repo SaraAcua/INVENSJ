@@ -18,14 +18,14 @@ namespace BLL
             repositorio = new ProductoRepository(conexion);
         }
 
-        public string GuardarProducto(Producto producto, int cod_color)
+        public string GuardarProducto(Producto producto, int cod_color, int cod_marca)
         {
             try
             {
                 conexion.Open();
                 if (repositorio.BuscarPorCodigoProducto(producto.CodigoProducto) == null)
                 {
-                    repositorio.GuardarProducto(producto, cod_color);
+                    repositorio.GuardarProducto(producto, cod_color, cod_marca);
                     return $"Se guardaron los  del producto  {producto.Descripcion}  datos satisfactoriamente";
                 }
                 return $"El producto ya existe";
