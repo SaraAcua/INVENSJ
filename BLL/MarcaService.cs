@@ -74,8 +74,8 @@ namespace BLL
 
         public List<String> ConsultarMarca()
         {
-            List<String> coloresString = new List<string>();
-            coloresString.Add("SELECCIONE");
+            List<String> marcasString = new List<string>();
+            marcasString.Add("SELECCIONE");
             try
             {
                 conexion.Open();
@@ -83,7 +83,7 @@ namespace BLL
                 conexion.Close();
                 foreach (Marca marca in MarcasRegistradas)
                 {
-                    coloresString.Add(marca.Nombre);
+                    marcasString.Add(marca.Nombre);
                 }
             }
             catch
@@ -91,7 +91,7 @@ namespace BLL
 
             }
             finally { conexion.Close(); }
-            return coloresString;
+            return marcasString;
         }
 
 
