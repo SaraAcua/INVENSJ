@@ -83,7 +83,7 @@ namespace DALL
             string respuesta;
             if (!dataReader.HasRows) return null;
 
-            respuesta = dataReader.GetString(0);
+            respuesta = dataReader.GetString(1);
             return respuesta;
 
         }
