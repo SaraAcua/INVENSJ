@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -43,6 +48,8 @@
             this.txtNumeroDoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.TxtColor = new System.Windows.Forms.TextBox();
+            this.TxtTalla = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,13 +77,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
-            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
-            this.TxtTalla = new System.Windows.Forms.TextBox();
-            this.TxtColor = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
@@ -114,6 +114,61 @@
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(562, 132);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(164, 91);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Direcciòn";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox2.Location = new System.Drawing.Point(167, 104);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.Size = new System.Drawing.Size(129, 20);
+            this.textBox2.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(164, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Apellidos";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Location = new System.Drawing.Point(167, 69);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(129, 20);
+            this.textBox1.TabIndex = 35;
+            // 
+            // LbelFechaFacturaVenta
+            // 
+            this.LbelFechaFacturaVenta.AutoSize = true;
+            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
+            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
+            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaVenta.TabIndex = 34;
+            this.LbelFechaFacturaVenta.Text = "/    /     /";
             // 
             // txtTelefonoCliente
             // 
@@ -289,6 +344,22 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
+            // TxtColor
+            // 
+            this.TxtColor.ForeColor = System.Drawing.Color.Black;
+            this.TxtColor.Location = new System.Drawing.Point(152, 23);
+            this.TxtColor.Name = "TxtColor";
+            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.TabIndex = 46;
+            // 
+            // TxtTalla
+            // 
+            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
+            this.TxtTalla.Location = new System.Drawing.Point(102, 23);
+            this.TxtTalla.Name = "TxtTalla";
+            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.TabIndex = 45;
+            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -436,11 +507,11 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(187, 7);
+            this.label25.Location = new System.Drawing.Point(187, 8);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 13);
+            this.label25.Size = new System.Drawing.Size(28, 13);
             this.label25.TabIndex = 33;
-            this.label25.Text = "$$$$$$$";
+            this.label25.Text = "$.....";
             // 
             // label21
             // 
@@ -619,77 +690,6 @@
             this.btnCancelarVenta.Text = "Cancelar";
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
             this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
-            // 
-            // LbelFechaFacturaVenta
-            // 
-            this.LbelFechaFacturaVenta.AutoSize = true;
-            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
-            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
-            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
-            this.LbelFechaFacturaVenta.TabIndex = 34;
-            this.LbelFechaFacturaVenta.Text = "/    /     /";
-            // 
-            // TxtTalla
-            // 
-            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
-            this.TxtTalla.Location = new System.Drawing.Point(102, 23);
-            this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
-            this.TxtTalla.TabIndex = 45;
-            // 
-            // TxtColor
-            // 
-            this.TxtColor.ForeColor = System.Drawing.Color.Black;
-            this.TxtColor.Location = new System.Drawing.Point(152, 23);
-            this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 20);
-            this.TxtColor.TabIndex = 46;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Location = new System.Drawing.Point(167, 69);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 35;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(164, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Apellidos";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox2.Location = new System.Drawing.Point(167, 104);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 37;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(164, 91);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Direcciòn";
             // 
             // FormCrearVenta
             // 
