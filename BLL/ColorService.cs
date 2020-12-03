@@ -66,6 +66,27 @@ namespace BLL
 
 
 
+        public string ConsultarIdColor(string nombre)
+        {
+
+            string respuesta="";
+            try
+            {
+                conexion.Open();
+                respuesta = repositorio.ConsultarIdColor(nombre);
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return respuesta;
+        }
+
+
+
         public ConsultaColorRespuesta ConsultarTodos()
         {
             ConsultaColorRespuesta respuesta = new ConsultaColorRespuesta();
