@@ -15,7 +15,7 @@ namespace Presentacion
     public partial class FormConsultarProductos : Form
     {
         ProductoService productoService;
-        Producto producto;
+       
         public FormConsultarProductos()
         {
             InitializeComponent();
