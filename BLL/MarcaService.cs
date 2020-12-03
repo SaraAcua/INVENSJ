@@ -72,7 +72,27 @@ namespace BLL
 
 
 
+        public List<String> ConsultarMarca()
+        {
+            List<String> coloresString = new List<string>();
+            coloresString.Add("SELECCIONE");
+            try
+            {
+                conexion.Open();
+                List<Marca> MarcasRegistradas = repositorio.ConsultarTodos();
+                conexion.Close();
+                foreach (Marca color in MarcasRegistradas)
+                {
+                    coloresString.Add(color.Nombre);
+                }
+            }
+            catch
+            {
 
+            }
+            finally { conexion.Close(); }
+            return coloresString;
+        }
 
 
     }
