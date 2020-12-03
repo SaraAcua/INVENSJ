@@ -45,6 +45,29 @@ namespace DALL
             }
         }
 
+        public string ConsultarIdColor(string nombreR)
+        {
+            OracleDataReader dataReader;
+            string respuesta="";
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select codigo_color from color where Nombre=  nombreR ";
+                command.Parameters.Add("nombreR", OracleDbType.Varchar2).Value = nombreR;
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        respuesta = DataReaderMapToIdColor(dataReader);
+
+                    }
+                }
+            }
+            return respuesta;
+        }
+
+
+
         private Color DataReaderMapToColor(OracleDataReader dataReader)
         {
             if (!dataReader.HasRows) return null;
@@ -53,6 +76,18 @@ namespace DALL
             return color;
 
         }
+
+
+        private string DataReaderMapToIdColor(OracleDataReader dataReader)
+        {
+            string respuesta;
+            if (!dataReader.HasRows) return null;
+
+            respuesta = dataReader.GetString(0);
+            return respuesta;
+
+        }
+
 
 
         public List<Color> ConsultarTodos()

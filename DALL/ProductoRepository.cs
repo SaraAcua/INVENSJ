@@ -25,8 +25,8 @@ namespace DALL
             using (var command = _connection.CreateCommand())
             {
 
-                command.CommandText = @"Insert Into producto 
-                values(:CodigoProducto,:Descripcion,:Costo,:Precio,:Iva,:Talla,:Color,:Marca,:StockMinimo,:StockMaximo,:Cantidad)";
+                command.CommandText = @"pr_insertar_producto";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("CodigoProducto", OracleDbType.Varchar2).Value = producto.CodigoProducto;
                 command.Parameters.Add("Descripcion", OracleDbType.Varchar2).Value = producto.Descripcion;
                 command.Parameters.Add("Costo", OracleDbType.Int32).Value = producto.Costo;

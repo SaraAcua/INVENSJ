@@ -98,7 +98,7 @@ namespace BLL
     }
 
 
-
+     
 
     public class ConsultaMarcaRespuesta
     {
