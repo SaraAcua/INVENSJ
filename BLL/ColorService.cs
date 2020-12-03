@@ -68,7 +68,7 @@ namespace BLL
 
         public int ConsultarIdColor(string nombre)
         {
-
+             
             int  respuesta=0;
             try
             {
