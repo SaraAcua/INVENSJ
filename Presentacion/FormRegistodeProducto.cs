@@ -195,13 +195,13 @@ namespace Presentacion
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
            Producto producto = MapearProducto();
-            string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text));
+            string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
              MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-           
 
+            //dataGvRegistroProd.DataSource=
             //Limpiar();
 
-   
+
         }
 
         private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
