@@ -71,6 +71,26 @@ namespace BLL
         }
 
 
+        public int ConsultarIdMarca(string nombre)
+        {
+
+            int respuesta = 0;
+            try
+            {
+                conexion.Open();
+                respuesta = repositorio.ConsultarIdMarca(nombre);
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return respuesta;
+        }
+
+
 
         public List<String> ConsultarMarca()
         {

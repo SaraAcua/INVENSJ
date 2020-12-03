@@ -45,6 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGvRegistroProd = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.txtCodigoColor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCodigoMarca = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtStockMaximo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,8 +66,6 @@
             this.txtDescripcionProd = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCodigoProd = new Guna.UI2.WinForms.Guna2TextBox();
             this.picImgen = new System.Windows.Forms.PictureBox();
-            this.txtCodigoMarca = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCodigoColor = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGvRegistroProd)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
@@ -327,6 +327,52 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(488, 165);
             this.guna2GradientPanel1.TabIndex = 5;
             // 
+            // txtCodigoColor
+            // 
+            this.txtCodigoColor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoColor.DefaultText = "";
+            this.txtCodigoColor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigoColor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigoColor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoColor.DisabledState.Parent = this.txtCodigoColor;
+            this.txtCodigoColor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoColor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigoColor.FocusedState.Parent = this.txtCodigoColor;
+            this.txtCodigoColor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCodigoColor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigoColor.HoverState.Parent = this.txtCodigoColor;
+            this.txtCodigoColor.Location = new System.Drawing.Point(86, 68);
+            this.txtCodigoColor.Name = "txtCodigoColor";
+            this.txtCodigoColor.PasswordChar = '\0';
+            this.txtCodigoColor.PlaceholderText = "";
+            this.txtCodigoColor.SelectedText = "";
+            this.txtCodigoColor.ShadowDecoration.Parent = this.txtCodigoColor;
+            this.txtCodigoColor.Size = new System.Drawing.Size(31, 22);
+            this.txtCodigoColor.TabIndex = 49;
+            // 
+            // txtCodigoMarca
+            // 
+            this.txtCodigoMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoMarca.DefaultText = "";
+            this.txtCodigoMarca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCodigoMarca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCodigoMarca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoMarca.DisabledState.Parent = this.txtCodigoMarca;
+            this.txtCodigoMarca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCodigoMarca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigoMarca.FocusedState.Parent = this.txtCodigoMarca;
+            this.txtCodigoMarca.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCodigoMarca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCodigoMarca.HoverState.Parent = this.txtCodigoMarca;
+            this.txtCodigoMarca.Location = new System.Drawing.Point(244, 67);
+            this.txtCodigoMarca.Name = "txtCodigoMarca";
+            this.txtCodigoMarca.PasswordChar = '\0';
+            this.txtCodigoMarca.PlaceholderText = "";
+            this.txtCodigoMarca.SelectedText = "";
+            this.txtCodigoMarca.ShadowDecoration.Parent = this.txtCodigoMarca;
+            this.txtCodigoMarca.Size = new System.Drawing.Size(32, 22);
+            this.txtCodigoMarca.TabIndex = 48;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -465,6 +511,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(85, 21);
             this.cmbMarca.TabIndex = 39;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // cmbColor
             // 
@@ -473,6 +520,7 @@
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(77, 21);
             this.cmbColor.TabIndex = 38;
+            this.cmbColor.SelectedIndexChanged += new System.EventHandler(this.cmbColor_SelectedIndexChanged);
             // 
             // txtRutaImge
             // 
@@ -644,52 +692,6 @@
             this.picImgen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImgen.TabIndex = 6;
             this.picImgen.TabStop = false;
-            // 
-            // txtCodigoMarca
-            // 
-            this.txtCodigoMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCodigoMarca.DefaultText = "";
-            this.txtCodigoMarca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCodigoMarca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCodigoMarca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigoMarca.DisabledState.Parent = this.txtCodigoMarca;
-            this.txtCodigoMarca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigoMarca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoMarca.FocusedState.Parent = this.txtCodigoMarca;
-            this.txtCodigoMarca.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCodigoMarca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoMarca.HoverState.Parent = this.txtCodigoMarca;
-            this.txtCodigoMarca.Location = new System.Drawing.Point(244, 67);
-            this.txtCodigoMarca.Name = "txtCodigoMarca";
-            this.txtCodigoMarca.PasswordChar = '\0';
-            this.txtCodigoMarca.PlaceholderText = "";
-            this.txtCodigoMarca.SelectedText = "";
-            this.txtCodigoMarca.ShadowDecoration.Parent = this.txtCodigoMarca;
-            this.txtCodigoMarca.Size = new System.Drawing.Size(32, 22);
-            this.txtCodigoMarca.TabIndex = 48;
-            // 
-            // txtCodigoColor
-            // 
-            this.txtCodigoColor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCodigoColor.DefaultText = "";
-            this.txtCodigoColor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCodigoColor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCodigoColor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigoColor.DisabledState.Parent = this.txtCodigoColor;
-            this.txtCodigoColor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigoColor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoColor.FocusedState.Parent = this.txtCodigoColor;
-            this.txtCodigoColor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCodigoColor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigoColor.HoverState.Parent = this.txtCodigoColor;
-            this.txtCodigoColor.Location = new System.Drawing.Point(86, 68);
-            this.txtCodigoColor.Name = "txtCodigoColor";
-            this.txtCodigoColor.PasswordChar = '\0';
-            this.txtCodigoColor.PlaceholderText = "";
-            this.txtCodigoColor.SelectedText = "";
-            this.txtCodigoColor.ShadowDecoration.Parent = this.txtCodigoColor;
-            this.txtCodigoColor.Size = new System.Drawing.Size(31, 22);
-            this.txtCodigoColor.TabIndex = 49;
             // 
             // FormRegistodeProducto
             // 
