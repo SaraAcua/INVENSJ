@@ -183,9 +183,9 @@ namespace Presentacion
             producto.Costo = int.Parse( txtCostoCompra.Text);
             producto.Precio = int.Parse(txtCodigoProd.Text);
             producto.Iva = int.Parse(txtIva.Text);
-            producto.Talla = cmbColor.Text;
-            producto.Color = cmbColor.Text;
-            producto.Marca = cmbMarca.Text;
+            producto.Talla = cmbTalla.Text;
+            producto.Color = txtCodigoColor.Text;
+            producto.Marca = txtCodigoMarca.Text;
             producto.StockMinimo = int.Parse(txtStockMinimo.Text);
             producto.StockMaximo= int.Parse(txtStockMaximo.Text);
             producto.Cantidad= int.Parse(txtCantidad.Text);
