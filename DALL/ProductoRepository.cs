@@ -27,16 +27,16 @@ namespace DALL
 
                 command.CommandText = @"pr_insertar_producto";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.Add("CodigoProducto", OracleDbType.Varchar2).Value = producto.CodigoProducto;
+                command.Parameters.Add("(codigo_producto ", OracleDbType.Varchar2).Value = producto.CodigoProducto;
                 command.Parameters.Add("Descripcion", OracleDbType.Varchar2).Value = producto.Descripcion;
                 command.Parameters.Add("Costo", OracleDbType.Int32).Value = producto.Costo;
                 command.Parameters.Add("Precio", OracleDbType.Int32).Value = producto.Precio;
                 command.Parameters.Add("Iva", OracleDbType.Int32).Value = producto.Iva;
                 command.Parameters.Add("Talla", OracleDbType.Varchar2).Value = producto.Talla;
-                command.Parameters.Add("Color", OracleDbType.Int32).Value = cod_color;
-                command.Parameters.Add("Marca", OracleDbType.Varchar2).Value = producto.Marca;
-                command.Parameters.Add("StockMinimo", OracleDbType.Int32).Value = producto.StockMinimo;
-                command.Parameters.Add("StockMaximo", OracleDbType.Int32).Value = producto.StockMaximo;
+                command.Parameters.Add("codigo_color ", OracleDbType.Int32).Value = cod_color;
+                command.Parameters.Add("codigo_marca ", OracleDbType.Varchar2).Value = producto.Marca;
+                command.Parameters.Add("stock_minimo ", OracleDbType.Int32).Value = producto.StockMinimo;
+                command.Parameters.Add("stock_maximo ", OracleDbType.Int32).Value = producto.StockMaximo;
                 command.Parameters.Add("Cantidad", OracleDbType.Int32).Value = producto.Cantidad;
                 var filas = command.ExecuteNonQuery();
                 return filas;
