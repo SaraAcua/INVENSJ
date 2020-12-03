@@ -26,7 +26,7 @@ namespace BLL
                 if (repositorio.BuscarPorCodigoProducto(producto.CodigoProducto) == null)
                 {
                     repositorio.GuardarProducto(producto, cod_color, cod_marca);
-                    return $"Se guardaron los  del producto  {producto.Descripcion}  datos satisfactoriamente";
+                    return $"Se guardaron los datos del producto  {producto.Descripcion}  satisfactoriamente";
                 }
                 return $"El producto ya existe";
             }
