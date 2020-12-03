@@ -59,7 +59,7 @@ namespace Presentacion
         void LlenarCodigoColor()
         {
             ColorService colorService = new ColorService(ConfigConnection.connectionString);
-            txtCodigoColor.Text = colorService.ConsultarIdColor(cmbColor.Text);
+            txtCodigoColor.Text = colorService.ConsultarIdColor(cmbColor.Text) ;
         }
         void LlenarComboMarca()
         {
