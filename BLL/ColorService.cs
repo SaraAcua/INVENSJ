@@ -66,10 +66,10 @@ namespace BLL
 
 
 
-        public string ConsultarIdColor(string nombre)
+        public int ConsultarIdColor(string nombre)
         {
 
-            string respuesta="10";
+            int  respuesta=0;
             try
             {
                 conexion.Open();
