@@ -23,8 +23,6 @@ namespace Presentacion
         DataTable table = new DataTable();
         public FormRegistodeProducto()
         {
-
-
             InitializeComponent();
             productoService = new ProductoService(ConfigConnection.connectionString);
             colorService = new ColorService(ConfigConnection.connectionString);
@@ -198,8 +196,8 @@ namespace Presentacion
             string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
              MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-            //dataGvRegistroProd.DataSource=
-            //Limpiar();
+           // dataGvRegistroProd.DataSource=
+            Limpiar();
 
 
         }
