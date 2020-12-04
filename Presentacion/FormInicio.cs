@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using BLL;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,25 @@ namespace Presentacion
     public partial class FormInicio : Form
     {
         public OracleDataReader ora_DataReader;
+        ProductoService productoService;
+        ClienteService cliente;
+        ProveedorService proveedor;
+        DashboardService service;
+
         public FormInicio()
         {
             InitializeComponent();
+            productoService = new ProductoService(ConfigConnection.connectionString);
+            cliente = new ClienteService(ConfigConnection.connectionString);
+            proveedor = new ProveedorService(ConfigConnection.connectionString);
+            Dashboard();
+
+        }
+
+        private void Dashboard()
+        {
+          DashboardService dashboardService = new DashboardService( ConfigConnection.connectionString);
+            cmboprueba.DataSource = dashboardService.ConsultarDatos();
         }
 
         private void timerFechaHora_Tick(object sender, EventArgs e)
@@ -39,6 +56,11 @@ namespace Presentacion
                    MessageBox.Show(exception.Message);
                 }
             }
+        }
+
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

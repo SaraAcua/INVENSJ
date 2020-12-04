@@ -38,8 +38,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblVentasToal = new System.Windows.Forms.Label();
+            this.LblProveedoresTotal = new System.Windows.Forms.Label();
+            this.LblClientesTotal = new System.Windows.Forms.Label();
+            this.cmboprueba = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
@@ -75,6 +80,8 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
+            this.guna2GradientPanel1.Controls.Add(this.LblClientesTotal);
+            this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(402, 43);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
@@ -95,6 +102,8 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
+            this.guna2GradientPanel2.Controls.Add(this.LblProveedoresTotal);
+            this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(214, 43);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
@@ -115,6 +124,8 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
+            this.guna2GradientPanel3.Controls.Add(this.LblVentasToal);
+            this.guna2GradientPanel3.Controls.Add(this.label1);
             this.guna2GradientPanel3.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(27, 43);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
@@ -131,21 +142,76 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
-            // guna2GradientPanel4
+            // label1
             // 
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(263, 149);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.ShadowDecoration.Parent = this.guna2GradientPanel4;
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(200, 100);
-            this.guna2GradientPanel4.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(72, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Total Ventas";
             // 
-            // guna2GradientPanel5
+            // label2
             // 
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(489, 149);
-            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.ShadowDecoration.Parent = this.guna2GradientPanel5;
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(200, 100);
-            this.guna2GradientPanel5.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(79, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Proveedores";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Pink;
+            this.label3.Location = new System.Drawing.Point(83, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Clientes";
+            // 
+            // LblVentasToal
+            // 
+            this.LblVentasToal.AutoSize = true;
+            this.LblVentasToal.ForeColor = System.Drawing.Color.Aqua;
+            this.LblVentasToal.Location = new System.Drawing.Point(80, 37);
+            this.LblVentasToal.Name = "LblVentasToal";
+            this.LblVentasToal.Size = new System.Drawing.Size(35, 13);
+            this.LblVentasToal.TabIndex = 10;
+            this.LblVentasToal.Text = "label4";
+            // 
+            // LblProveedoresTotal
+            // 
+            this.LblProveedoresTotal.AutoSize = true;
+            this.LblProveedoresTotal.ForeColor = System.Drawing.Color.Chartreuse;
+            this.LblProveedoresTotal.Location = new System.Drawing.Point(90, 37);
+            this.LblProveedoresTotal.Name = "LblProveedoresTotal";
+            this.LblProveedoresTotal.Size = new System.Drawing.Size(35, 13);
+            this.LblProveedoresTotal.TabIndex = 11;
+            this.LblProveedoresTotal.Text = "label5";
+            // 
+            // LblClientesTotal
+            // 
+            this.LblClientesTotal.AutoSize = true;
+            this.LblClientesTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.LblClientesTotal.Location = new System.Drawing.Point(96, 37);
+            this.LblClientesTotal.Name = "LblClientesTotal";
+            this.LblClientesTotal.Size = new System.Drawing.Size(35, 13);
+            this.LblClientesTotal.TabIndex = 12;
+            this.LblClientesTotal.Text = "label6";
+            // 
+            // cmboprueba
+            // 
+            this.cmboprueba.FormattingEnabled = true;
+            this.cmboprueba.Location = new System.Drawing.Point(52, 152);
+            this.cmboprueba.Name = "cmboprueba";
+            this.cmboprueba.Size = new System.Drawing.Size(121, 21);
+            this.cmboprueba.TabIndex = 5;
             // 
             // FormInicio
             // 
@@ -153,8 +219,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(730, 606);
-            this.Controls.Add(this.guna2GradientPanel4);
-            this.Controls.Add(this.guna2GradientPanel5);
+            this.Controls.Add(this.cmboprueba);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -164,6 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormInicio";
             this.Text = "FormInicio";
+            this.Load += new System.EventHandler(this.FormInicio_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -171,6 +237,7 @@
             this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
+            this.guna2GradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,10 +251,15 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label LblClientesTotal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblProveedoresTotal;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblVentasToal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmboprueba;
     }
 }
