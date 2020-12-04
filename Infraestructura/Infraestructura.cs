@@ -24,15 +24,15 @@ namespace Infraestructura
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new System.Net.NetworkCredential("josecarrillovillazon@gmail.com",
-             "josed200209231224");
+            smtp.Credentials = new System.Net.NetworkCredential("tiendaskshop@gmail.com",
+             "invensj2020");
         }
 
         private void ConfigurarEmail(Cliente cliente)
         {
             email = new MailMessage();
             email.To.Add(cliente.Email);
-            email.From = new MailAddress("josecarrillovillazon@gmail.com");
+            email.From = new MailAddress("tiendaskshop@gmail.com");
             email.Subject = "Registro de Usuario "
                 + DateTime.Now.ToString("dd/MMM/yyy hh:mm:ss");
             email.Body = $"<b>Sr {cliente.Nombre }</b><b> {cliente.Apellidos}</b> <br " +
