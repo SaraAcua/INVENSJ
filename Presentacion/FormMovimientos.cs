@@ -19,6 +19,7 @@ namespace Presentacion
         public FormMovimientos()
         {
             InitializeComponent();
+            movimientosService = new MovimientosService(ConfigConnection.connectionString);
             Gestionar();
             LlenarCombo();
         }
@@ -58,7 +59,7 @@ namespace Presentacion
             Movimientos movimientos = MapearMovimiento();
             string mensaje = movimientosService.GuardarCliente(movimientos);
             MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            // dataGvRegistroProd.DataSource=
+            Limpiar();
         }
         private void Limpiar()
         {
