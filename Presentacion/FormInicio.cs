@@ -18,7 +18,7 @@ namespace Presentacion
         ProductoService productoService;
         ClienteService cliente;
         ProveedorService proveedor;
-        DashboardService service;
+    
 
         public FormInicio()
         {
@@ -26,11 +26,11 @@ namespace Presentacion
             productoService = new ProductoService(ConfigConnection.connectionString);
             cliente = new ClienteService(ConfigConnection.connectionString);
             proveedor = new ProveedorService(ConfigConnection.connectionString);
-            DashboardCliente();
+            Dashboard();
 
         }
 
-        private void DashboardCliente()
+       public void Dashboard()
         {
           DashboardService dashboardService = new DashboardService( ConfigConnection.connectionString);
             LblClientesTotal.Text = dashboardService.ConsultarCliente();
@@ -62,6 +62,11 @@ namespace Presentacion
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

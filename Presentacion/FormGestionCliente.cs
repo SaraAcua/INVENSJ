@@ -23,6 +23,7 @@ namespace Presentacion
             llenarCombo();
             
 
+
         }
         private void inhhabilitar()
         {
@@ -74,6 +75,7 @@ namespace Presentacion
             Cliente cliente = MapearCliente();
             string mensaje = clienteService.GuardarCliente(cliente);
             MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            
             Limpiar();
 
         }
