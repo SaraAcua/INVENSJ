@@ -8,12 +8,12 @@ using ENTITY;
 
 namespace DALL
 {
-    class MovimientoRepository
+    public class MovimientosRepository
     {
 
         private readonly OracleConnection _connection;
         private readonly List<Movimientos> _proveedores = new List<Movimientos>();
-        public MovimientoRepository(ConnectionManager connection)
+        public MovimientosRepository(ConnectionManager connection)
         {
             _connection = connection._conexion;
         }
@@ -23,9 +23,9 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                
-                command.CommandText = @"Insert Into movimientos 
-                values(:Motivo,:Descripcion,:Codigo,:Cantidad,:Fecha)";
+
+                command.CommandText = @"pr_insertar_movimiento";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("Motivo", OracleDbType.Varchar2).Value = movimientos.Motivo;
                 command.Parameters.Add("Descripcion", OracleDbType.Varchar2).Value = movimientos.Descripcion;
                 command.Parameters.Add("Codigo", OracleDbType.Varchar2).Value = movimientos.Codigo;

@@ -49,7 +49,7 @@
     <Compile Include="ColorRepository.cs" />
     <Compile Include="DashboardRepository.cs" />
     <Compile Include="MarcaRepository.cs" />
-    <Compile Include="MovimientoRepository.cs" />
+    <Compile Include="MovimientosRepository.cs" />
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="ProductoRepository.cs" />
