@@ -11,32 +11,64 @@ namespace DALL
     public class DashboardRepository
     {
         private readonly OracleConnection _connection;
-        private readonly ArrayList Datos = new ArrayList();
+        
         public DashboardRepository(ConnectionManager connection)
         {
             _connection = connection._conexion;
         }
 
-        public ArrayList ConsultarDatos()
+        public string ConsultarCliente()
         {
+            string Datos="";
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"DashboardDatos";
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.CommandText = @"select count (id_cliente) from CLIENTE";
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
                 if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        Datos.Add ( dataReader.GetInt32(0));
-
-                    }
+                { 
+                        Datos= (dataReader.GetString(0));                
                 }
             }
             return Datos;
         }
+
+
+        public string ConsultarTotalVentas()
+        {
+            string Datos = "";
+            OracleDataReader dataReader;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select sum(total) from VENTA";
+                dataReader = command.ExecuteReader();
+                dataReader.Read();
+                if (dataReader.HasRows)
+                {
+                    Datos = (dataReader.GetString(0));
+                }
+            }
+            return Datos;
+        }
+
+        public string ConsultarProveedores()
+        {
+            string Datos = "";
+            OracleDataReader dataReader;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select count (id_proveedor)  from PROVEEDOR";
+                dataReader = command.ExecuteReader();
+                dataReader.Read();
+                if (dataReader.HasRows)
+                {
+                    Datos = (dataReader.GetString(0));
+                }
+            }
+            return Datos;
+        }
+
 
 
 
