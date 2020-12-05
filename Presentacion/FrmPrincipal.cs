@@ -30,7 +30,6 @@ namespace Presentacion
             InitializeComponent();
             PersonalizarSubMenu();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-
             this.ControlBox = false;
             this.DoubleBuffered = true;
             
@@ -213,8 +212,6 @@ namespace Presentacion
         private void pictureInicio_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(inicio);
-         
-
         }
         private void MostrarFormLogo()
         {
