@@ -36,6 +36,7 @@ namespace Presentacion
             LblClientesTotal.Text = dashboardService.ConsultarCliente();
             LblVentasToal.Text = dashboardService.ConsultarTotalVentas();
             LblProveedoresTotal.Text = dashboardService.ConsultarProveedores();
+         //   LblProductos.Text= dashboardService.
 
         }
 
