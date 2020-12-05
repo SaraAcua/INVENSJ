@@ -58,6 +58,7 @@
             this.BtnAlmacen = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
@@ -443,6 +444,7 @@
             // panelMenuProd
             // 
             this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMenuProd.Controls.Add(this.button1);
             this.panelMenuProd.Controls.Add(this.btnConsultarProd);
             this.panelMenuProd.Controls.Add(this.btnRegistarProd);
             this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
@@ -461,9 +463,9 @@
             this.btnConsultarProd.ForeColor = System.Drawing.Color.White;
             this.btnConsultarProd.Image = global::Presentacion.Properties.Resources.magnifying_glass;
             this.btnConsultarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarProd.Location = new System.Drawing.Point(0, 40);
+            this.btnConsultarProd.Location = new System.Drawing.Point(0, 28);
             this.btnConsultarProd.Name = "btnConsultarProd";
-            this.btnConsultarProd.Size = new System.Drawing.Size(233, 40);
+            this.btnConsultarProd.Size = new System.Drawing.Size(233, 26);
             this.btnConsultarProd.TabIndex = 1;
             this.btnConsultarProd.Text = "        Consultar productos";
             this.btnConsultarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -482,7 +484,7 @@
             this.btnRegistarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistarProd.Location = new System.Drawing.Point(0, 0);
             this.btnRegistarProd.Name = "btnRegistarProd";
-            this.btnRegistarProd.Size = new System.Drawing.Size(233, 40);
+            this.btnRegistarProd.Size = new System.Drawing.Size(233, 28);
             this.btnRegistarProd.TabIndex = 0;
             this.btnRegistarProd.Text = "        Gestiòn de productos ";
             this.btnRegistarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -530,6 +532,24 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Presentacion.Properties.Resources.magnifying_glass;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(233, 25);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "        Consultar productos";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmPrincipal
             // 
@@ -598,5 +618,6 @@
         private System.Windows.Forms.PictureBox picMin;
         private System.Windows.Forms.PictureBox picRestaurar;
         private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.Button button1;
     }
 }

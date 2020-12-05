@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.labelHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
@@ -109,28 +110,29 @@
             // LblClientesTotal
             // 
             this.LblClientesTotal.AutoSize = true;
+            this.LblClientesTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblClientesTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.LblClientesTotal.Location = new System.Drawing.Point(96, 37);
             this.LblClientesTotal.Name = "LblClientesTotal";
-            this.LblClientesTotal.Size = new System.Drawing.Size(35, 13);
+            this.LblClientesTotal.Size = new System.Drawing.Size(45, 16);
             this.LblClientesTotal.TabIndex = 12;
             this.LblClientesTotal.Text = "label6";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Pink;
-            this.label3.Location = new System.Drawing.Point(78, 15);
+            this.label3.Location = new System.Drawing.Point(66, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 15);
+            this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nº Clientes";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.valor;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -152,27 +154,28 @@
             // LblProveedoresTotal
             // 
             this.LblProveedoresTotal.AutoSize = true;
+            this.LblProveedoresTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProveedoresTotal.ForeColor = System.Drawing.Color.Chartreuse;
-            this.LblProveedoresTotal.Location = new System.Drawing.Point(90, 37);
+            this.LblProveedoresTotal.Location = new System.Drawing.Point(77, 37);
             this.LblProveedoresTotal.Name = "LblProveedoresTotal";
-            this.LblProveedoresTotal.Size = new System.Drawing.Size(35, 13);
+            this.LblProveedoresTotal.Size = new System.Drawing.Size(45, 16);
             this.LblProveedoresTotal.TabIndex = 11;
             this.LblProveedoresTotal.Text = "label5";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(79, 15);
+            this.label2.Location = new System.Drawing.Point(61, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 15);
+            this.label2.Size = new System.Drawing.Size(133, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nº Proveedores";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Presentacion.Properties.Resources.camion;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(7, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
@@ -195,28 +198,29 @@
             // LblVentasToal
             // 
             this.LblVentasToal.AutoSize = true;
+            this.LblVentasToal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblVentasToal.ForeColor = System.Drawing.Color.Aqua;
-            this.LblVentasToal.Location = new System.Drawing.Point(80, 37);
+            this.LblVentasToal.Location = new System.Drawing.Point(74, 37);
             this.LblVentasToal.Name = "LblVentasToal";
-            this.LblVentasToal.Size = new System.Drawing.Size(35, 13);
+            this.LblVentasToal.Size = new System.Drawing.Size(45, 16);
             this.LblVentasToal.TabIndex = 10;
             this.LblVentasToal.Text = "label4";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(72, 15);
+            this.label1.Location = new System.Drawing.Point(61, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Total Ventas";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Presentacion.Properties.Resources.bolsa_de_dinero_en_dolares;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(6, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 64);
             this.pictureBox3.TabIndex = 8;
@@ -237,28 +241,29 @@
             // LblProductos
             // 
             this.LblProductos.AutoSize = true;
+            this.LblProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProductos.ForeColor = System.Drawing.Color.Chartreuse;
             this.LblProductos.Location = new System.Drawing.Point(90, 37);
             this.LblProductos.Name = "LblProductos";
-            this.LblProductos.Size = new System.Drawing.Size(35, 13);
+            this.LblProductos.Size = new System.Drawing.Size(45, 16);
             this.LblProductos.TabIndex = 11;
             this.LblProductos.Text = "label5";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(78, 15);
+            this.label5.Location = new System.Drawing.Point(66, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 15);
+            this.label5.Size = new System.Drawing.Size(114, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Nº Productos";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Presentacion.Properties.Resources.camion;
-            this.pictureBox4.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 64);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -280,28 +285,29 @@
             // lblMarcas
             // 
             this.lblMarcas.AutoSize = true;
+            this.lblMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarcas.ForeColor = System.Drawing.Color.Chartreuse;
-            this.lblMarcas.Location = new System.Drawing.Point(90, 37);
+            this.lblMarcas.Location = new System.Drawing.Point(78, 37);
             this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(35, 13);
+            this.lblMarcas.Size = new System.Drawing.Size(45, 16);
             this.lblMarcas.TabIndex = 11;
             this.lblMarcas.Text = "label5";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label.Location = new System.Drawing.Point(79, 15);
+            this.label.Location = new System.Drawing.Point(61, 15);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(73, 15);
+            this.label.Size = new System.Drawing.Size(91, 20);
             this.label.TabIndex = 10;
             this.label.Text = "Nº Marcas";
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Presentacion.Properties.Resources.camion;
-            this.pictureBox5.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(7, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -323,28 +329,29 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Chartreuse;
             this.label8.Location = new System.Drawing.Point(90, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(45, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "label5";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(79, 15);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label9.Location = new System.Drawing.Point(67, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 15);
+            this.label9.Size = new System.Drawing.Size(45, 20);
             this.label9.TabIndex = 10;
             this.label9.Text = "Caja";
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Presentacion.Properties.Resources.camion;
-            this.pictureBox6.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(7, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(64, 64);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -356,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(730, 606);
+            this.ClientSize = new System.Drawing.Size(719, 606);
             this.Controls.Add(this.guna2GradientPanel6);
             this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.guna2GradientPanel4);
