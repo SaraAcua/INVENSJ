@@ -49,8 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblMarcas = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label8 = new System.Windows.Forms.Label();
@@ -268,8 +268,8 @@
             // guna2GradientPanel5
             // 
             this.guna2GradientPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
-            this.guna2GradientPanel5.Controls.Add(this.label6);
             this.guna2GradientPanel5.Controls.Add(this.lblMarcas);
+            this.guna2GradientPanel5.Controls.Add(this.label);
             this.guna2GradientPanel5.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel5.Location = new System.Drawing.Point(24, 159);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
@@ -277,26 +277,26 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(172, 65);
             this.guna2GradientPanel5.TabIndex = 13;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label6.Location = new System.Drawing.Point(90, 37);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "label5";
-            // 
             // lblMarcas
             // 
             this.lblMarcas.AutoSize = true;
-            this.lblMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblMarcas.Location = new System.Drawing.Point(79, 15);
+            this.lblMarcas.ForeColor = System.Drawing.Color.Chartreuse;
+            this.lblMarcas.Location = new System.Drawing.Point(90, 37);
             this.lblMarcas.Name = "lblMarcas";
-            this.lblMarcas.Size = new System.Drawing.Size(73, 15);
-            this.lblMarcas.TabIndex = 10;
-            this.lblMarcas.Text = "Nº Marcas";
+            this.lblMarcas.Size = new System.Drawing.Size(35, 13);
+            this.lblMarcas.TabIndex = 11;
+            this.lblMarcas.Text = "label5";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label.Location = new System.Drawing.Point(79, 15);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(73, 15);
+            this.label.TabIndex = 10;
+            this.label.Text = "Nº Marcas";
             // 
             // pictureBox5
             // 
@@ -414,8 +414,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMarcas;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private System.Windows.Forms.Label label8;
