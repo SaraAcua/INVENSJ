@@ -109,12 +109,12 @@ namespace Presentacion
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            var respuesta = movimientosService.(cmboConsulta.Text);
+            var respuesta = movimientosService.BuscarPorMotivo(cmboConsulta.Text);
             List<Movimientos> movimientos = new List<Movimientos>();
             if (!respuesta.Error)
             {
 
-                movimientos.Add(respuesta.Producto);
+                movimientos.Add(respuesta.Movimientos);
                 dtgvMovimientos.DataSource = movimientos;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
