@@ -69,6 +69,43 @@ namespace DALL
             return Datos;
         }
 
+        public string ConsultarCantidadProducto()
+        {
+            string Datos = "";
+            OracleDataReader dataReader;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select count (codigo_producto) from PRODUCTO";
+                dataReader = command.ExecuteReader();
+                dataReader.Read();
+                if (dataReader.HasRows)
+                {
+                    Datos = (dataReader.GetString(0));
+                }
+            }
+            return Datos;
+        }
+
+
+        public string ConsultarCantidadMarcas()
+        {
+            string Datos = "";
+            OracleDataReader dataReader;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select count (codigo_marca)  from MARCA";
+                dataReader = command.ExecuteReader();
+                dataReader.Read();
+                if (dataReader.HasRows)
+                {
+                    Datos = (dataReader.GetString(0));
+                }
+            }
+            return Datos;
+        }
+
+
+
 
 
 
