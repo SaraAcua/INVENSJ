@@ -37,7 +37,7 @@ namespace DALL
         }
 
 
-        public Movimientos BuscarPormotivo(string motivo)
+        public Movimientos BuscarPorMotivo(string motivo)
         {
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
