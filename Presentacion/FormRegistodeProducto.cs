@@ -30,6 +30,7 @@ namespace Presentacion
             llenarComboColor();
             LlenarComboMarca();
             LlenarComboTalla();
+            Inhabilitar();
             txtCodigoMarca.Enabled = false;
             txtCodigoColor.Enabled = false;
             table.Columns.Add("Codigo");
@@ -55,6 +56,16 @@ namespace Presentacion
             cmbColor.DataSource = colorService.ConsultarColor();
             cmbColor.Refresh();
  
+        }
+        private void Inhabilitar()
+        {
+            txtCostoCompra.Text = "0";
+            txtPrecioVenta.Text = "0";
+            txtIva.Text = "0";
+            txtCostoCompra.Enabled = false;
+            txtPrecioVenta.Enabled=false;
+            txtIva.Enabled = false;
+
         }
 
         void LlenarCodigoColor()
@@ -100,8 +111,6 @@ namespace Presentacion
         {
             txtCodigoProd.Text = "";
             txtDescripcionProd.Text = "";
-            txtCostoCompra.Text = "";
-            txtPrecioVenta.Text = "";
             txtCantidad.Text = "";
             txtRutaImge.Text = "";
             cmbColor.Text = "SELECCIONE";
@@ -179,7 +188,7 @@ namespace Presentacion
             producto.CodigoProducto = txtCodigoProd.Text;
             producto.Descripcion = txtDescripcionProd.Text;
             producto.Costo = int.Parse( txtCostoCompra.Text);
-            producto.Precio = int.Parse(txtCodigoProd.Text);
+            producto.Precio = int.Parse(txtPrecioVenta.Text);
             producto.Iva = int.Parse(txtIva.Text);
             producto.Talla = cmbTalla.Text;
             producto.Color = txtCodigoColor.Text;
@@ -196,7 +205,7 @@ namespace Presentacion
             string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
              MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-           // dataGvRegistroProd.DataSource=
+           //dataGvRegistroProd.DataSource=
             Limpiar();
 
 

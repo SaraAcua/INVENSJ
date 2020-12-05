@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LbelFechaFacturaCompra = new System.Windows.Forms.Label();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
@@ -47,28 +50,25 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.TxtColor = new System.Windows.Forms.TextBox();
+            this.TxtTalla = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
-            this.TxtColor = new System.Windows.Forms.TextBox();
-            this.TxtTalla = new System.Windows.Forms.TextBox();
-            this.LbelFechaFacturaCompra = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -103,6 +103,40 @@
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(593, 106);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(217, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Barrio";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(216, 72);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(93, 20);
+            this.textBox1.TabIndex = 39;
+            // 
+            // LbelFechaFacturaCompra
+            // 
+            this.LbelFechaFacturaCompra.AutoSize = true;
+            this.LbelFechaFacturaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaCompra.Location = new System.Drawing.Point(100, 35);
+            this.LbelFechaFacturaCompra.Name = "LbelFechaFacturaCompra";
+            this.LbelFechaFacturaCompra.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaCompra.TabIndex = 38;
+            this.LbelFechaFacturaCompra.Text = "/    /     /";
             // 
             // txtDireccionCliente
             // 
@@ -272,10 +306,10 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
+            this.guna2GradientPanel3.Controls.Add(this.textBox2);
             this.guna2GradientPanel3.Controls.Add(this.txtPrecio);
             this.guna2GradientPanel3.Controls.Add(this.button5);
             this.guna2GradientPanel3.Controls.Add(this.button4);
-            this.guna2GradientPanel3.Controls.Add(this.label24);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label19);
             this.guna2GradientPanel3.Controls.Add(this.label22);
@@ -328,26 +362,16 @@
             this.button4.Text = "   Agregar";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(214, 25);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(22, 13);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "$...";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(214, 7);
+            this.label23.Location = new System.Drawing.Point(194, 7);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 13);
+            this.label23.Size = new System.Drawing.Size(67, 13);
             this.label23.TabIndex = 39;
-            this.label23.Text = "Total";
+            this.label23.Text = "Precio venta";
             // 
             // label19
             // 
@@ -389,27 +413,6 @@
             this.label7.Size = new System.Drawing.Size(184, 17);
             this.label7.TabIndex = 39;
             this.label7.Text = "REGISTRO DE COMPRA";
-            // 
-            // button6
-            // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(633, 290);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 33);
-            this.button6.TabIndex = 40;
-            this.button6.Text = "Registrar";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(633, 336);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 33);
-            this.btnCancelar.TabIndex = 41;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel1
             // 
@@ -459,6 +462,22 @@
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(593, 51);
             this.guna2GradientPanel2.TabIndex = 35;
+            // 
+            // TxtColor
+            // 
+            this.TxtColor.ForeColor = System.Drawing.Color.Black;
+            this.TxtColor.Location = new System.Drawing.Point(165, 23);
+            this.TxtColor.Name = "TxtColor";
+            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.TabIndex = 48;
+            // 
+            // TxtTalla
+            // 
+            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
+            this.TxtTalla.Location = new System.Drawing.Point(115, 23);
+            this.TxtTalla.Name = "TxtTalla";
+            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.TabIndex = 47;
             // 
             // button2
             // 
@@ -519,55 +538,34 @@
             this.txtCodigoProd.Size = new System.Drawing.Size(82, 20);
             this.txtCodigoProd.TabIndex = 6;
             // 
-            // TxtColor
+            // button6
             // 
-            this.TxtColor.ForeColor = System.Drawing.Color.Black;
-            this.TxtColor.Location = new System.Drawing.Point(165, 23);
-            this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 20);
-            this.TxtColor.TabIndex = 48;
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(149, 470);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(73, 33);
+            this.button6.TabIndex = 40;
+            this.button6.Text = "Registrar";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // TxtTalla
+            // btnCancelar
             // 
-            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
-            this.TxtTalla.Location = new System.Drawing.Point(115, 23);
-            this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
-            this.TxtTalla.TabIndex = 47;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Location = new System.Drawing.Point(228, 470);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(73, 33);
+            this.btnCancelar.TabIndex = 41;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // LbelFechaFacturaCompra
+            // textBox2
             // 
-            this.LbelFechaFacturaCompra.AutoSize = true;
-            this.LbelFechaFacturaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbelFechaFacturaCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbelFechaFacturaCompra.Location = new System.Drawing.Point(100, 35);
-            this.LbelFechaFacturaCompra.Name = "LbelFechaFacturaCompra";
-            this.LbelFechaFacturaCompra.Size = new System.Drawing.Size(59, 16);
-            this.LbelFechaFacturaCompra.TabIndex = 38;
-            this.LbelFechaFacturaCompra.Text = "/    /     /";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(216, 72);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(93, 20);
-            this.textBox1.TabIndex = 39;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(217, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Barrio";
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(195, 22);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(73, 20);
+            this.textBox2.TabIndex = 43;
             // 
             // FormGestionCompra
             // 
@@ -622,14 +620,11 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
@@ -645,5 +640,8 @@
         private System.Windows.Forms.Label LbelFechaFacturaCompra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
