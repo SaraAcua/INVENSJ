@@ -78,6 +78,43 @@ namespace BLL
         }
 
 
+        public string ConsultarCantidadProductos()
+        {
+            string Datos = "";
+            try
+            {
+                conexion.Open();
+                Datos = repositorio.ConsultarCantidadProducto();
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return Datos;
+        }
+
+
+
+        public string ConsultarCantidadMarcas()
+        {
+            string Datos = "";
+            try
+            {
+                conexion.Open();
+                Datos = repositorio.ConsultarCantidadMarcas();
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return Datos;
+        }
 
 
     }
