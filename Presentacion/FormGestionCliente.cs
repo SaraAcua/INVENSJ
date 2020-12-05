@@ -72,15 +72,21 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtId.Text.Equals("")) {
+            if (txtId.Text.Equals("") || txtname.Text.Equals("")||cmboTipo.SelectedItem.Equals("")
+            ||txtApellido.Text.Equals("")||txtBarrio.Text.Equals("")||txtDirecciòn.Text.Equals("")||txtEmail.Text.Equals(""))
+            {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            Cliente cliente = MapearCliente();
-            string mensaje = clienteService.GuardarCliente(cliente);
-            MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            cmboTipo.Focus();
-            Limpiar();
+            else
+            {
+                Cliente cliente = MapearCliente();
+                string mensaje = clienteService.GuardarCliente(cliente);
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                cmboTipo.Focus();
+                Limpiar();
+
+            }
 
         }
 

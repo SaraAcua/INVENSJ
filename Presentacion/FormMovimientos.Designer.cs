@@ -44,16 +44,16 @@ namespace Presentacion
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarProducto = new System.Windows.Forms.Button();
             this.btnEliminarProd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvMovimientos = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmboConsulta = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMovimientos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,13 +220,13 @@ namespace Presentacion
             this.btnEliminarProd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminarProd.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dtgvMovimientos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 317);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(460, 127);
-            this.dataGridView1.TabIndex = 48;
+            this.dtgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvMovimientos.Location = new System.Drawing.Point(38, 317);
+            this.dtgvMovimientos.Name = "dtgvMovimientos";
+            this.dtgvMovimientos.Size = new System.Drawing.Size(460, 127);
+            this.dtgvMovimientos.TabIndex = 48;
             // 
             // label7
             // 
@@ -241,7 +241,7 @@ namespace Presentacion
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnConsulta);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cmboConsulta);
             this.panel1.Location = new System.Drawing.Point(39, 249);
@@ -249,24 +249,25 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(459, 52);
             this.panel1.TabIndex = 52;
             // 
-            // button1
+            // btnConsulta
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(122, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 30);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "     Buscar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.btnConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConsulta.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.Location = new System.Drawing.Point(122, 18);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(83, 30);
+            this.btnConsulta.TabIndex = 55;
+            this.btnConsulta.Text = "     Buscar";
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // label6
             // 
@@ -319,7 +320,7 @@ namespace Presentacion
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvMovimientos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtObservacion);
@@ -335,7 +336,7 @@ namespace Presentacion
             this.Name = "FormMovimientos";
             this.Text = "FormMovimientos";
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMovimientos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -359,12 +360,12 @@ namespace Presentacion
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardarProducto;
         private System.Windows.Forms.Button btnEliminarProd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvMovimientos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmboConsulta;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
     }
