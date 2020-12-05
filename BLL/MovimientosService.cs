@@ -28,7 +28,7 @@ namespace BLL
                 
                     repositorio.GuardarMovimiento(movimientos);
                     
-                    return $"Se guardaron los del movimiento";
+                    return $"Se guardaron los datos del movimiento";
                 
                 
             }
