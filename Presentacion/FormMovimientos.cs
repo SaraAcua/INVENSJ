@@ -53,15 +53,37 @@ namespace Presentacion
             return movimientos;
 
         }
-     
+
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            Movimientos movimientos = MapearMovimiento();
-            string mensaje = movimientosService.GuardarCliente(movimientos);
-            MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            Limpiar();
+            try
+            {
+                int cantidad = 0;
+                cantidad = int.Parse(txtCantidad.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Cantidad debe ser numerica ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+
+            if (txtCodigo.Text.Equals("") || int.Parse(txtCodigo.Text) < 0 || int.Parse(txtCantidad.Text) < 0 || cmboMotivo.SelectedItem.Equals("") || txtCantidad.Text.Equals(" ")
+                || txtObservacion.Text.Equals(""))
+            {
+
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                Movimientos movimientos = MapearMovimiento();
+                string mensaje = movimientosService.GuardarCliente(movimientos);
+                MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+
+            }
         }
-        private void Limpiar()
+                    
+         private void Limpiar()
         {
             txtCantidad.Text = "";
             txtCodigo.Text = "";
@@ -82,6 +104,25 @@ namespace Presentacion
             {
                 this.DialogResult = DialogResult.None;
                 //btnCancelar.Focus();
+            }
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            var respuesta = movimientosService.BuscarPorMotivo(cmboConsulta.Text);
+            List<Movimientos> movimientos = new List<Movimientos>();
+            if (!respuesta.Error)
+            {
+
+                movimientos.Add(respuesta.Movimientos);
+                dtgvMovimientos.DataSource = movimientos;
+                //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
+                //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
+            }
+
+            else
+            {
+                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

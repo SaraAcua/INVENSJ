@@ -60,10 +60,19 @@ namespace Presentacion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-           Proveedor proveedor = MapearProveedor();
-            string mensaje = proveedorService.GuardarProveedor(proveedor);
-            MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            Limpiar();
+            if (txtId.Text.Equals("") || txtRazonSocial.Text.Equals("") || cmboTipo.SelectedItem.Equals("")
+               || txtBarrio.Text.Equals("") || txtDireccion.Text.Equals("") || txtEmail.Text.Equals(""))
+            {
+
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Proveedor proveedor = MapearProveedor();
+                string mensaje = proveedorService.GuardarProveedor(proveedor);
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+            }
 
         }
 
