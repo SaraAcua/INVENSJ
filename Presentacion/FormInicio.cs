@@ -33,7 +33,10 @@ namespace Presentacion
         private void DashboardCliente()
         {
           DashboardService dashboardService = new DashboardService( ConfigConnection.connectionString);
-            cmboprueba.DataSource = dashboardService.ConsultarDatos();
+            LblClientesTotal.Text = dashboardService.ConsultarCliente();
+            LblVentasToal.Text = dashboardService.ConsultarTotalVentas();
+            LblProveedoresTotal.Text = dashboardService.ConsultarProveedores();
+
         }
 
         private void timerFechaHora_Tick(object sender, EventArgs e)

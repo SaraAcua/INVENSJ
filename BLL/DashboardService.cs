@@ -21,13 +21,13 @@ namespace BLL
 
        
         
-        public ArrayList ConsultarDatos()
+        public string ConsultarCliente()
         {
-            ArrayList Datos = new ArrayList();
+            string Datos = "";
             try
             {
                 conexion.Open();
-                Datos = repositorio.ConsultarDatos();
+                Datos = repositorio.ConsultarCliente();
                 conexion.Close();
                 
             }
@@ -38,6 +38,45 @@ namespace BLL
             finally { conexion.Close(); }
             return Datos;
         }
+
+
+
+        public string ConsultarTotalVentas()
+        {
+            string Datos = "";
+            try
+            {
+                conexion.Open();
+                Datos = repositorio.ConsultarTotalVentas();
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return Datos;
+        }
+
+        public string ConsultarProveedores()
+        {
+            string Datos = "";
+            try
+            {
+                conexion.Open();
+                Datos = repositorio.ConsultarProveedores();
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return Datos;
+        }
+
 
 
 
