@@ -16,7 +16,7 @@ namespace ENTITY
 
         public Venta()
         {
-
+          
         }
 
         public string CodigoVenta { get; set; }
