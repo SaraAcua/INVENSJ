@@ -33,7 +33,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -77,6 +76,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
+            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
@@ -158,17 +158,6 @@
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(129, 20);
             this.textBox1.TabIndex = 35;
-            // 
-            // LbelFechaFacturaVenta
-            // 
-            this.LbelFechaFacturaVenta.AutoSize = true;
-            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
-            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
-            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
-            this.LbelFechaFacturaVenta.TabIndex = 34;
-            this.LbelFechaFacturaVenta.Text = "/    /     /";
             // 
             // txtTelefonoCliente
             // 
@@ -691,6 +680,17 @@
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
             this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
             // 
+            // LbelFechaFacturaVenta
+            // 
+            this.LbelFechaFacturaVenta.AutoSize = true;
+            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
+            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
+            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaVenta.TabIndex = 34;
+            this.LbelFechaFacturaVenta.Text = "/    /     /";
+            // 
             // FormCrearVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -772,12 +772,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label LbelFechaFacturaVenta;
         private System.Windows.Forms.TextBox TxtColor;
         private System.Windows.Forms.TextBox TxtTalla;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label LbelFechaFacturaVenta;
     }
 }

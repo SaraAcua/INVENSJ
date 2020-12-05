@@ -24,6 +24,7 @@ namespace Presentacion
         FormListadoProveedores listadoProveedorescs = new FormListadoProveedores();
         FormListadoCliente listadoCliente = new FormListadoCliente();
         FormInicio inicio = new FormInicio();
+        FormMovimientos movimientos = new FormMovimientos();
         
         public FrmPrincipal()
         {
@@ -311,6 +312,12 @@ namespace Presentacion
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMovimientos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(movimientos);
+            EsconderSubMenu();
         }
     }
 }
