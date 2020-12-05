@@ -58,7 +58,7 @@ namespace Presentacion
             Movimientos movimientos = MapearMovimiento();
             string mensaje = movimientosService.GuardarCliente(movimientos);
             MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            // dataGvRegistroProd.DataSource=
+            
         }
         private void Limpiar()
         {
