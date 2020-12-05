@@ -26,11 +26,11 @@ namespace Presentacion
             productoService = new ProductoService(ConfigConnection.connectionString);
             cliente = new ClienteService(ConfigConnection.connectionString);
             proveedor = new ProveedorService(ConfigConnection.connectionString);
-            Dashboard();
+            DashboardCliente();
 
         }
 
-        private void Dashboard()
+        private void DashboardCliente()
         {
           DashboardService dashboardService = new DashboardService( ConfigConnection.connectionString);
             cmboprueba.DataSource = dashboardService.ConsultarDatos();
