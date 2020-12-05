@@ -12,7 +12,7 @@ namespace ENTITY
         {
 
 
-           Nombre = nombre;
+            Nombre = nombre;
            
         }
 
