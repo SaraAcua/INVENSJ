@@ -19,7 +19,7 @@ namespace BLL
             repositorio = new MovimientosRepository(conexion);
         }
 
-
+         
         public string GuardarCliente(Movimientos movimientos)
         { 
             try
