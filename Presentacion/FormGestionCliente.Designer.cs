@@ -100,7 +100,7 @@
             this.txtDirecciòn.Location = new System.Drawing.Point(235, 122);
             this.txtDirecciòn.Name = "txtDirecciòn";
             this.txtDirecciòn.Size = new System.Drawing.Size(174, 23);
-            this.txtDirecciòn.TabIndex = 14;
+            this.txtDirecciòn.TabIndex = 6;
             // 
             // label7
             // 
@@ -121,7 +121,7 @@
             this.txtBarrio.Location = new System.Drawing.Point(54, 123);
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(174, 23);
-            this.txtBarrio.TabIndex = 12;
+            this.txtBarrio.TabIndex = 5;
             // 
             // panel3
             // 
@@ -146,7 +146,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(121, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 54);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(19, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 54);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -179,7 +179,7 @@
             this.cmboTipo.Location = new System.Drawing.Point(56, 33);
             this.cmboTipo.Name = "cmboTipo";
             this.cmboTipo.Size = new System.Drawing.Size(81, 24);
-            this.cmboTipo.TabIndex = 11;
+            this.cmboTipo.TabIndex = 1;
             // 
             // label6
             // 
@@ -199,7 +199,7 @@
             this.txtEmail.Location = new System.Drawing.Point(235, 165);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(174, 23);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 8;
             // 
             // label5
             // 
@@ -228,7 +228,7 @@
             this.txtId.Location = new System.Drawing.Point(235, 34);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 23);
-            this.txtId.TabIndex = 6;
+            this.txtId.TabIndex = 2;
             // 
             // txtApellido
             // 
@@ -237,7 +237,7 @@
             this.txtApellido.Location = new System.Drawing.Point(235, 77);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(174, 23);
-            this.txtApellido.TabIndex = 5;
+            this.txtApellido.TabIndex = 4;
             // 
             // txtname
             // 
@@ -246,7 +246,7 @@
             this.txtname.Location = new System.Drawing.Point(54, 77);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(174, 23);
-            this.txtname.TabIndex = 4;
+            this.txtname.TabIndex = 3;
             // 
             // label4
             // 

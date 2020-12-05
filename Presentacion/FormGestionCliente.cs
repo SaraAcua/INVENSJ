@@ -72,10 +72,14 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtId.Text.Equals("")) {
+
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             Cliente cliente = MapearCliente();
             string mensaje = clienteService.GuardarCliente(cliente);
             MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            
+            cmboTipo.Focus();
             Limpiar();
 
         }
