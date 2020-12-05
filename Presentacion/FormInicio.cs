@@ -45,6 +45,7 @@ namespace Presentacion
         {
             labelHora.Text = DateTime.Now.ToLongTimeString();
             labelFecha.Text = DateTime.Now.ToString("dddd MMMM yyy");
+             Dashboard();
         }
 
         private void btnConexion_Click(object sender, EventArgs e)

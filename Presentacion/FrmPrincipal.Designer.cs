@@ -53,12 +53,12 @@
             this.btnGestionVenta = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panelMenuProd = new System.Windows.Forms.Panel();
+            this.btnMovimientos = new System.Windows.Forms.Button();
             this.btnConsultarProd = new System.Windows.Forms.Button();
             this.btnRegistarProd = new System.Windows.Forms.Button();
             this.BtnAlmacen = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMin)).BeginInit();
@@ -132,7 +132,7 @@
             // 
             this.picExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picExit.Image = ((System.Drawing.Image)(resources.GetObject("picExit.Image")));
-            this.picExit.Location = new System.Drawing.Point(687, 2);
+            this.picExit.Location = new System.Drawing.Point(687, 1);
             this.picExit.Name = "picExit";
             this.picExit.Size = new System.Drawing.Size(38, 35);
             this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -219,6 +219,7 @@
             this.btnListadoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoCliente.Location = new System.Drawing.Point(0, 121);
             this.btnListadoCliente.Name = "btnListadoCliente";
+            this.btnListadoCliente.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnListadoCliente.Size = new System.Drawing.Size(233, 40);
             this.btnListadoCliente.TabIndex = 3;
             this.btnListadoCliente.Text = "        Listado clientes";
@@ -238,6 +239,7 @@
             this.btnListadoVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoVentas.Location = new System.Drawing.Point(0, 80);
             this.btnListadoVentas.Name = "btnListadoVentas";
+            this.btnListadoVentas.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnListadoVentas.Size = new System.Drawing.Size(233, 41);
             this.btnListadoVentas.TabIndex = 0;
             this.btnListadoVentas.Text = "        Listado ventas";
@@ -257,6 +259,7 @@
             this.btnListadoProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoProv.Location = new System.Drawing.Point(0, 40);
             this.btnListadoProv.Name = "btnListadoProv";
+            this.btnListadoProv.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnListadoProv.Size = new System.Drawing.Size(233, 40);
             this.btnListadoProv.TabIndex = 2;
             this.btnListadoProv.Text = "        Listado proveedores";
@@ -276,6 +279,7 @@
             this.btnListadoCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListadoCompras.Location = new System.Drawing.Point(0, 0);
             this.btnListadoCompras.Name = "btnListadoCompras";
+            this.btnListadoCompras.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnListadoCompras.Size = new System.Drawing.Size(233, 40);
             this.btnListadoCompras.TabIndex = 1;
             this.btnListadoCompras.Text = "        Listado compras";
@@ -296,6 +300,7 @@
             this.btnMenuReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuReportes.Location = new System.Drawing.Point(0, 504);
             this.btnMenuReportes.Name = "btnMenuReportes";
+            this.btnMenuReportes.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnMenuReportes.Size = new System.Drawing.Size(233, 45);
             this.btnMenuReportes.TabIndex = 12;
             this.btnMenuReportes.Text = "              Reportes";
@@ -326,6 +331,7 @@
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProveedores.Location = new System.Drawing.Point(0, 40);
             this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnProveedores.Size = new System.Drawing.Size(233, 40);
             this.btnProveedores.TabIndex = 1;
             this.btnProveedores.Text = "         Proveedores";
@@ -345,6 +351,7 @@
             this.btnRegistarCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistarCompra.Location = new System.Drawing.Point(0, 0);
             this.btnRegistarCompra.Name = "btnRegistarCompra";
+            this.btnRegistarCompra.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnRegistarCompra.Size = new System.Drawing.Size(233, 40);
             this.btnRegistarCompra.TabIndex = 0;
             this.btnRegistarCompra.Text = "         Gestiòn de compra";
@@ -365,6 +372,7 @@
             this.btnMenuCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuCompra.Location = new System.Drawing.Point(0, 379);
             this.btnMenuCompra.Name = "btnMenuCompra";
+            this.btnMenuCompra.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnMenuCompra.Size = new System.Drawing.Size(233, 45);
             this.btnMenuCompra.TabIndex = 12;
             this.btnMenuCompra.Text = "              Compras";
@@ -395,6 +403,7 @@
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Location = new System.Drawing.Point(0, 40);
             this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnClientes.Size = new System.Drawing.Size(233, 40);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "        Clientes";
@@ -414,6 +423,7 @@
             this.btnGestionVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionVenta.Location = new System.Drawing.Point(0, 0);
             this.btnGestionVenta.Name = "btnGestionVenta";
+            this.btnGestionVenta.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGestionVenta.Size = new System.Drawing.Size(233, 40);
             this.btnGestionVenta.TabIndex = 0;
             this.btnGestionVenta.Text = "        Gestiòn de Venta";
@@ -434,6 +444,7 @@
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(0, 254);
             this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnVentas.Size = new System.Drawing.Size(233, 45);
             this.btnVentas.TabIndex = 12;
             this.btnVentas.Text = "              Ventas";
@@ -444,7 +455,7 @@
             // panelMenuProd
             // 
             this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuProd.Controls.Add(this.button1);
+            this.panelMenuProd.Controls.Add(this.btnMovimientos);
             this.panelMenuProd.Controls.Add(this.btnConsultarProd);
             this.panelMenuProd.Controls.Add(this.btnRegistarProd);
             this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Top;
@@ -452,6 +463,26 @@
             this.panelMenuProd.Name = "panelMenuProd";
             this.panelMenuProd.Size = new System.Drawing.Size(233, 80);
             this.panelMenuProd.TabIndex = 2;
+            // 
+            // btnMovimientos
+            // 
+            this.btnMovimientos.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnMovimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientos.ForeColor = System.Drawing.Color.White;
+            this.btnMovimientos.Image = ((System.Drawing.Image)(resources.GetObject("btnMovimientos.Image")));
+            this.btnMovimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientos.Location = new System.Drawing.Point(0, 54);
+            this.btnMovimientos.Name = "btnMovimientos";
+            this.btnMovimientos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMovimientos.Size = new System.Drawing.Size(233, 26);
+            this.btnMovimientos.TabIndex = 2;
+            this.btnMovimientos.Text = "        Movimientos";
+            this.btnMovimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientos.UseVisualStyleBackColor = false;
+            this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
             // 
             // btnConsultarProd
             // 
@@ -465,6 +496,7 @@
             this.btnConsultarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarProd.Location = new System.Drawing.Point(0, 28);
             this.btnConsultarProd.Name = "btnConsultarProd";
+            this.btnConsultarProd.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnConsultarProd.Size = new System.Drawing.Size(233, 26);
             this.btnConsultarProd.TabIndex = 1;
             this.btnConsultarProd.Text = "        Consultar productos";
@@ -484,6 +516,7 @@
             this.btnRegistarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistarProd.Location = new System.Drawing.Point(0, 0);
             this.btnRegistarProd.Name = "btnRegistarProd";
+            this.btnRegistarProd.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnRegistarProd.Size = new System.Drawing.Size(233, 28);
             this.btnRegistarProd.TabIndex = 0;
             this.btnRegistarProd.Text = "        Gestiòn de productos ";
@@ -506,6 +539,7 @@
             this.BtnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAlmacen.Location = new System.Drawing.Point(0, 129);
             this.BtnAlmacen.Name = "BtnAlmacen";
+            this.BtnAlmacen.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.BtnAlmacen.Size = new System.Drawing.Size(233, 45);
             this.BtnAlmacen.TabIndex = 1;
             this.BtnAlmacen.Text = "              Almacen";
@@ -532,24 +566,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Presentacion.Properties.Resources.magnifying_glass;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "        Consultar productos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmPrincipal
             // 
@@ -618,6 +634,6 @@
         private System.Windows.Forms.PictureBox picMin;
         private System.Windows.Forms.PictureBox picRestaurar;
         private System.Windows.Forms.PictureBox picExit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMovimientos;
     }
 }
