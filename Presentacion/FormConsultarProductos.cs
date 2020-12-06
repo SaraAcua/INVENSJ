@@ -42,6 +42,7 @@ namespace Presentacion
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
 
                 // (!respuesta.Error)
+
             }
 
         }
