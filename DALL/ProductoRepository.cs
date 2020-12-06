@@ -58,7 +58,30 @@ namespace DALL
             }
         }
 
-        
+
+        public List<Producto> BuscarPorDescripcionProducto(string descripcion)
+        {
+            OracleDataReader dataReader;
+            List<Producto> productos = new List<Producto>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "select * from producto where descripcion LIKE '%adescripcion%' ";
+                command.Parameters.Add("descripcion", OracleDbType.Varchar2).Value = descripcion;
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Producto producto = DataReaderMapToProducto(dataReader);
+                        productos.Add(producto);
+                    }
+                }
+            }
+            return productos;
+        }
+
+
+
 
         private Producto DataReaderMapToProducto(OracleDataReader dataReader)
         {
