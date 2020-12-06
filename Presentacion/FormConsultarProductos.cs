@@ -30,7 +30,7 @@ namespace Presentacion
             List<Producto> productos = new List<Producto>();
             if(txtCodigoProducto.Text.Equals(""))
             {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe digitar un codigo ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                
             }
 

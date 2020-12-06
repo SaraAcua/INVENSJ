@@ -110,10 +110,9 @@ namespace Presentacion
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
             }
-
             //else
             //{
-              //  MessageBox.Show(" ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              // MessageBox.Show(" Debe elegir un motivo", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //}
         }
 
