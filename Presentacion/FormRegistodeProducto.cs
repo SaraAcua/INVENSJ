@@ -186,26 +186,7 @@ namespace Presentacion
             return producto;
 
         }
-        private void btnGuardarProducto_Click(object sender, EventArgs e)
-        {
-            if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("")||txtStockMinimo.Text.Equals("")
-                || txtStockMaximo.Text.Equals(""))
-            {
-                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Producto producto = MapearProducto();
-                string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
-                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                //dataGvRegistroProd.DataSource=
-                Limpiar();
-            }
-           
-
-
-        }
+      
 
         private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -245,6 +226,25 @@ namespace Presentacion
                 this.DialogResult = DialogResult.None;
                 txtCodigoProd.Focus();
             }
+        }
+
+        private void BtnRegsitrarCliente_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("") || txtStockMinimo.Text.Equals("")
+              || txtStockMaximo.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Producto producto = MapearProducto();
+                string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                //dataGvRegistroProd.DataSource=
+                Limpiar();
+            }
+
         }
     }
     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
@@ -78,6 +79,10 @@ namespace Presentacion
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+            else if (ValidarCorreo())
+            {
+                MessageBox.Show("Debe digitar un email correcto ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             else
             {
                 Cliente cliente = MapearCliente();
@@ -102,8 +107,25 @@ namespace Presentacion
 
         }
 
-       
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private bool ValidarCorreo()
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(txtEmail.Text.Trim(), expresion))
+            {
+                if (Regex.Replace(txtEmail.Text.Trim(), expresion, String.Empty).Length == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return true;
+        }
+
+            private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
         }
