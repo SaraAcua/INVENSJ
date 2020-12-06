@@ -69,8 +69,8 @@ namespace Presentacion
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarCliente(movimientos);
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                LblTotal.Text = movimientosService. ("AVERÍA").Cuenta.ToString();
-                LblTotal.Text = movimientosService. ("REGALO").Cuenta.ToString();
+              //  LblTotal.Text = movimientosService. ("AVERÍA").Cuenta.ToString();
+                //LblTotal.Text = movimientosService. ("REGALO").Cuenta.ToString();
 
                 Limpiar();
 
@@ -107,17 +107,11 @@ namespace Presentacion
 
             ConsultaMovimientosRespuesta respuesta = new ConsultaMovimientosRespuesta();
 
-           // string tipo = cmboConsulta.Text;
-            //if (tipo == "Todos")
-            //{
-              //  dtgvMovimientos.DataSource = null;
+           
                 respuesta = movimientosService.BuscarPorMotivo(cmboConsulta.Text);
                 dtgvMovimientos.DataSource = respuesta.Movimientoss;
 
-            //else
-            //{
-              // MessageBox.Show(" Debe elegir un motivo", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+           
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)

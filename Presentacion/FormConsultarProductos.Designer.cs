@@ -34,9 +34,9 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarDescripcion = new System.Windows.Forms.Button();
             this.txtCodigoProducto = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgProducto = new System.Windows.Forms.DataGridView();
@@ -51,9 +51,9 @@
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.btnBuscar);
             this.guna2GradientPanel1.Controls.Add(this.label3);
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtDescripcion);
             this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.Controls.Add(this.button1);
+            this.guna2GradientPanel1.Controls.Add(this.btnBuscarDescripcion);
             this.guna2GradientPanel1.Controls.Add(this.txtCodigoProducto);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
@@ -94,12 +94,12 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Descripciòn";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(256, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 22);
-            this.textBox1.TabIndex = 17;
+            this.txtDescripcion.Location = new System.Drawing.Point(256, 40);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(194, 22);
+            this.txtDescripcion.TabIndex = 17;
             // 
             // label2
             // 
@@ -111,24 +111,25 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Codigo";
             // 
-            // button1
+            // btnBuscarDescripcion
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(474, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "     Buscar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscarDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarDescripcion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarDescripcion.FlatAppearance.BorderSize = 0;
+            this.btnBuscarDescripcion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBuscarDescripcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarDescripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarDescripcion.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarDescripcion.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarDescripcion.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarDescripcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarDescripcion.Location = new System.Drawing.Point(474, 34);
+            this.btnBuscarDescripcion.Name = "btnBuscarDescripcion";
+            this.btnBuscarDescripcion.Size = new System.Drawing.Size(83, 30);
+            this.btnBuscarDescripcion.TabIndex = 14;
+            this.btnBuscarDescripcion.Text = "     Buscar";
+            this.btnBuscarDescripcion.UseVisualStyleBackColor = false;
+            this.btnBuscarDescripcion.Click += new System.EventHandler(this.btnBuscarDescripcion_Click);
             // 
             // txtCodigoProducto
             // 
@@ -153,7 +154,7 @@
             this.txtCodigoProducto.ShadowDecoration.Parent = this.txtCodigoProducto;
             this.txtCodigoProducto.Size = new System.Drawing.Size(105, 20);
             this.txtCodigoProducto.TabIndex = 5;
-            
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -230,10 +231,10 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigoProducto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.DataGridView dtgProducto;
         private System.Windows.Forms.Button button2;
