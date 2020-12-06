@@ -131,7 +131,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(121, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(122, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 54);
             this.btnCancelar.TabIndex = 8;
