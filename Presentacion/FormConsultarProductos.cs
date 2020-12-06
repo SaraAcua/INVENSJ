@@ -49,5 +49,8 @@ namespace Presentacion
             txtCodigoProducto.Text = "";
             dtgProducto.DataSource = "";
         }
+
+       
+        
     }
 }
