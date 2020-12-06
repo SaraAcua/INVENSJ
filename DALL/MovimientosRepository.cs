@@ -12,7 +12,7 @@ namespace DALL
     {
 
         private readonly OracleConnection _connection;
-        private readonly List<Movimientos> _proveedores = new List<Movimientos>();
+        private readonly List<Movimientos> _movimientoss = new List<Movimientos>();
         public MovimientosRepository(ConnectionManager connection)
         {
             _connection = connection._conexion;
@@ -37,19 +37,25 @@ namespace DALL
         }
 
 
-        public Movimientos BuscarPorMotivo(string motivo)
+        public List<Movimientos> BuscarPorMotivo(string motivo)
         {
             OracleDataReader dataReader;
+            List<Movimientos> movimientoss = new List<Movimientos>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "select * from movimientos where motivo:='Motivo'";
-                //command.CommandText = @"select * from movimientos where motivo='AVERÍA'";
-                command.Parameters.Add("Motivo", OracleDbType.Varchar2).Value = motivo;
+                command.CommandText = @"select * from movimientos where motivo=:Motivo";
+                command.Parameters.Add("motivo", OracleDbType.Varchar2).Value = motivo;
                 dataReader = command.ExecuteReader();
-                dataReader.Read();
-                Movimientos movimientos = DataReaderMapToMovimientos(dataReader);
-                return movimientos;
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Movimientos movimientos = DataReaderMapToMovimientos(dataReader);
+                        movimientoss.Add(movimientos);
+                    }
+                }
             }
+            return movimientoss;
         }
 
         private Movimientos DataReaderMapToMovimientos(OracleDataReader dataReader)
@@ -60,7 +66,7 @@ namespace DALL
             movimientos.Descripcion = dataReader.GetString(1);
             movimientos.Codigo = dataReader.GetString(2);
             movimientos.Cantidad = dataReader.GetInt32(3);
-            movimientos.Fecha = dataReader.GetDateTime(3);
+            movimientos.Fecha = dataReader.GetDateTime(4);
             return movimientos;
 
         }

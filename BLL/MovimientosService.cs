@@ -40,16 +40,23 @@ namespace BLL
         }
 
 
-        public BusquedaMovimientosRespuesta BuscarPorMotivo(string motivo)
+        public ConsultaMovimientosRespuesta BuscarPorMotivo(string motivo)
         {
-            BusquedaMovimientosRespuesta respuesta = new BusquedaMovimientosRespuesta();
+            ConsultaMovimientosRespuesta respuesta = new ConsultaMovimientosRespuesta();
             try
             {
 
                 conexion.Open();
-                respuesta.Movimientos = repositorio.BuscarPorMotivo(motivo);
+                respuesta.Movimientoss = repositorio.BuscarPorMotivo(motivo);
                 conexion.Close();
-                respuesta.Mensaje = (respuesta.Movimientos != null) ? "Se encontró el motivo buscado" : "El motivo buscado no existe";
+                if (respuesta.Movimientoss.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
                 respuesta.Error = false;
                 return respuesta;
             }
