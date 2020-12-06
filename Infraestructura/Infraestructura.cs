@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Infraestructura
 {
     public class Email
-    {
+    { 
         private MailMessage email;
         private SmtpClient smtp;
         public Email()
