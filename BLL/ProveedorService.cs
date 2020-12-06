@@ -48,6 +48,11 @@ namespace BLL
                 conexion.Open();
                 respuesta.Proveedor = repositorio.BuscarPorIdentificacionProveedor(identificacion);
                 conexion.Close();
+                if (respuesta.Proveedor == null)
+                {
+                    respuesta.Error = true;
+                    return respuesta;
+                }
                 respuesta.Mensaje = (respuesta.Proveedor != null) ? "Se encontró el Proveedor buscado" : "El Proveedor buscado no existe";
                 respuesta.Error = false;
                 return respuesta;
