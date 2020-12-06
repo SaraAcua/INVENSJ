@@ -79,9 +79,8 @@
             this.labelHora.ForeColor = System.Drawing.Color.Teal;
             this.labelHora.Location = new System.Drawing.Point(51, 372);
             this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(166, 64);
+            this.labelHora.Size = new System.Drawing.Size(0, 64);
             this.labelHora.TabIndex = 1;
-            this.labelHora.Text = "label";
             // 
             // labelFecha
             // 
@@ -91,9 +90,8 @@
             this.labelFecha.ForeColor = System.Drawing.Color.Black;
             this.labelFecha.Location = new System.Drawing.Point(54, 414);
             this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(73, 35);
+            this.labelFecha.Size = new System.Drawing.Size(0, 35);
             this.labelFecha.TabIndex = 2;
-            this.labelFecha.Text = "label";
             // 
             // timerFechaHora
             // 
