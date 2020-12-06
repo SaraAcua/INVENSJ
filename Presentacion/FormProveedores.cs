@@ -35,22 +35,28 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           /* var respuesta = proveedor.
+            var respuesta = proveedor.BuscarPorIdentificacion(txtId.Text);
             List<Proveedor> proveedors = new List<Proveedor>();
-            if (!respuesta.Error)
+            if (respuesta.Error)
             {
+                MessageBox.Show("No existe el proveedor ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                proveedors.Add(respuesta.Cliente);
+            }
+            else if (txtId.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar una identifiacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                proveedors.Add(respuesta.Proveedor);
                 dtgvProveedor.DataSource = proveedors;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
+
             }
 
-            else
-            {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
-
+            }
         }
     }
-}
+

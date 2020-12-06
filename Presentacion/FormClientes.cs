@@ -40,10 +40,16 @@ namespace Presentacion
             var respuesta = clienteService.BuscarPorIdentificacion(txtId.Text);
             List<Cliente> clientes = new List<Cliente>();
 
-            if ((respuesta.Error)|| (txtId.Text.Equals("")))
+            if ((respuesta.Error))
             {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                MessageBox.Show("No existe el cliente ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else if (txtId.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar una identifiacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else
             {
@@ -51,9 +57,7 @@ namespace Presentacion
                 dtgcliente.DataSource = clientes;
                 //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
-                //MessageBox.Show("No hay clientes ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
 
         private void BtnRegsitrarCliente_Click_1(object sender, EventArgs e)

@@ -57,7 +57,7 @@ namespace Presentacion
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
 
-            if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("") 
+            if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("")
                 || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals(""))
             {
 
@@ -69,6 +69,9 @@ namespace Presentacion
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarCliente(movimientos);
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                LblTotal.Text = movimientosService. ("AVERÍA").Cuenta.ToString();
+                LblTotal.Text = movimientosService. ("REGALO").Cuenta.ToString();
+
                 Limpiar();
 
             }
