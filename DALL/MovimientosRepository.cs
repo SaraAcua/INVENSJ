@@ -66,7 +66,7 @@ namespace DALL
             movimientos.Descripcion = dataReader.GetString(1);
             movimientos.Codigo = dataReader.GetString(2);
             movimientos.Cantidad = dataReader.GetInt32(3);
-            movimientos.Fecha = dataReader.GetDateTime(4);
+            movimientos.Fecha = dataReader.GetDateTime(3);
             return movimientos;
 
         }
