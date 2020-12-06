@@ -69,6 +69,10 @@ namespace Presentacion
         {
             txtNumeroDoc.Text = "";
             txtNombreCliente.Text = "";
+            txtApellido.Text = "";
+            txtBarrioCliente.Text = "";
+            txtDireccion.Text = "";
+            txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
         }
@@ -130,6 +134,7 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Cliente no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
             }
 
            

@@ -130,6 +130,8 @@
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDireccion.Location = new System.Drawing.Point(167, 104);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
@@ -152,6 +154,8 @@
             // 
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtApellido.Location = new System.Drawing.Point(167, 69);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
@@ -174,6 +178,8 @@
             // 
             this.txtTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtTelefonoCliente.Location = new System.Drawing.Point(307, 104);
             this.txtTelefonoCliente.Multiline = true;
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
@@ -185,6 +191,8 @@
             // 
             this.txtBarrioCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBarrioCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBarrioCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarrioCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBarrioCliente.Location = new System.Drawing.Point(17, 104);
             this.txtBarrioCliente.Multiline = true;
             this.txtBarrioCliente.Name = "txtBarrioCliente";
@@ -196,6 +204,8 @@
             // 
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtNombreCliente.Location = new System.Drawing.Point(17, 69);
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
@@ -348,18 +358,20 @@
             // 
             // TxtColor
             // 
-            this.TxtColor.ForeColor = System.Drawing.Color.Black;
+            this.TxtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtColor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TxtColor.Location = new System.Drawing.Point(152, 23);
             this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.Size = new System.Drawing.Size(72, 24);
             this.TxtColor.TabIndex = 46;
             // 
             // TxtTalla
             // 
-            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
+            this.TxtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTalla.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TxtTalla.Location = new System.Drawing.Point(102, 23);
             this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.Size = new System.Drawing.Size(44, 24);
             this.TxtTalla.TabIndex = 45;
             // 
             // button2
@@ -406,6 +418,8 @@
             // 
             this.txtcantidadProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcantidadProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtcantidadProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcantidadProd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtcantidadProd.Location = new System.Drawing.Point(411, 23);
             this.txtcantidadProd.Multiline = true;
             this.txtcantidadProd.Name = "txtcantidadProd";
@@ -416,10 +430,11 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label20.Location = new System.Drawing.Point(480, 26);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 13);
+            this.label20.Size = new System.Drawing.Size(32, 18);
             this.label20.TabIndex = 31;
             this.label20.Text = "$...";
             // 
@@ -616,10 +631,11 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label24.Location = new System.Drawing.Point(134, 27);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(22, 13);
+            this.label24.Size = new System.Drawing.Size(32, 18);
             this.label24.TabIndex = 36;
             this.label24.Text = "$...";
             // 
