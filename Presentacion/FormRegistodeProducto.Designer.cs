@@ -421,6 +421,7 @@
             this.txtStockMaximo.ShadowDecoration.Parent = this.txtStockMaximo;
             this.txtStockMaximo.Size = new System.Drawing.Size(88, 19);
             this.txtStockMaximo.TabIndex = 45;
+            this.txtStockMaximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockMaximo_KeyPress);
             // 
             // txtStockMinimo
             // 
@@ -444,6 +445,7 @@
             this.txtStockMinimo.ShadowDecoration.Parent = this.txtStockMinimo;
             this.txtStockMinimo.Size = new System.Drawing.Size(71, 19);
             this.txtStockMinimo.TabIndex = 44;
+            this.txtStockMinimo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockMinimo_KeyPress);
             // 
             // label12
             // 
@@ -681,6 +683,7 @@
             this.txtCodigoProd.ShadowDecoration.Parent = this.txtCodigoProd;
             this.txtCodigoProd.Size = new System.Drawing.Size(58, 22);
             this.txtCodigoProd.TabIndex = 23;
+         
             // 
             // picImgen
             // 

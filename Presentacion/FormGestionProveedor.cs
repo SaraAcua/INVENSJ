@@ -86,6 +86,31 @@ namespace Presentacion
             txtEmail.Text = "";
 
         }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '-')
+                {
+                    if (((TextBox)sender).Text.Contains('-'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
+            }
+        }
     }
 }
     

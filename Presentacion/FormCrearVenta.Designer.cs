@@ -30,11 +30,12 @@
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
-            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
+            this.txtBarrioCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtNumFactura = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
-            this.LbelFechaFacturaVenta = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
@@ -90,12 +90,12 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.label11);
-            this.guna2GradientPanel1.Controls.Add(this.textBox2);
+            this.guna2GradientPanel1.Controls.Add(this.txtDireccion);
             this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtApellido);
             this.guna2GradientPanel1.Controls.Add(this.LbelFechaFacturaVenta);
             this.guna2GradientPanel1.Controls.Add(this.txtTelefonoCliente);
-            this.guna2GradientPanel1.Controls.Add(this.txtDireccionCliente);
+            this.guna2GradientPanel1.Controls.Add(this.txtBarrioCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
             this.guna2GradientPanel1.Controls.Add(this.txtNumFactura);
             this.guna2GradientPanel1.Controls.Add(this.label9);
@@ -126,16 +126,16 @@
             this.label11.TabIndex = 38;
             this.label11.Text = "Direcciòn";
             // 
-            // textBox2
+            // txtDireccion
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox2.Location = new System.Drawing.Point(167, 104);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 37;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtDireccion.Location = new System.Drawing.Point(167, 104);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDireccion.Size = new System.Drawing.Size(129, 20);
+            this.txtDireccion.TabIndex = 37;
             // 
             // label2
             // 
@@ -148,16 +148,27 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Apellidos";
             // 
-            // textBox1
+            // txtApellido
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Location = new System.Drawing.Point(167, 69);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 35;
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtApellido.Location = new System.Drawing.Point(167, 69);
+            this.txtApellido.Multiline = true;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtApellido.Size = new System.Drawing.Size(129, 20);
+            this.txtApellido.TabIndex = 35;
+            // 
+            // LbelFechaFacturaVenta
+            // 
+            this.LbelFechaFacturaVenta.AutoSize = true;
+            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
+            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
+            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
+            this.LbelFechaFacturaVenta.TabIndex = 34;
+            this.LbelFechaFacturaVenta.Text = "/    /     /";
             // 
             // txtTelefonoCliente
             // 
@@ -170,16 +181,16 @@
             this.txtTelefonoCliente.Size = new System.Drawing.Size(128, 20);
             this.txtTelefonoCliente.TabIndex = 33;
             // 
-            // txtDireccionCliente
+            // txtBarrioCliente
             // 
-            this.txtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDireccionCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtDireccionCliente.Location = new System.Drawing.Point(17, 104);
-            this.txtDireccionCliente.Multiline = true;
-            this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDireccionCliente.Size = new System.Drawing.Size(129, 20);
-            this.txtDireccionCliente.TabIndex = 32;
+            this.txtBarrioCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBarrioCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBarrioCliente.Location = new System.Drawing.Point(17, 104);
+            this.txtBarrioCliente.Multiline = true;
+            this.txtBarrioCliente.Name = "txtBarrioCliente";
+            this.txtBarrioCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBarrioCliente.Size = new System.Drawing.Size(129, 20);
+            this.txtBarrioCliente.TabIndex = 32;
             // 
             // txtNombreCliente
             // 
@@ -299,6 +310,7 @@
             this.txtNumeroDoc.Name = "txtNumeroDoc";
             this.txtNumeroDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroDoc.TabIndex = 5;
+            this.txtNumeroDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDoc_KeyPress);
             // 
             // label3
             // 
@@ -639,6 +651,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(61, 20);
             this.txtCantidad.TabIndex = 38;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // pictureBox1
             // 
@@ -679,17 +692,6 @@
             this.btnCancelarVenta.Text = "Cancelar";
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
             this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
-            // 
-            // LbelFechaFacturaVenta
-            // 
-            this.LbelFechaFacturaVenta.AutoSize = true;
-            this.LbelFechaFacturaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbelFechaFacturaVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbelFechaFacturaVenta.Location = new System.Drawing.Point(412, 32);
-            this.LbelFechaFacturaVenta.Name = "LbelFechaFacturaVenta";
-            this.LbelFechaFacturaVenta.Size = new System.Drawing.Size(59, 16);
-            this.LbelFechaFacturaVenta.TabIndex = 34;
-            this.LbelFechaFacturaVenta.Text = "/    /     /";
             // 
             // FormCrearVenta
             // 
@@ -763,7 +765,7 @@
         private System.Windows.Forms.Button btnGenerarVenta;
         private System.Windows.Forms.Button btnCancelarVenta;
         private System.Windows.Forms.TextBox txtTelefonoCliente;
-        private System.Windows.Forms.TextBox txtDireccionCliente;
+        private System.Windows.Forms.TextBox txtBarrioCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtNumeroDoc;
         private System.Windows.Forms.TextBox txtcantidadProd;
@@ -775,9 +777,9 @@
         private System.Windows.Forms.TextBox TxtColor;
         private System.Windows.Forms.TextBox TxtTalla;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label LbelFechaFacturaVenta;
     }
 }

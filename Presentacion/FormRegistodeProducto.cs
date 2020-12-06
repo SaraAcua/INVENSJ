@@ -62,9 +62,11 @@ namespace Presentacion
             txtCostoCompra.Text = "0";
             txtPrecioVenta.Text = "0";
             txtIva.Text = "0";
+            txtCantidad.Text = "0";
             txtCostoCompra.Enabled = false;
             txtPrecioVenta.Enabled=false;
             txtIva.Enabled = false;
+            txtCantidad.Enabled = false;
 
         }
 
@@ -219,6 +221,18 @@ namespace Presentacion
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
             LlenarCodigoMarca();
+        }
+
+     
+
+        private void txtStockMinimo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtStockMaximo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
         }
     }
     }

@@ -21,7 +21,7 @@ namespace Presentacion
             InitializeComponent();
             clienteService = new ClienteService(ConfigConnection.connectionString);
             llenarCombo();
-            
+
 
 
         }
@@ -29,7 +29,7 @@ namespace Presentacion
         {
 
         }
-      void llenarCombo()
+        void llenarCombo()
         {
             cmboTipo.Items.Add("CC");
             cmboTipo.Items.Add("CE");
@@ -45,7 +45,7 @@ namespace Presentacion
             {
 
                 this.Close();
-              
+
             }
             else
             {
@@ -72,8 +72,8 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtId.Text.Equals("") || txtname.Text.Equals("")||cmboTipo.SelectedItem.Equals("")
-            ||txtApellido.Text.Equals("")||txtBarrio.Text.Equals("")||txtDirecciòn.Text.Equals("")||txtEmail.Text.Equals(""))
+            if (txtId.Text.Equals("") || txtname.Text.Equals("") || cmboTipo.SelectedItem.Equals("")
+            || txtApellido.Text.Equals("") || txtBarrio.Text.Equals("") || txtDirecciòn.Text.Equals("") || txtEmail.Text.Equals(""))
             {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
@@ -100,6 +100,32 @@ namespace Presentacion
             txtTelefono.Text = "";
             txtEmail.Text = "";
 
+        }
+
+       
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '-')
+                {
+                    if (((TextBox)sender).Text.Contains('-'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
+            }
         }
     }
 }
