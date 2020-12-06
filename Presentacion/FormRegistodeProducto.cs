@@ -169,21 +169,6 @@ namespace Presentacion
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(@"Esta seguro que desea salir del registro de producto?", @"Atención",
-                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                Limpiar();
-
-            }
-            else
-            {
-                this.DialogResult = DialogResult.None;
-                txtCodigoProd.Focus();
-            }
-        }
         private Producto MapearProducto()
         {
           producto = new Producto();
@@ -201,26 +186,7 @@ namespace Presentacion
             return producto;
 
         }
-        private void btnGuardarProducto_Click(object sender, EventArgs e)
-        {
-            if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("")||txtStockMinimo.Text.Equals("")
-                || txtStockMaximo.Text.Equals(""))
-            {
-                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Producto producto = MapearProducto();
-                string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
-                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                //dataGvRegistroProd.DataSource=
-                Limpiar();
-            }
-           
-
-
-        }
+      
 
         private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -242,6 +208,43 @@ namespace Presentacion
         private void txtStockMaximo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+
+
+            if (MessageBox.Show(@"Esta seguro que desea salir del registro de producto?", @"Atención",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Limpiar();
+
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+                txtCodigoProd.Focus();
+            }
+        }
+
+        private void BtnRegsitrarCliente_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("") || txtStockMinimo.Text.Equals("")
+              || txtStockMaximo.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Producto producto = MapearProducto();
+                string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                //dataGvRegistroProd.DataSource=
+                Limpiar();
+            }
+
         }
     }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.dtgcliente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -37,6 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.BtnRegsitrarCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgcliente)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,7 +81,7 @@
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(402, 120);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(325, 116);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
             // label2
@@ -107,7 +109,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::Presentacion.Properties.Resources.buscar;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(208, 54);
+            this.btnBuscar.Location = new System.Drawing.Point(197, 52);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 42);
@@ -144,17 +146,19 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.BtnRegsitrarCliente);
             this.panel3.Controls.Add(this.btnEditarCliente);
-            this.panel3.Location = new System.Drawing.Point(461, 111);
+            this.panel3.Location = new System.Drawing.Point(373, 109);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(174, 76);
+            this.panel3.Size = new System.Drawing.Size(270, 64);
             this.panel3.TabIndex = 22;
             // 
             // BtnRegsitrarCliente
             // 
             this.BtnRegsitrarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.BtnRegsitrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRegsitrarCliente.FlatAppearance.BorderSize = 0;
             this.BtnRegsitrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.BtnRegsitrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -162,10 +166,10 @@
             this.BtnRegsitrarCliente.ForeColor = System.Drawing.Color.Black;
             this.BtnRegsitrarCliente.Image = global::Presentacion.Properties.Resources.diskette;
             this.BtnRegsitrarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(1, 3);
+            this.BtnRegsitrarCliente.Location = new System.Drawing.Point(0, 3);
             this.BtnRegsitrarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRegsitrarCliente.Name = "BtnRegsitrarCliente";
-            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(85, 73);
+            this.BtnRegsitrarCliente.Size = new System.Drawing.Size(86, 61);
             this.BtnRegsitrarCliente.TabIndex = 10;
             this.BtnRegsitrarCliente.Text = "Registrar";
             this.BtnRegsitrarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -175,6 +179,7 @@
             // btnEditarCliente
             // 
             this.btnEditarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarCliente.FlatAppearance.BorderSize = 0;
             this.btnEditarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,15 +187,36 @@
             this.btnEditarCliente.ForeColor = System.Drawing.Color.Black;
             this.btnEditarCliente.Image = global::Presentacion.Properties.Resources.edit;
             this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarCliente.Location = new System.Drawing.Point(87, 1);
+            this.btnEditarCliente.Location = new System.Drawing.Point(90, 1);
             this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(85, 73);
+            this.btnEditarCliente.Size = new System.Drawing.Size(91, 63);
             this.btnEditarCliente.TabIndex = 9;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditarCliente.UseVisualStyleBackColor = false;
             this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(182, 1);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 64);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // FormClientes
             // 
@@ -228,5 +254,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button BtnRegsitrarCliente;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

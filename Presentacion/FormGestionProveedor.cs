@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
@@ -58,6 +59,24 @@ namespace Presentacion
             return proveedor;
 
         }
+
+        private bool ValidarCorreo()
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(txtEmail.Text.Trim(), expresion))
+            {
+                if (Regex.Replace(txtEmail.Text.Trim(), expresion, String.Empty).Length == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return true;
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtId.Text.Equals("") || txtRazonSocial.Text.Equals("") || cmboTipo.SelectedItem.Equals("")
@@ -65,6 +84,10 @@ namespace Presentacion
             {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else if (ValidarCorreo())
+            {
+                MessageBox.Show("Debe digitar un email correcto ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             else
             {

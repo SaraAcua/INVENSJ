@@ -29,9 +29,9 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMovimientos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMovimientos));
             this.cmboMotivo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@ namespace Presentacion
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarProducto = new System.Windows.Forms.Button();
             this.btnEliminarProd = new System.Windows.Forms.Button();
             this.dtgvMovimientos = new System.Windows.Forms.DataGridView();
@@ -54,6 +53,7 @@ namespace Presentacion
             this.cmboConsulta = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.LblTotal = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovimientos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -165,26 +165,6 @@ namespace Presentacion
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 58);
             this.panel3.TabIndex = 47;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(175, 2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 54);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.UseWaitCursor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardarProducto
             // 
@@ -323,6 +303,27 @@ namespace Presentacion
             this.LblTotal.TabIndex = 54;
             this.LblTotal.Text = "--";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(176, 1);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 54);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
             // FormMovimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,7 +371,6 @@ namespace Presentacion
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardarProducto;
         private System.Windows.Forms.Button btnEliminarProd;
         private System.Windows.Forms.DataGridView dtgvMovimientos;
@@ -381,5 +381,6 @@ namespace Presentacion
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LblTotal;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
