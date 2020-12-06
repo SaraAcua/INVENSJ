@@ -100,16 +100,17 @@ namespace Presentacion
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            var respuesta = movimientosService.BuscarPorMotivo(cmboConsulta.Text);
-            List<Movimientos> movimientos = new List<Movimientos>();
-            if (!respuesta.Error)
-            {
 
-                movimientos.Add(respuesta.Movimientos);
-                dtgvMovimientos.DataSource = movimientos;
-                //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
-                //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
-            }
+
+            ConsultaMovimientosRespuesta respuesta = new ConsultaMovimientosRespuesta();
+
+           // string tipo = cmboConsulta.Text;
+            //if (tipo == "Todos")
+            //{
+              //  dtgvMovimientos.DataSource = null;
+                respuesta = movimientosService.BuscarPorMotivo(cmboConsulta.Text);
+                dtgvMovimientos.DataSource = respuesta.Movimientoss;
+
             //else
             //{
               // MessageBox.Show(" Debe elegir un motivo", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
