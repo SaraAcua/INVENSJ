@@ -65,8 +65,7 @@ namespace DALL
             List<Producto> productos = new List<Producto>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "select * from producto where descripcion LIKE '%adescripcion%' ";
-                command.Parameters.Add("descripcion", OracleDbType.Varchar2).Value = descripcion;
+                command.CommandText = @"select * from producto where descripcion LIKE '%"+ descripcion + "%' ";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
