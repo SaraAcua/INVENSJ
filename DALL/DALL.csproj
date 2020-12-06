@@ -48,6 +48,8 @@
     <Compile Include="ClienteRepository.cs" />
     <Compile Include="ColorRepository.cs" />
     <Compile Include="DashboardRepository.cs" />
+    <Compile Include="DetalleFacturaCompraRepository.cs" />
+    <Compile Include="DetalleFacturaVentaRepository.cs" />
     <Compile Include="MarcaRepository.cs" />
     <Compile Include="MovimientosRepository.cs" />
     <Compile Include="ProveedorRepository.cs" />
