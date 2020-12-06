@@ -71,6 +71,34 @@ namespace BLL
         }
 
 
+        public ConteoMovimientosRespuesta TotalizarTipo(string motivo)
+        {
+            ConteoMovimientosRespuesta respuesta = new ConteoMovimientosRespuesta();
+            try
+            {
+
+                conexion.Open();
+                respuesta.Cuenta = repositorio.Totalizar(motivo);
+                conexion.Close();
+                respuesta.Error = false;
+                respuesta.Mensaje = "Se consultan los Datos";
+
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+
+        }
+
+
+
+
+
 
     }
 
