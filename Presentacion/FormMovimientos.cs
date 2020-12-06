@@ -57,8 +57,8 @@ namespace Presentacion
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
 
-            if (txtCodigo.Text.Equals("") || int.Parse(txtCodigo.Text) < 0 || int.Parse(txtCantidad.Text) < 0 || cmboMotivo.SelectedItem.Equals("") || txtCantidad.Text.Equals(" ")
-                || txtObservacion.Text.Equals(""))
+            if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("") 
+                || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals(""))
             {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
