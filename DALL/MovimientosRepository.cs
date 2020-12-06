@@ -91,11 +91,11 @@ namespace DALL
             return movimientos1;
         }
 
-        //public int Totalizar()
-        //{
+        public int Totalizar(string motivo)
+        {
 
-        //   // return BuscarPorMotivo(string motivo).Count();
-        //}
+             return BuscarPorMotivo(motivo).Count();
+        }
 
 
     }
