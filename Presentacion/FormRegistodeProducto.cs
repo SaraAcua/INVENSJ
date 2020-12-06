@@ -169,21 +169,6 @@ namespace Presentacion
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(@"Esta seguro que desea salir del registro de producto?", @"Atención",
-                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                Limpiar();
-
-            }
-            else
-            {
-                this.DialogResult = DialogResult.None;
-                txtCodigoProd.Focus();
-            }
-        }
         private Producto MapearProducto()
         {
           producto = new Producto();
@@ -242,6 +227,24 @@ namespace Presentacion
         private void txtStockMaximo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+
+
+            if (MessageBox.Show(@"Esta seguro que desea salir del registro de producto?", @"Atención",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Limpiar();
+
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+                txtCodigoProd.Focus();
+            }
         }
     }
     }

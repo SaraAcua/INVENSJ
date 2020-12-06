@@ -85,6 +85,15 @@ namespace Presentacion
                 }
             }
         }
+
+     
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+            dtgcliente.DataSource = "";
+
+        }
     }
     }
 

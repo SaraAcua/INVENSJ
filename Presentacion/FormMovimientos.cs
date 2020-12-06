@@ -69,7 +69,7 @@ namespace Presentacion
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarCliente(movimientos);
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-              //  LblTotal.Text = movimientosService. ("AVERÍA").Cuenta.ToString();
+              // LblTotal.Text = movimientosService. ("AVERÍA").Cuenta.ToString();
                 //LblTotal.Text = movimientosService. ("REGALO").Cuenta.ToString();
 
                 Limpiar();
@@ -84,22 +84,6 @@ namespace Presentacion
             txtObservacion.Text = "";
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-            if (MessageBox.Show(@"Esta seguro que desea cancelar del registro de salida?", @"Atención",
-                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                Limpiar();
-
-            }
-            else
-            {
-                this.DialogResult = DialogResult.None;
-                //btnCancelar.Focus();
-            }
-        }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -120,7 +104,22 @@ namespace Presentacion
             // only allow one decimal point if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) { e.Handled = true; } }
         }
 
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
 
+            if (MessageBox.Show(@"Esta seguro que desea cancelar del registro de salida?", @"Atención",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Limpiar();
+
+            }
+            else
+            {
+                this.DialogResult = DialogResult.None;
+                //btnCancelar.Focus();
+            }
+        }
     }
 }
     
