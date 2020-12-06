@@ -61,6 +61,36 @@ namespace BLL
         }
 
 
+        public ConsultaProductoRespuesta BuscarPorDescripcion(string descripcion)
+        {
+            ConsultaProductoRespuesta respuesta = new ConsultaProductoRespuesta();
+            try
+            {
+                conexion.Open();
+                respuesta.Productos = repositorio.BuscarPorDescripcionProducto(descripcion);
+                conexion.Close();
+                if (respuesta.Productos.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
+
+
     }
 
     public class ConsultaProductoRespuesta
