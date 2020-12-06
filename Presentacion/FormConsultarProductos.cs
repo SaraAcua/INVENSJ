@@ -28,18 +28,20 @@ namespace Presentacion
 
             var respuesta = productoService.BuscarPorcodigo(txtCodigoProducto.Text);
             List<Producto> productos = new List<Producto>();
-            if (!respuesta.Error)
+            if(txtCodigoProducto.Text.Equals(""))
             {
-
-                productos.Add(respuesta.Producto);
-                dtgProducto.DataSource = productos;
-                //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
-                //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
+                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
             }
 
             else
             {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                productos.Add(respuesta.Producto);
+                dtgProducto.DataSource = productos;
+                //TxtTotal.Text = clienteService.Totalizar().Cuenta.ToString();
+                //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
+
+                // (!respuesta.Error)
             }
 
         }

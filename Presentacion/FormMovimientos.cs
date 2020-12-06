@@ -111,10 +111,10 @@ namespace Presentacion
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
             }
 
-            else
-            {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //else
+            //{
+              //  MessageBox.Show(" ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)

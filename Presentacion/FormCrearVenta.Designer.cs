@@ -480,14 +480,14 @@
             this.dataGVfactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVfactura.Location = new System.Drawing.Point(21, 328);
             this.dataGVfactura.Name = "dataGVfactura";
-            this.dataGVfactura.Size = new System.Drawing.Size(562, 150);
+            this.dataGVfactura.Size = new System.Drawing.Size(562, 100);
             this.dataGVfactura.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Location = new System.Drawing.Point(289, 483);
+            this.panel1.Location = new System.Drawing.Point(280, 453);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 47);
             this.panel1.TabIndex = 5;
@@ -670,7 +670,7 @@
             this.btnGenerarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarVenta.Location = new System.Drawing.Point(608, 221);
+            this.btnGenerarVenta.Location = new System.Drawing.Point(42, 453);
             this.btnGenerarVenta.Name = "btnGenerarVenta";
             this.btnGenerarVenta.Size = new System.Drawing.Size(91, 41);
             this.btnGenerarVenta.TabIndex = 37;
@@ -685,9 +685,9 @@
             this.btnCancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.btnCancelarVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelarVenta.Location = new System.Drawing.Point(608, 274);
+            this.btnCancelarVenta.Location = new System.Drawing.Point(139, 454);
             this.btnCancelarVenta.Name = "btnCancelarVenta";
-            this.btnCancelarVenta.Size = new System.Drawing.Size(91, 38);
+            this.btnCancelarVenta.Size = new System.Drawing.Size(98, 40);
             this.btnCancelarVenta.TabIndex = 38;
             this.btnCancelarVenta.Text = "Cancelar";
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
