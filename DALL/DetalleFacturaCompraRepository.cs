@@ -18,25 +18,22 @@ namespace DALL
         }
 
 
-         /*public int GuardarDetalleFacturaVenta(DetalleFacturaVenta detalle)
-         {
-             using (var command = _connection.CreateCommand())
-             {
-                 command.CommandText = @"pr_--------------------";
-                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                 command.Parameters.Add("Identificacion", OracleDbType.Varchar2).Value = cliente.Identificacion;
-                 command.Parameters.Add("TipoIdentificacion", OracleDbType.Varchar2).Value = cliente.TipoIdentificacion;
-                 command.Parameters.Add("Nombre", OracleDbType.Varchar2).Value = cliente.Nombre;
-                 command.Parameters.Add("Apellidos", OracleDbType.Varchar2).Value = cliente.Apellidos;
-                 command.Parameters.Add("Telefono", OracleDbType.Varchar2).Value = cliente.Telefono;
-                 command.Parameters.Add("Barrio", OracleDbType.Varchar2).Value = cliente.Barrio;
-                 command.Parameters.Add("Direccion", OracleDbType.Varchar2).Value = cliente.Direccion;
-                 command.Parameters.Add("Email", OracleDbType.Varchar2).Value = cliente.Email;
-                 var filas = command.ExecuteNonQuery();
-                 return filas;
-             }
-         }*/
-         
+        public int GuardarDetalleFacturaCompra(DetalleFacturaCompra detalle)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_insertar_detalle_venta";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("codigo_compra", OracleDbType.Varchar2).Value = detalle.CodigoCompra;
+                command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = detalle.CodigoProducto;
+                command.Parameters.Add("cantidad", OracleDbType.Varchar2).Value = detalle.CantidadProducto;
+                command.Parameters.Add("precio", OracleDbType.Varchar2).Value = detalle.Valorunitario;
+                command.Parameters.Add("subtotal", OracleDbType.Varchar2).Value = detalle.ValorTotal;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
 
 
 

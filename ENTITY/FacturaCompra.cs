@@ -13,7 +13,7 @@ namespace ENTITY
             CodigoFactura = codigoFactura;
             Fecha = fecha;
             ValorTotalFactura = valorTotalFactura;
-            
+            CodigoProveedor = proveedor.Identificacion;
         }
 
         public FacturaCompra()
@@ -21,6 +21,7 @@ namespace ENTITY
 
         }
 
+        public string CodigoProveedor { get; set; }
         public string CodigoFactura { get; set; }
         public string Fecha { get; set; }
         public double ValorTotalFactura { get; set; }

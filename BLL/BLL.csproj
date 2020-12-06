@@ -46,6 +46,8 @@
     <Compile Include="DashboardService.cs" />
     <Compile Include="DetalleFacturaCompraService.cs" />
     <Compile Include="DetalleFacturaVentaService.cs" />
+    <Compile Include="FacturaCompraService.cs" />
+    <Compile Include="FacturaVentaService.cs" />
     <Compile Include="MarcaService.cs" />
     <Compile Include="MovimientosService.cs" />
     <Compile Include="ProductoService.cs" />
