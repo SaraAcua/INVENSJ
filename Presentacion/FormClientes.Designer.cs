@@ -36,9 +36,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BtnRegsitrarCliente = new System.Windows.Forms.Button();
-            this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.BtnRegsitrarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgcliente)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -148,12 +147,32 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.BtnRegsitrarCliente);
-            this.panel3.Controls.Add(this.btnEditarCliente);
             this.panel3.Location = new System.Drawing.Point(373, 109);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 64);
+            this.panel3.Size = new System.Drawing.Size(209, 64);
             this.panel3.TabIndex = 22;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(94, 0);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 64);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // BtnRegsitrarCliente
             // 
@@ -175,48 +194,6 @@
             this.BtnRegsitrarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnRegsitrarCliente.UseVisualStyleBackColor = false;
             this.BtnRegsitrarCliente.Click += new System.EventHandler(this.BtnRegsitrarCliente_Click_1);
-            // 
-            // btnEditarCliente
-            // 
-            this.btnEditarCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCliente.FlatAppearance.BorderSize = 0;
-            this.btnEditarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnEditarCliente.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarCliente.Location = new System.Drawing.Point(90, 1);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(91, 63);
-            this.btnEditarCliente.TabIndex = 9;
-            this.btnEditarCliente.Text = "Editar";
-            this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditarCliente.UseVisualStyleBackColor = false;
-            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(182, 1);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 64);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // FormClientes
             // 
@@ -252,7 +229,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button BtnRegsitrarCliente;
         private System.Windows.Forms.Button btnCancelar;
     }

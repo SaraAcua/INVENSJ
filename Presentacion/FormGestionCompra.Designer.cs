@@ -30,7 +30,7 @@
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBarrio = new System.Windows.Forms.TextBox();
             this.LbelFechaFacturaCompra = new System.Windows.Forms.Label();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegsitroProv = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNitProveedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GradientPanel1.Controls.Add(this.label9);
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtBarrio);
             this.guna2GradientPanel1.Controls.Add(this.LbelFechaFacturaCompra);
             this.guna2GradientPanel1.Controls.Add(this.txtDireccionCliente);
             this.guna2GradientPanel1.Controls.Add(this.label5);
@@ -91,7 +91,7 @@
             this.guna2GradientPanel1.Controls.Add(this.txtNombreCliente);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.btnRegsitroProv);
-            this.guna2GradientPanel1.Controls.Add(this.button1);
+            this.guna2GradientPanel1.Controls.Add(this.btnBuscar);
             this.guna2GradientPanel1.Controls.Add(this.txtNitProveedor);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label2);
@@ -115,17 +115,19 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "Barrio";
             // 
-            // textBox1
+            // txtBarrio
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(216, 72);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(93, 20);
-            this.textBox1.TabIndex = 39;
+            this.txtBarrio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBarrio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBarrio.Enabled = false;
+            this.txtBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarrio.ForeColor = System.Drawing.Color.Black;
+            this.txtBarrio.Location = new System.Drawing.Point(216, 72);
+            this.txtBarrio.Multiline = true;
+            this.txtBarrio.Name = "txtBarrio";
+            this.txtBarrio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBarrio.Size = new System.Drawing.Size(93, 20);
+            this.txtBarrio.TabIndex = 39;
             // 
             // LbelFechaFacturaCompra
             // 
@@ -143,6 +145,8 @@
             this.txtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccionCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtDireccionCliente.Enabled = false;
+            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionCliente.ForeColor = System.Drawing.Color.Black;
             this.txtDireccionCliente.Location = new System.Drawing.Point(315, 72);
             this.txtDireccionCliente.Multiline = true;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
@@ -166,6 +170,8 @@
             this.txtTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtTelefonoCliente.Enabled = false;
+            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoCliente.ForeColor = System.Drawing.Color.Black;
             this.txtTelefonoCliente.Location = new System.Drawing.Point(449, 72);
             this.txtTelefonoCliente.Multiline = true;
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
@@ -201,6 +207,8 @@
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtNombreCliente.Enabled = false;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.ForeColor = System.Drawing.Color.Black;
             this.txtNombreCliente.Location = new System.Drawing.Point(23, 72);
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
@@ -237,22 +245,23 @@
             this.btnRegsitroProv.UseVisualStyleBackColor = true;
             this.btnRegsitroProv.Click += new System.EventHandler(this.btnRegsitroProv_Click);
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(315, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 25);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "      Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(315, 29);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(77, 25);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "      Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNitProveedor
             // 
@@ -477,18 +486,20 @@
             // 
             // TxtColor
             // 
+            this.TxtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtColor.ForeColor = System.Drawing.Color.Black;
             this.TxtColor.Location = new System.Drawing.Point(165, 23);
             this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 20);
+            this.TxtColor.Size = new System.Drawing.Size(72, 26);
             this.TxtColor.TabIndex = 48;
             // 
             // TxtTalla
             // 
+            this.TxtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTalla.ForeColor = System.Drawing.Color.Black;
             this.TxtTalla.Location = new System.Drawing.Point(115, 23);
             this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 20);
+            this.TxtTalla.Size = new System.Drawing.Size(44, 26);
             this.TxtTalla.TabIndex = 47;
             // 
             // button2
@@ -611,7 +622,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNitProveedor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnRegsitroProv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNumeroCompra;
@@ -643,7 +654,7 @@
         private System.Windows.Forms.TextBox TxtTalla;
         private System.Windows.Forms.Label LbelFechaFacturaCompra;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBarrio;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnCancelar;

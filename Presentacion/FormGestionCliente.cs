@@ -132,6 +132,31 @@ namespace Presentacion
 
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                Cliente cliente = new Cliente();
+                BusquedaClienteRespuesta consulta = new BusquedaClienteRespuesta();
+                consulta = clienteService.BuscarPorIdentificacion(txtId.Text);
+                if (!consulta.Error)
+                {
+                    cliente = consulta.Cliente;
+                    txtname.Text = cliente.Nombre;
+                    txtApellido.Text = cliente.Apellidos;
+                    txtBarrio.Text = cliente.Barrio;
+                    txtDirecciòn.Text = cliente.Direccion;
+                    txtTelefono.Text = cliente.Telefono;
+                    txtEmail.Text = cliente.Email;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+            }
+
+
+
+
             if (!Char.IsDigit(e.KeyChar) &&
                 e.KeyChar != (char)Keys.Back &&
                 e.KeyChar != '-')
@@ -149,5 +174,12 @@ namespace Presentacion
                 }
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }

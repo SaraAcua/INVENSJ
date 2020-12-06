@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace Presentacion
 {
     public partial class FormGestionCompra : Form
     {
+        ProveedorService service;
         public FormGestionCompra()
         {
             InitializeComponent();
+            service = new ProveedorService(ConfigConnection.connectionString);
 
             TxtTalla.Enabled = false;
             TxtColor.Enabled = false;
@@ -124,6 +128,26 @@ namespace Presentacion
                     else
                         e.Handled = false;
                 }
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+            BusquedaProveedorRespuesta consulta = new BusquedaProveedorRespuesta();
+            consulta = service.BuscarPorIdentificacion(txtNitProveedor.Text);
+            if (!consulta.Error)
+            {
+                proveedor = consulta.Proveedor;
+                txtNombreCliente.Text = proveedor.RazonSocial;
+                txtBarrio.Text = proveedor.Barrio;
+                txtDireccionCliente.Text = proveedor.Direccion;
+                txtTelefonoCliente.Text = proveedor.Telefono;
+            }
+            else
+            {
+                MessageBox.Show("Proveedor no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
             }
         }
     }

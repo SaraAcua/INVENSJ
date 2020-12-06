@@ -35,6 +35,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtBarrio = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cmboTipo = new System.Windows.Forms.ComboBox();
@@ -126,12 +127,32 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.btnEditar);
             this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.btnGuardar);
-            this.panel3.Location = new System.Drawing.Point(112, 210);
+            this.panel3.Location = new System.Drawing.Point(81, 210);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 58);
+            this.panel3.Size = new System.Drawing.Size(265, 58);
             this.panel3.TabIndex = 5;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(-1, 1);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(80, 54);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -143,7 +164,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(121, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(181, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 54);
             this.btnCancelar.TabIndex = 10;
@@ -162,7 +183,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.diskette;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(19, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(90, 1);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 54);
             this.btnGuardar.TabIndex = 9;
@@ -230,6 +251,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 23);
             this.txtId.TabIndex = 2;
+           
             this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // txtApellido
@@ -339,5 +361,6 @@
         private System.Windows.Forms.TextBox txtDirecciòn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBarrio;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
