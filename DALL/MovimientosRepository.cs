@@ -11,6 +11,7 @@ namespace DALL
     public class MovimientosRepository
     {
 
+
         private readonly OracleConnection _connection;
         private readonly List<Movimientos> _movimientoss = new List<Movimientos>();
         public MovimientosRepository(ConnectionManager connection)
