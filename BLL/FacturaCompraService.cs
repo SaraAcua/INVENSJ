@@ -8,26 +8,28 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class DetalleFacturaVentaService
+    class FacturaCompraService
     {
+
         private readonly ConnectionManager conexion;
-        private readonly DetalleFacturaVentaRepository repositorio;
-        public DetalleFacturaVentaService(string connectionString)
+        private readonly FacturaCompraRepository repositorio;
+        public FacturaCompraService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
-            repositorio = new DetalleFacturaVentaRepository(conexion);
+            repositorio = new FacturaCompraRepository(conexion);
         }
 
-        public string GuardarDetalleCompra(DetalleFacturaVenta detalle)
+
+        public string GuardarFacturaCompra(FacturaCompra factura)
         {
             try
             {
                 conexion.Open();
-
-                repositorio.GuardarDetalleFacturaVenta(detalle);
-
-                return $"Se guardaron los datos de la factura satisfactoriamente";
-
+                
+                    repositorio.GuardarFacturaCompra(factura);
+                    
+                    return $"Se guardaron los datos satisfactoriamente";
+                
             }
             catch (Exception e)
             {

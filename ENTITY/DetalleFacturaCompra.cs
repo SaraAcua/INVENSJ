@@ -27,7 +27,7 @@ namespace ENTITY
            
         }
 
-        public string CodigoVenta { get; set; }
+        public string CodigoCompra { get; set; }
         public string CodigoProducto { get; set; }
         public string Descripcion { get; set; }
         public int CantidadProducto { get; set; }
