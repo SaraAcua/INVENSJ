@@ -62,11 +62,11 @@ namespace DALL
         {
             if (!dataReader.HasRows) return null;
             Movimientos movimientos = new Movimientos();
-            movimientos.Motivo = dataReader.GetString(0);
-            movimientos.Descripcion = dataReader.GetString(1);
-            movimientos.Codigo = dataReader.GetString(2);
-            movimientos.Cantidad = dataReader.GetInt32(3);
-            movimientos.Fecha = dataReader.GetDateTime(4);
+            movimientos.Motivo = dataReader.GetString(1);
+            movimientos.Descripcion = dataReader.GetString(2);
+            movimientos.Codigo = dataReader.GetString(3);
+            movimientos.Cantidad = dataReader.GetInt32(4);
+            movimientos.Fecha = dataReader.GetDateTime(5);
             return movimientos;
 
         }
