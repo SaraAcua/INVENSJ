@@ -18,7 +18,7 @@ namespace DALL
         }
 
 
-        /* public int GuardarDetalleFacturaVenta(DetalleFacturaVenta detalleFacturaVenta)
+         /*public int GuardarDetalleFacturaVenta(DetalleFacturaVenta detalle)
          {
              using (var command = _connection.CreateCommand())
              {
@@ -35,8 +35,8 @@ namespace DALL
                  var filas = command.ExecuteNonQuery();
                  return filas;
              }
-         }
-         */
+         }*/
+         
 
 
 

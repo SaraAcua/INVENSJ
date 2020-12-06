@@ -42,7 +42,8 @@ namespace DALL
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "select * from movimientos where motivo LIKE '%Motivo%'";
+                command.CommandText = "select * from movimientos where motivo:='Motivo'";
+                //command.CommandText = @"select * from movimientos where motivo='AVERÍA'";
                 command.Parameters.Add("Motivo", OracleDbType.Varchar2).Value = motivo;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
