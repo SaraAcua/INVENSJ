@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNumeroDoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -104,7 +104,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label6);
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.Controls.Add(this.label4);
-            this.guna2GradientPanel1.Controls.Add(this.button1);
+            this.guna2GradientPanel1.Controls.Add(this.btnConsultar);
             this.guna2GradientPanel1.Controls.Add(this.txtNumeroDoc);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.Silver;
@@ -286,22 +286,23 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Nombres";
             // 
-            // button1
+            // btnConsultar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(223, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "      Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
+            this.btnConsultar.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(223, 17);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(82, 32);
+            this.btnConsultar.TabIndex = 6;
+            this.btnConsultar.Text = "      Buscar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // txtNumeroDoc
             // 
@@ -339,7 +340,7 @@
             this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(21, 194);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(21, 196);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
@@ -470,9 +471,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(217, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(144, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "FACTURACIÓN";
+            this.label1.Text = "REGISTRO VENTA";
             // 
             // dataGVfactura
             // 
@@ -670,7 +671,7 @@
             this.btnGenerarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarVenta.Location = new System.Drawing.Point(42, 453);
+            this.btnGenerarVenta.Location = new System.Drawing.Point(42, 444);
             this.btnGenerarVenta.Name = "btnGenerarVenta";
             this.btnGenerarVenta.Size = new System.Drawing.Size(91, 41);
             this.btnGenerarVenta.TabIndex = 37;
@@ -685,7 +686,7 @@
             this.btnCancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.btnCancelarVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelarVenta.Location = new System.Drawing.Point(139, 454);
+            this.btnCancelarVenta.Location = new System.Drawing.Point(139, 445);
             this.btnCancelarVenta.Name = "btnCancelarVenta";
             this.btnCancelarVenta.Size = new System.Drawing.Size(98, 40);
             this.btnCancelarVenta.TabIndex = 38;
@@ -737,7 +738,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGVfactura;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

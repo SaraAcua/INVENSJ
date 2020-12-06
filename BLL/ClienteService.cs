@@ -55,6 +55,11 @@ namespace BLL
                 conexion.Open();
                 respuesta.Cliente = repositorio.BuscarPorIdentificacionCliente(identificacion);
                 conexion.Close();
+               if(respuesta.Cliente == null)
+                {
+                    respuesta.Error = true;
+                    return respuesta;
+                }
                 respuesta.Mensaje = (respuesta.Cliente != null) ? "Se encontró el cliente buscado" : "El cliente buscado no existe";
                 respuesta.Error = false;
                 return respuesta;
