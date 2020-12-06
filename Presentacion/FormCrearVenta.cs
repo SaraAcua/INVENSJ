@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +15,15 @@ namespace Presentacion
 {
     public partial class FormCrearVenta : Form
     {
-    
+        ClienteService service;
+        Cliente cliente;
+
+
         DataTable table = new DataTable();
         public FormCrearVenta()
         {
             InitializeComponent();
+           service = new ClienteService(ConfigConnection.connectionString);
             table.Columns.Add("Codigo producto");
             table.Columns.Add("Descripciòn");
             table.Columns.Add("Precio unitario");
@@ -105,6 +111,31 @@ namespace Presentacion
                         e.Handled = false;
                 }
             }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            BusquedaClienteRespuesta consulta = new BusquedaClienteRespuesta();
+            consulta = service.BuscarPorIdentificacion(txtNumeroDoc.Text);
+            if (!consulta.Error)
+            {
+                cliente = consulta.Cliente;
+                txtNombreCliente.Text = cliente.Nombre;
+                txtApellido.Text = cliente.Apellidos;
+                txtBarrioCliente.Text = cliente.Barrio;
+                txtDireccion.Text = cliente.Direccion;
+                txtTelefonoCliente.Text = cliente.Telefono;
+            }
+            else
+            {
+                MessageBox.Show("Cliente no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+
+           
+           
+            
+
         }
     }
 }
