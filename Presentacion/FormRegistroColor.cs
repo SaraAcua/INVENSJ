@@ -46,10 +46,18 @@ namespace Presentacion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Color color = MapearColor();
-            string mensaje = colorService.GuardarColor(color);
-            MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            Limpiar();
+            if (txtNombre.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Color color = MapearColor();
+                string mensaje = colorService.GuardarColor(color);
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+            }
+           
 
         }
 

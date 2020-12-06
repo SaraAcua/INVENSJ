@@ -52,13 +52,78 @@ namespace Presentacion
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                 Limpiar();
+                Limpiar();
 
             }
             else
             {
                 this.DialogResult = DialogResult.None;
                 //btnCancelar.Focus();
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                   e.KeyChar != (char)Keys.Back &&
+                   e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '.')
+                {
+                    if (((TextBox)sender).Text.Contains('.'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '.')
+                {
+                    if (((TextBox)sender).Text.Contains('.'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
+            }
+        }
+
+        private void txtNitProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '-')
+                {
+                    if (((TextBox)sender).Text.Contains('-'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
             }
         }
     }

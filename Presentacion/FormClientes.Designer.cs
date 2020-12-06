@@ -139,6 +139,7 @@
             this.txtId.ShadowDecoration.Parent = this.txtId;
             this.txtId.Size = new System.Drawing.Size(138, 28);
             this.txtId.TabIndex = 17;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // panel3
             // 

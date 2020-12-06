@@ -36,10 +36,13 @@ namespace Presentacion
         void InhabiltarText()
         {
             txtNumFactura.Enabled = false;
-            txtDireccionCliente.Enabled = false;
+            txtDireccion.Enabled = false;
             txtNombreCliente.Enabled = false;
             txtTelefonoCliente.Enabled = false;
             txtcantidadProd.Enabled = false;
+            txtApellido.Enabled = false;
+            txtBarrioCliente.Enabled = false;
+
         }
 
 
@@ -76,6 +79,31 @@ namespace Presentacion
             else
             {
                 this.DialogResult = DialogResult.None;
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtNumeroDoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (e.KeyChar == '-')
+                {
+                    if (((TextBox)sender).Text.Contains('-'))
+                        e.Handled = true;
+                    else
+                        e.Handled = false;
+                }
             }
         }
     }

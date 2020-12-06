@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -261,6 +261,7 @@
             this.txtNitProveedor.Name = "txtNitProveedor";
             this.txtNitProveedor.Size = new System.Drawing.Size(90, 20);
             this.txtNitProveedor.TabIndex = 5;
+            this.txtNitProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNitProveedor_KeyPress);
             // 
             // label3
             // 
@@ -322,6 +323,15 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(592, 51);
             this.guna2GradientPanel3.TabIndex = 38;
             // 
+            // textBox2
+            // 
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(195, 22);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(73, 20);
+            this.textBox2.TabIndex = 43;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
             // txtPrecio
             // 
             this.txtPrecio.ForeColor = System.Drawing.Color.Black;
@@ -329,6 +339,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(73, 20);
             this.txtPrecio.TabIndex = 42;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // button5
             // 
@@ -402,6 +413,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(67, 20);
             this.txtCantidad.TabIndex = 38;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label7
             // 
@@ -558,14 +570,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(195, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 20);
-            this.textBox2.TabIndex = 43;
             // 
             // FormGestionCompra
             // 

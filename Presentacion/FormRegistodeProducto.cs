@@ -62,9 +62,11 @@ namespace Presentacion
             txtCostoCompra.Text = "0";
             txtPrecioVenta.Text = "0";
             txtIva.Text = "0";
+            txtCantidad.Text = "0";
             txtCostoCompra.Enabled = false;
             txtPrecioVenta.Enabled=false;
             txtIva.Enabled = false;
+            txtCantidad.Enabled = false;
 
         }
 
@@ -201,12 +203,21 @@ namespace Presentacion
         }
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-           Producto producto = MapearProducto();
-            string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
-             MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("")||txtStockMinimo.Text.Equals("")
+                || txtStockMaximo.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Producto producto = MapearProducto();
+                string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-           //dataGvRegistroProd.DataSource=
-            Limpiar();
+                //dataGvRegistroProd.DataSource=
+                Limpiar();
+            }
+           
 
 
         }
@@ -219,6 +230,18 @@ namespace Presentacion
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
             LlenarCodigoMarca();
+        }
+
+     
+
+        private void txtStockMinimo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+        }
+
+        private void txtStockMaximo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
         }
     }
     }

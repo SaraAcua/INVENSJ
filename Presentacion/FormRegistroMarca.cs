@@ -48,12 +48,17 @@ namespace Presentacion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            Marca marca = MapearMarca();
-            string mensaje = marcaService.GuardarMarca(marca);
-            MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            Limpiar();
-
+            if (txtNombre.Text.Equals(""))
+            {
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Marca marca = MapearMarca();
+                string mensaje = marcaService.GuardarMarca(marca);
+                MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+            }
         }
 
         private void Limpiar()

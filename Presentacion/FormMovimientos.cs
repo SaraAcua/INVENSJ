@@ -48,7 +48,7 @@ namespace Presentacion
             movimientos.Motivo = cmboMotivo.Text;
             movimientos.Codigo = txtCodigo.Text;
             movimientos.Cantidad = int.Parse(txtCantidad.Text);
-            movimientos.Fecha = DateTime.Parse( LbelFecha.Text);
+            movimientos.Fecha = DateTime.Parse(LbelFecha.Text);
             movimientos.Descripcion = txtObservacion.Text;
             return movimientos;
 
@@ -56,15 +56,6 @@ namespace Presentacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int cantidad = 0;
-                cantidad = int.Parse(txtCantidad.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Cantidad debe ser numerica ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
 
             if (txtCodigo.Text.Equals("") || int.Parse(txtCodigo.Text) < 0 || int.Parse(txtCantidad.Text) < 0 || cmboMotivo.SelectedItem.Equals("") || txtCantidad.Text.Equals(" ")
                 || txtObservacion.Text.Equals(""))
@@ -82,8 +73,8 @@ namespace Presentacion
 
             }
         }
-                    
-         private void Limpiar()
+
+        private void Limpiar()
         {
             txtCantidad.Text = "";
             txtCodigo.Text = "";
@@ -120,13 +111,20 @@ namespace Presentacion
                 //txtId.Text = clienteService.TotalizarTipo("F").Cuenta.ToString();
             }
 
-            else
-            {
-                MessageBox.Show("Debe digitar una identificacion ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //else
+            //{
+              //  MessageBox.Show(" ", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
-    }
 
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+            // only allow one decimal point if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) { e.Handled = true; } }
+        }
+
+
+    }
 }
     
   
