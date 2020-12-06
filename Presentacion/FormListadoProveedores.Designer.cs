@@ -49,7 +49,7 @@
             this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(597, 229);
+            this.btnImprimir.Location = new System.Drawing.Point(397, 442);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(91, 41);
             this.btnImprimir.TabIndex = 41;
@@ -71,7 +71,7 @@
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(547, 87);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(444, 98);
             this.guna2GradientPanel1.TabIndex = 40;
             // 
             // label3
@@ -80,7 +80,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(288, 21);
+            this.label3.Location = new System.Drawing.Point(220, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 33;
@@ -110,7 +110,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Presentacion.Properties.Resources.buscar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(411, 32);
+            this.button1.Location = new System.Drawing.Point(329, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 30);
             this.button1.TabIndex = 31;
@@ -119,7 +119,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 37);
+            this.textBox2.Location = new System.Drawing.Point(223, 37);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 30;
@@ -144,7 +144,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Presentacion.Properties.Resources.buscar;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(160, 32);
+            this.button3.Location = new System.Drawing.Point(142, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 30);
             this.button3.TabIndex = 28;
@@ -157,7 +157,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(44, 229);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 207);
             this.dataGridView1.TabIndex = 39;
             // 
             // label2
