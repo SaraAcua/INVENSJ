@@ -53,7 +53,7 @@ namespace Presentacion
             this.label6 = new System.Windows.Forms.Label();
             this.cmboConsulta = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LblTotal = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovimientos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -314,14 +314,14 @@ namespace Presentacion
             this.label8.TabIndex = 53;
             this.label8.Text = "Total";
             // 
-            // label9
+            // LblTotal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(423, 459);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "label9";
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.Location = new System.Drawing.Point(423, 459);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(13, 13);
+            this.LblTotal.TabIndex = 54;
+            this.LblTotal.Text = "--";
             // 
             // FormMovimientos
             // 
@@ -329,7 +329,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(741, 523);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
@@ -380,6 +380,6 @@ namespace Presentacion
         private System.Windows.Forms.ComboBox cmboConsulta;
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LblTotal;
     }
 }

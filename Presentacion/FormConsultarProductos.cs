@@ -53,7 +53,14 @@ namespace Presentacion
             dtgProducto.DataSource = "";
         }
 
-       
-        
+        private void btnBuscarDescripcion_Click(object sender, EventArgs e)
+        {
+            ConsultaProductoRespuesta respuesta = new ConsultaProductoRespuesta();
+
+
+            respuesta = productoService.BuscarPorDescripcion(txtDescripcion.Text);
+            dtgProducto.DataSource = respuesta.Productos;
+
+        }
     }
 }
