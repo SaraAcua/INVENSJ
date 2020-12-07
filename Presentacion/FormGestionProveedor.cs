@@ -156,7 +156,7 @@ namespace Presentacion
                         e.Handled = false;
                 }
             }
-        }
+        } 
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
