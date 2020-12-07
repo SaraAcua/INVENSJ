@@ -50,7 +50,7 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.TxtColor = new System.Windows.Forms.TextBox();
             this.TxtTalla = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarProduct = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcantidadProd = new System.Windows.Forms.TextBox();
@@ -338,19 +338,19 @@
             // 
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.TxtColor);
+            this.guna2GradientPanel2.Controls.Add(this.btnBuscarProduct);
             this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
-            this.guna2GradientPanel2.Controls.Add(this.button2);
-            this.guna2GradientPanel2.Controls.Add(this.label10);
-            this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.Controls.Add(this.txtcantidadProd);
             this.guna2GradientPanel2.Controls.Add(this.label20);
+            this.guna2GradientPanel2.Controls.Add(this.label10);
             this.guna2GradientPanel2.Controls.Add(this.label19);
             this.guna2GradientPanel2.Controls.Add(this.label18);
+            this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.Controls.Add(this.label14);
             this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(21, 196);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(23, 196);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
@@ -360,7 +360,7 @@
             // 
             this.TxtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtColor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtColor.Location = new System.Drawing.Point(152, 23);
+            this.TxtColor.Location = new System.Drawing.Point(240, 19);
             this.TxtColor.Name = "TxtColor";
             this.TxtColor.Size = new System.Drawing.Size(72, 24);
             this.TxtColor.TabIndex = 46;
@@ -369,35 +369,36 @@
             // 
             this.TxtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTalla.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtTalla.Location = new System.Drawing.Point(102, 23);
+            this.TxtTalla.Location = new System.Drawing.Point(190, 19);
             this.TxtTalla.Name = "TxtTalla";
             this.TxtTalla.Size = new System.Drawing.Size(44, 24);
             this.TxtTalla.TabIndex = 45;
             // 
-            // button2
+            // btnBuscarProduct
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBuscarProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(225, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 32);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "      Buscar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBuscarProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarProduct.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarProduct.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarProduct.Location = new System.Drawing.Point(102, 11);
+            this.btnBuscarProduct.Name = "btnBuscarProduct";
+            this.btnBuscarProduct.Size = new System.Drawing.Size(82, 32);
+            this.btnBuscarProduct.TabIndex = 35;
+            this.btnBuscarProduct.Text = "      Buscar";
+            this.btnBuscarProduct.UseVisualStyleBackColor = false;
+            this.btnBuscarProduct.Click += new System.EventHandler(this.btnBuscarProduct_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(152, 7);
+            this.label10.Location = new System.Drawing.Point(240, 3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 44;
@@ -408,7 +409,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(102, 7);
+            this.label8.Location = new System.Drawing.Point(190, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 39;
@@ -420,7 +421,7 @@
             this.txtcantidadProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtcantidadProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcantidadProd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtcantidadProd.Location = new System.Drawing.Point(411, 23);
+            this.txtcantidadProd.Location = new System.Drawing.Point(340, 22);
             this.txtcantidadProd.Multiline = true;
             this.txtcantidadProd.Name = "txtcantidadProd";
             this.txtcantidadProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -432,7 +433,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(480, 26);
+            this.label20.Location = new System.Drawing.Point(409, 25);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(32, 18);
             this.label20.TabIndex = 31;
@@ -443,7 +444,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(472, 7);
+            this.label19.Location = new System.Drawing.Point(401, 6);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(37, 13);
             this.label19.TabIndex = 30;
@@ -454,7 +455,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(411, 7);
+            this.label18.Location = new System.Drawing.Point(340, 6);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(49, 13);
             this.label18.TabIndex = 28;
@@ -788,7 +789,7 @@
         private System.Windows.Forms.TextBox txtcantidadProd;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarProduct;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtColor;

@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class FormRegistodeProducto : Form
     {
-        ProductoService productoService ;
+        ProductoService productoService;
         Producto producto;
         ColorService colorService;
         MarcaService marcaService;
@@ -49,13 +49,13 @@ namespace Presentacion
             cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-         void llenarComboColor()
+        void llenarComboColor()
         {
-        
-           ColorService colorService= new ColorService(ConfigConnection.connectionString);
+
+            ColorService colorService = new ColorService(ConfigConnection.connectionString);
             cmbColor.DataSource = colorService.ConsultarColor();
             cmbColor.Refresh();
- 
+
         }
         private void Inhabilitar()
         {
@@ -64,7 +64,7 @@ namespace Presentacion
             txtIva.Text = "0";
             txtCantidad.Text = "0";
             txtCostoCompra.Enabled = false;
-            txtPrecioVenta.Enabled=false;
+            txtPrecioVenta.Enabled = false;
             txtIva.Enabled = false;
             txtCantidad.Enabled = false;
 
@@ -72,7 +72,7 @@ namespace Presentacion
 
         void LlenarCodigoColor()
         {
-            
+
             string codigo = colorService.ConsultarIdColor(cmbColor.Text).ToString();
             if (codigo != "0")
             {
@@ -118,7 +118,7 @@ namespace Presentacion
             cmbColor.Text = "SELECCIONE";
             cmbMarca.Text = "SELECCIONE";
             cmbTalla.Text = "SELECCIONE";
-            picImgen.Visible= false;
+            picImgen.Visible = false;
 
         }
         private void LlenarComboTalla()
@@ -130,7 +130,7 @@ namespace Presentacion
             cmbTalla.Items.Add("L");
             cmbTalla.Items.Add("XL");
             cmbTalla.Items.Add("XXL");
-          
+
         }
 
         private void btnEliminarProd_Click(object sender, EventArgs e)
@@ -171,22 +171,22 @@ namespace Presentacion
 
         private Producto MapearProducto()
         {
-          producto = new Producto();
+            producto = new Producto();
             producto.CodigoProducto = txtCodigoProd.Text;
             producto.Descripcion = txtDescripcionProd.Text;
-            producto.Costo = int.Parse( txtCostoCompra.Text);
+            producto.Costo = int.Parse(txtCostoCompra.Text);
             producto.Precio = int.Parse(txtPrecioVenta.Text);
             producto.Iva = int.Parse(txtIva.Text);
             producto.Talla = cmbTalla.Text;
             producto.Color = txtCodigoColor.Text;
             producto.Marca = txtCodigoMarca.Text;
             producto.StockMinimo = int.Parse(txtStockMinimo.Text);
-            producto.StockMaximo= int.Parse(txtStockMaximo.Text);
-            producto.Cantidad= int.Parse(txtCantidad.Text);
+            producto.StockMaximo = int.Parse(txtStockMaximo.Text);
+            producto.Cantidad = int.Parse(txtCantidad.Text);
             return producto;
 
         }
-      
+
 
         private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -198,7 +198,7 @@ namespace Presentacion
             LlenarCodigoMarca();
         }
 
-     
+
 
         private void txtStockMinimo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -246,6 +246,11 @@ namespace Presentacion
             }
 
         }
+
+        private void txtCodigoProd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
-    }
+}
 
