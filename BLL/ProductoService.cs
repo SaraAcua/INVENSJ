@@ -46,6 +46,11 @@ namespace BLL
                 conexion.Open();
                 respuesta.Producto = repositorio.BuscarPorCodigoProducto(codigo);
                 conexion.Close();
+                if (respuesta.Producto == null)
+                {
+                    respuesta.Error = true;
+                    return respuesta;
+                }
                 respuesta.Mensaje = (respuesta.Producto != null) ? "Se encontró el producto buscado" : "El cliente buscado no existe";
                 respuesta.Error = false;
                 return respuesta;
