@@ -157,7 +157,7 @@ namespace Presentacion
                     TxtTalla.Text = producto.Talla;
                     TxtColor.Text = producto.Color;
                     txtcantidadProd.Text= producto.Cantidad.ToString();
-                    lblPrecioVenta.Text = producto.Precio.ToString();
+                    lblPrecioVenta.Text = producto.Precio.ToString(); 
                 }
                 else
                 {
