@@ -36,7 +36,7 @@ namespace BLL
             }
             finally { conexion.Close(); }
         }
-
+         
         public BusquedaProductoRespuesta BuscarPorcodigo(string codigo)
         {
             BusquedaProductoRespuesta respuesta = new BusquedaProductoRespuesta();
