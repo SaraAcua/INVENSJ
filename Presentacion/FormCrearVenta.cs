@@ -142,5 +142,27 @@ namespace Presentacion
             
 
         }
+
+        private void btnBuscarProduct_Click(object sender, EventArgs e)
+        {
+            
+                Producto producto = new Producto();
+                BusquedaProductoRespuesta consulta = new BusquedaProductoRespuesta();
+              //  consulta = ProductoService. (txtCodigoProd.Text);
+                if (!consulta.Error)
+                {
+                    producto = consulta.Producto;
+                   
+                    TxtTalla.Text = producto.Talla;
+                    TxtColor.Text = producto.Color;
+                      producto.Cantidad = int.Parse(txtcantidadProd.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Producto no existe", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+            }
+        }
     }
 }

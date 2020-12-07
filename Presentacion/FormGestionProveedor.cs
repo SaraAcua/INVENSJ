@@ -117,6 +117,28 @@ namespace Presentacion
 
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                Proveedor proveedor = new Proveedor();
+                BusquedaProveedorRespuesta consulta = new BusquedaProveedorRespuesta();
+                consulta = proveedorService.BuscarPorIdentificacion(txtId.Text);
+                if (!consulta.Error)
+                {
+                    proveedor = consulta.Proveedor;
+                    txtRazonSocial.Text = proveedor.RazonSocial;
+                    txtBarrio.Text = proveedor.Barrio;
+                    txtDireccion.Text = proveedor.Direccion;
+                    txtTelefono.Text = proveedor.Telefono;
+                    txtEmail.Text = proveedor.Email;
+                }
+                else
+                {
+                    MessageBox.Show("Proveedor no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+            }
+
+
             if (!Char.IsDigit(e.KeyChar) &&
                 e.KeyChar != (char)Keys.Back &&
                 e.KeyChar != '-')

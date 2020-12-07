@@ -179,7 +179,6 @@
             this.btnGuardarProducto.Text = "Guardar";
             this.btnGuardarProducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardarProducto.UseVisualStyleBackColor = false;
-          
             // 
             // btnEliminarProd
             // 
@@ -729,6 +728,7 @@
             this.txtCodigoProd.ShadowDecoration.Parent = this.txtCodigoProd;
             this.txtCodigoProd.Size = new System.Drawing.Size(58, 22);
             this.txtCodigoProd.TabIndex = 23;
+            this.txtCodigoProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoProd_KeyPress);
             // 
             // picImgen
             // 
