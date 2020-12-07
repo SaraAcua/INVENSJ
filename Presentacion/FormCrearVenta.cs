@@ -16,6 +16,7 @@ namespace Presentacion
     public partial class FormCrearVenta : Form
     {
         ClienteService service;
+        ProductoService productoService;
         Cliente cliente;
 
 
@@ -148,14 +149,15 @@ namespace Presentacion
             
                 Producto producto = new Producto();
                 BusquedaProductoRespuesta consulta = new BusquedaProductoRespuesta();
-              //  consulta = ProductoService. (txtCodigoProd.Text);
+               consulta = productoService.BuscarPorcodigo (txtCodigoProd.Text);
                 if (!consulta.Error)
                 {
                     producto = consulta.Producto;
                    
                     TxtTalla.Text = producto.Talla;
                     TxtColor.Text = producto.Color;
-                      producto.Cantidad = int.Parse(txtcantidadProd.Text);
+                    txtcantidadProd.Text= producto.Cantidad.ToString();
+                    lblPrecioVenta.Text = producto.Precio.ToString();
                 }
                 else
                 {
@@ -165,4 +167,4 @@ namespace Presentacion
             }
         }
     }
-}
+

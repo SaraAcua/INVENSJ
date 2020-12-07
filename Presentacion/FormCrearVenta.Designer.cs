@@ -54,7 +54,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcantidadProd = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -341,7 +341,7 @@
             this.guna2GradientPanel2.Controls.Add(this.btnBuscarProduct);
             this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
             this.guna2GradientPanel2.Controls.Add(this.txtcantidadProd);
-            this.guna2GradientPanel2.Controls.Add(this.label20);
+            this.guna2GradientPanel2.Controls.Add(this.lblPrecioVenta);
             this.guna2GradientPanel2.Controls.Add(this.label10);
             this.guna2GradientPanel2.Controls.Add(this.label19);
             this.guna2GradientPanel2.Controls.Add(this.label18);
@@ -428,16 +428,16 @@
             this.txtcantidadProd.Size = new System.Drawing.Size(49, 20);
             this.txtcantidadProd.TabIndex = 37;
             // 
-            // label20
+            // lblPrecioVenta
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(409, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(32, 18);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "$...";
+            this.lblPrecioVenta.AutoSize = true;
+            this.lblPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPrecioVenta.Location = new System.Drawing.Point(409, 25);
+            this.lblPrecioVenta.Name = "lblPrecioVenta";
+            this.lblPrecioVenta.Size = new System.Drawing.Size(32, 18);
+            this.lblPrecioVenta.TabIndex = 31;
+            this.lblPrecioVenta.Text = "$...";
             // 
             // label19
             // 
@@ -787,7 +787,7 @@
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtNumeroDoc;
         private System.Windows.Forms.TextBox txtcantidadProd;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnBuscarProduct;
         private System.Windows.Forms.Label label10;
