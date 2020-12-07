@@ -140,6 +140,7 @@ namespace Presentacion
                 if (!consulta.Error)
                 {
                     cliente = consulta.Cliente;
+                    cmboTipo.SelectedItem = cliente.TipoIdentificacion;
                     txtname.Text = cliente.Nombre;
                     txtApellido.Text = cliente.Apellidos;
                     txtBarrio.Text = cliente.Barrio;
@@ -177,7 +178,14 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+              Cliente cliente = MapearCliente();
+                string mensaje = clienteService.ModificarCliente(cliente);
+                MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
         }
 
     }

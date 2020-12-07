@@ -47,18 +47,6 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNumeroDoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.TxtColor = new System.Windows.Forms.TextBox();
-            this.TxtTalla = new System.Windows.Forms.TextBox();
-            this.btnBuscarProduct = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtcantidadProd = new System.Windows.Forms.TextBox();
-            this.lblPrecioVenta = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCodigoProd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGVfactura = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,12 +65,26 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnCancelarVenta = new System.Windows.Forms.Button();
+            this.txtCodigoProd = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblPrecioVenta = new System.Windows.Forms.Label();
+            this.btnBuscarProduct = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblTalla = new System.Windows.Forms.Label();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -334,152 +336,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Numero documento";
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.TxtColor);
-            this.guna2GradientPanel2.Controls.Add(this.btnBuscarProduct);
-            this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
-            this.guna2GradientPanel2.Controls.Add(this.txtcantidadProd);
-            this.guna2GradientPanel2.Controls.Add(this.lblPrecioVenta);
-            this.guna2GradientPanel2.Controls.Add(this.label10);
-            this.guna2GradientPanel2.Controls.Add(this.label19);
-            this.guna2GradientPanel2.Controls.Add(this.label18);
-            this.guna2GradientPanel2.Controls.Add(this.label8);
-            this.guna2GradientPanel2.Controls.Add(this.label14);
-            this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(23, 196);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
-            this.guna2GradientPanel2.TabIndex = 1;
-            // 
-            // TxtColor
-            // 
-            this.TxtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtColor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtColor.Location = new System.Drawing.Point(240, 19);
-            this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 24);
-            this.TxtColor.TabIndex = 46;
-            // 
-            // TxtTalla
-            // 
-            this.TxtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTalla.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtTalla.Location = new System.Drawing.Point(190, 19);
-            this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 24);
-            this.TxtTalla.TabIndex = 45;
-            // 
-            // btnBuscarProduct
-            // 
-            this.btnBuscarProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscarProduct.FlatAppearance.BorderSize = 0;
-            this.btnBuscarProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.btnBuscarProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarProduct.Image = global::Presentacion.Properties.Resources.buscar;
-            this.btnBuscarProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarProduct.Location = new System.Drawing.Point(102, 11);
-            this.btnBuscarProduct.Name = "btnBuscarProduct";
-            this.btnBuscarProduct.Size = new System.Drawing.Size(82, 32);
-            this.btnBuscarProduct.TabIndex = 35;
-            this.btnBuscarProduct.Text = "      Buscar";
-            this.btnBuscarProduct.UseVisualStyleBackColor = false;
-            this.btnBuscarProduct.Click += new System.EventHandler(this.btnBuscarProduct_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(240, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 13);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Color";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(190, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Talla";
-            // 
-            // txtcantidadProd
-            // 
-            this.txtcantidadProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcantidadProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtcantidadProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcantidadProd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtcantidadProd.Location = new System.Drawing.Point(340, 22);
-            this.txtcantidadProd.Multiline = true;
-            this.txtcantidadProd.Name = "txtcantidadProd";
-            this.txtcantidadProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtcantidadProd.Size = new System.Drawing.Size(49, 20);
-            this.txtcantidadProd.TabIndex = 37;
-            // 
-            // lblPrecioVenta
-            // 
-            this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioVenta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(409, 25);
-            this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(32, 18);
-            this.lblPrecioVenta.TabIndex = 31;
-            this.lblPrecioVenta.Text = "$...";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(401, 6);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 13);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "Precio";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(340, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Cantidad";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(11, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 13);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Codigo producto";
-            // 
-            // txtCodigoProd
-            // 
-            this.txtCodigoProd.ForeColor = System.Drawing.Color.Black;
-            this.txtCodigoProd.Location = new System.Drawing.Point(17, 23);
-            this.txtCodigoProd.Name = "txtCodigoProd";
-            this.txtCodigoProd.Size = new System.Drawing.Size(79, 20);
-            this.txtCodigoProd.TabIndex = 6;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -632,11 +488,11 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(134, 27);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(32, 18);
+            this.label24.Size = new System.Drawing.Size(27, 15);
             this.label24.TabIndex = 36;
             this.label24.Text = "$...";
             // 
@@ -711,12 +567,184 @@
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
             this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click);
             // 
+            // txtCodigoProd
+            // 
+            this.txtCodigoProd.ForeColor = System.Drawing.Color.Black;
+            this.txtCodigoProd.Location = new System.Drawing.Point(17, 23);
+            this.txtCodigoProd.Name = "txtCodigoProd";
+            this.txtCodigoProd.Size = new System.Drawing.Size(79, 20);
+            this.txtCodigoProd.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(11, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Codigo producto";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(277, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Talla";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(435, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Cantidad";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(493, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Precio";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(327, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Color";
+            // 
+            // lblPrecioVenta
+            // 
+            this.lblPrecioVenta.AutoSize = true;
+            this.lblPrecioVenta.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioVenta.ForeColor = System.Drawing.Color.Black;
+            this.lblPrecioVenta.Location = new System.Drawing.Point(494, 23);
+            this.lblPrecioVenta.Name = "lblPrecioVenta";
+            this.lblPrecioVenta.Size = new System.Drawing.Size(27, 15);
+            this.lblPrecioVenta.TabIndex = 31;
+            this.lblPrecioVenta.Text = "$...";
+            // 
+            // btnBuscarProduct
+            // 
+            this.btnBuscarProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarProduct.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarProduct.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarProduct.Location = new System.Drawing.Point(98, 14);
+            this.btnBuscarProduct.Name = "btnBuscarProduct";
+            this.btnBuscarProduct.Size = new System.Drawing.Size(37, 29);
+            this.btnBuscarProduct.TabIndex = 35;
+            this.btnBuscarProduct.UseVisualStyleBackColor = false;
+            this.btnBuscarProduct.Click += new System.EventHandler(this.btnBuscarProduct_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(142, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 48;
+            this.label12.Text = "Descripcion";
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.BorderRadius = 15;
+            this.guna2GradientPanel2.Controls.Add(this.lblCantidad);
+            this.guna2GradientPanel2.Controls.Add(this.lblColor);
+            this.guna2GradientPanel2.Controls.Add(this.lblTalla);
+            this.guna2GradientPanel2.Controls.Add(this.lblDescripcion);
+            this.guna2GradientPanel2.Controls.Add(this.label12);
+            this.guna2GradientPanel2.Controls.Add(this.btnBuscarProduct);
+            this.guna2GradientPanel2.Controls.Add(this.lblPrecioVenta);
+            this.guna2GradientPanel2.Controls.Add(this.label10);
+            this.guna2GradientPanel2.Controls.Add(this.label19);
+            this.guna2GradientPanel2.Controls.Add(this.label18);
+            this.guna2GradientPanel2.Controls.Add(this.label8);
+            this.guna2GradientPanel2.Controls.Add(this.label14);
+            this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(23, 196);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
+            this.guna2GradientPanel2.TabIndex = 1;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.lblDescripcion.Location = new System.Drawing.Point(144, 27);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(0, 13);
+            this.lblDescripcion.TabIndex = 49;
+            // 
+            // lblTalla
+            // 
+            this.lblTalla.AutoSize = true;
+            this.lblTalla.BackColor = System.Drawing.Color.Transparent;
+            this.lblTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTalla.ForeColor = System.Drawing.Color.Black;
+            this.lblTalla.Location = new System.Drawing.Point(282, 26);
+            this.lblTalla.Name = "lblTalla";
+            this.lblTalla.Size = new System.Drawing.Size(0, 13);
+            this.lblTalla.TabIndex = 50;
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.BackColor = System.Drawing.Color.Transparent;
+            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.ForeColor = System.Drawing.Color.Black;
+            this.lblColor.Location = new System.Drawing.Point(336, 25);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(0, 13);
+            this.lblColor.TabIndex = 51;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidad.Location = new System.Drawing.Point(446, 25);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(0, 13);
+            this.lblCantidad.TabIndex = 52;
+            // 
             // FormCrearVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(734, 553);
+            this.ClientSize = new System.Drawing.Size(734, 559);
             this.Controls.Add(this.btnCancelarVenta);
             this.Controls.Add(this.btnGenerarVenta);
             this.Controls.Add(this.guna2GradientPanel3);
@@ -735,14 +763,14 @@
             this.Text = "FormCrearVenta";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,7 +779,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGVfactura;
         private System.Windows.Forms.Panel panel1;
@@ -764,9 +791,6 @@
         private System.Windows.Forms.Button btnAgraegarCliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCodigoProd;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
@@ -786,18 +810,24 @@
         private System.Windows.Forms.TextBox txtBarrioCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtNumeroDoc;
-        private System.Windows.Forms.TextBox txtcantidadProd;
-        private System.Windows.Forms.Label lblPrecioVenta;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button btnBuscarProduct;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtColor;
-        private System.Windows.Forms.TextBox TxtTalla;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label LbelFechaFacturaVenta;
+        private System.Windows.Forms.TextBox txtCodigoProd;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPrecioVenta;
+        private System.Windows.Forms.Button btnBuscarProduct;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.Label lblTalla;
+        private System.Windows.Forms.Label lblCantidad;
     }
 }

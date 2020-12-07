@@ -15,13 +15,13 @@ namespace Presentacion
     public partial class FormGestionCompra : Form
     {
         ProveedorService service;
+        ProductoService productoService;
         public FormGestionCompra()
         {
             InitializeComponent();
             service = new ProveedorService(ConfigConnection.connectionString);
+            productoService = new ProductoService(ConfigConnection.connectionString);
 
-            TxtTalla.Enabled = false;
-            TxtColor.Enabled = false;
             LbelFechaFacturaCompra.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
@@ -131,6 +131,27 @@ namespace Presentacion
             }
         }
 
+       
+
+        private void btnBuscarProd_Click(object sender, EventArgs e)
+        {
+            Producto producto = new Producto();
+            BusquedaProductoRespuesta pconsulta = new BusquedaProductoRespuesta();
+            pconsulta = productoService.BuscarPorcodigo(txtCodigoProd.Text);
+            if (!pconsulta.Error)
+            {
+                producto = pconsulta.Producto;
+                lblDescripcion.Text = producto.Descripcion;
+                lblTalla.Text = producto.Talla;
+                lblColor.Text = producto.Color;
+                
+            }
+            else
+            {
+                MessageBox.Show("Producto no existe", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+            }
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Proveedor proveedor = new Proveedor();
