@@ -35,9 +35,7 @@ namespace Presentacion
             dataGVfactura.DataSource = table;
             InhabiltarText();
 
-            TxtTalla.Enabled = false;
-            TxtColor.Enabled = false;
-            txtcantidadProd.Enabled = false;
+           
 
             LbelFechaFacturaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
@@ -48,7 +46,6 @@ namespace Presentacion
             txtDireccion.Enabled = false;
             txtNombreCliente.Enabled = false;
             txtTelefonoCliente.Enabled = false;
-            txtcantidadProd.Enabled = false;
             txtApellido.Enabled = false;
             txtBarrioCliente.Enabled = false;
 
@@ -155,11 +152,11 @@ namespace Presentacion
                 if (!pconsulta.Error)
                 {
                     producto = pconsulta.Producto;
-                   
-                    TxtTalla.Text = producto.Talla;
-                    TxtColor.Text = producto.Color;
-                    txtcantidadProd.Text= producto.Cantidad.ToString();
-                    lblPrecioVenta.Text = producto.Precio.ToString();
+                    lblDescripcion.Text = producto.Descripcion;
+                    lblTalla.Text = producto.Talla;
+                    lblColor.Text = producto.Color;
+                    lblCantidad.Text= producto.Cantidad.ToString();
+                    lblPrecioVenta.Text = producto.Precio.ToString(); 
                 }
                 else
                 {
@@ -167,6 +164,6 @@ namespace Presentacion
                     Limpiar();
                 }
             }
-        }
+    }
     }
 

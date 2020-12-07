@@ -60,9 +60,11 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.TxtColor = new System.Windows.Forms.TextBox();
-            this.TxtTalla = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.lblTalla = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnBuscarProd = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -468,64 +470,94 @@
             // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.TxtColor);
-            this.guna2GradientPanel2.Controls.Add(this.TxtTalla);
-            this.guna2GradientPanel2.Controls.Add(this.button2);
+            this.guna2GradientPanel2.Controls.Add(this.lblColor);
+            this.guna2GradientPanel2.Controls.Add(this.lblTalla);
+            this.guna2GradientPanel2.Controls.Add(this.lblDescripcion);
+            this.guna2GradientPanel2.Controls.Add(this.label11);
+            this.guna2GradientPanel2.Controls.Add(this.btnBuscarProd);
             this.guna2GradientPanel2.Controls.Add(this.label10);
             this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.Controls.Add(this.label14);
             this.guna2GradientPanel2.Controls.Add(this.txtCodigoProd);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.Silver;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.guna2GradientPanel2.ForeColor = System.Drawing.Color.Black;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(34, 166);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(593, 51);
             this.guna2GradientPanel2.TabIndex = 35;
             // 
-            // TxtColor
+            // lblColor
             // 
-            this.TxtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtColor.ForeColor = System.Drawing.Color.Black;
-            this.TxtColor.Location = new System.Drawing.Point(165, 23);
-            this.TxtColor.Name = "TxtColor";
-            this.TxtColor.Size = new System.Drawing.Size(72, 26);
-            this.TxtColor.TabIndex = 48;
+            this.lblColor.AutoSize = true;
+            this.lblColor.BackColor = System.Drawing.Color.Transparent;
+            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.ForeColor = System.Drawing.Color.Black;
+            this.lblColor.Location = new System.Drawing.Point(376, 26);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(0, 13);
+            this.lblColor.TabIndex = 48;
             // 
-            // TxtTalla
+            // lblTalla
             // 
-            this.TxtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTalla.ForeColor = System.Drawing.Color.Black;
-            this.TxtTalla.Location = new System.Drawing.Point(115, 23);
-            this.TxtTalla.Name = "TxtTalla";
-            this.TxtTalla.Size = new System.Drawing.Size(44, 26);
-            this.TxtTalla.TabIndex = 47;
+            this.lblTalla.AutoSize = true;
+            this.lblTalla.BackColor = System.Drawing.Color.Transparent;
+            this.lblTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTalla.ForeColor = System.Drawing.Color.Black;
+            this.lblTalla.Location = new System.Drawing.Point(325, 26);
+            this.lblTalla.Name = "lblTalla";
+            this.lblTalla.Size = new System.Drawing.Size(0, 13);
+            this.lblTalla.TabIndex = 47;
             // 
-            // button2
+            // lblDescripcion
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.lblDescripcion.Location = new System.Drawing.Point(173, 26);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(0, 13);
+            this.lblDescripcion.TabIndex = 46;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(166, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 13);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Descripcion";
+            // 
+            // btnBuscarProd
+            // 
+            this.btnBuscarProd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(346, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 23);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "      Buscar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBuscarProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarProd.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProd.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarProd.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarProd.Location = new System.Drawing.Point(111, 20);
+            this.btnBuscarProd.Name = "btnBuscarProd";
+            this.btnBuscarProd.Size = new System.Drawing.Size(36, 23);
+            this.btnBuscarProd.TabIndex = 35;
+            this.btnBuscarProd.UseVisualStyleBackColor = false;
+            this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(165, 7);
+            this.label10.Location = new System.Drawing.Point(369, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 44;
@@ -536,7 +568,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(116, 7);
+            this.label8.Location = new System.Drawing.Point(316, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 39;
@@ -643,20 +675,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtPrecio;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtCodigoProd;
-        private System.Windows.Forms.TextBox TxtColor;
-        private System.Windows.Forms.TextBox TxtTalla;
         private System.Windows.Forms.Label LbelFechaFacturaCompra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBarrio;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.Label lblTalla;
+        private System.Windows.Forms.Label lblDescripcion;
     }
 }
