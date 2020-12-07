@@ -82,7 +82,7 @@ namespace BLL
                 conexion.Open();
                 if (repositorio.BuscarPorIdentificacionCliente(cliente.Identificacion) != null)
                 {
-                    repositorio.GuardarCliente(cliente);
+                    repositorio.ModificarCliente(cliente);
                     return $"Se modificaron los datos del cliente: {cliente.Nombre}   satisfactoriamente";
                 }
                 return $"El cliente no existe";
