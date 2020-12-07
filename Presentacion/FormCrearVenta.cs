@@ -18,6 +18,7 @@ namespace Presentacion
         ClienteService service;
         ProductoService productoService;
         Cliente cliente;
+        Producto producto;
 
 
         DataTable table = new DataTable();
@@ -25,6 +26,7 @@ namespace Presentacion
         {
             InitializeComponent();
            service = new ClienteService(ConfigConnection.connectionString);
+            productoService = new ProductoService(ConfigConnection.connectionString);
             table.Columns.Add("Codigo producto");
             table.Columns.Add("Descripciòn");
             table.Columns.Add("Precio unitario");
@@ -148,11 +150,11 @@ namespace Presentacion
         {
             
                 Producto producto = new Producto();
-                BusquedaProductoRespuesta consulta = new BusquedaProductoRespuesta();
-               consulta = productoService.BuscarPorcodigo (txtCodigoProd.Text);
-                if (!consulta.Error)
+                BusquedaProductoRespuesta pconsulta = new BusquedaProductoRespuesta();
+               pconsulta = productoService.BuscarPorcodigo (txtCodigoProd.Text);
+                if (!pconsulta.Error)
                 {
-                    producto = consulta.Producto;
+                    producto = pconsulta.Producto;
                    
                     TxtTalla.Text = producto.Talla;
                     TxtColor.Text = producto.Color;
