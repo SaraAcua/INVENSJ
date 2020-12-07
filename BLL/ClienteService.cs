@@ -75,6 +75,29 @@ namespace BLL
         }
 
 
+        public string ModificarCliente(Cliente cliente)
+        {
+            try
+            {
+                conexion.Open();
+                if (repositorio.BuscarPorIdentificacionCliente(cliente.Identificacion) != null)
+                {
+                    repositorio.ModificarCliente(cliente);
+                    return $"Se modificaron los datos del cliente: {cliente.Nombre}   satisfactoriamente";
+                }
+                return $"El cliente no existe";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+
+
+
+
+
 
     }
 
