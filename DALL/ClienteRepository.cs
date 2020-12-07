@@ -40,6 +40,27 @@ namespace DALL
         }
 
 
+        public int ModificarCliente(Cliente cliente)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_modificar_cliente";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("Identificacion", OracleDbType.Varchar2).Value = cliente.Identificacion;
+                command.Parameters.Add("TipoIdentificacion", OracleDbType.Varchar2).Value = cliente.TipoIdentificacion;
+                command.Parameters.Add("Nombre", OracleDbType.Varchar2).Value = cliente.Nombre;
+                command.Parameters.Add("Apellidos", OracleDbType.Varchar2).Value = cliente.Apellidos;
+                command.Parameters.Add("Telefono", OracleDbType.Varchar2).Value = cliente.Telefono;
+                command.Parameters.Add("Barrio", OracleDbType.Varchar2).Value = cliente.Barrio;
+                command.Parameters.Add("Direccion", OracleDbType.Varchar2).Value = cliente.Direccion;
+                command.Parameters.Add("Email", OracleDbType.Varchar2).Value = cliente.Email;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
+
+
         public Cliente BuscarPorIdentificacionCliente(string identificacion)
         {
             OracleDataReader dataReader;
