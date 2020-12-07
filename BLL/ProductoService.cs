@@ -41,7 +41,7 @@ namespace BLL
         {
             BusquedaProductoRespuesta respuesta = new BusquedaProductoRespuesta();
             try
-            {
+            { 
 
                 conexion.Open();
                 respuesta.Producto = repositorio.BuscarPorCodigoProducto(codigo);
