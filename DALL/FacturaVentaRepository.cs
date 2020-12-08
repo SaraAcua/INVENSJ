@@ -33,5 +33,28 @@ namespace DALL
         }
 
 
+
+        public int ConsultarIdFactura()
+        {
+            OracleDataReader dataReader;
+            int respuesta = 0;
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "SELECT COUNT(*)+1 FROM venta ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        respuesta = dataReader.GetInt32(0);
+
+                    }
+                }
+            }
+            return respuesta;
+        }
+
+
+
     }
 }

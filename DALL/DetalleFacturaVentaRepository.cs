@@ -29,7 +29,7 @@ namespace DALL
                 command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = detalle.CodigoProducto;
                 command.Parameters.Add("cantidad", OracleDbType.Varchar2).Value = detalle.CantidadProducto;
                 command.Parameters.Add("precio", OracleDbType.Varchar2).Value = detalle.Valorunitario;
-                command.Parameters.Add("subtotal", OracleDbType.Varchar2).Value = detalle.ValorTotal;
+                command.Parameters.Add("subtotal", OracleDbType.Varchar2).Value = detalle.ValorSubTotal;
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
