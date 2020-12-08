@@ -38,5 +38,29 @@ namespace BLL
         }
 
 
+        public int ConsultarIdFactura()
+        {
+
+            int respuesta = 0;
+            try
+            {
+                conexion.Open();
+                respuesta = repositorio.ConsultarIdFactura();
+                conexion.Close();
+
+            }
+            catch
+            {
+
+            }
+            finally { conexion.Close(); }
+            return respuesta;
+        }
+
+
+
+
+
+
     }
 }
