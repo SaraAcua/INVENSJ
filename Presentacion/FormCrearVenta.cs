@@ -196,6 +196,9 @@ namespace Presentacion
         {
             List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
             dataGVfactura.DataSource = ventas;
+
+            dataGVfactura.Rows.Add();
+
         }
     }
     }

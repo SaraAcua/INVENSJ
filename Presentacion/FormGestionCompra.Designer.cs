@@ -45,7 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvCompra = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCompra)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -306,14 +306,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nº de compra";
             // 
-            // dataGridView1
+            // dtgvCompra
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 291);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(593, 163);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgvCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCompra.Location = new System.Drawing.Point(34, 291);
+            this.dtgvCompra.Name = "dtgvCompra";
+            this.dtgvCompra.Size = new System.Drawing.Size(593, 163);
+            this.dtgvCompra.TabIndex = 1;
             // 
             // guna2GradientPanel3
             // 
@@ -627,7 +627,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2GradientPanel3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvCompra);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -636,7 +636,7 @@
             this.Load += new System.EventHandler(this.FormGestionCompra_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCompra)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -664,7 +664,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDireccionCliente;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvCompra;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnAgregar;
