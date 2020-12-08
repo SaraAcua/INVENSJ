@@ -24,7 +24,7 @@ namespace DALL
             {
                 command.CommandText = @"pr_insertar_venta";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.Add("id_cliente", OracleDbType.Varchar2).Value = detalle.CodigoFactura;
+                command.Parameters.Add("id_cliente", OracleDbType.Varchar2).Value = detalle.IdCliente;
                 command.Parameters.Add("fecha", OracleDbType.Date).Value = detalle.Fecha;
                 command.Parameters.Add("total", OracleDbType.Int32).Value = detalle.ValorTotalFactura;
                 var filas = command.ExecuteNonQuery();
