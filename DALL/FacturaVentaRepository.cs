@@ -33,7 +33,7 @@ namespace DALL
         }
 
 
-
+          
         public int ConsultarIdFactura()
         {
             OracleDataReader dataReader;
