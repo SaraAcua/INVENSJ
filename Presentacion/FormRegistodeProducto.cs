@@ -242,7 +242,7 @@ namespace Presentacion
                 MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                 //dataGvRegistroProd.DataSource=
-                Limpiar();
+                Limpiar(); 
             }
 
         }
