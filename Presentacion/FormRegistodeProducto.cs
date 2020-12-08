@@ -118,7 +118,11 @@ namespace Presentacion
             cmbColor.Text = "SELECCIONE";
             cmbMarca.Text = "SELECCIONE";
             cmbTalla.Text = "SELECCIONE";
+            txtStockMaximo.Text = "";
+            txtStockMinimo.Text = "";
             picImgen.Visible = false;
+            txtCodigoProd.Focus();
+
 
         }
         private void LlenarComboTalla()
@@ -231,7 +235,7 @@ namespace Presentacion
         private void BtnRegsitrarCliente_Click(object sender, EventArgs e)
         {
             if (txtCodigoProd.Text.Equals("") || txtDescripcionProd.Text.Equals("") || txtStockMinimo.Text.Equals("")
-              || txtStockMaximo.Text.Equals(""))
+              || txtStockMaximo.Text.Equals("")|| cmbColor.SelectedItem.Equals("SELECCIONE")||cmbMarca.SelectedItem.Equals("SELECCIONE"))
             {
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
@@ -241,7 +245,7 @@ namespace Presentacion
                 string mensaje = productoService.GuardarProducto(producto, int.Parse(txtCodigoColor.Text), int.Parse(txtCodigoMarca.Text));
                 MessageBox.Show(mensaje, "Infomacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
-                //dataGvRegistroProd.DataSource=
+               
                 Limpiar(); 
             }
 

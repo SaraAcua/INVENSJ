@@ -48,7 +48,7 @@
             this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(595, 228);
+            this.btnImprimir.Location = new System.Drawing.Point(498, 470);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(91, 41);
             this.btnImprimir.TabIndex = 41;

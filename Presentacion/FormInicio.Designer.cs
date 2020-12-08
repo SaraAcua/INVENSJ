@@ -337,9 +337,9 @@
             this.label8.ForeColor = System.Drawing.Color.Chartreuse;
             this.label8.Location = new System.Drawing.Point(90, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.Size = new System.Drawing.Size(15, 16);
             this.label8.TabIndex = 11;
-            this.label8.Text = "label5";
+            this.label8.Text = "0";
             // 
             // label9
             // 
