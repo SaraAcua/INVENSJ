@@ -56,9 +56,9 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnQuitarProducto = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -439,9 +439,9 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
-            this.guna2GradientPanel3.Controls.Add(this.button5);
+            this.guna2GradientPanel3.Controls.Add(this.BtnQuitarProducto);
             this.guna2GradientPanel3.Controls.Add(this.btnAgregar);
-            this.guna2GradientPanel3.Controls.Add(this.label24);
+            this.guna2GradientPanel3.Controls.Add(this.lblTotal);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label22);
             this.guna2GradientPanel3.Controls.Add(this.txtCantidad);
@@ -453,21 +453,22 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(561, 51);
             this.guna2GradientPanel3.TabIndex = 36;
             // 
-            // button5
+            // BtnQuitarProducto
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::Presentacion.Properties.Resources.basura;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(410, 17);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 23);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "Quitar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnQuitarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnQuitarProducto.FlatAppearance.BorderSize = 0;
+            this.BtnQuitarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.BtnQuitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnQuitarProducto.ForeColor = System.Drawing.Color.Black;
+            this.BtnQuitarProducto.Image = global::Presentacion.Properties.Resources.basura;
+            this.BtnQuitarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnQuitarProducto.Location = new System.Drawing.Point(410, 17);
+            this.BtnQuitarProducto.Name = "BtnQuitarProducto";
+            this.BtnQuitarProducto.Size = new System.Drawing.Size(85, 23);
+            this.BtnQuitarProducto.TabIndex = 41;
+            this.BtnQuitarProducto.Text = "Quitar";
+            this.BtnQuitarProducto.UseVisualStyleBackColor = false;
+            this.BtnQuitarProducto.Click += new System.EventHandler(this.BtnQuitarProducto_Click);
             // 
             // btnAgregar
             // 
@@ -485,16 +486,16 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             // 
-            // label24
+            // lblTotal
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(134, 27);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 15);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "$...";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(134, 27);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(27, 15);
+            this.lblTotal.TabIndex = 36;
+            this.lblTotal.Text = "$...";
             // 
             // label23
             // 
@@ -797,9 +798,9 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label27;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnQuitarProducto;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCantidad;

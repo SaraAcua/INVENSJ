@@ -95,6 +95,28 @@ namespace Presentacion
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                try
+                {
+                    if (int.Parse(txtCantidad.Text) > 0)
+                    {
+
+                        int cantidad = int.Parse(txtCantidad.Text);
+                        int precio = int.Parse(lblPrecioVenta.Text);
+                        lblTotal.Text = (cantidad * precio).ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad incorrecta ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch { }
+            }
+
+
         }
 
         private void txtNumeroDoc_KeyPress(object sender, KeyPressEventArgs e)
@@ -164,6 +186,11 @@ namespace Presentacion
                     Limpiar();
                 }
             }
+
+        private void BtnQuitarProducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
