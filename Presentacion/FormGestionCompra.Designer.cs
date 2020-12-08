@@ -50,7 +50,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -321,7 +321,7 @@
             this.guna2GradientPanel3.Controls.Add(this.textBox2);
             this.guna2GradientPanel3.Controls.Add(this.txtPrecio);
             this.guna2GradientPanel3.Controls.Add(this.button5);
-            this.guna2GradientPanel3.Controls.Add(this.button4);
+            this.guna2GradientPanel3.Controls.Add(this.btnAgregar);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label19);
             this.guna2GradientPanel3.Controls.Add(this.label22);
@@ -368,21 +368,22 @@
             this.button5.Text = "Quitar";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnAgregar
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Presentacion.Properties.Resources.boton_agregar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(345, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 23);
-            this.button4.TabIndex = 40;
-            this.button4.Text = "   Agregar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::Presentacion.Properties.Resources.boton_agregar;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(345, 19);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(77, 23);
+            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.Text = "   Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label23
             // 
@@ -666,7 +667,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCantidad;
