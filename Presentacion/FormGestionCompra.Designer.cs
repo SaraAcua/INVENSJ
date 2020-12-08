@@ -58,7 +58,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblPrecioTotalCompra = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblColor = new System.Windows.Forms.Label();
             this.lblTalla = new System.Windows.Forms.Label();
@@ -441,7 +441,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.lblPrecioTotalCompra);
             this.panel1.Location = new System.Drawing.Point(333, 470);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 47);
@@ -459,15 +459,15 @@
             this.label26.TabIndex = 34;
             this.label26.Text = "Total pagado";
             // 
-            // label25
+            // lblPrecioTotalCompra
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(187, 7);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 13);
-            this.label25.TabIndex = 33;
-            this.label25.Text = "$$$$$$$";
+            this.lblPrecioTotalCompra.AutoSize = true;
+            this.lblPrecioTotalCompra.ForeColor = System.Drawing.Color.Black;
+            this.lblPrecioTotalCompra.Location = new System.Drawing.Point(187, 7);
+            this.lblPrecioTotalCompra.Name = "lblPrecioTotalCompra";
+            this.lblPrecioTotalCompra.Size = new System.Drawing.Size(49, 13);
+            this.lblPrecioTotalCompra.TabIndex = 33;
+            this.lblPrecioTotalCompra.Text = "$$$$$$$";
             // 
             // guna2GradientPanel2
             // 
@@ -675,7 +675,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblPrecioTotalCompra;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.Label label10;
