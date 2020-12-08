@@ -20,6 +20,7 @@ namespace Presentacion
         Cliente cliente;
         Producto producto;
         DetalleFacturaVenta detalle;
+        FacturaVentaService VentaService;
 
         List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
         DataTable table = new DataTable();
@@ -28,6 +29,9 @@ namespace Presentacion
             InitializeComponent();
             service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
+            VentaService = new FacturaVentaService(ConfigConnection.connectionString);
+            //txtNumFactura.Text = VentaService.ConsultarIdFactura().ToString();
+           
 
             InhabiltarText();
       
@@ -157,7 +161,7 @@ namespace Presentacion
             }
 
 
-
+            
 
 
         }
@@ -225,13 +229,18 @@ namespace Presentacion
                     row.Cells["CantidadProducto"].Value = item.CantidadProducto;
                     row.Cells["Valorunitario"].Value = item.Valorunitario;
                     row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
-                    
-
                 }
               
             }
             dtgvFactura.DataSource = ventas;
+            int total = 0;
+            foreach (DataGridViewRow row in dtgvFactura.Rows)
+            {
+                total += Convert.ToInt32(row.Cells["ValorSubTotal"].Value);
+            }
+            lblTotalFactura.Text = (total).ToString();
         }
+       
     }
 }
 
