@@ -21,13 +21,13 @@ namespace ENTITY
 
         }
 
-        public string CodigoProveedor { get; set; }
         public string CodigoFactura { get; set; }
+        public string CodigoProveedor { get; set; }
         public string Fecha { get; set; }
         public double ValorTotalFactura { get; set; }
 
         private List<DetalleFacturaCompra> Detalles;
-        public Cliente Persona { get; set; }
+        
 
         
         public void AgregarDetalle(Producto producto, int cantidad)
@@ -39,7 +39,7 @@ namespace ENTITY
 
         public void CalcularTotalFactura()
         {
-            ValorTotalFactura = Detalles.Sum(d=>d.ValorTotal);
+            ValorTotalFactura = Detalles.Sum(d=>d.ValorSubTotal);
         }
 
 
