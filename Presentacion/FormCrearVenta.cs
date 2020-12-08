@@ -54,9 +54,25 @@ namespace Presentacion
 
         private void btnGenerarVenta_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int total = int.Parse(lblTotalFactura.Text);
+                if (total > 0)
+                {
+                    RegistrarFactura();
+                    MessageBox.Show("Venta realizada con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+              
 
-            RegistrarFactura();
-        }
+            }
+            catch 
+            {
+                MessageBox.Show("Debe ingresar productos ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
+           
+        
 
         private void btnAgraegarCliente_Click(object sender, EventArgs e)
         {
