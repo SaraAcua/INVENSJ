@@ -21,6 +21,7 @@ namespace Presentacion
         Producto producto;
         DetalleFacturaVenta detalle;
         FacturaVentaService VentaService;
+        DetalleFacturaVentaService detalleFactura;
 
         List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
         DataTable table = new DataTable();
@@ -30,6 +31,8 @@ namespace Presentacion
             service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
             VentaService = new FacturaVentaService(ConfigConnection.connectionString);
+            detalleFactura = new DetalleFacturaVentaService(ConfigConnection.connectionString);
+
             //txtNumFactura.Text = VentaService.ConsultarIdFactura().ToString();
 
 
@@ -231,10 +234,8 @@ namespace Presentacion
                     row.Cells["Valorunitario"].Value = item.Valorunitario;
                     row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
                 }
-
-
-
             }
+            detalleFactura.GuardarDetallesVenta(ventas);
         }
            
 
