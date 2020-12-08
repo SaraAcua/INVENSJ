@@ -40,7 +40,7 @@ namespace DALL
             int respuesta = 0;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "SELECT COUNT(*)+1 FROM venta ";
+                command.CommandText = "SELECT COUNT(*) FROM venta ";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
