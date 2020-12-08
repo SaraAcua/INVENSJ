@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -367,19 +367,20 @@
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(34, 5);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 20);
+            this.label26.Size = new System.Drawing.Size(150, 20);
             this.label26.TabIndex = 34;
-            this.label26.Text = "Total a pagar";
+            this.label26.Text = "Total a pagar     $";
             // 
             // lblTotalFactura
             // 
             this.lblTotalFactura.AutoSize = true;
+            this.lblTotalFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalFactura.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalFactura.Location = new System.Drawing.Point(187, 8);
+            this.lblTotalFactura.Location = new System.Drawing.Point(147, 4);
             this.lblTotalFactura.Name = "lblTotalFactura";
-            this.lblTotalFactura.Size = new System.Drawing.Size(28, 13);
+            this.lblTotalFactura.Size = new System.Drawing.Size(55, 24);
             this.lblTotalFactura.TabIndex = 33;
-            this.lblTotalFactura.Text = "$.....";
+            this.lblTotalFactura.Text = " 0.00";
             // 
             // label21
             // 
@@ -737,24 +738,24 @@
             // 
             // dtgvFactura
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtgvFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.dtgvFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgvFactura.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtgvFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvFactura.Location = new System.Drawing.Point(21, 331);
             this.dtgvFactura.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvFactura.Name = "dtgvFactura";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dtgvFactura.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.dtgvFactura.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dtgvFactura.Size = new System.Drawing.Size(562, 106);
             this.dtgvFactura.TabIndex = 39;
             // 
