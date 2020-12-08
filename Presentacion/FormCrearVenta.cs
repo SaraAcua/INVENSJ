@@ -21,23 +21,17 @@ namespace Presentacion
         Producto producto;
         DetalleFacturaVenta detalle;
 
-
+        List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
         DataTable table = new DataTable();
         public FormCrearVenta()
         {
             InitializeComponent();
-           service = new ClienteService(ConfigConnection.connectionString);
+            service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
-           // detalle = new DetalleFacturaVenta(ConfigConnection.connectionString);
-            //table.Columns.Add("Codigo producto");
-            //table.Columns.Add("Descripciòn");
-            //table.Columns.Add("Precio unitario");
-            //table.Columns.Add("Cantidad");
-            //table.Columns.Add(" sub Total");
-            //dataGVfactura.DataSource = table;
-            InhabiltarText();
 
-           
+            InhabiltarText();
+      
+
 
             LbelFechaFacturaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
@@ -61,11 +55,11 @@ namespace Presentacion
 
         private void btnAgraegarCliente_Click(object sender, EventArgs e)
         {
-          
+
             FormGestionCliente cliente = new FormGestionCliente();
 
             cliente.ShowDialog();
-           
+
         }
         private void Limpiar()
         {
@@ -77,7 +71,7 @@ namespace Presentacion
             txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
-          
+
         }
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
@@ -86,8 +80,8 @@ namespace Presentacion
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Limpiar();
-             
-            
+
+
             }
             else
             {
@@ -162,43 +156,49 @@ namespace Presentacion
                 Limpiar();
             }
 
-           
-           
-            
+
+
+
 
         }
 
         private void btnBuscarProduct_Click(object sender, EventArgs e)
         {
-            
-                Producto producto = new Producto();
-                BusquedaProductoRespuesta pconsulta = new BusquedaProductoRespuesta();
-               pconsulta = productoService.BuscarPorcodigo (txtCodigoProd.Text);
-                if (!pconsulta.Error)
-                {
-                    producto = pconsulta.Producto;
-                    lblDescripcion.Text = producto.Descripcion;
-                    lblTalla.Text = producto.Talla;
-                    lblColor.Text = producto.Color;
-                    lblCantidad.Text= producto.Cantidad.ToString();
-                    lblPrecioVenta.Text = producto.Precio.ToString(); 
-                }
-                else
-                {
-                    MessageBox.Show("Producto no existe", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    Limpiar();
-                }
+
+            Producto producto = new Producto();
+            BusquedaProductoRespuesta pconsulta = new BusquedaProductoRespuesta();
+            pconsulta = productoService.BuscarPorcodigo(txtCodigoProd.Text);
+            if (!pconsulta.Error)
+            {
+                producto = pconsulta.Producto;
+                lblDescripcion.Text = producto.Descripcion;
+                lblTalla.Text = producto.Talla;
+                lblColor.Text = producto.Color;
+                lblCantidad.Text = producto.Cantidad.ToString();
+                lblPrecioVenta.Text = producto.Precio.ToString();
             }
+            else
+            {
+                MessageBox.Show("Producto no existe", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                Limpiar();
+            }
+        }
 
         private void BtnQuitarProducto_Click(object sender, EventArgs e)
         {
 
         }
 
+        private List<DetalleFacturaVenta> LlenarData(List<DetalleFacturaVenta> detalles, DetalleFacturaVenta facturaNuevo)
+        {
+            List<DetalleFacturaVenta> detalleFacturas = detalles;
+            detalleFacturas.Add(facturaNuevo);
+            return detalleFacturas;
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
-           // dataGVfactura.DataSource = ventas;
+
+            // dataGVfactura.DataSource = ventas;
             //FacturaVenta venta = new FacturaVenta();
             //venta.CodigoFactura = txtNumFactura.Text;
             //venta.IdCliente = txtNumeroDoc.Text;
@@ -212,10 +212,27 @@ namespace Presentacion
             detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
             detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
 
-            ventas.Add(detalle);
-           dataGVfactura.DataSource = ventas;
 
+            ventas.Add(detalle);
+            dtgvFactura.DataSource = null;
+
+            foreach (DataGridViewRow row in dtgvFactura.Rows)
+            {
+                foreach (var item in ventas)
+                {
+                    row.Cells["codigoVenta"].Value = item.CodigoVenta;
+                    row.Cells["CodigoProducto"].Value = item.CodigoProducto;
+                    row.Cells["CantidadProducto"].Value = item.CantidadProducto;
+                    row.Cells["Valorunitario"].Value = item.Valorunitario;
+                    row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
+                    
+
+                }
+              
+            }
+            dtgvFactura.DataSource = ventas;
         }
     }
-    }
+}
+
 
