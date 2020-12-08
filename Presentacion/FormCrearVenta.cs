@@ -95,6 +95,8 @@ namespace Presentacion
             txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
+            dtgvFactura.DataSource = "";
+            txtNumFactura.Text = "";
 
         }
 
