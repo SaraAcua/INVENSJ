@@ -57,7 +57,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -75,10 +75,10 @@
             this.btnBuscarProduct = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblTalla = new System.Windows.Forms.Label();
-            this.lblColor = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.lblTalla = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
             this.panel1.SuspendLayout();
@@ -440,7 +440,7 @@
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.button5);
-            this.guna2GradientPanel3.Controls.Add(this.button4);
+            this.guna2GradientPanel3.Controls.Add(this.btnAgregar);
             this.guna2GradientPanel3.Controls.Add(this.label24);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label22);
@@ -469,21 +469,21 @@
             this.button5.Text = "Quitar";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnAgregar
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Presentacion.Properties.Resources.boton_agregar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(226, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 23);
-            this.button4.TabIndex = 40;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::Presentacion.Properties.Resources.boton_agregar;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(226, 17);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(85, 23);
+            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // label24
             // 
@@ -695,27 +695,16 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(562, 51);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
-            // lblDescripcion
+            // lblCantidad
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(144, 27);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(0, 13);
-            this.lblDescripcion.TabIndex = 49;
-            // 
-            // lblTalla
-            // 
-            this.lblTalla.AutoSize = true;
-            this.lblTalla.BackColor = System.Drawing.Color.Transparent;
-            this.lblTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTalla.ForeColor = System.Drawing.Color.Black;
-            this.lblTalla.Location = new System.Drawing.Point(282, 26);
-            this.lblTalla.Name = "lblTalla";
-            this.lblTalla.Size = new System.Drawing.Size(0, 13);
-            this.lblTalla.TabIndex = 50;
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidad.Location = new System.Drawing.Point(446, 25);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(0, 13);
+            this.lblCantidad.TabIndex = 52;
             // 
             // lblColor
             // 
@@ -728,16 +717,27 @@
             this.lblColor.Size = new System.Drawing.Size(0, 13);
             this.lblColor.TabIndex = 51;
             // 
-            // lblCantidad
+            // lblTalla
             // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
-            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
-            this.lblCantidad.Location = new System.Drawing.Point(446, 25);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(0, 13);
-            this.lblCantidad.TabIndex = 52;
+            this.lblTalla.AutoSize = true;
+            this.lblTalla.BackColor = System.Drawing.Color.Transparent;
+            this.lblTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTalla.ForeColor = System.Drawing.Color.Black;
+            this.lblTalla.Location = new System.Drawing.Point(282, 26);
+            this.lblTalla.Name = "lblTalla";
+            this.lblTalla.Size = new System.Drawing.Size(0, 13);
+            this.lblTalla.TabIndex = 50;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.lblDescripcion.Location = new System.Drawing.Point(144, 27);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(0, 13);
+            this.lblDescripcion.TabIndex = 49;
             // 
             // FormCrearVenta
             // 
@@ -798,7 +798,7 @@
         private System.Windows.Forms.Label label27;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
