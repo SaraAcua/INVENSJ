@@ -13,6 +13,7 @@ namespace ENTITY
             
             Fecha = fecha;
             ValorTotalFactura = valorTotalFactura;
+            IdCliente = cliente.Identificacion;
             
         }
 
@@ -23,11 +24,12 @@ namespace ENTITY
         }
 
         public string CodigoFactura { get; set; }
+        public string IdCliente { get; set; }    
         public string Fecha { get; set; }
         public double ValorTotalFactura { get; set; }
 
         private List<DetalleFacturaVenta> Detalles;
-        public Cliente Persona { get; set; }
+        
 
 
         public void AgregarDetalle(Producto producto, int cantidad)
