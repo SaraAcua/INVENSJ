@@ -51,7 +51,6 @@
             this.txtNumeroDoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGVfactura = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.lblTotalFactura = new System.Windows.Forms.Label();
@@ -82,12 +81,13 @@
             this.lblColor = new System.Windows.Forms.Label();
             this.lblTalla = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.dtgvFactura = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -349,36 +349,6 @@
             this.label1.Size = new System.Drawing.Size(144, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "REGISTRO VENTA";
-            // 
-            // dataGVfactura
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGVfactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGVfactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGVfactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGVfactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGVfactura.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGVfactura.Location = new System.Drawing.Point(21, 328);
-            this.dataGVfactura.Name = "dataGVfactura";
-            this.dataGVfactura.Size = new System.Drawing.Size(562, 100);
-            this.dataGVfactura.TabIndex = 4;
             // 
             // panel1
             // 
@@ -765,12 +735,36 @@
             this.lblDescripcion.Size = new System.Drawing.Size(0, 13);
             this.lblDescripcion.TabIndex = 49;
             // 
+            // dtgvFactura
+            // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgvFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvFactura.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dtgvFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvFactura.Location = new System.Drawing.Point(21, 331);
+            this.dtgvFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgvFactura.Name = "dtgvFactura";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dtgvFactura.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvFactura.Size = new System.Drawing.Size(562, 106);
+            this.dtgvFactura.TabIndex = 39;
+            // 
             // FormCrearVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(734, 559);
+            this.Controls.Add(this.dtgvFactura);
             this.Controls.Add(this.btnCancelarVenta);
             this.Controls.Add(this.btnGenerarVenta);
             this.Controls.Add(this.guna2GradientPanel3);
@@ -779,7 +773,6 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGVfactura);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -789,7 +782,6 @@
             this.Text = "FormCrearVenta";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVfactura)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
@@ -797,6 +789,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -806,7 +799,6 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGVfactura;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label label3;
@@ -855,5 +847,6 @@
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Label lblTalla;
         private System.Windows.Forms.Label lblCantidad;
+        public System.Windows.Forms.DataGridView dtgvFactura;
     }
 }

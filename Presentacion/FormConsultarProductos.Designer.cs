@@ -39,8 +39,8 @@
             this.btnBuscarDescripcion = new System.Windows.Forms.Button();
             this.txtCodigoProducto = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgProducto = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.dtgProducto = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducto)).BeginInit();
             this.SuspendLayout();
@@ -167,6 +167,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CONSULTA PRODUCTO";
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(627, 216);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(82, 36);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dtgProducto
             // 
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -190,18 +202,6 @@
             this.dtgProducto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProducto.Size = new System.Drawing.Size(579, 266);
             this.dtgProducto.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(627, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormConsultarProductos
             // 
@@ -236,7 +236,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnBuscar;
-        public System.Windows.Forms.DataGridView dtgProducto;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.DataGridView dtgProducto;
     }
 }
