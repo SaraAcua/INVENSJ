@@ -98,6 +98,7 @@ namespace Presentacion
             dtgvFactura.DataSource = "";
             txtNumFactura.Text = "";
 
+
         }
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
