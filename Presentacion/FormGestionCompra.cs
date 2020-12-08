@@ -174,7 +174,8 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+            List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
+            dtgvCompra.DataSource = compras;
 
 
 

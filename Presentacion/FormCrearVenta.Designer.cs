@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -51,7 +54,7 @@
             this.dataGVfactura = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblTotalFactura = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -349,8 +352,29 @@
             // 
             // dataGVfactura
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGVfactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGVfactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGVfactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGVfactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGVfactura.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGVfactura.Location = new System.Drawing.Point(21, 328);
             this.dataGVfactura.Name = "dataGVfactura";
             this.dataGVfactura.Size = new System.Drawing.Size(562, 100);
@@ -359,7 +383,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.lblTotalFactura);
             this.panel1.Location = new System.Drawing.Point(280, 453);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 47);
@@ -377,15 +401,15 @@
             this.label26.TabIndex = 34;
             this.label26.Text = "Total a pagar";
             // 
-            // label25
+            // lblTotalFactura
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(187, 8);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(28, 13);
-            this.label25.TabIndex = 33;
-            this.label25.Text = "$.....";
+            this.lblTotalFactura.AutoSize = true;
+            this.lblTotalFactura.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalFactura.Location = new System.Drawing.Point(187, 8);
+            this.lblTotalFactura.Name = "lblTotalFactura";
+            this.lblTotalFactura.Size = new System.Drawing.Size(28, 13);
+            this.lblTotalFactura.TabIndex = 33;
+            this.lblTotalFactura.Text = "$.....";
             // 
             // label21
             // 
@@ -795,7 +819,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblTotalFactura;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label27;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;

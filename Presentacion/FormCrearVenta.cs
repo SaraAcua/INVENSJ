@@ -19,6 +19,7 @@ namespace Presentacion
         ProductoService productoService;
         Cliente cliente;
         Producto producto;
+        DetalleFacturaVenta detalle;
 
 
         DataTable table = new DataTable();
@@ -27,6 +28,7 @@ namespace Presentacion
             InitializeComponent();
            service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
+           // detalle = new DetalleFacturaVenta(ConfigConnection.connectionString);
             //table.Columns.Add("Codigo producto");
             //table.Columns.Add("Descripciòn");
             //table.Columns.Add("Precio unitario");
@@ -75,6 +77,7 @@ namespace Presentacion
             txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
+          
         }
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
@@ -195,7 +198,23 @@ namespace Presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
-            dataGVfactura.DataSource = ventas;
+           // dataGVfactura.DataSource = ventas;
+            //FacturaVenta venta = new FacturaVenta();
+            //venta.CodigoFactura = txtNumFactura.Text;
+            //venta.IdCliente = txtNumeroDoc.Text;
+            //venta.Fecha = LbelFechaFacturaVenta.Text;
+            //venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
+
+            DetalleFacturaVenta detalle = new DetalleFacturaVenta();
+            detalle.CodigoVenta = txtNumFactura.Text;
+            detalle.CodigoProducto = txtCodigoProd.Text;
+            detalle.CantidadProducto = int.Parse(txtCantidad.Text);
+            detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
+            detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
+
+            ventas.Add(detalle);
+           dataGVfactura.DataSource = ventas;
+
         }
     }
     }
