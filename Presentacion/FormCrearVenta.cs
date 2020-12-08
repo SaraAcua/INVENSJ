@@ -77,6 +77,7 @@ namespace Presentacion
             txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
+          
         }
 
         private void btnCancelarVenta_Click(object sender, EventArgs e)
@@ -197,7 +198,7 @@ namespace Presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
-            dataGVfactura.DataSource = ventas;
+           // dataGVfactura.DataSource = ventas;
             //FacturaVenta venta = new FacturaVenta();
             //venta.CodigoFactura = txtNumFactura.Text;
             //venta.IdCliente = txtNumeroDoc.Text;
@@ -205,14 +206,14 @@ namespace Presentacion
             //venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
 
             DetalleFacturaVenta detalle = new DetalleFacturaVenta();
-            detalle.CodigoVenta = txtCodigoProd.Text;
-            detalle.CodigoProducto = txtCantidad.Text;
+            detalle.CodigoVenta = txtNumFactura.Text;
+            detalle.CodigoProducto = txtCodigoProd.Text;
             detalle.CantidadProducto = int.Parse(txtCantidad.Text);
             detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
             detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
 
-            //ventas.Add(detalle);
-           // dataGVfactura.DataSource = detalle;
+            ventas.Add(detalle);
+           dataGVfactura.DataSource = ventas;
 
         }
     }
