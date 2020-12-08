@@ -19,6 +19,7 @@ namespace Presentacion
         ProductoService productoService;
         Cliente cliente;
         Producto producto;
+        DetalleFacturaVenta detalle;
 
 
         DataTable table = new DataTable();
@@ -27,6 +28,7 @@ namespace Presentacion
             InitializeComponent();
            service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
+           // detalle = new DetalleFacturaVenta(ConfigConnection.connectionString);
             //table.Columns.Add("Codigo producto");
             //table.Columns.Add("Descripciòn");
             //table.Columns.Add("Precio unitario");
@@ -196,8 +198,21 @@ namespace Presentacion
         {
             List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
             dataGVfactura.DataSource = ventas;
+            //FacturaVenta venta = new FacturaVenta();
+            //venta.CodigoFactura = txtNumFactura.Text;
+            //venta.IdCliente = txtNumeroDoc.Text;
+            //venta.Fecha = LbelFechaFacturaVenta.Text;
+            //venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
 
-            dataGVfactura.Rows.Add();
+            DetalleFacturaVenta detalle = new DetalleFacturaVenta();
+            detalle.CodigoVenta = txtCodigoProd.Text;
+            detalle.CodigoProducto = txtCantidad.Text;
+            detalle.CantidadProducto = int.Parse(txtCantidad.Text);
+            detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
+            detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
+
+            //ventas.Add(detalle);
+           // dataGVfactura.DataSource = detalle;
 
         }
     }
