@@ -13,7 +13,6 @@ namespace ENTITY
             CodigoVenta = factura.CodigoFactura;
             CodigoProducto = producto.CodigoProducto;
             CantidadProducto = cantidadProducto;
-            FechaVenta = factura.Fecha;
             Valorunitario = producto.Precio;
 
 
@@ -27,11 +26,8 @@ namespace ENTITY
         public string CodigoVenta { get; set; }
         public string CodigoProducto { get; set; }
         public int CantidadProducto { get; set; }
-        public string FechaVenta { get; set; }
-        public int Valorunitario { get; set; }
-
-        
-        public double ValorTotal { get { return Valorunitario * CantidadProducto; } set { } }
+        public int Valorunitario { get; set; }        
+        public double ValorSubTotal { get { return Valorunitario * CantidadProducto; } set { } }
 
     }
 }
