@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class FacturaCompraService
+    public class FacturaCompraService
     {
 
         private readonly ConnectionManager conexion;
