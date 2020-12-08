@@ -40,7 +40,7 @@ namespace DALL
             int respuesta = 0;
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "SELECT COUNT(*) FROM venta ";
+                command.CommandText = "SELECT MAX(codigo_venta) FROM venta ";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
