@@ -39,7 +39,7 @@ namespace ENTITY
 
         public void CalcularTotalFactura()
         {
-            ValorTotalFactura = Detalles.Sum(d=>d.ValorTotal);
+            ValorTotalFactura = Detalles.Sum(d=>d.ValorSubTotal);
         }
 
 
