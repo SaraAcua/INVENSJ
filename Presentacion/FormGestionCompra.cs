@@ -171,5 +171,13 @@ namespace Presentacion
                 Limpiar();
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+        }
     }
 }

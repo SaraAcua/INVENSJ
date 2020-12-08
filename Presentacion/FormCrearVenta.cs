@@ -191,6 +191,12 @@ namespace Presentacion
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
+            dataGVfactura.DataSource = ventas;
+        }
     }
     }
 
