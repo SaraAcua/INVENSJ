@@ -31,10 +31,10 @@ namespace Presentacion
             productoService = new ProductoService(ConfigConnection.connectionString);
             VentaService = new FacturaVentaService(ConfigConnection.connectionString);
             //txtNumFactura.Text = VentaService.ConsultarIdFactura().ToString();
-           
+
 
             InhabiltarText();
-      
+
 
 
             LbelFechaFacturaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -55,6 +55,7 @@ namespace Presentacion
         private void btnGenerarVenta_Click(object sender, EventArgs e)
         {
 
+            RegistrarFactura();
         }
 
         private void btnAgraegarCliente_Click(object sender, EventArgs e)
@@ -161,7 +162,7 @@ namespace Presentacion
             }
 
 
-            
+
 
 
         }
@@ -187,27 +188,50 @@ namespace Presentacion
                 Limpiar();
             }
         }
+        private void RegistrarFactura()
+        {
+
+            FacturaVenta venta = new FacturaVenta();
+            venta.CodigoFactura = txtNumFactura.Text;
+            venta.IdCliente = txtNumeroDoc.Text;
+            venta.Fecha = LbelFechaFacturaVenta.Text;
+            venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
+            VentaService.GuardarFacturaVenta(venta);
+
+            txtNumFactura.Text = VentaService.ConsultarIdFactura().ToString();
+
+            foreach (DetalleFacturaVenta detalle in ventas)
+            {
+                detalle.CodigoVenta = txtNumFactura.Text;
+            }
+
+                foreach (DataGridViewRow row in dtgvFactura.Rows)
+            {
+                foreach (var item in ventas)
+                {
+                    row.Cells["codigoVenta"].Value = item.CodigoVenta;
+                    row.Cells["CodigoProducto"].Value = item.CodigoProducto;
+                    row.Cells["CantidadProducto"].Value = item.CantidadProducto;
+                    row.Cells["Valorunitario"].Value = item.Valorunitario;
+                    row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
+                }
+
+
+
+            }
+        }
+           
 
         private void BtnQuitarProducto_Click(object sender, EventArgs e)
         {
 
         }
 
-        private List<DetalleFacturaVenta> LlenarData(List<DetalleFacturaVenta> detalles, DetalleFacturaVenta facturaNuevo)
-        {
-            List<DetalleFacturaVenta> detalleFacturas = detalles;
-            detalleFacturas.Add(facturaNuevo);
-            return detalleFacturas;
-        }
+       
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            // dataGVfactura.DataSource = ventas;
-            //FacturaVenta venta = new FacturaVenta();
-            //venta.CodigoFactura = txtNumFactura.Text;
-            //venta.IdCliente = txtNumeroDoc.Text;
-            //venta.Fecha = LbelFechaFacturaVenta.Text;
-            //venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
+           
 
             DetalleFacturaVenta detalle = new DetalleFacturaVenta();
             detalle.CodigoVenta = txtNumFactura.Text;
