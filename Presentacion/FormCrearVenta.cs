@@ -27,12 +27,12 @@ namespace Presentacion
             InitializeComponent();
            service = new ClienteService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
-            table.Columns.Add("Codigo producto");
-            table.Columns.Add("Descripciòn");
-            table.Columns.Add("Precio unitario");
-            table.Columns.Add("Cantidad");
-            table.Columns.Add(" sub Total");
-            dataGVfactura.DataSource = table;
+            //table.Columns.Add("Codigo producto");
+            //table.Columns.Add("Descripciòn");
+            //table.Columns.Add("Precio unitario");
+            //table.Columns.Add("Cantidad");
+            //table.Columns.Add(" sub Total");
+            //dataGVfactura.DataSource = table;
             InhabiltarText();
 
            
