@@ -94,6 +94,7 @@ namespace Presentacion
             txtCantidad.Text = "";
             txtCodigo.Text = "";
             txtObservacion.Text = "";
+            lblCantidaInicial.Text = "";
         }
 
 
