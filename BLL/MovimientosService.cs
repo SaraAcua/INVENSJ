@@ -71,6 +71,11 @@ namespace BLL
         }
 
 
+
+       
+
+
+
         public ConteoMovimientosRespuesta TotalizarTipo(string motivo)
         {
             ConteoMovimientosRespuesta respuesta = new ConteoMovimientosRespuesta();
