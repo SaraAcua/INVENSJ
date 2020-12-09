@@ -59,14 +59,17 @@ namespace Presentacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            Producto producto = new Producto();
-            int cantidadInicial = producto.Cantidad;
+            int cantidad = int.Parse(lblCantidaInicial.Text);
+            int cantidadDigitada = int.Parse(txtCantidad.Text);
 
             if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("")
                 || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals("") )
             {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }else if(cantidadDigitada>cantidad)
+            {
+                MessageBox.Show(" Cantidad no disponible ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
 
             else 
@@ -129,6 +132,26 @@ namespace Presentacion
                 this.DialogResult = DialogResult.None;
                 //btnCancelar.Focus();
             }
+        }
+
+
+
+        private void BtnBuscarCantidad_Click(object sender, EventArgs e)
+        {
+            BusquedaProductoRespuesta consulta = new BusquedaProductoRespuesta();
+            consulta = productoService.BuscarPorcodigo(txtCodigo.Text);
+            if (!consulta.Error)
+            {
+                producto = consulta.Producto;
+                lblCantidaInicial.Text = producto.Cantidad.ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Producto no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            }
+
         }
     }
 }

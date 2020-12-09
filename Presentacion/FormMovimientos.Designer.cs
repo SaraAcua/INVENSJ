@@ -30,8 +30,8 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMovimientos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmboMotivo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +54,9 @@ namespace Presentacion
             this.cmboConsulta = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.LblTotal = new System.Windows.Forms.Label();
+            this.lblCantidaInicial = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BtnBuscarCantidad = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMovimientos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -98,7 +101,7 @@ namespace Presentacion
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(251, 87);
+            this.txtCantidad.Location = new System.Drawing.Point(411, 87);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(67, 20);
             this.txtCantidad.TabIndex = 39;
@@ -109,7 +112,7 @@ namespace Presentacion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(248, 67);
+            this.label5.Location = new System.Drawing.Point(408, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 40;
@@ -120,7 +123,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(339, 68);
+            this.label4.Location = new System.Drawing.Point(503, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 44;
@@ -131,7 +134,7 @@ namespace Presentacion
             this.LbelFecha.AutoSize = true;
             this.LbelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbelFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LbelFecha.Location = new System.Drawing.Point(344, 88);
+            this.LbelFecha.Location = new System.Drawing.Point(504, 88);
             this.LbelFecha.Name = "LbelFecha";
             this.LbelFecha.Size = new System.Drawing.Size(59, 16);
             this.LbelFecha.TabIndex = 43;
@@ -227,19 +230,19 @@ namespace Presentacion
             // dtgvMovimientos
             // 
             this.dtgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvMovimientos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvMovimientos.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvMovimientos.Location = new System.Drawing.Point(38, 317);
             this.dtgvMovimientos.Name = "dtgvMovimientos";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dtgvMovimientos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgvMovimientos.Size = new System.Drawing.Size(460, 127);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtgvMovimientos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvMovimientos.Size = new System.Drawing.Size(512, 124);
             this.dtgvMovimientos.TabIndex = 48;
             // 
             // label7
@@ -260,7 +263,7 @@ namespace Presentacion
             this.panel1.Controls.Add(this.cmboConsulta);
             this.panel1.Location = new System.Drawing.Point(39, 249);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 52);
+            this.panel1.Size = new System.Drawing.Size(511, 62);
             this.panel1.TabIndex = 52;
             // 
             // btnConsulta
@@ -289,7 +292,7 @@ namespace Presentacion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(4, 4);
+            this.label6.Location = new System.Drawing.Point(4, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 54;
@@ -299,7 +302,7 @@ namespace Presentacion
             // 
             this.cmboConsulta.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmboConsulta.FormattingEnabled = true;
-            this.cmboConsulta.Location = new System.Drawing.Point(7, 23);
+            this.cmboConsulta.Location = new System.Drawing.Point(7, 28);
             this.cmboConsulta.Name = "cmboConsulta";
             this.cmboConsulta.Size = new System.Drawing.Size(97, 21);
             this.cmboConsulta.TabIndex = 53;
@@ -326,12 +329,54 @@ namespace Presentacion
             this.LblTotal.TabIndex = 54;
             this.LblTotal.Text = "--";
             // 
+            // lblCantidaInicial
+            // 
+            this.lblCantidaInicial.AutoSize = true;
+            this.lblCantidaInicial.Location = new System.Drawing.Point(334, 90);
+            this.lblCantidaInicial.Name = "lblCantidaInicial";
+            this.lblCantidaInicial.Size = new System.Drawing.Size(0, 13);
+            this.lblCantidaInicial.TabIndex = 55;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(319, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 16);
+            this.label10.TabIndex = 56;
+            this.label10.Text = "Dsiponible";
+            // 
+            // BtnBuscarCantidad
+            // 
+            this.BtnBuscarCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscarCantidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscarCantidad.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarCantidad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.BtnBuscarCantidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.BtnBuscarCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarCantidad.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarCantidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnBuscarCantidad.Image = global::Presentacion.Properties.Resources.buscar;
+            this.BtnBuscarCantidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscarCantidad.Location = new System.Drawing.Point(248, 85);
+            this.BtnBuscarCantidad.Name = "BtnBuscarCantidad";
+            this.BtnBuscarCantidad.Size = new System.Drawing.Size(70, 22);
+            this.BtnBuscarCantidad.TabIndex = 56;
+            this.BtnBuscarCantidad.Text = "     Buscar";
+            this.BtnBuscarCantidad.UseVisualStyleBackColor = false;
+            this.BtnBuscarCantidad.Click += new System.EventHandler(this.BtnBuscarCantidad_Click);
+            // 
             // FormMovimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(741, 523);
+            this.Controls.Add(this.BtnBuscarCantidad);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblCantidaInicial);
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -384,5 +429,8 @@ namespace Presentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LblTotal;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblCantidaInicial;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button BtnBuscarCantidad;
     }
 }

@@ -194,10 +194,6 @@ namespace Presentacion
                 txtNumeroDoc.Text = "";
             }
 
-
-
-
-
         }
 
         private void btnBuscarProduct_Click(object sender, EventArgs e)
