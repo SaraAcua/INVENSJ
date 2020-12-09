@@ -24,6 +24,7 @@ namespace Presentacion
         DetalleFacturaVentaService detalleFactura;
 
         List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
+        List<Producto> productos = new List<Producto>();
         DataTable table = new DataTable();
         public FormCrearVenta()
         {
@@ -266,8 +267,11 @@ namespace Presentacion
                 detalle.CantidadProducto = int.Parse(txtCantidad.Text);
                 detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
                 detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
+                Producto producto = new Producto();
+                producto.CodigoProducto = txtCodigoProd.Text;
+                producto.Cantidad = int.Parse(txtCantidad.Text);
 
-
+                productos.Add(producto);
                 ventas.Add(detalle);
                 dtgvFactura.DataSource = null;
             }
