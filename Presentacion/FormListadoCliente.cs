@@ -36,5 +36,10 @@ namespace Presentacion
                 }
             }
         }
+
+        private void btnBuscarId_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

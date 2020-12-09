@@ -32,10 +32,10 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarBarrio = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscarId = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
@@ -61,10 +61,10 @@
             this.guna2GradientPanel1.BorderRadius = 15;
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.Controls.Add(this.button1);
+            this.guna2GradientPanel1.Controls.Add(this.btnBuscarBarrio);
             this.guna2GradientPanel1.Controls.Add(this.textBox2);
             this.guna2GradientPanel1.Controls.Add(this.textBox1);
-            this.guna2GradientPanel1.Controls.Add(this.button3);
+            this.guna2GradientPanel1.Controls.Add(this.btnBuscarId);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(45, 110);
@@ -98,24 +98,24 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Identificaciòn";
             // 
-            // button1
+            // btnBuscarBarrio
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(359, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 30);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "     Buscar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscarBarrio.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarBarrio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarBarrio.FlatAppearance.BorderSize = 0;
+            this.btnBuscarBarrio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBuscarBarrio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarBarrio.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarBarrio.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarBarrio.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarBarrio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarBarrio.Location = new System.Drawing.Point(359, 32);
+            this.btnBuscarBarrio.Name = "btnBuscarBarrio";
+            this.btnBuscarBarrio.Size = new System.Drawing.Size(83, 30);
+            this.btnBuscarBarrio.TabIndex = 25;
+            this.btnBuscarBarrio.Text = "     Buscar";
+            this.btnBuscarBarrio.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -132,24 +132,25 @@
             this.textBox1.TabIndex = 23;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // button3
+            // btnBuscarId
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(139, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 30);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "     Buscar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBuscarId.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarId.FlatAppearance.BorderSize = 0;
+            this.btnBuscarId.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBuscarId.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscarId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarId.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarId.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarId.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarId.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarId.Location = new System.Drawing.Point(139, 32);
+            this.btnBuscarId.Name = "btnBuscarId";
+            this.btnBuscarId.Size = new System.Drawing.Size(83, 30);
+            this.btnBuscarId.TabIndex = 22;
+            this.btnBuscarId.Text = "     Buscar";
+            this.btnBuscarId.UseVisualStyleBackColor = false;
+            this.btnBuscarId.Click += new System.EventHandler(this.btnBuscarId_Click);
             // 
             // dataGridView1
             // 
@@ -198,12 +199,12 @@
 
         private System.Windows.Forms.Button btnImprimir;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscarId;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarBarrio;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
     }
