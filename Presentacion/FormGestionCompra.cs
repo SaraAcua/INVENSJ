@@ -16,12 +16,17 @@ namespace Presentacion
     {
         ProveedorService service;
         ProductoService productoService;
+        FacturaCompraService compraService;
+        DetalleFacturaCompra detalle;
+        DetalleFacturaCompraService detalleService;
+        List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
         public FormGestionCompra()
         {
             InitializeComponent();
             service = new ProveedorService(ConfigConnection.connectionString);
             productoService = new ProductoService(ConfigConnection.connectionString);
-
+            compraService = new FacturaCompraService(ConfigConnection.connectionString);
+            detalleService = new DetalleFacturaCompraService(ConfigConnection.connectionString);
             LbelFechaFacturaCompra.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
@@ -172,13 +177,76 @@ namespace Presentacion
             }
         }
 
+
+        private void RegistrarFactura()
+        {
+
+            FacturaCompra compra = new FacturaCompra();
+            compra.CodigoFactura = txtNumeroCompra.Text;
+            compra.CodigoProveedor = txtNitProveedor.Text;
+            compra.Fecha = LbelFechaFacturaCompra.Text;
+            compra.ValorTotalFactura = Double.Parse(lblPrecioTotalCompra.Text);
+            compraService.GuardarFacturaVenta(compra);
+
+            txtNumeroCompra.Text = compraService.ConsultarIdFactura().ToString();
+
+            foreach (DetalleFacturaCompra detalle in compras)
+            {
+                detalle.CodigoCompra = txtNumeroCompra.Text;
+            }
+
+            foreach (DataGridViewRow row in dtgvCompra.Rows)
+            {
+                foreach (var item in compras)
+                {
+                    row.Cells["codigoVenta"].Value = item.CodigoCompra;
+                    row.Cells["CodigoProducto"].Value = item.CodigoProducto;
+                    row.Cells["CantidadProducto"].Value = item.CantidadProducto;
+                    row.Cells["Valorunitario"].Value = item.Valorunitario;
+                    row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
+                }
+            }
+            detalleService.GuardarDetallesCompra(compras);
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
+            DetalleFacturaCompra detalle = new DetalleFacturaCompra();
+            detalle.CodigoCompra = txtNumeroCompra.Text;
+            detalle.CodigoProducto = txtCodigoProd.Text;
+            detalle.CantidadProducto = int.Parse(txtCantidad.Text);
+            detalle.Valorunitario = int.Parse(txtPrecio.Text);
+            detalle.ValorSubTotal = Double.Parse(lblPrecioTotalCompra.Text);
+
+
+            compras.Add(detalle);
+            dtgvCompra.DataSource = null;
+
+            foreach (DataGridViewRow row in dtgvCompra.Rows)
+            {
+                foreach (var item in compras)
+                {
+                    row.Cells["codigoVenta"].Value = item.CodigoCompra;
+                    row.Cells["CodigoProducto"].Value = item.CodigoProducto;
+                    row.Cells["CantidadProducto"].Value = item.CantidadProducto;
+                    row.Cells["Valorunitario"].Value = item.Valorunitario;
+                    row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
+                }
+
+            }
             dtgvCompra.DataSource = compras;
-
-
-
+            int total = 0;
+            foreach (DataGridViewRow row in dtgvCompra.Rows)
+            {
+                total += Convert.ToInt32(row.Cells["ValorSubTotal"].Value);
+            }
+            lblPrecioTotalCompra.Text = (total).ToString();
         }
+
+
+
+
     }
 }
+
