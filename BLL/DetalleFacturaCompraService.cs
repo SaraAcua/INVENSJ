@@ -18,7 +18,7 @@ namespace BLL
             repositorio = new DetalleFacturaCompraRepository(conexion);
         }
 
-        public string GuardarDetallesCompra(List<DetalleFacturaCompra> detalles)
+        public string GuardarDetallesCompra(List<DetalleFacturaCompra> detalles, List<Producto> productos)
         {
             try
             {
@@ -31,32 +31,21 @@ namespace BLL
 
                     conexion.Close();
                 }
-                    return $"Se guardaron los datos de la factura satisfactoriamente";
-                
-            }
-            catch (Exception e)
-            {
-                return $"Error de la Aplicacion: {e.Message}";
-            }
-            finally { conexion.Close(); }
-        }
 
-
-        public string ActualizarProducto(List<DetalleFacturaCompra> detalles)
-        {
-            try
-            {
-                foreach (DetalleFacturaCompra detalle in detalles)
+                //Actualizar Productos
+                foreach (Producto producto in productos)
                 {
                     conexion.Open();
 
-                    repositorio.GuardarDetalleFacturaCompra(detalle);
+                    repositorio.ActualizarInventario(producto);
 
 
                     conexion.Close();
                 }
                 return $"Se guardaron los datos de la factura satisfactoriamente";
 
+                
+
             }
             catch (Exception e)
             {
@@ -64,6 +53,9 @@ namespace BLL
             }
             finally { conexion.Close(); }
         }
+
+
+        
 
     }
 }
