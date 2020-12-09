@@ -96,6 +96,30 @@ namespace BLL
         }
 
 
+        public string ModificarProducto(Producto producto)
+        {
+            try
+            {
+                conexion.Open();
+                if (repositorio.BuscarPorCodigoProducto(producto.CodigoProducto) != null)
+                {
+                    repositorio.ModificarProducto(producto);
+                    return $"Se modificaron los datos del producto: {producto.Descripcion}   satisfactoriamente";
+                }
+                return $"El producto no existe";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+
+
+
+
+
+
     }
 
     public class ConsultaProductoRespuesta
