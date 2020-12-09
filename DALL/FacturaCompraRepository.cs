@@ -46,7 +46,7 @@ namespace DALL
                 command.Parameters.Add("fechaFinal", OracleDbType.Date).Value = fechaFinal;
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
-                {
+                { 
                     while (dataReader.Read())
                     {
                         FacturaCompra facturaCompra = DataReaderMapToFactura(dataReader);
