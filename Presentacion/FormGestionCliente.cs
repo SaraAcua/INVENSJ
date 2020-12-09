@@ -146,7 +146,7 @@ namespace Presentacion
                     txtBarrio.Text = cliente.Barrio;
                     txtDirecciòn.Text = cliente.Direccion;
                     txtTelefono.Text = cliente.Telefono;
-                    txtEmail.Text = cliente.Email;
+                    txtEmail.Text = cliente.Email; 
                 }
                 else
                 {
