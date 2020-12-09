@@ -59,33 +59,43 @@ namespace Presentacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            int cantidad = int.Parse(lblCantidaInicial.Text);
-            int cantidadDigitada = int.Parse(txtCantidad.Text);
-
-            if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("")
-                || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals("") )
+            try
             {
 
-                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }else if(cantidadDigitada>cantidad)
-            {
-                MessageBox.Show(" Cantidad no disponible ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+                int cantidad = int.Parse(lblCantidaInicial.Text);
+                int cantidadDigitada = int.Parse(txtCantidad.Text);
+
+                if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("")
+                    || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals(""))
+                {
+
+                    MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+                else if (cantidadDigitada > cantidad)
+                {
+                    MessageBox.Show(" Cantidad no disponible ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    Movimientos movimientos = MapearMovimiento();
+                    string mensaje = movimientosService.GuardarMovimiento(movimientos);
+                    Producto producto1 = new Producto();
+                    producto.CodigoProducto = txtCodigo.Text;
+                    producto.Cantidad = int.Parse(txtCantidad.Text);
+
+                    movimientosService.ActualizarInventario(producto);
+                    MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+
+                    Limpiar();
+
+                }
             }
-
-            else 
+            catch
             {
-                Movimientos movimientos = MapearMovimiento();
-                string mensaje = movimientosService.GuardarMovimiento(movimientos);
-                Producto producto1 = new Producto();
-                producto.CodigoProducto = txtCodigo.Text;
-                producto.Cantidad = int.Parse(txtCantidad.Text);
-               
-                movimientosService.ActualizarInventario(producto);
-                MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-               
-
-                Limpiar();
-
+                MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 
