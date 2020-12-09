@@ -161,6 +161,7 @@
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnGuardarProducto
             // 

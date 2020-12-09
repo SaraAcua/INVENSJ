@@ -35,7 +35,7 @@ namespace Presentacion
             ConsultaFacturaRespuesta respuesta = new ConsultaFacturaRespuesta();
 
 
-           // respuesta = ventaService.(DateTime.Parse(dateTimeListadoCompra.Text), DateTime.Parse(dateTimeListadoCompra1.Text));
+          // respuesta = ventaService.(DateTime.Parse(dateTimeListadoCompra.Text), DateTime.Parse(dateTimeListadoCompra1.Text));
             dtgvVentas.DataSource = respuesta.Facturas;
             Limpiar();
         }

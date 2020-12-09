@@ -253,7 +253,49 @@ namespace Presentacion
 
         private void txtCodigoProd_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                BusquedaProductoRespuesta consulta = new BusquedaProductoRespuesta();
+                consulta = productoService.BuscarPorcodigo(txtCodigoProd.Text);
+                if (!consulta.Error)
+                {
+                    producto = consulta.Producto;
+                    txtDescripcionProd.Text = producto.Descripcion.ToString();
+                    txtPrecioVenta.Text = producto.Precio.ToString();
+                    txtIva.Text = producto.Iva.ToString();
+                    cmbTalla.SelectedItem = producto.Talla.ToString();
+                    cmbColor.SelectedItem = producto.Color.ToString();
+                    cmbMarca.SelectedItem = producto.Marca.ToString();
+                    txtStockMinimo.Text = producto.StockMinimo.ToString();
+                    txtStockMaximo.Text = producto.StockMaximo.ToString();
+                    txtPrecioVenta.Enabled = true;
+                    txtIva.Enabled=true;
 
+                }
+                else
+                {
+                    MessageBox.Show("Producto no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                }
+            }
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    Producto producto = MapearProducto();
+                    string mensaje = productoService.ModificarProducto(producto);
+                    MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+            }
+            catch { }
         }
     }
 }
