@@ -95,7 +95,7 @@ namespace BLL
 
         }
 
-        public string GuardarMovimiento(Producto producto)
+        public string ActualizarInventario(Producto producto)
         {
             try
             {
