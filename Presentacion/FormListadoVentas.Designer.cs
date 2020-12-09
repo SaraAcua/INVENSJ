@@ -34,11 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeListadoCompra1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimeListadoCompra = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dtgvVentas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnImprimir
@@ -62,7 +62,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.dateTimeListadoCompra1);
             this.guna2GradientPanel1.Controls.Add(this.dateTimeListadoCompra);
-            this.guna2GradientPanel1.Controls.Add(this.button3);
+            this.guna2GradientPanel1.Controls.Add(this.btnBuscar);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(42, 109);
@@ -114,33 +114,34 @@
             this.dateTimeListadoCompra.TabIndex = 32;
             this.dateTimeListadoCompra.Value = new System.DateTime(2020, 11, 30, 0, 0, 0, 0);
             // 
-            // button3
+            // btnBuscar
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Presentacion.Properties.Resources.buscar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(415, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 30);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "     Buscar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(415, 32);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(83, 30);
+            this.btnBuscar.TabIndex = 31;
+            this.btnBuscar.Text = "     Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridView1
+            // dtgvVentas
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 228);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 236);
-            this.dataGridView1.TabIndex = 39;
+            this.dtgvVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvVentas.Location = new System.Drawing.Point(42, 228);
+            this.dtgvVentas.Name = "dtgvVentas";
+            this.dtgvVentas.Size = new System.Drawing.Size(547, 236);
+            this.dtgvVentas.TabIndex = 39;
             // 
             // label2
             // 
@@ -163,13 +164,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListadoVentas";
             this.Text = "FormListadoVentas";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,12 +180,12 @@
 
         private System.Windows.Forms.Button btnImprimir;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvVentas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimeListadoCompra1;
         private System.Windows.Forms.DateTimePicker dateTimeListadoCompra;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
