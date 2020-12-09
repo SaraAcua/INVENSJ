@@ -95,6 +95,23 @@ namespace BLL
 
         }
 
+        public string GuardarMovimiento(Producto producto)
+        {
+            try
+            {
+                    conexion.Open();
+                    repositorio.ActualizarInventario(producto);
+                    conexion.Close();
+                return $"Se guardaron los datos del movimiento satisfactoriamente";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+
+
 
 
 

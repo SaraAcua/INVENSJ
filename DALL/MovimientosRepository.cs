@@ -92,6 +92,22 @@ namespace DALL
             return movimientos1;
         }
 
+
+        public int ActualizarInventario(Producto producto)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_actualizar_cantidad_producto";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("Acodigo", OracleDbType.Varchar2).Value = producto.CodigoProducto;
+                command.Parameters.Add("Acantidad", OracleDbType.Varchar2).Value = producto.Cantidad;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
+
+
         public int Totalizar(string motivo)
         {
 
