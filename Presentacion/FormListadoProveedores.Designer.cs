@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscarBarrio = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBarrio = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnBuscarId = new System.Windows.Forms.Button();
             this.dtgvProveedor = new System.Windows.Forms.DataGridView();
@@ -62,7 +62,7 @@
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.btnBuscarBarrio);
-            this.guna2GradientPanel1.Controls.Add(this.textBox2);
+            this.guna2GradientPanel1.Controls.Add(this.txtBarrio);
             this.guna2GradientPanel1.Controls.Add(this.txtId);
             this.guna2GradientPanel1.Controls.Add(this.btnBuscarId);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
@@ -118,12 +118,12 @@
             this.btnBuscarBarrio.UseVisualStyleBackColor = false;
             this.btnBuscarBarrio.Click += new System.EventHandler(this.btnBuscarBarrio_Click);
             // 
-            // textBox2
+            // txtBarrio
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 30;
+            this.txtBarrio.Location = new System.Drawing.Point(223, 37);
+            this.txtBarrio.Name = "txtBarrio";
+            this.txtBarrio.Size = new System.Drawing.Size(100, 20);
+            this.txtBarrio.TabIndex = 30;
             // 
             // txtId
             // 
@@ -204,7 +204,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarBarrio;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBarrio;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnBuscarId;
     }

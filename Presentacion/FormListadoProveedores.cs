@@ -70,7 +70,11 @@ namespace Presentacion
 
         private void btnBuscarBarrio_Click(object sender, EventArgs e)
         {
+            ConsultaProveedorRespuesta respuesta = new ConsultaProveedorRespuesta();
 
+
+            respuesta = service.BuscarPorBarrio(txtBarrio.Text);
+            dtgvProveedor.DataSource = respuesta.Proveedores;
         }
     }
 }
