@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -159,6 +160,8 @@
             this.dtgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProveedor.Location = new System.Drawing.Point(44, 229);
             this.dtgvProveedor.Name = "dtgvProveedor";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgvProveedor.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvProveedor.Size = new System.Drawing.Size(444, 207);
             this.dtgvProveedor.TabIndex = 39;
             // 

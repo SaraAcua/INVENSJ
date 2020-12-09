@@ -33,13 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscarBarrio = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBarrio = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnBuscarId = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvClientesReportes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvClientesReportes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnImprimir
@@ -62,8 +62,8 @@
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.btnBuscarBarrio);
-            this.guna2GradientPanel1.Controls.Add(this.textBox2);
-            this.guna2GradientPanel1.Controls.Add(this.textBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtBarrio);
+            this.guna2GradientPanel1.Controls.Add(this.txtId);
             this.guna2GradientPanel1.Controls.Add(this.btnBuscarId);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(66)))), ((int)(((byte)(97)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
@@ -116,21 +116,22 @@
             this.btnBuscarBarrio.TabIndex = 25;
             this.btnBuscarBarrio.Text = "     Buscar";
             this.btnBuscarBarrio.UseVisualStyleBackColor = false;
+            this.btnBuscarBarrio.Click += new System.EventHandler(this.btnBuscarBarrio_Click);
             // 
-            // textBox2
+            // txtBarrio
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 24;
+            this.txtBarrio.Location = new System.Drawing.Point(239, 37);
+            this.txtBarrio.Name = "txtBarrio";
+            this.txtBarrio.Size = new System.Drawing.Size(100, 20);
+            this.txtBarrio.TabIndex = 24;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtId.Location = new System.Drawing.Point(33, 37);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 23;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // btnBuscarId
             // 
@@ -152,14 +153,14 @@
             this.btnBuscarId.UseVisualStyleBackColor = false;
             this.btnBuscarId.Click += new System.EventHandler(this.btnBuscarId_Click);
             // 
-            // dataGridView1
+            // dtgvClientesReportes
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(472, 228);
-            this.dataGridView1.TabIndex = 42;
+            this.dtgvClientesReportes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvClientesReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvClientesReportes.Location = new System.Drawing.Point(45, 229);
+            this.dtgvClientesReportes.Name = "dtgvClientesReportes";
+            this.dtgvClientesReportes.Size = new System.Drawing.Size(472, 228);
+            this.dtgvClientesReportes.TabIndex = 42;
             // 
             // label2
             // 
@@ -182,14 +183,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvClientesReportes);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListadoCliente";
             this.Text = "FormListadoCliente";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvClientesReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,12 +201,12 @@
         private System.Windows.Forms.Button btnImprimir;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Button btnBuscarId;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvClientesReportes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarBarrio;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBarrio;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
