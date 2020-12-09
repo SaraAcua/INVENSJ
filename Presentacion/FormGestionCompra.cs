@@ -20,6 +20,7 @@ namespace Presentacion
         DetalleFacturaCompra detalle;
         DetalleFacturaCompraService detalleService;
         List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
+        List<Producto> productos = new List<Producto>();
         public FormGestionCompra()
         {
             InitializeComponent();
@@ -231,8 +232,10 @@ namespace Presentacion
             compra.ValorTotalFactura = Double.Parse(lblPrecioTotalCompra.Text);
             compraService.GuardarFacturaCompra(compra);
 
+            
             foreach (DetalleFacturaCompra detalle in compras)
             {
+                
                 detalle.CodigoCompra = txtNumeroCompra.Text;
             }
 
@@ -247,8 +250,8 @@ namespace Presentacion
                     row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
                 }
             }
-            detalleService.GuardarDetallesCompra(compras);
-            
+           // detalleService.GuardarDetallesCompra(compras, productos);
+      
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -261,7 +264,13 @@ namespace Presentacion
                 detalle.CantidadProducto = int.Parse(txtCantidad.Text);
                 detalle.Valorunitario = int.Parse(txtPrecio.Text);
                 detalle.ValorSubTotal = Double.Parse(LblSubtotal.Text);
-
+                
+                Producto producto = new Producto();
+                producto.CodigoProducto = txtCodigoProd.Text;
+                producto.Cantidad = int.Parse(txtCantidad.Text);
+                producto.Costo = int.Parse(txtPrecio.Text);
+                producto.Precio = int.Parse(txtPrecioventa.Text);
+                productos.Add(producto);
 
                 compras.Add(detalle);
                 dtgvCompra.DataSource = null;
@@ -300,9 +309,6 @@ namespace Presentacion
                 RegistrarFactura();
                 MessageBox.Show("Compra registrada  con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
-                
-
-
 
             }
             }
@@ -314,12 +320,23 @@ namespace Presentacion
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            
-            for (int i = 0; i < compras.Count; i++)
-            {
-                compras.RemoveAt(i);
-            }
-                
+
+            //    if (dtgvCompra.CurrentRow == null)
+            //        return;
+
+            //    dtgvCompra.Rows.Remove(dtgvCompra.CurrentRow);
+            //try
+            //{
+            //    dtgvCompra.Rows.RemoveAt(dtgvCompra.CurrentRow.Index);
+            //}
+            //catch { }
+
+            //for (int i = 0; i < compras.Count; i++)
+            //{
+            //    compras.RemoveAt(i);
+            //}
+
+
         }
     }
 }

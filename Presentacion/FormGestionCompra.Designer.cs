@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBarrio = new System.Windows.Forms.TextBox();
@@ -311,13 +311,14 @@
             // 
             // dtgvCompra
             // 
+            this.dtgvCompra.AllowUserToAddRows = false;
             this.dtgvCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCompra.Location = new System.Drawing.Point(34, 291);
             this.dtgvCompra.Name = "dtgvCompra";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvCompra.Size = new System.Drawing.Size(593, 163);
             this.dtgvCompra.TabIndex = 1;
             // 
