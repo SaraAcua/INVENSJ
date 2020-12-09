@@ -223,7 +223,7 @@ namespace Presentacion
             FacturaVenta venta = new FacturaVenta();
             venta.CodigoFactura = txtNumFactura.Text;
             venta.IdCliente = txtNumeroDoc.Text;
-            venta.Fecha = LbelFechaFacturaVenta.Text;
+            venta.Fecha = DateTime.Parse( LbelFechaFacturaVenta.Text);
             venta.ValorTotalFactura = Double.Parse(lblTotalFactura.Text);
             VentaService.GuardarFacturaVenta(venta);
 
