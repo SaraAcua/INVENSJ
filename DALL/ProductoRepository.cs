@@ -114,7 +114,7 @@ namespace DALL
                 command.Parameters.Add("aiva", OracleDbType.Int32).Value = producto.Iva;
                 command.Parameters.Add("atalla", OracleDbType.Varchar2).Value = producto.Talla;
                 command.Parameters.Add("acodigo_color", OracleDbType.Int32).Value = producto.Costo;
-                command.Parameters.Add("acodigo_marca", OracleDbType.Int32).Value = producto.Marca;
+                command.Parameters.Add("acodigo_marca", OracleDbType.Int32).Value = int.Parse(producto.Marca);
                 command.Parameters.Add("astock_minimo", OracleDbType.Int32).Value = producto.StockMinimo;
                 command.Parameters.Add("astock_max", OracleDbType.Int32).Value = producto.StockMaximo;
                 var filas = command.ExecuteNonQuery();
