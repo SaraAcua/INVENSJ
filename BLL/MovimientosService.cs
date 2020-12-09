@@ -20,7 +20,7 @@ namespace BLL
         }
 
          
-        public string GuardarCliente(Movimientos movimientos)
+        public string GuardarMovimiento(Movimientos movimientos)
         { 
             try
             {
