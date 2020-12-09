@@ -33,11 +33,11 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ConsultaProductoRespuesta respuesta = new ConsultaProductoRespuesta();
+            ConsultaFacturaRespuesta respuesta = new ConsultaFacturaRespuesta ();
 
 
-            respuesta = compraService.();
-            //dtgProducto.DataSource = respuesta.Productos;
+            respuesta = compraService.BuscarReporte(DateTime.Parse(dateTimeListadoCompra.Text),DateTime.Parse( dateTimeListadoCompra1.Text));
+            dtgvListadoCompra.DataSource = respuesta.Facturas;
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

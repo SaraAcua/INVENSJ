@@ -228,7 +228,7 @@ namespace Presentacion
             FacturaCompra compra = new FacturaCompra();
             compra.CodigoFactura = txtNumeroCompra.Text;
             compra.CodigoProveedor = txtNitProveedor.Text;
-            compra.Fecha = LbelFechaFacturaCompra.Text;
+            compra.Fecha = DateTime.Parse( LbelFechaFacturaCompra.Text);
             compra.ValorTotalFactura = Double.Parse(lblPrecioTotalCompra.Text);
             compraService.GuardarFacturaCompra(compra);
 
