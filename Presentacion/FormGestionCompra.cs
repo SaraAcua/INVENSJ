@@ -250,7 +250,7 @@ namespace Presentacion
                     row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
                 }
             }
-           // detalleService.GuardarDetallesCompra(compras, productos);
+            detalleService.GuardarDetallesCompra(compras, productos);
       
         }
 
