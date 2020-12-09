@@ -59,19 +59,21 @@ namespace Presentacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
+            Producto producto = new Producto();
+            int cantidadInicial = producto.Cantidad;
 
             if (txtCodigo.Text.Equals("") || int.Parse(txtCantidad.Text) <= 0 || cmboMotivo.SelectedItem.Equals("")
-                || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals(""))
+                || txtCantidad.Text.Equals(" ") || txtObservacion.Text.Equals("") )
             {
 
                 MessageBox.Show("Debe digitar los datos requeridos ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
 
-            else
+            else 
             {
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarMovimiento(movimientos);
-                Producto producto = new Producto();
+                Producto producto1 = new Producto();
                 producto.CodigoProducto = txtCodigo.Text;
                 producto.Cantidad = int.Parse(txtCantidad.Text);
                
