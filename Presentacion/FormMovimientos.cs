@@ -16,10 +16,13 @@ namespace Presentacion
     {
         MovimientosService movimientosService;
         Movimientos movimientos;
+        Producto producto;
+        ProductoService productoService;
         public FormMovimientos()
         {
             InitializeComponent();
             movimientosService = new MovimientosService(ConfigConnection.connectionString);
+            productoService = new ProductoService(ConfigConnection.connectionString);
             Gestionar();
             LlenarCombo();
         }
@@ -67,8 +70,10 @@ namespace Presentacion
             else
             {
                 Movimientos movimientos = MapearMovimiento();
-                string mensaje = movimientosService.GuardarCliente(movimientos);
-              
+                string mensaje = movimientosService.GuardarMovimiento(movimientos);
+                
+               
+              //  movimientosService.();
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                
 
