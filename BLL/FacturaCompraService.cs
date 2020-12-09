@@ -39,5 +39,62 @@ namespace BLL
         }
 
 
+        public ConsultaFacturaRespuesta BuscarPorDescripcion(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            ConsultaFacturaRespuesta respuesta = new ConsultaFacturaRespuesta();
+            try
+            {
+                conexion.Open();
+                respuesta.Facturas = repositorio.ReporteFactura(fechaInicial, fechaFinal);
+                conexion.Close();
+                if (respuesta.Facturas.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
+
+
+
     }
+
+    public class ConsultaFacturaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public IList<FacturaCompra> Facturas { get; set; }
+    }
+
+
+    public class BusquedaFacturaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public FacturaCompra FacturaCompra { get; set; }
+    }
+
+
+
+    public class ConteoFacturaRespuesta
+    {
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public int Cuenta { get; set; }
+    }
+
+
 }

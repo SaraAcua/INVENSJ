@@ -34,6 +34,50 @@ namespace DALL
             }
         }
 
+        public List<FacturaCompra> ReporteFactura(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            OracleDataReader dataReader;
+            List<FacturaCompra> facturas = new List<FacturaCompra>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_consultar_lista_compras";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("fechaInicial", OracleDbType.Varchar2).Value = fechaInicial;
+                command.Parameters.Add("fechaFinal", OracleDbType.Varchar2).Value = fechaFinal;
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        FacturaCompra facturaCompra = DataReaderMapToFactura(dataReader);
+                        facturas.Add(facturaCompra);
+                    }
+                }
+            }
+            return facturas;
+        }
+
+
+
+        private FacturaCompra DataReaderMapToFactura(OracleDataReader dataReader)
+        {
+
+            if (!dataReader.HasRows) return null;
+            FacturaCompra factura = new FacturaCompra();
+            factura.CodigoFactura = dataReader.GetString(0);
+            factura.CodigoProveedor = dataReader.GetString(1);
+            factura.Fecha = dataReader.GetString(2);
+            factura.ValorTotalFactura = dataReader.GetInt32(3);
+            return factura;
+
+        }
+
+
+
+
+
+
+
 
 
 
