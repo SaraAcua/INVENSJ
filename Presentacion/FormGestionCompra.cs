@@ -314,7 +314,7 @@ namespace Presentacion
                     saveFileDialog.InitialDirectory = @"c:/document";
                     saveFileDialog.DefaultExt = "pdf";
                     string filename = "";
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK) 
                     {
                         filename = saveFileDialog.FileName;
                         if (filename != "" && compras.Count > 0)
