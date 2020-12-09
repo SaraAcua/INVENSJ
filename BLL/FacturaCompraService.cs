@@ -1,5 +1,6 @@
 ﻿using DALL;
 using ENTITY;
+using Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,6 +68,24 @@ namespace BLL
             }
             finally { conexion.Close(); }
         }
+
+
+
+        public string GenerarPdf(List<FacturaCompra> facturas, string filename)
+        {
+            DocumentoPdf documentoPdf = new DocumentoPdf();
+            try
+            {
+                documentoPdf.GuardarPdf(facturas, filename);
+                return "Se generó el Documento satisfactoriamente";
+            }
+            catch (Exception e)
+            {
+
+                return "Error al crear docuemnto" + e.Message;
+            }
+        }
+
 
 
 
