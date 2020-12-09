@@ -8,7 +8,7 @@ namespace ENTITY
 {
     public class FacturaCompra
     {
-        public FacturaCompra(Proveedor proveedor, string codigoFactura, string fecha, int valorTotalFactura)
+        public FacturaCompra(Proveedor proveedor, string codigoFactura, DateTime fecha, int valorTotalFactura)
         {
             CodigoFactura = codigoFactura;
             Fecha = fecha;
@@ -23,7 +23,7 @@ namespace ENTITY
 
         public string CodigoFactura { get; set; }
         public string CodigoProveedor { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public double ValorTotalFactura { get; set; }
 
         private List<DetalleFacturaCompra> Detalles;

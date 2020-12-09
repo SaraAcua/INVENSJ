@@ -42,8 +42,8 @@ namespace DALL
             {
                 command.CommandText = @"pr_consultar_lista_compras";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.Add("fechaInicial", OracleDbType.Varchar2).Value = fechaInicial;
-                command.Parameters.Add("fechaFinal", OracleDbType.Varchar2).Value = fechaFinal;
+                command.Parameters.Add("fechaInicial", OracleDbType.Date).Value = fechaInicial;
+                command.Parameters.Add("fechaFinal", OracleDbType.Date).Value = fechaFinal;
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
@@ -66,7 +66,7 @@ namespace DALL
             FacturaCompra factura = new FacturaCompra();
             factura.CodigoFactura = dataReader.GetString(0);
             factura.CodigoProveedor = dataReader.GetString(1);
-            factura.Fecha = dataReader.GetString(2);
+            factura.Fecha = dataReader.GetDateTime(2);
             factura.ValorTotalFactura = dataReader.GetInt32(3);
             return factura;
 
