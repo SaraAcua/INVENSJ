@@ -41,13 +41,12 @@ namespace DALL
 
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"SELECT *  FROM COMPRA   WHERE fecha  BETWEEN TO_DATE( fechaInicial ) AND TO_DATE(fechaFinal) ORDER BY codigo_compra;";
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.CommandText = @"SELECT *  FROM COMPRA   WHERE fecha  BETWEEN TO_DATE(:fechaInicial) AND TO_DATE(:fechaFinal) ORDER BY codigo_compra";
                 command.Parameters.Add("fechaInicial", OracleDbType.Date).Value = fechaInicial;
                 command.Parameters.Add("fechaFinal", OracleDbType.Date).Value = fechaFinal;
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
-                {
+                { 
                     while (dataReader.Read())
                     {
                         FacturaCompra facturaCompra = DataReaderMapToFactura(dataReader);
