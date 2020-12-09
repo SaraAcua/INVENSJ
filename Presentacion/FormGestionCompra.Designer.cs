@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBarrio = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.LblSubtotal = new System.Windows.Forms.Label();
             this.txtPrecioventa = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -315,9 +315,9 @@
             this.dtgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCompra.Location = new System.Drawing.Point(34, 291);
             this.dtgvCompra.Name = "dtgvCompra";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvCompra.Size = new System.Drawing.Size(593, 163);
             this.dtgvCompra.TabIndex = 1;
             // 
@@ -328,7 +328,7 @@
             this.guna2GradientPanel3.Controls.Add(this.LblSubtotal);
             this.guna2GradientPanel3.Controls.Add(this.txtPrecioventa);
             this.guna2GradientPanel3.Controls.Add(this.txtPrecio);
-            this.guna2GradientPanel3.Controls.Add(this.button5);
+            this.guna2GradientPanel3.Controls.Add(this.btnQuitar);
             this.guna2GradientPanel3.Controls.Add(this.btnAgregar);
             this.guna2GradientPanel3.Controls.Add(this.label23);
             this.guna2GradientPanel3.Controls.Add(this.label19);
@@ -381,21 +381,22 @@
             this.txtPrecio.TabIndex = 42;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
-            // button5
+            // btnQuitar
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::Presentacion.Properties.Resources.basura;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(483, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 23);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "Quitar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnQuitar.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(119)))), ((int)(((byte)(173)))));
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.ForeColor = System.Drawing.Color.Black;
+            this.btnQuitar.Image = global::Presentacion.Properties.Resources.basura;
+            this.btnQuitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuitar.Location = new System.Drawing.Point(483, 19);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(81, 23);
+            this.btnQuitar.TabIndex = 41;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnAgregar
             // 
@@ -696,7 +697,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dtgvCompra;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;

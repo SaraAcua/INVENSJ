@@ -248,6 +248,7 @@ namespace Presentacion
                 }
             }
             detalleService.GuardarDetallesCompra(compras);
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -299,7 +300,7 @@ namespace Presentacion
                 RegistrarFactura();
                 MessageBox.Show("Compra registrada  con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
-                  
+                
 
 
 
@@ -311,6 +312,15 @@ namespace Presentacion
             }
         }
 
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            
+            for (int i = 0; i < compras.Count; i++)
+            {
+                compras.RemoveAt(i);
+            }
+                
+        }
     }
 }
 
