@@ -32,8 +32,6 @@ namespace Presentacion
         private void Limpiar()
         {
             dateTimeListadoCompra.CustomFormat = "";
-
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
