@@ -26,6 +26,7 @@ namespace Presentacion
             dateTimeListadoCompra.CustomFormat = "dd/MM/yyyy";
             dateTimeListadoCompra1.Format = DateTimePickerFormat.Custom;
             dateTimeListadoCompra1.CustomFormat = "dd/MM/yyyy";
+           
 
         }
         private void Limpiar()
