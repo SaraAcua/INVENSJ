@@ -56,7 +56,7 @@ namespace DALL
                 Producto producto = DataReaderMapToProducto(dataReader);
                 return producto;
             }
-        }
+        } 
 
 
         public List<Producto> BuscarPorDescripcionProducto(string descripcion)
