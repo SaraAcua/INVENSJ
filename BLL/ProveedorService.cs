@@ -68,6 +68,36 @@ namespace BLL
         }
 
 
+        public ConsultaProveedorRespuesta BuscarPorBarrio(string barrio)
+        {
+            ConsultaProveedorRespuesta respuesta = new ConsultaProveedorRespuesta();
+            try
+            {
+                conexion.Open();
+                respuesta.Proveedores = repositorio.BuscarProveedorPorBarrio(barrio);
+                conexion.Close();
+                if (respuesta.Proveedores.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
+
+
 
 
     }

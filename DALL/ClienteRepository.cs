@@ -99,7 +99,7 @@ namespace DALL
             List<Cliente> clientes = new List<Cliente>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"select * from cliente where descripcion LIKE '%" + barrio + "%' ";
+                command.CommandText = @"select * from cliente where barrio LIKE '%" + barrio + "%' ";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
