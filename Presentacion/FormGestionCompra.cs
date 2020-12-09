@@ -304,13 +304,36 @@ namespace Presentacion
             try
             {
                 int total = int.Parse(lblPrecioTotalCompra.Text);
-            if (total > 0)
-            {
-                RegistrarFactura();
-                MessageBox.Show("Compra registrada  con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
+                if (total > 0)
+                {
 
-            }
+                    RegistrarFactura();
+                    MessageBox.Show("Compra registrada  con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Title = "Guardar Informe";
+                    saveFileDialog.InitialDirectory = @"c:/document";
+                    saveFileDialog.DefaultExt = "pdf";
+                    string filename = "";
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        filename = saveFileDialog.FileName;
+                        if (filename != "" && compras.Count > 0)
+                        {
+                            //  string mensaje = compraService.GenerarPdf(compras, filename);
+
+                            // MessageBox.Show(mensaje, "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se especifico una ruta o No hay datos para generar el reporte", "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+
+                        Limpiar();
+
+                    }
+                }
             }
             catch
             {
