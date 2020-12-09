@@ -245,7 +245,7 @@ namespace Presentacion
                     row.Cells["ValorSubTotal"].Value = item.ValorSubTotal;
                 }
             }
-            detalleFactura.GuardarDetallesVenta(ventas);
+            detalleFactura.GuardarDetallesVenta(ventas,productos);
         }
            
 
