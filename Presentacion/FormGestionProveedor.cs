@@ -160,14 +160,14 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            //var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //if (respuesta == DialogResult.Yes)
-            //{
-            //    Proveedor proveedor = MapearProveedor();
-            //    string mensaje = proveedorService.(proveedor);
-            //    MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    Limpiar();
-            //}
+            var respuesta = MessageBox.Show("Está seguro de Modificar la información", "Mensaje de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+                Proveedor proveedor = MapearProveedor();
+               string mensaje = proveedorService.(proveedor);
+               MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               Limpiar();
+            }
         }
     }
 }
