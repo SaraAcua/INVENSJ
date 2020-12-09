@@ -95,7 +95,6 @@ namespace Presentacion
             txtTelefonoCliente.Text = "";
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
-            dtgvFactura.DataSource = "";
             txtNumFactura.Text = "";
 
 
@@ -122,9 +121,11 @@ namespace Presentacion
 
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
+                int cantidaInicial = int.Parse(lblCantidad.Text);
+                int cantidadDigitada = int.Parse(txtCantidad.Text);
                 try
                 {
-                    if (int.Parse(txtCantidad.Text) > 0)
+                    if (cantidadDigitada > 0 && cantidadDigitada<=cantidaInicial)
                     {
 
                         int cantidad = int.Parse(txtCantidad.Text);
@@ -138,6 +139,11 @@ namespace Presentacion
 
                 }
                 catch { }
+            }
+            if (txtCodigoProd.Text.Equals(""))
+            {
+                MessageBox.Show("Debe buscar un producto ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                txtCantidad.Text ="";
             }
 
 
@@ -180,7 +186,7 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Cliente no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                Limpiar();
+                txtNumeroDoc.Text = "";
             }
 
 
@@ -251,18 +257,22 @@ namespace Presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-           
 
-            DetalleFacturaVenta detalle = new DetalleFacturaVenta();
-            detalle.CodigoVenta = txtNumFactura.Text;
-            detalle.CodigoProducto = txtCodigoProd.Text;
-            detalle.CantidadProducto = int.Parse(txtCantidad.Text);
-            detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
-            detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
+            try
+            {
+                DetalleFacturaVenta detalle = new DetalleFacturaVenta();
+                detalle.CodigoVenta = txtNumFactura.Text;
+                detalle.CodigoProducto = txtCodigoProd.Text;
+                detalle.CantidadProducto = int.Parse(txtCantidad.Text);
+                detalle.Valorunitario = int.Parse(lblPrecioVenta.Text);
+                detalle.ValorSubTotal = Double.Parse(lblTotal.Text);
 
 
-            ventas.Add(detalle);
-            dtgvFactura.DataSource = null;
+                ventas.Add(detalle);
+                dtgvFactura.DataSource = null;
+            }
+            catch { }
+          
 
             foreach (DataGridViewRow row in dtgvFactura.Rows)
             {

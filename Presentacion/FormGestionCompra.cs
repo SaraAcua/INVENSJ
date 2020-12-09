@@ -51,7 +51,14 @@ namespace Presentacion
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
             txtPrecio.Text = "";
-
+            lblColor.Text = "";
+            lblDescripcion.Text = "";
+            txtNombreCliente.Text = "";
+            txtDireccionCliente.Text = "";
+            txtBarrio.Text = "";
+            txtTelefonoCliente.Text = "";
+            LblSubtotal.Text = "";
+           
 
         }
 
@@ -62,18 +69,25 @@ namespace Presentacion
             {
 
                 Limpiar();
+                
 
             }
             else
             {
                 this.DialogResult = DialogResult.None;
-                //btnCancelar.Focus();
+               
             }
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+            if (txtCodigoProd.Text.Equals(""))
+            {
+                MessageBox.Show("Debe buscar un producto ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                txtCantidad.Text ="";
+            }
+       
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,6 +108,35 @@ namespace Presentacion
                         e.Handled = false;
                 }
             }
+
+
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                try
+                {
+                   
+
+                    if (int.Parse(txtCantidad.Text) > 0)
+                    {
+
+                        int cantidad = int.Parse(txtCantidad.Text);
+                        int precio = int.Parse(txtPrecio.Text);
+                        LblSubtotal.Text = (cantidad * precio).ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad incorrecta ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch { }
+            }
+            if (txtCodigoProd.Text.Equals(""))
+            {
+                MessageBox.Show("Debe buscar un producto ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                txtCantidad.Text = "";
+            }
+
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -154,7 +197,7 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Producto no existe", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                Limpiar();
+                
             }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -173,7 +216,7 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Proveedor no esta registrado ", " Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                Limpiar();
+                txtNitProveedor.Text = "";
             }
         }
 
@@ -186,9 +229,7 @@ namespace Presentacion
             compra.CodigoProveedor = txtNitProveedor.Text;
             compra.Fecha = LbelFechaFacturaCompra.Text;
             compra.ValorTotalFactura = Double.Parse(lblPrecioTotalCompra.Text);
-            compraService.GuardarFacturaVenta(compra);
-
-            txtNumeroCompra.Text = compraService.ConsultarIdFactura().ToString();
+            compraService.GuardarFacturaCompra(compra);
 
             foreach (DetalleFacturaCompra detalle in compras)
             {
@@ -199,7 +240,7 @@ namespace Presentacion
             {
                 foreach (var item in compras)
                 {
-                    row.Cells["codigoVenta"].Value = item.CodigoCompra;
+                    row.Cells["codigoCompra"].Value = item.CodigoCompra;
                     row.Cells["CodigoProducto"].Value = item.CodigoProducto;
                     row.Cells["CantidadProducto"].Value = item.CantidadProducto;
                     row.Cells["Valorunitario"].Value = item.Valorunitario;
@@ -211,23 +252,27 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
-            DetalleFacturaCompra detalle = new DetalleFacturaCompra();
-            detalle.CodigoCompra = txtNumeroCompra.Text;
-            detalle.CodigoProducto = txtCodigoProd.Text;
-            detalle.CantidadProducto = int.Parse(txtCantidad.Text);
-            detalle.Valorunitario = int.Parse(txtPrecio.Text);
-            detalle.ValorSubTotal = Double.Parse(lblPrecioTotalCompra.Text);
+            try
+            {
+                DetalleFacturaCompra detalle = new DetalleFacturaCompra();
+                detalle.CodigoCompra = txtNumeroCompra.Text;
+                detalle.CodigoProducto = txtCodigoProd.Text;
+                detalle.CantidadProducto = int.Parse(txtCantidad.Text);
+                detalle.Valorunitario = int.Parse(txtPrecio.Text);
+                detalle.ValorSubTotal = Double.Parse(LblSubtotal.Text);
 
 
-            compras.Add(detalle);
-            dtgvCompra.DataSource = null;
+                compras.Add(detalle);
+                dtgvCompra.DataSource = null;
+            }
+            catch { }
+           
 
             foreach (DataGridViewRow row in dtgvCompra.Rows)
             {
                 foreach (var item in compras)
                 {
-                    row.Cells["codigoVenta"].Value = item.CodigoCompra;
+                    row.Cells["codigoCompra"].Value = item.CodigoCompra;
                     row.Cells["CodigoProducto"].Value = item.CodigoProducto;
                     row.Cells["CantidadProducto"].Value = item.CantidadProducto;
                     row.Cells["Valorunitario"].Value = item.Valorunitario;
@@ -244,9 +289,29 @@ namespace Presentacion
             lblPrecioTotalCompra.Text = (total).ToString();
         }
 
+        private void btnGenerarCompra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int total = int.Parse(lblPrecioTotalCompra.Text);
+            if (total > 0)
+            {
+                RegistrarFactura();
+                MessageBox.Show("Compra registrada  con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                  
 
 
+
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar productos ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }
+
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBarrio = new System.Windows.Forms.TextBox();
@@ -47,7 +48,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvCompra = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.LblSubtotal = new System.Windows.Forms.Label();
+            this.txtPrecioventa = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -69,7 +72,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnGenerarCompra = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCompra)).BeginInit();
@@ -312,13 +315,18 @@
             this.dtgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCompra.Location = new System.Drawing.Point(34, 291);
             this.dtgvCompra.Name = "dtgvCompra";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvCompra.Size = new System.Drawing.Size(593, 163);
             this.dtgvCompra.TabIndex = 1;
             // 
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BorderRadius = 15;
-            this.guna2GradientPanel3.Controls.Add(this.textBox2);
+            this.guna2GradientPanel3.Controls.Add(this.label13);
+            this.guna2GradientPanel3.Controls.Add(this.LblSubtotal);
+            this.guna2GradientPanel3.Controls.Add(this.txtPrecioventa);
             this.guna2GradientPanel3.Controls.Add(this.txtPrecio);
             this.guna2GradientPanel3.Controls.Add(this.button5);
             this.guna2GradientPanel3.Controls.Add(this.btnAgregar);
@@ -334,14 +342,35 @@
             this.guna2GradientPanel3.Size = new System.Drawing.Size(592, 51);
             this.guna2GradientPanel3.TabIndex = 38;
             // 
-            // textBox2
+            // label13
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(195, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 20);
-            this.textBox2.TabIndex = 43;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(274, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Sub Total";
+            // 
+            // LblSubtotal
+            // 
+            this.LblSubtotal.AutoSize = true;
+            this.LblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSubtotal.ForeColor = System.Drawing.Color.Black;
+            this.LblSubtotal.Location = new System.Drawing.Point(285, 25);
+            this.LblSubtotal.Name = "LblSubtotal";
+            this.LblSubtotal.Size = new System.Drawing.Size(0, 15);
+            this.LblSubtotal.TabIndex = 44;
+            // 
+            // txtPrecioventa
+            // 
+            this.txtPrecioventa.ForeColor = System.Drawing.Color.Black;
+            this.txtPrecioventa.Location = new System.Drawing.Point(195, 22);
+            this.txtPrecioventa.Name = "txtPrecioventa";
+            this.txtPrecioventa.Size = new System.Drawing.Size(73, 20);
+            this.txtPrecioventa.TabIndex = 43;
+            this.txtPrecioventa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // txtPrecio
             // 
@@ -361,7 +390,7 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = global::Presentacion.Properties.Resources.basura;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(428, 19);
+            this.button5.Location = new System.Drawing.Point(483, 19);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(81, 23);
             this.button5.TabIndex = 41;
@@ -377,7 +406,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = global::Presentacion.Properties.Resources.boton_agregar;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(345, 19);
+            this.btnAgregar.Location = new System.Drawing.Point(400, 19);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(77, 23);
             this.btnAgregar.TabIndex = 40;
@@ -594,22 +623,23 @@
             this.txtCodigoProd.Size = new System.Drawing.Size(82, 20);
             this.txtCodigoProd.TabIndex = 6;
             // 
-            // button6
+            // btnGenerarCompra
             // 
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(149, 470);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 33);
-            this.button6.TabIndex = 40;
-            this.button6.Text = "Registrar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGenerarCompra.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarCompra.Location = new System.Drawing.Point(107, 470);
+            this.btnGenerarCompra.Name = "btnGenerarCompra";
+            this.btnGenerarCompra.Size = new System.Drawing.Size(115, 47);
+            this.btnGenerarCompra.TabIndex = 40;
+            this.btnGenerarCompra.Text = "Generar compra";
+            this.btnGenerarCompra.UseVisualStyleBackColor = true;
+            this.btnGenerarCompra.Click += new System.EventHandler(this.btnGenerarCompra_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(228, 470);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(93, 47);
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -624,7 +654,7 @@
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnGenerarCompra);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.dtgvCompra);
@@ -685,13 +715,15 @@
         private System.Windows.Forms.Label LbelFechaFacturaCompra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBarrio;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtPrecioventa;
+        private System.Windows.Forms.Button btnGenerarCompra;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Label lblTalla;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label LblSubtotal;
     }
 }
