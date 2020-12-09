@@ -164,8 +164,8 @@ namespace Presentacion
             if (respuesta == DialogResult.Yes)
             {
                 Proveedor proveedor = MapearProveedor();
-               string mensaje = proveedorService.(proveedor);
-               MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              // string mensaje = proveedorService.(proveedor);
+              // MessageBox.Show(mensaje, "Mensaje de Modificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                Limpiar();
             }
         }
