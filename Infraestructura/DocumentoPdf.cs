@@ -12,35 +12,36 @@ namespace Infraestructura
 {
     public class DocumentoPdf
     {
-        public void GuardarPdf(List<FacturaCompra> facturas, string path)
+        public void GuardarPdf(List<DetalleFacturaCompra> detalles, string path)
         {
             FileStream stream = new FileStream(path, FileMode.Create);
             Document document = new Document(iTextSharp.text.PageSize.LETTER, 40, 40, 40, 40);
             PdfWriter writer = PdfWriter.GetInstance(document, stream);
             document.AddAuthor("Aplicacion Pulsacion");
             document.Open();
-            document.Add(new Paragraph("INFORME DE FACTURAS REGISTRADAS"));
+            document.Add(new Paragraph("DETALLE FACTURA REGISTRADA"));
             document.Add(new Paragraph("\n"));
-            document.Add(LlenarTabla(facturas));
+            document.Add(LlenarTabla(detalles));
             document.Close();
         }
 
 
-        private PdfPTable LlenarTabla(List<FacturaCompra> facturas)
+        private PdfPTable LlenarTabla(List<DetalleFacturaCompra> detalles)
         {
             PdfPTable tabla = new PdfPTable(5);
-            tabla.AddCell(new Paragraph("Codigo_Factura"));
-            tabla.AddCell(new Paragraph("Id_Proveedor"));
-            tabla.AddCell(new Paragraph("Fecha"));
-            tabla.AddCell(new Paragraph("Total"));
-            
-            foreach (var item in facturas)
+            tabla.AddCell(new Paragraph("Codigo_Compra"));
+            tabla.AddCell(new Paragraph("Codigo_Producto"));
+            tabla.AddCell(new Paragraph("Cantidad"));
+            tabla.AddCell(new Paragraph("Precio"));
+            tabla.AddCell(new Paragraph("Subtotal"));
+
+            foreach (var item in detalles)
             {
-                tabla.AddCell(new Paragraph(item.CodigoFactura));
-                tabla.AddCell(new Paragraph(item.CodigoProveedor));
-                tabla.AddCell(new Paragraph(item.Fecha.ToString()));
-                tabla.AddCell(new Paragraph(item.ValorTotalFactura.ToString()));
-                
+                tabla.AddCell(new Paragraph(item.CodigoCompra));
+                tabla.AddCell(new Paragraph(item.CodigoProducto));
+                tabla.AddCell(new Paragraph(item.CantidadProducto.ToString()));
+                tabla.AddCell(new Paragraph(item.Valorunitario.ToString()));
+                tabla.AddCell(new Paragraph(item.ValorSubTotal.ToString()));
 
             }
             return tabla;
