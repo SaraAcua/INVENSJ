@@ -71,9 +71,11 @@ namespace Presentacion
             {
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarMovimiento(movimientos);
-                
+                Producto producto = new Producto();
+                producto.CodigoProducto = txtCodigo.Text;
+                producto.Cantidad = int.Parse(txtCantidad.Text);
                
-              //  movimientosService.();
+                movimientosService.ActualizarInventario(producto);
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                
 
