@@ -15,6 +15,12 @@ namespace Presentacion
         public FormListadoCompra()
         {
             InitializeComponent();
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
