@@ -27,6 +27,7 @@ namespace BLL
                     conexion.Open();
 
                     repositorio.GuardarDetalleFacturaCompra(detalle);
+                    
 
                     conexion.Close();
                 }
@@ -41,7 +42,28 @@ namespace BLL
         }
 
 
+        public string ActualizarProducto(List<DetalleFacturaCompra> detalles)
+        {
+            try
+            {
+                foreach (DetalleFacturaCompra detalle in detalles)
+                {
+                    conexion.Open();
 
+                    repositorio.GuardarDetalleFacturaCompra(detalle);
+
+
+                    conexion.Close();
+                }
+                return $"Se guardaron los datos de la factura satisfactoriamente";
+
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
 
     }
 }

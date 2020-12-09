@@ -35,6 +35,23 @@ namespace DALL
         }
 
 
+        public int ActualizarInventario(Producto producto)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_actualizar_producto";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("Acosto", OracleDbType.Int32).Value = producto.Costo;
+                command.Parameters.Add("Aprecio", OracleDbType.Varchar2).Value = producto.Precio;
+                command.Parameters.Add("Acodigo", OracleDbType.Varchar2).Value = producto.CodigoProducto;
+                command.Parameters.Add("Acantidad", OracleDbType.Varchar2).Value = producto.Cantidad;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
+
+
 
 
     }
