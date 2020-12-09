@@ -65,18 +65,22 @@ namespace Presentacion
                 {
                     RegistrarFactura();
                     MessageBox.Show("Venta realizada con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
+                    Limpiar(); 
                 }
-              
+                dtgvFactura.Rows.Clear();
+                //dtgvFactura.Refresh();
+
 
             }
             catch 
             {
                 MessageBox.Show("Debe ingresar productos ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
-           
-        
+          
+
+        }
+
+
 
         private void btnAgraegarCliente_Click(object sender, EventArgs e)
         {
@@ -246,6 +250,7 @@ namespace Presentacion
                 }
             }
             detalleFactura.GuardarDetallesVenta(ventas,productos);
+            
         }
            
 
