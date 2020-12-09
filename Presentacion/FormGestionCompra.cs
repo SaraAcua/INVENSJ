@@ -319,9 +319,9 @@ namespace Presentacion
                         filename = saveFileDialog.FileName;
                         if (filename != "" && compras.Count > 0)
                         {
-                            //  string mensaje = compraService.GenerarPdf(compras, filename);
+                            string mensaje = compraService.GenerarPdf(compras, filename);
 
-                            // MessageBox.Show(mensaje, "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(mensaje, "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else
