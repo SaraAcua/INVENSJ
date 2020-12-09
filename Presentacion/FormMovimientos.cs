@@ -68,7 +68,7 @@ namespace Presentacion
             {
                 Movimientos movimientos = MapearMovimiento();
                 string mensaje = movimientosService.GuardarCliente(movimientos);
-                //movimientosService.
+               // movimientosService.
                 MessageBox.Show(mensaje, "Informacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                
 
