@@ -22,6 +22,10 @@ namespace Presentacion
         {
             InitializeComponent();
             compraService = new FacturaCompraService(ConfigConnection.connectionString);
+            dateTimeListadoCompra.Format = DateTimePickerFormat.Custom;
+            dateTimeListadoCompra.CustomFormat = "dd/MM/yyyy";
+            dateTimeListadoCompra1.Format = DateTimePickerFormat.Custom;
+            dateTimeListadoCompra1.CustomFormat = "dd/MM/yyyy";
 
         }
         private void Limpiar()
@@ -38,6 +42,7 @@ namespace Presentacion
 
             respuesta = compraService.BuscarReporte(DateTime.Parse(dateTimeListadoCompra.Text),DateTime.Parse( dateTimeListadoCompra1.Text));
             dtgvListadoCompra.DataSource = respuesta.Facturas;
+            Limpiar();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
