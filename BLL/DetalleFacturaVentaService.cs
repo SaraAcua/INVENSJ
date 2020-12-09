@@ -18,7 +18,7 @@ namespace BLL
             repositorio = new DetalleFacturaVentaRepository(conexion);
         }
 
-        public string GuardarDetallesVenta(List<DetalleFacturaVenta> detalles)
+        public string GuardarDetallesVenta(List<DetalleFacturaVenta> detalles, List<Producto> productos)
         {
             try
             {
@@ -30,6 +30,19 @@ namespace BLL
 
                     conexion.Close();
                 }
+
+                //------------
+                foreach (Producto producto in productos)
+                {
+                    conexion.Open();
+
+                    repositorio.ActualizarInventario(producto);
+
+
+                    conexion.Close();
+                }
+
+
                 return $"Se guardaron los datos de la factura satisfactoriamente";
                 
             }

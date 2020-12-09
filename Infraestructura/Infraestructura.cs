@@ -36,7 +36,7 @@ namespace Infraestructura
             email.Subject = "Registro de Usuario "
                 + DateTime.Now.ToString("dd/MMM/yyy hh:mm:ss");
             email.Body = $"<b>Sr {cliente.Nombre }</b><b> {cliente.Apellidos}</b> <br " +
-                $" > se ha realizado su registro Sartisfactoriamente";
+                $" > se ha realizado su registro Satisfactoriamente    =)";
             email.IsBodyHtml = true;
             email.Priority = MailPriority.Normal;
         }
