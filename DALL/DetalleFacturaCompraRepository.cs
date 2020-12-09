@@ -22,13 +22,13 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"pr_insertar_detalle_venta";
+                command.CommandText = @"pr_insertar_detalle_compra";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.Add("codigo_compra", OracleDbType.Varchar2).Value = detalle.CodigoCompra;
+                command.Parameters.Add("codigo_compra", OracleDbType.Int32).Value = int.Parse(detalle.CodigoCompra);
                 command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = detalle.CodigoProducto;
-                command.Parameters.Add("cantidad", OracleDbType.Varchar2).Value = detalle.CantidadProducto;
-                command.Parameters.Add("precio", OracleDbType.Varchar2).Value = detalle.Valorunitario;
-                command.Parameters.Add("subtotal", OracleDbType.Varchar2).Value = detalle.ValorSubTotal;
+                command.Parameters.Add("cantidad", OracleDbType.Int32).Value = detalle.CantidadProducto;
+                command.Parameters.Add("precio", OracleDbType.Int32).Value = detalle.Valorunitario;
+                command.Parameters.Add("subtotal", OracleDbType.Int32).Value = detalle.ValorSubTotal;
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
