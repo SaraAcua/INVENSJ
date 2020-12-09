@@ -39,7 +39,7 @@ namespace BLL
         }
 
 
-        public ConsultaFacturaRespuesta BuscarPorDescripcion(DateTime fechaInicial, DateTime fechaFinal)
+        public ConsultaFacturaRespuesta BuscarReporte(DateTime fechaInicial, DateTime fechaFinal)
         {
             ConsultaFacturaRespuesta respuesta = new ConsultaFacturaRespuesta();
             try
