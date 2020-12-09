@@ -75,6 +75,38 @@ namespace BLL
         }
 
 
+        public ConsultaClienteRespuesta BuscarPorBarrio(string barrio)
+        {
+            ConsultaClienteRespuesta respuesta = new ConsultaClienteRespuesta();
+            try
+            {
+                conexion.Open();
+                respuesta.Clientes = repositorio.BuscarClientePorBarrio(barrio);
+                conexion.Close();
+                if (respuesta.Clientes.Count > 0)
+                {
+                    respuesta.Mensaje = "Se consultan los Datos";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No hay datos para consultar";
+                }
+                respuesta.Error = false;
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+
+                respuesta.Mensaje = $"Error de la Aplicacion: {e.Message}";
+                respuesta.Error = true;
+                return respuesta;
+            }
+            finally { conexion.Close(); }
+        }
+
+
+
+
         public string ModificarCliente(Cliente cliente)
         {
             try
@@ -94,9 +126,7 @@ namespace BLL
             finally { conexion.Close(); }
         }
 
-
-
-
+        
 
 
     }

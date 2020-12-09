@@ -91,6 +91,33 @@ namespace DALL
 
         }
 
+
+
+        public List<Cliente> BuscarClientePorBarrio(string barrio)
+        {
+            OracleDataReader dataReader;
+            List<Cliente> clientes = new List<Cliente>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select * from cliente where descripcion LIKE '%" + barrio + "%' ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Cliente cliente = DataReaderMapToCliente(dataReader);
+                        clientes.Add(cliente);
+                    }
+                }
+            }
+            return clientes;
+        }
+
+
+
+
+
+
         public List<Cliente> ConsultarTodos()
         {
             OracleDataReader dataReader;
