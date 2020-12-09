@@ -91,6 +91,27 @@ namespace DALL
 
         }
 
+
+        public int ModificarProveedor(Proveedor proveedor)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_modificar_proveedor";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("Identificacion", OracleDbType.Varchar2).Value = proveedor.Identificacion;
+                command.Parameters.Add("TipoIdentificacion", OracleDbType.Varchar2).Value = proveedor.TipoIdentificacion;
+                command.Parameters.Add("Razon_Social", OracleDbType.Varchar2).Value = proveedor.RazonSocial;
+                command.Parameters.Add("Telefono", OracleDbType.Varchar2).Value = proveedor.Telefono;
+                command.Parameters.Add("Barrio", OracleDbType.Varchar2).Value = proveedor.Barrio;
+                command.Parameters.Add("Direccion", OracleDbType.Varchar2).Value = proveedor.Direccion;
+                command.Parameters.Add("Email", OracleDbType.Varchar2).Value = proveedor.Email;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
+
+
         public List<Proveedor> ConsultarTodos()
         {
             OracleDataReader dataReader;

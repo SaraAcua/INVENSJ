@@ -68,6 +68,27 @@ namespace BLL
         }
 
 
+        public string ModificarProveedor(Proveedor proveedor)
+        {
+            try
+            {
+                conexion.Open();
+                if (repositorio.BuscarPorIdentificacionProveedor(proveedor.Identificacion) != null)
+                {
+                    repositorio.ModificarProveedor(proveedor);
+                    return $"Se modificaron los datos del proveedor: {proveedor.RazonSocial}   satisfactoriamente";
+                }
+                return $"El proveedor no existe";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+
+
+
         public ConsultaProveedorRespuesta BuscarPorBarrio(string barrio)
         {
             ConsultaProveedorRespuesta respuesta = new ConsultaProveedorRespuesta();
