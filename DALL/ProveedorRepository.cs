@@ -53,6 +53,29 @@ namespace DALL
             }
         }
 
+        public List<Proveedor> BuscarProveedorPorBarrio(string barrio)
+        {
+            OracleDataReader dataReader;
+            List<Proveedor> proveedores = new List<Proveedor>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"select * from proveedor where barrio LIKE '%" + barrio + "%' ";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Proveedor proveedor = DataReaderMapToProveedor(dataReader);
+                        proveedores.Add(proveedor);
+                    }
+                }
+            }
+            return proveedores;
+        }
+
+
+
+
         private Proveedor DataReaderMapToProveedor(OracleDataReader dataReader)
         {
             if (!dataReader.HasRows) return null;
