@@ -102,6 +102,28 @@ namespace DALL
 
         }
 
+        public int ModificarProducto(Producto producto)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = @"pr_modificar_producto";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add("acodigo", OracleDbType.Varchar2).Value = producto.CodigoProducto;
+                command.Parameters.Add("aDescripcion", OracleDbType.Varchar2).Value = producto.Descripcion;
+                command.Parameters.Add("aprecio", OracleDbType.Varchar2).Value = producto.Precio;
+                command.Parameters.Add("aiva", OracleDbType.Varchar2).Value = producto.Iva;
+                command.Parameters.Add("atalla", OracleDbType.Varchar2).Value = producto.Talla;
+                command.Parameters.Add("acodigo_color", OracleDbType.Varchar2).Value = producto.Costo;
+                command.Parameters.Add("acodigo_marca", OracleDbType.Varchar2).Value = producto.Marca;
+                command.Parameters.Add("astock_minimo", OracleDbType.Varchar2).Value = producto.StockMinimo;
+                command.Parameters.Add("astock_max", OracleDbType.Varchar2).Value = producto.StockMaximo;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }
+
+
+
 
     }
 }
