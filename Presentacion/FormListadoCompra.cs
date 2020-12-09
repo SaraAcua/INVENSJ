@@ -36,7 +36,7 @@ namespace Presentacion
             ConsultaProductoRespuesta respuesta = new ConsultaProductoRespuesta();
 
 
-           // respuesta = compraService.Busca();
+            respuesta = compraService.();
             //dtgProducto.DataSource = respuesta.Productos;
         }
 
