@@ -38,6 +38,7 @@ namespace DALL
         {
             OracleDataReader dataReader;
             List<FacturaCompra> facturas = new List<FacturaCompra>();
+
             using (var command = _connection.CreateCommand())
             {
                 command.CommandText = @"pr_consultar_lista_compras";
