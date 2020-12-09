@@ -74,7 +74,7 @@ namespace Presentacion
 
 
             respuesta = service.BuscarPorBarrio(txtBarrio.Text);
-            dtgvClientesReportes.DataSource = respuesta.Clientes; ;
+            dtgvClientesReportes.DataSource = respuesta.Clientes; 
         }
     }
 }
