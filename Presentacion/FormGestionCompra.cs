@@ -72,7 +72,7 @@ namespace Presentacion
             {
 
                 Limpiar();
-                compras.Clear();
+                compras.Clear(); 
                 dtgvCompra.DataSource = null;
                 
 

@@ -32,12 +32,12 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ConsultaFacturaRespuesta respuesta = new ConsultaFacturaRespuesta();
+            ConsultaFacturaVentaRespuesta respuesta = new ConsultaFacturaVentaRespuesta();
 
 
-          // respuesta = ventaService.(DateTime.Parse(dateTimeListadoCompra.Text), DateTime.Parse(dateTimeListadoCompra1.Text));
+           respuesta = ventaService.BuscarReporte(DateTime.Parse(dateTimeListadoCompra.Text), DateTime.Parse(dateTimeListadoCompra1.Text));
             dtgvVentas.DataSource = respuesta.Facturas;
-            Limpiar();
+            //Limpiar();
         }
     }
 }

@@ -103,7 +103,7 @@
             this.dateTimeListadoCompra1.Name = "dateTimeListadoCompra1";
             this.dateTimeListadoCompra1.Size = new System.Drawing.Size(121, 20);
             this.dateTimeListadoCompra1.TabIndex = 33;
-            this.dateTimeListadoCompra1.Value = new System.DateTime(2020, 11, 30, 0, 0, 0, 0);
+            this.dateTimeListadoCompra1.Value = new System.DateTime(2020, 12, 10, 0, 0, 0, 0);
             // 
             // dateTimeListadoCompra
             // 
@@ -112,7 +112,7 @@
             this.dateTimeListadoCompra.Name = "dateTimeListadoCompra";
             this.dateTimeListadoCompra.Size = new System.Drawing.Size(127, 20);
             this.dateTimeListadoCompra.TabIndex = 32;
-            this.dateTimeListadoCompra.Value = new System.DateTime(2020, 11, 30, 0, 0, 0, 0);
+            this.dateTimeListadoCompra.Value = new System.DateTime(2020, 12, 10, 0, 0, 0, 0);
             // 
             // btnBuscar
             // 
