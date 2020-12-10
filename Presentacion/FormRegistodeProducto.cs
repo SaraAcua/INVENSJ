@@ -228,7 +228,7 @@ namespace Presentacion
             else
             {
                 this.DialogResult = DialogResult.None;
-                txtCodigoProd.Focus();
+                txtCodigoProd.Focus(); 
             }
         }
 
