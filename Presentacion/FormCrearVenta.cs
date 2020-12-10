@@ -23,7 +23,7 @@ namespace Presentacion
         FacturaVentaService VentaService;
         DetalleFacturaVentaService detalleFactura;
 
-        List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>();
+        List<DetalleFacturaVenta> ventas = new List<DetalleFacturaVenta>(); 
         List<Producto> productos = new List<Producto>();
         DataTable table = new DataTable();
         public FormCrearVenta()
@@ -67,7 +67,7 @@ namespace Presentacion
                     MessageBox.Show("Venta realizada con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar(); 
                 }
-                dtgvFactura.Rows.Clear();
+               // dtgvFactura.Rows.Clear();
                 //dtgvFactura.Refresh();
 
 
