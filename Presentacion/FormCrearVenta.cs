@@ -67,9 +67,11 @@ namespace Presentacion
                     MessageBox.Show("Venta realizada con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar(); 
                 }
-                dtgvFactura.DataSource = null;
+               
+
                 ventas.Clear();
-               // dtgvFactura.Refresh();
+                dtgvFactura.DataSource = null;
+                // dtgvFactura.Refresh();
 
 
             }
@@ -118,6 +120,7 @@ namespace Presentacion
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Limpiar();
+                ventas.Clear();
                 dtgvFactura.DataSource = null;
 
 
