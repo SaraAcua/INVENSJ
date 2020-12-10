@@ -23,7 +23,7 @@ namespace Infraestructura
             document.Add(new Paragraph("\n"));
             document.Add(new Paragraph("  SK SHOP TU TIENDA "));
             document.Add(LlenarTabla(detalles));
-            document.Close();
+            document.Close(); 
         }
 
 
