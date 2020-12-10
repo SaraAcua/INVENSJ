@@ -62,7 +62,7 @@ namespace DALL
 
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"SELECT *  FROM Venta   WHERE fecha  BETWEEN TO_DATE(:fechaInicial) AND TO_DATE(:fechaFinal) ORDER BY codigo_compra";
+                command.CommandText = @"SELECT *  FROM Venta   WHERE fecha  BETWEEN TO_DATE(:fechaInicial) AND TO_DATE(:fechaFinal)";
                 command.Parameters.Add("fechaInicial", OracleDbType.Date).Value = fechaInicial;
                 command.Parameters.Add("fechaFinal", OracleDbType.Date).Value = fechaFinal;
                 dataReader = command.ExecuteReader();
