@@ -59,6 +59,8 @@ namespace Presentacion
             txtBarrio.Text = "";
             txtTelefonoCliente.Text = "";
             LblSubtotal.Text = "";
+            lblTalla.Text = "";
+            txtPrecioventa.Text = "";
            
 
         }
@@ -70,6 +72,7 @@ namespace Presentacion
             {
 
                 Limpiar();
+                dtgvCompra.DataSource = null;
                 
 
             }
@@ -329,7 +332,8 @@ namespace Presentacion
                             MessageBox.Show("No se especifico una ruta o No hay datos para generar el reporte", "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
-
+                        dtgvCompra.DataSource = null;
+                        compras.Clear();
                         Limpiar();
 
                     }

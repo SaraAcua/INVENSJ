@@ -67,8 +67,9 @@ namespace Presentacion
                     MessageBox.Show("Venta realizada con exito ", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar(); 
                 }
-               // dtgvFactura.Rows.Clear();
-                //dtgvFactura.Refresh();
+                dtgvFactura.DataSource = null;
+                ventas.Clear();
+               // dtgvFactura.Refresh();
 
 
             }
@@ -101,6 +102,12 @@ namespace Presentacion
             txtCodigoProd.Text = "";
             txtCantidad.Text = "";
             txtNumFactura.Text = "";
+            lblColor.Text = "";
+            lblDescripcion.Text = "";
+            lblPrecioVenta.Text = "";
+            lblTalla.Text = "";
+            lblTotal.Text = "";
+            
 
 
         }
@@ -111,6 +118,7 @@ namespace Presentacion
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Limpiar();
+                dtgvFactura.DataSource = null;
 
 
             }
