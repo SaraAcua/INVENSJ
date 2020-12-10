@@ -17,10 +17,11 @@ namespace Infraestructura
             FileStream stream = new FileStream(path, FileMode.Create);
             Document document = new Document(iTextSharp.text.PageSize.LETTER, 40, 40, 40, 40);
             PdfWriter writer = PdfWriter.GetInstance(document, stream);
-            document.AddAuthor("Aplicacion Pulsacion");
+            document.AddAuthor("Aplicacion de inventario");
             document.Open();
             document.Add(new Paragraph("DETALLE FACTURA REGISTRADA"));
             document.Add(new Paragraph("\n"));
+            document.Add(new Paragraph("  SK SHOP TU TIENDA "));
             document.Add(LlenarTabla(detalles));
             document.Close();
         }
@@ -29,8 +30,9 @@ namespace Infraestructura
         private PdfPTable LlenarTabla(List<DetalleFacturaCompra> detalles)
         {
             PdfPTable tabla = new PdfPTable(5);
-            tabla.AddCell(new Paragraph("Codigo_Compra"));
-            tabla.AddCell(new Paragraph("Codigo_Producto"));
+
+            tabla.AddCell(new Paragraph("Codigo compra"));
+            tabla.AddCell(new Paragraph("Codigo producto"));
             tabla.AddCell(new Paragraph("Cantidad"));
             tabla.AddCell(new Paragraph("Precio"));
             tabla.AddCell(new Paragraph("Subtotal"));

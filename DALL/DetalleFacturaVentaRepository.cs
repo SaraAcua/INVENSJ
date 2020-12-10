@@ -23,7 +23,7 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"pr_insertar_detalle_venta";
+                command.CommandText = @"PROYECTO_INSERTAR.pr_insertar_detalle_venta";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("codigo_venta", OracleDbType.Int32).Value = detalle.CodigoVenta;
                 command.Parameters.Add("codigo_producto", OracleDbType.Varchar2).Value = detalle.CodigoProducto;
@@ -40,7 +40,7 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"pr_actualizar_cantidad_producto";
+                command.CommandText = @"PROYECTO_INSERTAR.pr_actualizar_cantidad_producto";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("Acodigo", OracleDbType.Varchar2).Value = producto.CodigoProducto;
                 command.Parameters.Add("Acantidad", OracleDbType.Varchar2).Value = producto.Cantidad;

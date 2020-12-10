@@ -22,7 +22,7 @@ namespace DALL
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"pr_insertar_marca";
+                command.CommandText = @"PROYECTO_INSERTAR.pr_insertar_marca";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("Nombre", OracleDbType.Varchar2).Value = marca.Nombre;
                 var filas = command.ExecuteNonQuery();
