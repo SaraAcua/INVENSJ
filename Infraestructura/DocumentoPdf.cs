@@ -51,7 +51,28 @@ namespace Infraestructura
         }
 
 
+        //private PdfPTable LlenarTablaFactura(List<FacturaCompra> facturas)
+        //{
+        //    PdfPTable tabla = new PdfPTable(5);
 
+        //    tabla.AddCell(new Paragraph("Codigo compra"));
+        //    tabla.AddCell(new Paragraph("Codigo producto"));
+        //    tabla.AddCell(new Paragraph("Cantidad"));
+        //    tabla.AddCell(new Paragraph("Precio"));
+        //    tabla.AddCell(new Paragraph("Subtotal"));
+
+        //    foreach (var item in facturas)
+        //    {
+        //        tabla.AddCell(new Paragraph(item.CodigoCompra));
+        //        tabla.AddCell(new Paragraph(item.CodigoProducto));
+        //        tabla.AddCell(new Paragraph(item.CantidadProducto.ToString()));
+        //        tabla.AddCell(new Paragraph(item.Valorunitario.ToString()));
+        //        tabla.AddCell(new Paragraph(item.ValorSubTotal.ToString()));
+
+        //    }
+        //    return tabla;
+
+        //}
 
 
     }
