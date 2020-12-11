@@ -18,7 +18,7 @@ namespace Presentacion
         ProductoService productoService;
         ClienteService cliente;
         ProveedorService proveedor;
-    
+        MovimientosService service;
 
         public FormInicio()
         {
@@ -38,6 +38,7 @@ namespace Presentacion
             LblProveedoresTotal.Text = dashboardService.ConsultarProveedores();
             LblProductos.Text = dashboardService.ConsultarCantidadProductos();
             lblMarcas.Text = dashboardService.ConsultarCantidadMarcas();
+            lblCaja.Text = dashboardService.ConsultarTotalVentas();
 
         }
 
@@ -66,12 +67,12 @@ namespace Presentacion
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
-          
+            
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+        private void chartCantidad_Click(object sender, EventArgs e)
         {
-
-        }
+         
+                   }
     }
 }

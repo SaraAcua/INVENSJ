@@ -43,8 +43,7 @@ namespace Presentacion
             table.Columns.Add("Marca");
             table.Columns.Add("Imagen");
 
-            dataGvRegistroProd.DataSource = table;
-            dataGvRegistroProd.Refresh();
+        
             cmbColor.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTalla.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -113,7 +112,7 @@ namespace Presentacion
         {
             txtCodigoProd.Text = "";
             txtDescripcionProd.Text = "";
-            txtCantidad.Text = "";
+            txtCantidad.Text = "0";
             txtRutaImge.Text = "";
             cmbColor.Text = "SELECCIONE";
             cmbMarca.Text = "SELECCIONE";
