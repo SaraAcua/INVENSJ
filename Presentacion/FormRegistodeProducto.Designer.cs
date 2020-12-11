@@ -45,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGvRegistroProd = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txtCodigoColor = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCodigoMarca = new Guna.UI2.WinForms.Guna2TextBox();
@@ -69,7 +68,6 @@
             this.txtCodigoProd = new Guna.UI2.WinForms.Guna2TextBox();
             this.picImgen = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGvRegistroProd)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAddMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAgregarImage)).BeginInit();
@@ -317,18 +315,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dataGvRegistroProd
-            // 
-            this.dataGvRegistroProd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGvRegistroProd.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGvRegistroProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGvRegistroProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGvRegistroProd.Location = new System.Drawing.Point(25, 292);
-            this.dataGvRegistroProd.Name = "dataGvRegistroProd";
-            this.dataGvRegistroProd.Size = new System.Drawing.Size(688, 228);
-            this.dataGvRegistroProd.TabIndex = 3;
             // 
             // guna2GradientPanel1
             // 
@@ -751,7 +737,6 @@
             this.Controls.Add(this.picImgen);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dataGvRegistroProd);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -759,7 +744,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "FormRegistodeProducto";
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGvRegistroProd)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAddMarca)).EndInit();
@@ -775,7 +759,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGvRegistroProd;
         private System.Windows.Forms.Button btnGuardarProducto;
         private System.Windows.Forms.Button btnEliminarProd;
         private System.Windows.Forms.Label label10;
