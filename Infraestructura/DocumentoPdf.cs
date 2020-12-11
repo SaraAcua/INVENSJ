@@ -3,15 +3,19 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Image = iTextSharp.text.Image;
 
 namespace Infraestructura
 {
     public class DocumentoPdf
     {
+        Proveedor proveedor = new Proveedor();
         public void GuardarPdf(List<DetalleFacturaCompra> detalles, string path)
         {
             FileStream stream = new FileStream(path, FileMode.Create);
@@ -19,6 +23,41 @@ namespace Infraestructura
             PdfWriter writer = PdfWriter.GetInstance(document, stream);
             document.AddAuthor("Aplicacion de inventario");
             document.Open();
+            var imagepath = @"C:\Logo\LogoPdf.PNG";
+            FileStream stream1 = new FileStream(imagepath, FileMode.Open);
+            {
+                var png = Image.GetInstance(System.Drawing.Image.FromStream(stream1), ImageFormat.Png);
+                png.ScalePercent(5f);
+                png.SetAbsolutePosition(document.Left, document.Top);
+                document.Add(png);
+            }
+            var spacer = new Paragraph("")
+            {
+                SpacingBefore = 10f,
+                SpacingAfter = 10f,
+            };
+            document.Add(spacer);
+
+            var headerTable = new PdfPTable(new[] { .75f, 2f })
+            {
+               // HorizontalAlignment = Left,
+                WidthPercentage = 75,
+                DefaultCell = { MinimumHeight = 22f }
+            };
+
+            headerTable.AddCell("Fecha");
+            headerTable.AddCell(DateTime.Now.ToString());
+            headerTable.AddCell("Razon social");
+            headerTable.AddCell(proveedor.RazonSocial);
+            headerTable.AddCell("Telefono");
+            headerTable.AddCell(proveedor.Telefono);
+            headerTable.AddCell("Direccion");
+            headerTable.AddCell(proveedor.Direccion);
+
+            document.Add(headerTable);
+            document.Add(spacer);
+            var columnWidths = new[] { 1f, 1f, 2f, 1f };
+
             document.Add(new Paragraph("DETALLE FACTURA REGISTRADA"));
             document.Add(new Paragraph("\n"));
             document.Add(new Paragraph("  SK SHOP TU TIENDA "));
