@@ -71,12 +71,12 @@ namespace BLL
 
 
 
-        public string GenerarPdf(List<DetalleFacturaCompra> detalles, string filename)
+        public string GenerarPdf(List<DetalleFacturaCompra> detalles, List<Proveedor> compras,string filename)
         {
             DocumentoPdf documentoPdf = new DocumentoPdf();
             try
             {
-                documentoPdf.GuardarPdf(detalles, filename);
+                documentoPdf.GuardarPdf(detalles,compras, filename);
                 return "Se generó el Documento satisfactoriamente";
             }
             catch (Exception e)

@@ -20,6 +20,7 @@ namespace Presentacion
         DetalleFacturaCompra detalle;
         DetalleFacturaCompraService detalleService;
         List<DetalleFacturaCompra> compras = new List<DetalleFacturaCompra>();
+        List<Proveedor> proveedors = new List<Proveedor>();
         List<Producto> productos = new List<Producto>();
         public FormGestionCompra()
         {
@@ -263,12 +264,19 @@ namespace Presentacion
             try
             {
                 DetalleFacturaCompra detalle = new DetalleFacturaCompra();
+                Proveedor proveedor = new Proveedor();
                 detalle.CodigoCompra = txtNumeroCompra.Text;
                 detalle.CodigoProducto = txtCodigoProd.Text;
                 detalle.CantidadProducto = int.Parse(txtCantidad.Text);
                 detalle.Valorunitario = int.Parse(txtPrecio.Text);
                 detalle.ValorSubTotal = Double.Parse(LblSubtotal.Text);
-                
+
+               // proveedor.Identificacion = txtNitProveedor.Text;
+                proveedor.RazonSocial = txtNombreCliente.Text;
+                proveedor.Telefono = txtTelefonoCliente.Text;
+                proveedor.Direccion = txtDireccionCliente.Text;
+                proveedors.Add(proveedor);
+
                 Producto producto = new Producto();
                 producto.CodigoProducto = txtCodigoProd.Text;
                 producto.Cantidad = int.Parse(txtCantidad.Text);
@@ -323,7 +331,7 @@ namespace Presentacion
                         filename = saveFileDialog.FileName;
                         if (filename != "" && compras.Count > 0)
                         {
-                            string mensaje = compraService.GenerarPdf(compras, filename);
+                            string mensaje = compraService.GenerarPdf(compras,proveedors, filename);
 
                             MessageBox.Show(mensaje, "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
