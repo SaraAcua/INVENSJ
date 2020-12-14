@@ -32,7 +32,7 @@ namespace BLL
                 
             }
             catch
-            {
+            { 
 
             }
             finally { conexion.Close(); }
